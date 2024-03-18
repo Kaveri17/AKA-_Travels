@@ -1,0 +1,31 @@
+.Blogs{
+    background-color: lightblue ;
+}
+.pic3{
+    height: 100%;
+    width: 50%;
+    padding: 50px 0;
+    margin: 25px;
+}
+.blogscontainer{
+    /* height: 80%; */
+    width: 50%;
+    padding: 50px 0;
+    margin: 25px;
+}
+.blogscontainer:hover{
+    cursor: pointer;
+    color: gray;
+}
+.pic2{
+    height: 100%;
+    width: 50%;
+    padding: 50px 0;
+    margin: 25px;
+}
+.pic2{
+    height: 100%;
+    width: 50%;
+    padding: 50px 0;
+    margin: 25px;
+}
