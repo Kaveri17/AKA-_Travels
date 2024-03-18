@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
   return (
     <div className='grid w-full grid-cols-1 bg-slate-950 text-white py-3 md:grid-cols-5 sm:grid-cols-4 '>
-            <div className="text-center text-3xl font-bolder">Our Store</div>
+            <div className="text-center text-3xl font-bolder">AKA TRAVELS</div>
             <div className="flex px-3 sm:col-span-2 md:col-span-3 ">
             <input type="search" className="w-full rounded-s-lg px-3 py-1 outline-none text-purple-950"/>
             <button className="rounded-e-lg bg-orange-300 px-3">Search</button>

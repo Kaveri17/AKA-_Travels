@@ -23,9 +23,43 @@
     padding: 50px 0;
     margin: 25px;
 }
-.pic2{
+.pic1{
     height: 100%;
     width: 50%;
     padding: 50px 0;
     margin: 25px;
 }
+.pic1:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px gray;
+}
+button{
+    width: 150px;
+    padding: 15px;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid rebeccapurple;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+color: #fff;
+position: relative;
+}
+span{
+    background: darkgoldenrod;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+
+}
+
