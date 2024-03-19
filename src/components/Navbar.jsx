@@ -25,22 +25,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-       
-        <div className="nav w-full h-screen" style={{backgroundImage: "url('https://wordpress.vecurosoft.com/travolo/wp-content/uploads/2023/11/banner-bg-1.png')"}} >
-
-
-
-            <h1 className='w-18 ps-8 font-bold text-3xl '>Uncovering Stories, One Trip At A <br>
-            </br>Time</h1>
-            <p className='para mt-9 mx-8'>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br /> Corrupti labore quisquam, perspiciatis assumenda
-                <br />
-                 voluptatibus iste eos est iusto cumque alias laborum eligendi. Sint.
-            </p>
-            <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md">READ MORE</button>
-            </div>
-       
-        
+      
     </>
   )
 }
