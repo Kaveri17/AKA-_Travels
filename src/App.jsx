@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import './App.css'
+import MyRoutes from './MyRoutes'
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
     //   <Navbar/>
     // </div>
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
+    <MyRoutes/>
     </>
     
   )
