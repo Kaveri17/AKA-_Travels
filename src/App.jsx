@@ -8,6 +8,7 @@ import Blogs from './Layout/Blogs'
 import Popular from './Layout/Popular'
 import MyRoutes from './MyRoutes'
 
+
 function App() {
   
 
@@ -18,6 +19,8 @@ function App() {
       <Footer/>
       <Blogs/>
       <Popular/> */}
+      
+
     </>
   )
 }
