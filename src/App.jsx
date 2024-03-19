@@ -1,13 +1,18 @@
 import { useState } from 'react'
-import Headers from './Layout/Headers'
 import MyRoutes from './MyRoutes'
+import Navbar from './components/Navbar'
+import './App.css'
 
 function App() {
-
   return (
+    
+    // <div className='container'>
+    //   <Navbar/>
+    // </div>
     <>
       <MyRoutes/>
     </>
+    
   )
 }
 
