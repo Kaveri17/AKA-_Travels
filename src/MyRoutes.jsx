@@ -1,8 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './Layout/Layout'
-import About from './Pages/About'
+import About from './pages/About'
 import Home from './pages/Home'
+
 
 const MyRoutes = () => {
   return (
@@ -10,8 +11,10 @@ const MyRoutes = () => {
         <BrowserRouter>
             <Routes>
                 <Route path='/' element={<Layout/>}>
+                    {/* <Route index element={<Home/>}/> */}
                     <Route index element={<Home/>}/>
-                   <Route path='/about' element={<About/>}/>
+                    <Route path='/about' element={<About/>}/> 
+                   
 
                 </Route>
             </Routes>
