@@ -1,22 +1,23 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-// import Home from './pages/Home'
-import Layout from './components/Layout'
+import Layout from './Layout/Layout'
+import About from './Pages/About'
 import Home from './pages/Home'
-import Navbar from './components/Navbar'
 
 const MyRoutes = () => {
   return (
-    <BrowserRouter>
-   <Routes>
-    <Route path='/' element={<Layout/>}>
-     <Route path='/home' element={<Home/>}/>
+    <>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<Layout/>}>
+                    <Route index element={<Home/>}/>
+                   <Route path='/about' element={<About/>}/>
 
-    </Route>
-   
-   </Routes>
-   </BrowserRouter>
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    </>
   )
 }
 
-export default MyRoutes
+export default MyRoutes 

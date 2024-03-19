@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import MyRoutes from './MyRoutes'
 import Navbar from './components/Navbar'
 import './App.css'
 import MyRoutes from './MyRoutes'
@@ -9,8 +11,7 @@ function App() {
     //   <Navbar/>
     // </div>
     <>
-    {/* <Navbar/> */}
-    <MyRoutes/>
+    <Navbar/>
     </>
     
   )
