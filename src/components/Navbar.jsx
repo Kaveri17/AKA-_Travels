@@ -3,29 +3,36 @@ import './Navbar.css'
 const Navbar = () => {
   return (
     <>
-    <nav className="navbar flex items-center justify-between text-black p-4">
-      <div className="flex items-center">
-        <img src="/Image/logo.jpg" alt="Logo" className="w-12 h-12 rounded-full" />
-        <div className="ml-4">
-          <a href="#" className="font-bold text-lg"></a>
-        </div>
-      </div>
-      <div className="hidden md:flex items-center">
-        <ul className="flex space-x-4">
-          <li><a href="#" className="hover:text-gray-300">Home</a></li>
-          <li><a href="#" className="hover:text-gray-300">Popular</a></li>
-          <li><a href="#" className="hover:text-gray-300">Pages</a></li>
-          <li><a href="#" className="hover:text-gray-300">Gallery</a></li>
-          <li><a href="#" className="hover:text-gray-300">About</a></li>
-          <li><a href="#" className="hover:text-gray-300">Blogs</a></li>
-          <li><a href="#" className="hover:text-gray-300">Contact</a></li>
+
+    <div className="nav flex justify-between items-center w-4/5 mx-auto ">
+      <img src="/Image/logo2.png" alt=""className='logo w-28 h-28 rounded'/>
+      <div className="navbar">
+        <ul className='flex justify-between items-center space-x-9 text-2xl'>
+          <li><a href=""></a>Home</li>
+          <li><a href=""></a>Popular</li>
+          <li><a href=""></a>Pages</li>
+          <li><a href=""></a>Gallery</li>
+          <li><a href="">About</a></li>
+          <li><a href="">Blogs</a></li>
+          <li><a href="">contact</a></li>
         </ul>
-        <div className="ml-4">
-          <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md ">Sign In</button>
-        </div>
+
       </div>
-    </nav>
-      
+      <div className="nav-right flex space-x-2 ">
+        <div class="search-container flex items-center py-3 rounded-2xl relative">
+          <input type="text" placeholder="Search..."/>
+          <i class="fa-solid fa-magnifying-glass  right-2 text-xl absolute"></i>
+
+        </div>
+          <div>
+          <i class="fa-solid fa-user text-2xl py-3 "></i>
+          </div>
+
+      </div>
+    
+       
+        </div>
+        
     </>
   )
 }
