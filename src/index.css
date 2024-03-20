@@ -13,3 +13,17 @@
   min-height: 100vh; 
   background-color:#f9f9;
 } */
+
+.hdiv{
+  padding-top: 5.5rem;
+  /* padding: 4rem 0; */
+}
+
+/* .history-div :nth-child(even){
+  padding: 2rem 0;
+} */
+.history {
+  background-image:url("../public/Image/historybg.png") ;
+  background-position: center;
+  background-size:cover ;
+}
