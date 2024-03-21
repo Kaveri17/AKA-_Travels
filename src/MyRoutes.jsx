@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './Layout/Layout'
 import About from './pages/About'
 import Home from './pages/Home'
+import Test from './pages/Test'
+
 
 
 const MyRoutes = () => {
@@ -14,6 +16,8 @@ const MyRoutes = () => {
                     {/* <Route index element={<Home/>}/> */}
                     <Route index element={<Home/>}/>
                     <Route path='/about' element={<About/>}/> 
+                    <Route path='/test' element={<Test/>}/> 
+
                    
 
                 </Route>
