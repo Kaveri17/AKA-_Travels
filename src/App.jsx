@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import MyRoutes from './MyRoutes'
-import Navbar from './components/Navbar'
+// import Navbar from './components/Navbar'
 import './App.css'
 
 
@@ -11,7 +11,7 @@ function App() {
     //   <Navbar/>
     // </div>
     <>
-    <MyRoutes/>
+      <MyRoutes/>
    
     </>
     
