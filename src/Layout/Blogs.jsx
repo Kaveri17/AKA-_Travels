@@ -79,7 +79,7 @@ const Blogs = () => {
 
       <img src="\Image\pic2.webp" alt="" className='h-24 w-24 py-2 '/>
       <i class="bi bi-calendar pe-8">12 December 2023</i>
-      <h1>The messages for Greek tourism at ITB Berlin, one of the world’s largest travel exhibitions, give high hopes for 2024.</h1>
+      <h1>The messages for Greek tourism at ITB Berlin, one of the world's largest travel exhibitions, give high hopes for 2024.</h1>
 
 
 
