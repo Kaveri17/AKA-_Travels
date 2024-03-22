@@ -5,7 +5,7 @@ const About = () => {
     <>
     {/* Home Part */}
         <div className="back" style={{backgroundColor:'rgba(255, 244, 238,0.8)'}} >
-            <div className="container mx-auto w-10/12 flex flex-col md:flex-row justify-between items-center py-7" style={{height:'90vh',}}>
+            <div className="container mx-auto w-10/12 flex flex-col md:flex-row justify-between items-center py-7 " >
                 <div className="about-img w-6/12 relative">
                     <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2016/07/limestone-rock-phang-nga-1-Beautiful-limestone-rock-in-the-ocean.jpg" alt="" className='b1 w-11/12 ' style={{height:'60vh',borderRadius:'100px 0 100px 0'}}/>
                     <img src="https://heymondo.com/blog/wp-content/uploads/2021/03/shutterstock_757552030_compressed.jpg" alt="" className='b2 w-1/2 absolute -right-16 top-16 rounded-full border-white z-10' style={{borderWidth:'40px', height:'65%'}}/>
@@ -22,7 +22,7 @@ const About = () => {
                         </h2>
                     </div>
                 </div>
-                <div className="about-detail w-5/12 px-6">
+                <div className="about-detail md:w-5/12 md:px-6">
                     <h3 className='text-orange-500 text-lg font-bold'>Hello We Are AKA'S Travels</h3>
                     <h1 className='font-extrabold text-3xl py-3'>We Are The Best Travel Companion</h1>
                     <p className='pb-3 tracking-widest leading-relaxed'>
@@ -229,8 +229,8 @@ const About = () => {
                     </p>
                 </div>
                 
-                <div className="blogs-container flex flex-wrap justify-around">
-                    <div className="blogs w-2/6 p-2 border-solid border-orange-300 border-2 rounded-lg" >
+                <div className="blogs-container flex flex-col md:flex-row justify-between w-full">
+                    <div className="blogs p-4 border-solid border-orange-300 border-2 rounded-lg" >
                         <div className="blog-img">
                             <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image w-full"/> 
                         </div>
@@ -252,7 +252,7 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="blogs w-2/6 p-2 border-solid border-orange-300 border-2 rounded-lg">
+                    <div className="blogs p-4 border-solid border-orange-300 border-2 rounded-lg">
                         <div className="blog-img">
                             <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image " className='w-full'/> 
                         </div>
@@ -274,7 +274,7 @@ const About = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="blogs w-2/6 p-2 border-solid border-orange-300 border-2 rounded-lg">
+                    <div className="blogs p-4 border-solid border-orange-300 border-2 rounded-lg">
                         <div className="blog-img">
                             <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image" className='w-full'/> 
                         </div>
