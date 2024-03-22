@@ -28,3 +28,14 @@
   background-position: center;
   background-size:cover ;
 }
+.ram{
+background-image: url('/Image/back.jpg');
+background-size: cover;
+background-position: center;
+}
+.special{
+background-color:wheat;
+}
+.special:hover {
+  background-color:#f9f9f9;
+}
