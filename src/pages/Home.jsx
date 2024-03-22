@@ -1,5 +1,6 @@
 import React from 'react'
-// import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar'
+import "../Pages/Home.css"
 
 const Home = () => {
   return (
@@ -204,28 +205,71 @@ const Home = () => {
         </div>
 
         {/*  Breathtaking cities*/}
-<div className='flex items-center justify-between w-full'>
-        <div className="cities  flex-col ps-5 w-1/2">
-          <div className='w-full'>
-            <h5>Go & Discover</h5>
-            <h1>Breathtaking Cities</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, in.</p>
+        
+        <div className='flex pt-6'>
+        <div className="cities flex  flex-col px-4 ">
+          <div className="para">
+            <h6 className='text-xl'>Go & Discover</h6>
+            <h1 className='pt-2 font-bold text-6xl  '>Breathtaking Cities</h1>
+            <p className='pt-3  '>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, vero. Similique minus odit corrupti perspiciatis ab accusantium iste.</p>
           </div>
-          <div>
-          <div className='flex flex-row space-x-2'>
-            <img src="/Image/2.jpg" alt="" className='w-1/2 h-full'/>
-            <img src="/Image/2.jpg" alt="" className='w-1/2 h-full'/>
+          
+          <div className='flex flex-row h-80 space-x-2 pt-4 ' >
+            <img src="/Image/2.jpg" alt="" className='w-2/4 ' />
+            <img src="/Image/2.jpg" alt="" className='w-2/4' />
+          </div>
+          
+          
+            </div>       
+          
+        <div className=' '>
+          <img src="/Image/2.jpg" alt="" className='w-full h-full px-2' />
+          </div>
+
+          </div>
+
+          {/* special activities */}
+          
+          <div className='pt-5  ps-3 flex justify-betwern items-center space-x-1 pe-3' >
+
+            <div className="special border-2 border-solid border-slate-500 w-1/4 text-center py-6 h-64" >
+              <h1 className='text-4xl  '><i class="fa-solid fa-star"></i></h1>
+              <h1 className='pt-3 font-bold text-xl '>Special Activities</h1>
+              <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni reiciendis vero omnis nulla corporis.</p>
+            </div>
+       
+
+            <div className="special border-2 border-solid border-slate-500 w-1/4 text-center py-6 h-64 " >
+              <h1 className='text-4xl '><i class="fa-solid fa-person"></i>
+              </h1>
+              <h1 className='pt-3 font-bold text-xl '>Proper Guide</h1>
+              <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni reiciendis vero omnis nulla corporis.</p>
+            </div>
+            <div className="special border-2 border-solid border-slate-500 w-1/4 text-center py-6 h-64 " >
+              <h1 className='text-4xl '><i class="fa-solid fa-plane"></i></h1>
+              <h1 className='pt-3 font-bold text-xl '>Travel Arrangement</h1>
+              <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni reiciendis vero omnis nulla corporis.</p>
+            </div>
+            <div className="special border-2 border-solid border-slate-500 w-1/4 text-center py-6 h-64" >
+              <h1 className='text-4xl '><i class="fa-solid fa-location-dot"></i></h1>
+              <h1 className='pt-3 font-bold text-xl '>Location Manager </h1>
+              <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni reiciendis vero omnis nulla corporis.</p>
             </div>
             </div>
+
+            {/* Get Special Offer */}
+
+         <div className='ram flex justify-between items-center px-4 py-9 ' >
+          <div className="offer">
+            <h6>Go & Discover</h6>
+            <h1>Get Special Offer</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam dicta hic tenetur aut excepturi velit.</p>
+            <button>OPEN AN ACCOUNT</button>
           </div>
-      <div className=' flex flex-col w-1/2 pe-2 '>
-       <img src="/Image/2.jpg" alt="" className='h-full ' />
-       </div>
-          </div>
- 
-   
-        <div/>
-     
+          <h1>35% off</h1>
+         </div>
+         
+
 
     </>
     
