@@ -4,6 +4,9 @@ import Layout from './Layout/Layout'
 
 import About from "./pages/About"
  import Test from './pages/Test'    
+import About from './Pages/About'
+import Home from './Pages/Home'
+import Test from './Pages/Test'
 
 
 import Blogs from './Layout/Blogs'
