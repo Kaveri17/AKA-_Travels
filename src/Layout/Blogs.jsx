@@ -10,12 +10,10 @@ const Blogs = () => {
    <>
    <Header/>
    <div className='Blogs flex justify-between'>
-        <div className="blog-left w-4/6 ">
-
-        
+        <div className="blog-left w-4/6">
             <div className=' w-full '>
             <img src="\Image\pic3.webp" alt="" className='pic3'/>
-        <div className='blogscontainer border-2 border-slate-600  '>
+        <div className='blogscontainer border-2 border-slate-600 '>
                 <h1 className='font-extrabold leading-10 text-3xl font-serif'>The salty breeze that carries with it the unmistakable scent of the ocean, mingling with the faint whispers of palm trees swaying in the distance.</h1>
                 <p className='py-12 font-bold leading-10 text-1xl text-font-serif'>As the sun dances upon the water's surface, it paints the horizon with hues of orange and pink, a breathtaking display of nature's artistry. Footprints are left behind in the sand, a testament to the countless souls who have found solace and serenity in this seaside sanctuary. Here, time seems to slow, allowing for moments of pure tranquility and connection with the natural world.</p>
                <div className='m-3'>
@@ -86,18 +84,15 @@ const Blogs = () => {
       <img src="\Image\pic1.jpeg" alt="" className='h-24 w-24 py-2 '/>
       <i class="bi bi-calendar pe-8">12 December 2023</i>
       <h1>Thailand has positioned itself astutely to capture outbound travel demand from China with its bilateral visa waiver. </h1>
-
-
-
       </div>
 
       <div className='font-extrabold leading-10 text-3xl font-serif underline m-5'>CATEGORIES</div>
       <ul className='list-unstyled'>
        <div className=' border-2'>
-        <li className='py-2 bg-orange-400 my-1 rounded-lg hover:bg-violet-600'><a href="">ADVENTURE(5)</a></li>
-        <li className='py-2 bg-red-400 my-1 rounded-lg hover:bg-violet-600'><a href="">FOOD(3)</a></li>
-        <li className='py-2 bg-pink-400 my-1 rounded-lg hover:bg-violet-600'><a href="">SUMMER(2)</a></li>
-        <li className='py-2 bg-purple-400 my-1 rounded-lg hover:bg-violet-600'><a href="">TRAVEL(6)</a></li>
+        <li className='py-2 bg-white my-1 rounded-lg hover:bg-violet-600'><a href="">ADVENTURE(5)</a></li>
+        <li className='py-2 bg-white my-1 rounded-lg hover:bg-violet-600'><a href="">FOOD(3)</a></li>
+        <li className='py-2 bg-white my-1 rounded-lg hover:bg-violet-600'><a href="">SUMMER(2)</a></li>
+        <li className='py-2 bg-white my-1 rounded-lg hover:bg-violet-600'><a href="">TRAVEL(6)</a></li>
        </div>
       </ul>
       

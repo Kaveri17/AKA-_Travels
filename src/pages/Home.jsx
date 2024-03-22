@@ -110,6 +110,7 @@ const Home = () => {
             </div>
             </div>
             <button>View Details</button>
+            </div>
 
             
 
@@ -120,7 +121,7 @@ const Home = () => {
           
           </div>
 
-        </div>
+        
 
     </>
     
