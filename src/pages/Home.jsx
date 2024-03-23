@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import "../pages/Home.css"
+
 
 const Home = () => {
   return (
@@ -60,8 +60,8 @@ const Home = () => {
         {/*Adventure  */}
         <div className="Adventure ">
           <div className="div1 flex items-center justify-between pt-9 ps-6">
-            <div className="para rounded-lg ps-7 bg-slate-300 border-solid border-2 border-slate-900 -me-11 z-10 w-50 py-11 ">
-              <h1 className='text-xl'> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
+            <div className="para rounded-lg ps-7 bg-slate-300 border-solid border-2 border-slate-900 w-2/4 py-11 -me-32 z-20 ">
+              <h1 className='text-xl '> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
               <h1 className='font-bold text-2xl '>Cambodia In August: Island Hopping And Weather Tips</h1>
               <p className='pt-4'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam obcaecati rerum sint velit incidunt error laboriosam.</p>
               <div>
@@ -69,8 +69,8 @@ const Home = () => {
               </div>
             </div>   
             
-            <div >
-              <img src="https://wordpress.vecurosoft.com/travolo/wp-content/uploads/2023/12/7-2-705x540.jpg" alt="" className='w-50' />
+            <div className='w-2/4'>
+              <img src="https://wordpress.vecurosoft.com/travolo/wp-content/uploads/2023/12/7-2-705x540.jpg" alt=""/>
             </div>
           </div>
         </div>
@@ -235,7 +235,7 @@ const Home = () => {
             <div className="special border-2 border-solid border-slate-500 w-1/4 text-center py-6 h-64" >
               <h1 className='text-4xl  '><i class="fa-solid fa-star"></i></h1>
               <h1 className='pt-3 font-bold text-xl '>Special Activities</h1>
-              <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni reiciendis vero omnis nulla corporis.</p>
+              <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni reiciendis vero omnis</p>
             </div>
        
 
@@ -243,30 +243,30 @@ const Home = () => {
               <h1 className='text-4xl '><i class="fa-solid fa-person"></i>
               </h1>
               <h1 className='pt-3 font-bold text-xl '>Proper Guide</h1>
-              <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni reiciendis vero omnis nulla corporis.</p>
+              <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni reiciendis vero omnis .</p>
             </div>
             <div className="special border-2 border-solid border-slate-500 w-1/4 text-center py-6 h-64 " >
               <h1 className='text-4xl '><i class="fa-solid fa-plane"></i></h1>
               <h1 className='pt-3 font-bold text-xl '>Travel Arrangement</h1>
-              <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni reiciendis vero omnis nulla corporis.</p>
+              <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni </p>
             </div>
             <div className="special border-2 border-solid border-slate-500 w-1/4 text-center py-6 h-64" >
               <h1 className='text-4xl '><i class="fa-solid fa-location-dot"></i></h1>
               <h1 className='pt-3 font-bold text-xl '>Location Manager </h1>
-              <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni reiciendis vero omnis nulla corporis.</p>
+              <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni </p>
             </div>
             </div>
 
             {/* Get Special Offer */}
 
-         <div className='ram flex justify-between items-center px-4 py-9 ' >
+         <div className='ram flex justify-between items-center px-6 py-6 mt-9 bg-slate-500 ' >
           <div className="offer">
-            <h6>Go & Discover</h6>
-            <h1>Get Special Offer</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam dicta hic tenetur aut excepturi velit.</p>
-            <button>OPEN AN ACCOUNT</button>
+            <h6 className='text-xl'>Go & Discover</h6>
+            <h1 className='text-2xl font-bold pt-2'>Get Special Offer</h1>
+            <p className='pt-2 pb-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam dicta hic tenetur aut excepturi velit.</p>
+            <button className='text-bold py-2 '>OPEN AN ACCOUNT</button>
           </div>
-          <h1>35% off</h1>
+          <h1 className='text-8xl mr-4'>35% off</h1>
          </div>
          
 
