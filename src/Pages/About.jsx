@@ -5,7 +5,7 @@ const About = () => {
     <>
     {/* Home Part */}
         <div className="back" style={{backgroundColor:'rgba(255, 244, 238,0.8)'}} >
-            <div className="container mx-auto w-10/12 flex flex-col md:flex-row justify-between items-center py-7" style={{height:'90vh',}}>
+            <div className="container mx-auto w-10/12 flex flex-col md:flex-row justify-between items-center py-36 " >
                 <div className="about-img w-6/12 relative">
                     <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2016/07/limestone-rock-phang-nga-1-Beautiful-limestone-rock-in-the-ocean.jpg" alt="" className='b1 w-11/12 ' style={{height:'60vh',borderRadius:'100px 0 100px 0'}}/>
                     <img src="https://heymondo.com/blog/wp-content/uploads/2021/03/shutterstock_757552030_compressed.jpg" alt="" className='b2 w-1/2 absolute -right-16 top-16 rounded-full border-white z-10' style={{borderWidth:'40px', height:'65%'}}/>
@@ -22,7 +22,7 @@ const About = () => {
                         </h2>
                     </div>
                 </div>
-                <div className="about-detail w-5/12 px-6">
+                <div className="about-detail lg:w-5/12 px-6  ">
                     <h3 className='text-orange-500 text-lg font-bold'>Hello We Are AKA'S Travels</h3>
                     <h1 className='font-extrabold text-3xl py-3'>We Are The Best Travel Companion</h1>
                     <p className='pb-3 tracking-widest leading-relaxed'>
@@ -221,7 +221,7 @@ const About = () => {
         
         <div className="blogandnews">
             <div className="wrapper w-10/12 mx-auto py-20">
-                <div className="blog-title w-1/2 mx-auto pb-3">
+                <div className="blog-title w-1/2 mx-auto pb-9">
                     <h2 className='text-center text-orange-500 text-lg tracking-wider font-bold py-2'>Blog & News</h2>
                     <h1 className='text-center tracking-wide font-extrabold pb-4' style={{fontSize:'2.5rem'}}>Our Latest Blog</h1>
                     <p className='text-sm leading-relaxed tracking-wider text-zinc-500 text-center'>
@@ -229,70 +229,79 @@ const About = () => {
                     </p>
                 </div>
                 
-                <div className="blogs-container flex flex-wrap justify-around">
-                    <div className="blogs w-2/6 p-2 border-solid border-orange-300 border-2 rounded-lg" >
-                        <div className="blog-img">
-                            <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image w-full"/> 
+                <div className="blogs-container flex flex-col md:flex-row justify-between content-aroun w-full">
+                    <div className="blogs p-4 border-solid border-orange-300 border-2 rounded-lg" >
+                        <div className="blog-img rounded-lg">
+                            <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image " className='w-full rounded-lg'/> 
                         </div>
-                        <div className="blog-detail">
-                            <h2>
+                        <div className="blog-detail py-3">
+                            <h2 className='text-black text-2xl font-bold tracking-wide '>
                                 10 Sun Hats For Beach Days,Long
                             </h2>
-                            <p>
+                            <p className='text-zinc-400 text-sm font-medium pt-1'>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nostrum.
                             </p>
                         </div>
-                        <div className="blog-bottom ">
-                            <div className="blog-date w-1/5">
+                        <div className="blog-bottom flex w-full items-center">
+                            <div className="blog-date w-1/2 text-zinc-600  ">
                                 <i class="fa-solid fa-calendar-days"></i>
                                 <span className='blog-createddate'>12. December 2023</span>
                             </div>
-                            <div className="blog-btn w-3/5">
-                                <button className='bg-orange-500'>READ MORE</button>
+                            <div className="blog-btn w-1/2 ps-3">
+                                <button className='bg-orange-500   px-3 py-2 rounded-lg font-bold text-white'>
+                                    READ MORE 
+                                    <i class="bi bi-arrow-right"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div className="blogs w-2/6 p-2 border-solid border-orange-300 border-2 rounded-lg">
-                        <div className="blog-img">
-                            <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image " className='w-full'/> 
+                    <div className="blogs p-4 border-solid border-orange-300 border-2 rounded-lg " >
+                        <div className="blog-img rounded-lg">
+                            <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image " className='w-full rounded-lg'/> 
                         </div>
-                        <div className="blog-detail">
-                            <h2>
+                        <div className="blog-detail py-3">
+                            <h2 className='text-black text-2xl font-bold tracking-wide '>
                                 10 Sun Hats For Beach Days,Long
                             </h2>
-                            <p>
+                            <p className='text-zinc-400 text-sm font-medium pt-1'>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nostrum.
                             </p>
                         </div>
-                        <div className="blog-bottom flex">
-                            <div className="blog-date w-1/5">
+                        <div className="blog-bottom flex w-full items-center">
+                            <div className="blog-date w-1/2 text-zinc-600  ">
                                 <i class="fa-solid fa-calendar-days"></i>
                                 <span className='blog-createddate'>12. December 2023</span>
                             </div>
-                            <div className="blog-btn w-3/5">
-                                <button className='bg-orange-500'>READ MORE</button>
+                            <div className="blog-btn w-1/2 ps-3">
+                                <button className='bg-orange-500   px-3 py-2 rounded-lg font-bold text-white'>
+                                    READ MORE 
+                                    <i class="bi bi-arrow-right"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div className="blogs w-2/6 p-2 border-solid border-orange-300 border-2 rounded-lg">
-                        <div className="blog-img">
-                            <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image" className='w-full'/> 
+                    <div className="blogs p-4 border-solid border-orange-300 border-2 rounded-lg" >
+                        <div className="blog-img rounded-lg">
+                            <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image " className='w-full rounded-lg'/> 
                         </div>
-                        <div className="blog-detail">
-                            <h2>
+                        <div className="blog-detail py-3">
+                            <h2 className='text-black text-2xl font-bold tracking-wide '>
                                 10 Sun Hats For Beach Days,Long
                             </h2>
-                            <p>
+                            <p className='text-zinc-400 text-sm font-medium pt-1'>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nostrum.
                             </p>
                         </div>
-                        <div className="blog-bottom flex">
-                            <div className="blog-date w-1/5">
+                        <div className="blog-bottom flex w-full items-center">
+                            <div className="blog-date w-1/2 text-zinc-600  ">
                                 <i class="fa-solid fa-calendar-days"></i>
                                 <span className='blog-createddate'>12. December 2023</span>
                             </div>
-                            <div className="blog-btn w-3/5">
-                                <button className='bg-orange-500'>READ MORE</button>
+                            <div className="blog-btn w-1/2 ps-3">
+                                <button className='bg-orange-500   px-3 py-2 rounded-lg font-bold text-white'>
+                                    READ MORE 
+                                    <i class="bi bi-arrow-right"></i>
+                                </button>
                             </div>
                         </div>
                     </div>

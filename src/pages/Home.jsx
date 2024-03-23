@@ -264,7 +264,7 @@ const Home = () => {
             <h6 className='text-xl'>Go & Discover</h6>
             <h1 className='text-2xl font-bold pt-2'>Get Special Offer</h1>
             <p className='pt-2 pb-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam dicta hic tenetur aut excepturi velit.</p>
-            <button className='text-bold py-2 '>OPEN AN ACCOUNT</button>
+            <button className='border-2 border-solid border-slate-600 rounded-full py-2 hover:bg-slate-600'>OPEN AN ACCOUNT</button>
           </div>
           <h1 className='text-8xl mr-4'>35% off</h1>
          </div>
