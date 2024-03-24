@@ -39,11 +39,45 @@
     width: 32%;
   }
 }
+
 /* Activities.jsx */
 .activity-div img:hover{
   transform: scale(1.05);
   transition: 1s;
 }
+.activity-div{
+  height: 70vh;
+}
+.activity-div:hover .overlay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TripTypes.jsx */
+.triptypes-div img:hover{
+  transform:  scale(1.05);
+  transition: 1s;
+}
+.triptypes-div{
+  height: 70vh;
+}
+.overlay{
+  display: none;
+}
+.triptypes-div:hover .overlay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay button{
+  color:white;
+}
+.overlay button:hover{
+  color: rgb(18, 232, 232);
+  background-color: white;
+}
+
 
 
 
