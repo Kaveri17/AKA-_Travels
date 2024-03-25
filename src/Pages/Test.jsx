@@ -6,353 +6,173 @@ function Test() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4
+    slidesToShow: 3,
+    slidesToScroll: 3
   };
   return (
     <div className="slider-container">
       <Slider {...settings}>
         <div>
-        <div className='py-5 ps-6 flex item-center justify-between w-1/3'>
-            <div className='border-2 border-solid border-red-500 py-4 px-2 ps-3'>
-            <div className=''>
-              <img src="Image/1.jpg" alt="" />
-              <h1 className='text-xl font-bold px-5 py-2'>Fantastic Maldives Tour Package</h1>
-            </div>
-            <div className="flex col-span-4"> 
-          
+          <div className="border-2 border-orange-200 w-full my-8">
+      <img src="\Image\pic20.webp" alt="" className=' pic20 w-full  py-12 px-12'/>
+
       
-            <div className='ps-6 '>
-              <div className="div1 ">
-              <h><i class="fa-solid fa-location-dot text-xl"></i>  Everest,India,Maldives, Srilanka</h>
+      <h1 className='text-center font-3xl font-black'>EVEREST BASE CAMP:EXPLORE ITS BEAUTY</h1>
+      <div className=" flex flex-row justify-center my-8 ">
+      <div className="leftt">
+      <i class="bi bi-geo-alt">Solukhumbu</i>
+      <br/>
+      <i class="bi bi-clock">4Days-2Nights</i>
+      <br/>
+      </div>
+      <div className="righttt">
+      <div className="discountprice border-2  border-blue-500 bg-blue-200">
+                10% off
               </div>
-              <div className="div2 pt-2 ">
-              <h1><i class="fa-regular fa-clock text-xl"></i> 7 Days - 5 Nights</h1>
+              <div className="price">
+                $900
               </div>
-
-            </div>
-
-           <div className='ps-9'>  
-            <div className="discountprice">
-              <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500 px-2'>10% off</button>
-            </div>
-            <div className="price font-bold text-3xl">
-              $900
-            </div>
-            <div className='text-xl'>
-              <strike>$1000</strike>
-            </div>
-            </div>
-            </div>
-            <div className='text-center '>
-            <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500  item-center px-14 py-2 '>View Details</button>
-       </div>
-            </div>
-            </div>
+              <div>
+                <strike>$1000</strike>
+              </div>
+              </div>
+              </div>
+      <button className='w-1/2 hover:bg-orange-300 border-2'>VIEW DETAILS</button>
+          </div>
         </div>
         <div>
-        <div className='py-5 ps-6 flex item-center justify-between w-1/3'>
-            <div className='border-2 border-solid border-red-500 py-4 px-2 ps-3'>
-            <div className=''>
-              <img src="Image/1.jpg" alt="" />
-              <h1 className='text-xl font-bold px-5 py-2'>Fantastic Maldives Tour Package</h1>
-            </div>
-            <div className="flex col-span-4"> 
-          
-      
-            <div className='ps-6 '>
-              <div className="div1 ">
-              <h><i class="fa-solid fa-location-dot text-xl"></i>  Everest,India,Maldives, Srilanka</h>
+          <div className="border-2 border-orange-200 w-full my-8">
+      <img src="Image\pic21.jpeg" alt="" className='pic21 w-full  py-12 px-12'/>
+      <h1 className='text-center font-3xl font-black'>Dubai river:EXPLORE ITS BEAUTY</h1>
+      <div className=" flex flex-row justify-center my-8">
+      <div className="leftt">
+      <i class="bi bi-geo-alt">Dubai</i>
+      <br/>
+      <i class="bi bi-clock">5Days-2Nights</i>
+      <br/>
+      </div>
+      <div className="righttt">
+      <div className="discountprice border-2 border-blue-500 bg-blue-200">
+                10% off
               </div>
-              <div className="div2 pt-2 ">
-              <h1><i class="fa-regular fa-clock text-xl"></i> 7 Days - 5 Nights</h1>
+              <div className="price">
+                $900
               </div>
-
-            </div>
-
-           <div className='ps-9'>  
-            <div className="discountprice">
-              <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500 px-2'>10% off</button>
-            </div>
-            <div className="price font-bold text-3xl">
-              $900
-            </div>
-            <div className='text-xl'>
-              <strike>$1000</strike>
-            </div>
-            </div>
-            </div>
-            <div className='text-center '>
-            <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500  item-center px-14 py-2 '>View Details</button>
-       </div>
-            </div>
-            </div>
+              <div>
+                <strike>$1000</strike>
+              </div>
+              </div>
+              </div>
+      <button className='w-1/2 hover:bg-orange-300 border-2'>VIEW DETAILS</button>
+          </div>
         </div>
         <div>
-        <div className='py-5 ps-6 flex item-center justify-between w-1/3'>
-            <div className='border-2 border-solid border-red-500 py-4 px-2 ps-3'>
-            <div className=''>
-              <img src="Image/1.jpg" alt="" />
-              <h1 className='text-xl font-bold px-5 py-2'>Fantastic Maldives Tour Package</h1>
-            </div>
-            <div className="flex col-span-4"> 
-          
-      
-            <div className='ps-6 '>
-              <div className="div1 ">
-              <h><i class="fa-solid fa-location-dot text-xl"></i>  Everest,India,Maldives, Srilanka</h>
+          <div className="border-2 border-orange-200 w-full my-8">
+      <img src="Image\pic22.jpeg" alt="" className='pic22 w-full  py-12 px-12'/>
+      <h1 className='text-center font-3xl font-black'>Switzerland:EXPLORE ITS BEAUTY</h1>
+      <div className=" flex flex-row justify-center my-8">
+      <div className="leftt">
+      <i class="bi bi-geo-alt">Switzerland</i>
+      <br/>
+      <i class="bi bi-clock">6Days-4Nights</i>
+      <br/>
+      </div>
+      <div className="righttt">
+      <div className="discountprice border-2 border-blue-500 bg-blue-200">
+                10% off
               </div>
-              <div className="div2 pt-2 ">
-              <h1><i class="fa-regular fa-clock text-xl"></i> 7 Days - 5 Nights</h1>
+              <div className="price">
+                $900
               </div>
-
-            </div>
-
-           <div className='ps-9'>  
-            <div className="discountprice">
-              <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500 px-2'>10% off</button>
-            </div>
-            <div className="price font-bold text-3xl">
-              $900
-            </div>
-            <div className='text-xl'>
-              <strike>$1000</strike>
-            </div>
-            </div>
-            </div>
-            <div className='text-center '>
-            <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500  item-center px-14 py-2 '>View Details</button>
-       </div>
-            </div>
-            </div>
+              <div>
+                <strike>$1000</strike>
+              </div>
+              </div>
+              </div>
+      <button className='w-1/2 hover:bg-orange-300 border-2'>VIEW DETAILS</button>
+          </div>
         </div>
         <div>
-        <div className='py-5 ps-6 flex item-center justify-between w-1/3'>
-            <div className='border-2 border-solid border-red-500 py-4 px-2 ps-3'>
-            <div className=''>
-              <img src="Image/1.jpg" alt="" />
-              <h1 className='text-xl font-bold px-5 py-2'>Fantastic Maldives Tour Package</h1>
-            </div>
-            <div className="flex col-span-4"> 
-          
-      
-            <div className='ps-6 '>
-              <div className="div1 ">
-              <h><i class="fa-solid fa-location-dot text-xl"></i>  Everest,India,Maldives, Srilanka</h>
+          <div className="border-2 border-orange-200 w-full my-8">
+      <img src="Image\pic23.jpeg" alt="" className='pic23 w-full  py-12 px-12'/>
+      <h1 className='text-center font-3xl font-black'>FRANCE:EXPLORE ITS BEAUTY</h1>
+      <div className=" flex flex-row justify-center my-8">
+      <div className="leftt">
+      <i class="bi bi-geo-alt">France</i>
+      <br/>
+      <i class="bi bi-clock">3Days-2Nights</i>
+      <br/>
+      </div>
+      <div className="righttt">
+      <div className="discountprice border-2 border-blue-500 bg-blue-200">
+                10% off
               </div>
-              <div className="div2 pt-2 ">
-              <h1><i class="fa-regular fa-clock text-xl"></i> 7 Days - 5 Nights</h1>
+              <div className="price">
+                $900
               </div>
-
-            </div>
-
-           <div className='ps-9'>  
-            <div className="discountprice">
-              <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500 px-2'>10% off</button>
-            </div>
-            <div className="price font-bold text-3xl">
-              $900
-            </div>
-            <div className='text-xl'>
-              <strike>$1000</strike>
-            </div>
-            </div>
-            </div>
-            <div className='text-center '>
-            <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500  item-center px-14 py-2 '>View Details</button>
-       </div>
-            </div>
-            </div>
+              <div>
+                <strike>$1000</strike>
+              </div>
+              </div>
+              </div>
+      <button className='w-1/2 hover:bg-orange-300 border-2'>VIEW DETAILS</button>
+          </div>
         </div>
         <div>
-        <div className='py-5 ps-6 flex item-center justify-between w-1/3'>
-            <div className='border-2 border-solid border-red-500 py-4 px-2 ps-3'>
-            <div className=''>
-              <img src="Image/1.jpg" alt="" />
-              <h1 className='text-xl font-bold px-5 py-2'>Fantastic Maldives Tour Package</h1>
-            </div>
-            <div className="flex col-span-4"> 
-          
-      
-            <div className='ps-6 '>
-              <div className="div1 ">
-              <h><i class="fa-solid fa-location-dot text-xl"></i>  Everest,India,Maldives, Srilanka</h>
+          <div className="border-2 border-orange-200 w-full my-8">
+      <img src="Image\pic24.jpeg" alt="" className='pic24 w-full  py-12 px-12'/>
+      <h1 className='text-center font-3xl font-black'>RUSSIA:EXPLORE ITS BEAUTY</h1>
+      <div className=" flex flex-row justify-center my-8">
+      <div className="leftt">
+      <i class="bi bi-geo-alt">Russia</i>
+      <br/>
+      <i class="bi bi-clock">4Days-2Nights</i>
+      <br/>
+      </div>
+      <div className="righttt">
+      <div className="discountprice border-2 border-blue-500 bg-blue-200 hover:orange-300">
+                10% off
               </div>
-              <div className="div2 pt-2 ">
-              <h1><i class="fa-regular fa-clock text-xl"></i> 7 Days - 5 Nights</h1>
+              <div className="price">
+                $900
               </div>
-
-            </div>
-
-           <div className='ps-9'>  
-            <div className="discountprice">
-              <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500 px-2'>10% off</button>
-            </div>
-            <div className="price font-bold text-3xl">
-              $900
-            </div>
-            <div className='text-xl'>
-              <strike>$1000</strike>
-            </div>
-            </div>
-            </div>
-            <div className='text-center '>
-            <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500  item-center px-14 py-2 '>View Details</button>
-       </div>
-            </div>
-            </div>
+              <div>
+                <strike>$1000</strike>
+              </div>
+              </div>
+              </div>
+              
+      <button className='w-1/2 hover:bg-orange-300 border-2'>VIEW DETAILS</button>
+          </div>
         </div>
         <div>
-        <div className='py-5 ps-6 flex item-center justify-between w-1/3'>
-            <div className='border-2 border-solid border-red-500 py-4 px-2 ps-3'>
-            <div className=''>
-              <img src="Image/1.jpg" alt="" />
-              <h1 className='text-xl font-bold px-5 py-2'>Fantastic Maldives Tour Package</h1>
-            </div>
-            <div className="flex col-span-4"> 
-          
+          <div className="border-2 border-orange-200 w-full my-8">
+      <img src="Image\pic25.webp" alt="" className='pic25 w-full  py-12 px-12'/>
+      <h1 className='text-center font-3xl font-black'>GREECE:EXPLORE ITS BEAUTY</h1>
+      <div className=" flex flex-row justify-center my-8">
       
-            <div className='ps-6 '>
-              <div className="div1 ">
-              <h><i class="fa-solid fa-location-dot text-xl"></i>  Everest,India,Maldives, Srilanka</h>
-              </div>
-              <div className="div2 pt-2 ">
-              <h1><i class="fa-regular fa-clock text-xl"></i> 7 Days - 5 Nights</h1>
-              </div>
+      <div className="leftt">
+      <i class="bi bi-geo-alt">Greece</i>
+      <br/>
+      <i class="bi bi-clock">2Days-1Night</i>
+      <br/>
+      </div>
 
-            </div>
-
-           <div className='ps-9'>  
-            <div className="discountprice">
-              <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500 px-2'>10% off</button>
-            </div>
-            <div className="price font-bold text-3xl">
-              $900
-            </div>
-            <div className='text-xl'>
-              <strike>$1000</strike>
-            </div>
-            </div>
-            </div>
-            <div className='text-center '>
-            <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500  item-center px-14 py-2 '>View Details</button>
-       </div>
-            </div>
-            </div>
-        </div>
-        <div>
-        <div className='py-5 ps-6 flex item-center justify-between w-1/3'>
-            <div className='border-2 border-solid border-red-500 py-4 px-2 ps-3'>
-            <div className=''>
-              <img src="Image/1.jpg" alt="" />
-              <h1 className='text-xl font-bold px-5 py-2'>Fantastic Maldives Tour Package</h1>
-            </div>
-            <div className="flex col-span-4"> 
-          
+      <div className="righttt">
+      <div className="discountprice border-2 border-blue-500 bg-blue-200">
+                10% off
+              </div>
+              <div className="price">
+                $900
+              </div>
+              <div>
+                <strike>$1000</strike>
+              </div>
+              </div>
+              </div>
       
-            <div className='ps-6 '>
-              <div className="div1 ">
-              <h><i class="fa-solid fa-location-dot text-xl"></i>  Everest,India,Maldives, Srilanka</h>
-              </div>
-              <div className="div2 pt-2 ">
-              <h1><i class="fa-regular fa-clock text-xl"></i> 7 Days - 5 Nights</h1>
-              </div>
-
-            </div>
-
-           <div className='ps-9'>  
-            <div className="discountprice">
-              <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500 px-2'>10% off</button>
-            </div>
-            <div className="price font-bold text-3xl">
-              $900
-            </div>
-            <div className='text-xl'>
-              <strike>$1000</strike>
-            </div>
-            </div>
-            </div>
-            <div className='text-center '>
-            <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500  item-center px-14 py-2 '>View Details</button>
-       </div>
-            </div>
-            </div>
-        </div>
-        <div>
-        <div className='py-5 ps-6 flex item-center justify-between w-1/3'>
-            <div className='border-2 border-solid border-red-500 py-4 px-2 ps-3'>
-            <div className=''>
-              <img src="Image/1.jpg" alt="" />
-              <h1 className='text-xl font-bold px-5 py-2'>Fantastic Maldives Tour Package</h1>
-            </div>
-            <div className="flex col-span-4"> 
-          
-      
-            <div className='ps-6 '>
-              <div className="div1 ">
-              <h><i class="fa-solid fa-location-dot text-xl"></i>  Everest,India,Maldives, Srilanka</h>
-              </div>
-              <div className="div2 pt-2 ">
-              <h1><i class="fa-regular fa-clock text-xl"></i> 7 Days - 5 Nights</h1>
-              </div>
-
-            </div>
-
-           <div className='ps-9'>  
-            <div className="discountprice">
-              <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500 px-2'>10% off</button>
-            </div>
-            <div className="price font-bold text-3xl">
-              $900
-            </div>
-            <div className='text-xl'>
-              <strike>$1000</strike>
-            </div>
-            </div>
-            </div>
-            <div className='text-center '>
-            <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500  item-center px-14 py-2 '>View Details</button>
-       </div>
-            </div>
-            </div>
-        </div>
-        <div>
-        <div className='py-5 ps-6 flex item-center justify-between w-1/3'>
-            <div className='border-2 border-solid border-red-500 py-4 px-2 ps-3'>
-            <div className=''>
-              <img src="Image/1.jpg" alt="" />
-              <h1 className='text-xl font-bold px-5 py-2'>Fantastic Maldives Tour Package</h1>
-            </div>
-            <div className="flex col-span-4"> 
-          
-      
-            <div className='ps-6 '>
-              <div className="div1 ">
-              <h><i class="fa-solid fa-location-dot text-xl"></i>  Everest,India,Maldives, Srilanka</h>
-              </div>
-              <div className="div2 pt-2 ">
-              <h1><i class="fa-regular fa-clock text-xl"></i> 7 Days - 5 Nights</h1>
-              </div>
-
-            </div>
-
-           <div className='ps-9'>  
-            <div className="discountprice">
-              <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500 px-2'>10% off</button>
-            </div>
-            <div className="price font-bold text-3xl">
-              $900
-            </div>
-            <div className='text-xl'>
-              <strike>$1000</strike>
-            </div>
-            </div>
-            </div>
-            <div className='text-center '>
-            <button className='border-2 border-solid border-red-500 rounded-full hover:bg-slate-500  item-center px-14 py-2 '>View Details</button>
-       </div>
-            </div>
-            </div>
+      <button className='w-1/2 hover:bg-orange-300 border-2'>VIEW DETAILS</button>
+          </div>
         </div>
       </Slider>
     </div>

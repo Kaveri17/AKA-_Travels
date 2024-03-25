@@ -18,7 +18,8 @@ const MyRoutes = () => {
             <Routes>
                 <Route path='/' element={<Layout/>}>
                     <Route index element={<Home/>}/>
-                    <Route path='./test' element={<Test/>}/>            
+                    <Route path='/test' element={<Test/>}/>            
+
                     <Route path='about' element={<About/>}/>
                     <Route path='/blogs' element={<Blogs/>}/>
                     <Route path='/popular' element={<Popular/>}/>
