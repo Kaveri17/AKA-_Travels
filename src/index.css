@@ -50,6 +50,10 @@ background-size: cover;
 background-position: center;
 
 }
+.sita{
+  background-color: rgba(0, 0, 0,0.3);
+  
+}
 .special{
 background-color:wheat;
 }

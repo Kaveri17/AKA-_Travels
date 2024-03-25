@@ -18,6 +18,7 @@ import Blogs from './Layout/Blogs'
 import Popular from './Layout/Popular'
 
 import Activities from './Pages/Activities'
+import AutoPlay from './Pages/Autoplay'
 
 
 
@@ -37,6 +38,7 @@ const MyRoutes = () => {
                     <Route path='/blogs' element={<Blogs/>}/>
                     <Route path='/popular' element={<Popular/>}/>
                     <Route path='/activity' element={<Activities/>}/>
+                    
 
                 </Route>
             </Routes>
