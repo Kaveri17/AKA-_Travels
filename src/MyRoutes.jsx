@@ -8,6 +8,7 @@ import Blogs from './Layout/Blogs'
 import Popular from './Layout/Popular'
 import Activities from './Pages/Activities'
 import TripTypes from './Pages/TripTypes'
+import Cart from './Pages/Cart'
 
 
 
@@ -24,6 +25,7 @@ const MyRoutes = () => {
                     <Route path='/popular' element={<Popular/>}/>
                     <Route path='/activity' element={<Activities/>}/>
                     <Route path='/triptypes' element={<TripTypes/>}/>
+                    <Route path='/cart' element={<Cart/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
