@@ -1,6 +1,6 @@
 import React from 'react'
-import Slider from "react-slick";
-import Navbar from '../components/Navbar'
+import Slider from 'react-slick';
+// import Navbar from '../components/Navbar'
 
 
 const Home = () => {

@@ -1,6 +1,7 @@
-.Blogs{
+ .Blogs{
     background-color: rgba(255, 244, 238,0.8) ;
-}
+
+} 
 .pic3{
     /* height: 100%; */
     width: 100%;
@@ -13,10 +14,10 @@
     padding: 50px 0;
     /* margin: 25px; */
 }
-.blogscontainer:hover{
+/* .blogscontainer:hover{
     cursor: pointer;
     color: gray;
-}
+} */
 .pic2{
     /* height: 100%; */
     width: 100%;
@@ -79,8 +80,37 @@ button:hover{
 } */
 .icons:hover{
     color: orchid;
+    border-radius: 50%;
 }
-
+.categories{
+    background-color: white;
+}
+.readmore{
+    border: 1px solid black;
+}
+.readmore:hover{
+    background-color: orange;
+    color: white;
+}
+.hi{
+    color: blue;
+}
+.hiiiii{
+    color: rgb(37, 150, 190)
+}
+.hiiii{
+    color: rgb(168, 105, 50);
+}
+.hiii{
+    color: red;
+    border: 1px solid black;
+    border-radius: 50%;
+    
+}
+/* .fab{
+    border: 1px solid black;
+    border-radius: 50%;
+} */
    
 
 
