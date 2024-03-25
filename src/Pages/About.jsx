@@ -3,6 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <>
+    {/* Home Part */}
         <div className="back" style={{backgroundColor:'rgba(255, 244, 238,0.8)'}} >
             <div className="container mx-auto w-10/12 flex flex-col md:flex-row justify-between items-center py-7" style={{height:'90vh',}}>
                 <div className="about-img w-6/12 relative">
@@ -14,7 +15,7 @@ const About = () => {
                             Of Experience
                         </h2>
                     </div>
-                    <div className="clients bg-cyan-400 text-white absolute right-12 -bottom-12 px-16 py-12 rounded-3xl border-white"  style={{borderWidth:'15px'}}>
+                    <div className="clients bg-teal-300 text-white absolute right-12 -bottom-12 px-16 py-12 rounded-3xl border-white"  style={{borderWidth:'15px'}}>
                         <h1 className='font-black text-3xl'> 20,000+</h1> 
                         <h2 className='font-bold text-lg'>
                             Happy Clients
@@ -38,6 +39,9 @@ const About = () => {
                 </div> 
             </div>
         </div>
+    
+    {/* History */}
+
         <div className="history">
             <div className="wrapper w-10/12 mx-auto py-20">
                 <h2 className='text-center text-orange-500 text-lg tracking-wider font-bold py-3'>Road Map</h2>
@@ -45,33 +49,33 @@ const About = () => {
 
                 <div className="history-containers py-9">
                         <div className="history-div flex flex-wrap justify-between">
-                            <div className="w-full lg:w-5/12 ">
-                                <div className=" me-7 p-9 rounded-xl bg-white shadow-2xl">
-                                    <div className="titles flex justify-between">
+                            <div className="w-full lg:w-5/12 pt-20 lg:pt-0">
+                                <div className=" me-7 px-9 py-8 rounded-xl bg-white shadow-2xl">
+                                    <div className="titles flex justify-between items-center">
                                         <h2 className='text-2xl font-bold tracking-wider'>
                                             Paris
                                         </h2>
-                                        <div className='flex '> 
+                                        <div className='flex items-center '> 
                                             <i className="bi bi-dot text-orange-400 text-6xl"></i>
-                                            <h2 className='text-zinc-400 text-5xl font-bold '> 2024</h2>
+                                            <h2 className='text-zinc-400 text-2xl font-bold '> 2024</h2>
                                         </div>
                                     </div>
                                     <div className="para">
-                                        <p className='leading-relaxed tracking-widest text-zinc-500'>
+                                        <p className='leading-relaxed tracking-widest text-zinc-500 text-sm'>
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nesciunt commodi perspiciatis id tenetur earum ducimus officia consequatur corporis dolorem.
                                         </p>
                                     </div>
                                 </div>
                             </div>
                             <div className="w-full lg:w-5/12 hdiv">
-                                <div className=" me-7 p-9 rounded-xl bg-white shadow-2xl">
-                                    <div className="titles flex justify-between">
+                                <div className=" me-7 px-9 py-8 rounded-xl bg-white shadow-2xl">
+                                    <div className="titles flex justify-between items-center">
                                         <h2 className='text-2xl font-bold tracking-wider'>
                                             Magnificant
                                         </h2>
-                                        <div className='flex '> 
+                                        <div className='flex items-center'> 
                                             <i className="bi bi-dot text-orange-400 text-6xl"></i>
-                                            <h2 className='text-zinc-400 text-5xl font-bold '> 2023</h2>
+                                            <h2 className='text-zinc-400 text-2xl font-bold '> 2023</h2>
                                         </div>
                                     </div>
                                     <div className="para">
@@ -81,15 +85,15 @@ const About = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="w-full lg:w-5/12  ">
-                                <div className=" me-7 p-9 bg-white rounded-xl shadow-2xl">
-                                    <div className="titles flex justify-between">
+                            <div className="w-full lg:w-5/12 pt-20 lg:pt-0">
+                                <div className=" me-7 px-9 py-8 bg-white rounded-xl shadow-2xl">
+                                    <div className="titles flex justify-between items-center">
                                         <h2 className='text-2xl font-bold tracking-wider'>
                                             Maldives
                                         </h2>
-                                        <div className='flex '> 
+                                        <div className='flex items-center'> 
                                             <i className="bi bi-dot text-orange-400 text-6xl"></i>
-                                            <h2 className='text-zinc-400 text-5xl font-bold '> 2022</h2>
+                                            <h2 className='text-zinc-400 text-2xl font-bold '> 2022</h2>
                                         </div>
                                     </div>
                                     <div className="para">
@@ -100,14 +104,14 @@ const About = () => {
                                 </div>
                             </div>
                             <div className="w-full lg:w-5/12 hdiv">
-                                <div className=" me-7 p-9 bg-white rounded-xl shadow-2xl">
-                                    <div className="titles flex justify-between">
+                                <div className=" me-7 px-9 py-8 bg-white rounded-xl shadow-2xl">
+                                    <div className="titles flex justify-between items-center">
                                         <h2 className='text-2xl font-bold tracking-wider'>
                                             Greece
                                         </h2>
-                                        <div className='flex '> 
+                                        <div className='flex items-center'> 
                                             <i className="bi bi-dot text-orange-400 text-6xl"></i>
-                                            <h2 className='text-zinc-400 text-5xl font-bold '> 2021</h2>
+                                            <h2 className='text-zinc-400 text-2xl font-bold '> 2021</h2>
                                         </div>
                                     </div>
                                     <div className="para">
@@ -117,15 +121,15 @@ const About = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="w-full lg:w-5/12">
-                                <div className="me-7 p-9 bg-white rounded-xl shadow-2xl">
-                                    <div className="titles flex justify-between">
+                            <div className="w-full lg:w-5/12 pt-20 lg:pt-0">
+                                <div className="me-7 px-9 py-8 bg-white rounded-xl shadow-2xl">
+                                    <div className="titles flex justify-between items-center">
                                         <h2 className='text-2xl font-bold tracking-wider'>
                                             Pokhara
                                         </h2>
-                                        <div className='flex '> 
+                                        <div className='flex items-center'> 
                                             <i className="bi bi-dot text-orange-400 text-6xl"></i>
-                                            <h2 className='text-zinc-400 text-5xl font-bold '> 2019</h2>
+                                            <h2 className='text-zinc-400 text-2xl font-bold '> 2019</h2>
                                         </div>
                                     </div>
                                     <div className="para">
@@ -136,14 +140,14 @@ const About = () => {
                                 </div>
                             </div>
                             <div className="w-full lg:w-5/12 hdiv">
-                                <div className=" me-7 p-9 bg-white rounded-xl shadow-2xl">
+                                <div className=" me-7 px-9 py-8 bg-white rounded-xl shadow-2xl">
                                     <div className="titles flex justify-between items-center">
                                         <h2 className='text-2xl font-bold tracking-wider'>
                                             Established
                                         </h2>
-                                        <div className='flex  '> 
+                                        <div className='flex items-center'> 
                                             <i className="bi bi-dot text-orange-400 text-6xl"></i>
-                                            <h2 className='text-zinc-400 text-5xl font-bold '> 2018</h2>
+                                            <h2 className='text-zinc-400 text-2xl font-bold '> 2018</h2>
                                         </div>
                                     </div>
                                     <div className="para">
@@ -152,9 +156,146 @@ const About = () => {
                                         </p>
                                     </div>
                                 </div>
-                            </div>
-                            
+                            </div>                            
                         </div>                            
+                </div>
+            </div>
+        </div>
+    
+    {/* Client Reviews */}
+
+        <div className="client-testimonials h-screen">
+            <div className='h-screen' style={{backgroundColor:"rgba(45, 30, 16, 0.4)"}}>
+                <div className="wrapper w-10/12 mx-auto py-28">
+                    <h2 className='text-teal-300 text-lg tracking-wide font-bold py-1'>Our Best Review's</h2>
+                    <h1 className='tracking-wide font-extrabold pb-12 text-slate-100' style={{fontSize:'2.5rem'}}>70,000 Happy Clients <br/> Around The World</h1>
+
+                    <div className="clients flex flex-col md:flex-row w-full md:w-8/12">
+                        <div className="client-container w-full md:w-1/2 px-2">
+                            <div className="client-review bg-white rounded-xl px-6 py-7 text-center">
+                                <p className='text-gray-600 tracking-widest leading-relaxed text-sm'>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum possimus est voluptatum, 
+                                </p>
+                                <div className="rating pt-1">
+                                    <i class="bi bi-star-fill text-teal-400"></i>
+                                    <i class="bi bi-star-fill text-teal-400"></i>
+                                    <i class="bi bi-star-fill text-teal-400"></i>
+                                    <i class="bi bi-star-fill text-teal-400"></i>
+                                    <i class="bi bi-star-fill text-teal-400"></i>
+                                </div>
+                            </div>
+                            <div className="client-details flex flex-col items-center py-3">
+                                <h2 className='text-white font-bold text-2xl tracking-wide leading-relaxed'>Alina Adhikari</h2>
+                                <h5 className='text-white tracking-wide leading-relaxed pb-3'>Lorem, ipsum.</h5>
+                                <img src="https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg" alt="client-picture"  className='rounded-full w-20'/>
+
+                            </div>
+                        </div>
+                        <div className="client-container w-full md:w-1/2 px-2">
+                            <div className="client-review bg-white rounded-xl px-6 py-7 text-center">
+                                <p className='text-gray-600 tracking-widest leading-relaxed text-sm'>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum possimus est voluptatum, 
+                                </p>
+                                <div className="rating pt-1">
+                                    <i class="bi bi-star-fill text-teal-400"></i>
+                                    <i class="bi bi-star-fill text-teal-400"></i>
+                                    <i class="bi bi-star-fill text-teal-400"></i>
+                                    <i class="bi bi-star-fill text-teal-400"></i>
+                                    <i class="bi bi-star-fill text-teal-400"></i>
+                                </div>
+                            </div>
+                            <div className="client-details flex flex-col items-center py-3">
+                                <h2 className='text-white font-bold text-2xl tracking-wide leading-relaxed'>Anusha Chalise</h2>
+                                <h5 className='text-white tracking-wide leading-relaxed pb-3'>Lorem, ipsum.</h5>
+                                <img src="https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/IQ-Accountants-managing-partner-Kyelie-Baxter-Slack-customer-story.jpg" alt="client-picture"  className='rounded-full w-20'/>
+
+                            </div>
+                        </div>                                                 
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    {/* Blogs & News*/}
+        
+        <div className="blogandnews">
+            <div className="wrapper w-10/12 mx-auto py-20">
+                <div className="blog-title w-1/2 mx-auto pb-3">
+                    <h2 className='text-center text-orange-500 text-lg tracking-wider font-bold py-2'>Blog & News</h2>
+                    <h1 className='text-center tracking-wide font-extrabold pb-4' style={{fontSize:'2.5rem'}}>Our Latest Blog</h1>
+                    <p className='text-sm leading-relaxed tracking-wider text-zinc-500 text-center'>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam expedita hic sint officia. Praesentium illum libero perspiciatis. Similique, provident omnis?
+                    </p>
+                </div>
+                
+                <div className="blogs-container flex flex-wrap justify-around">
+                    <div className="blogs w-2/6 p-2 border-solid border-orange-300 border-2 rounded-lg" >
+                        <div className="blog-img">
+                            <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image w-full"/> 
+                        </div>
+                        <div className="blog-detail">
+                            <h2>
+                                10 Sun Hats For Beach Days,Long
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nostrum.
+                            </p>
+                        </div>
+                        <div className="blog-bottom ">
+                            <div className="blog-date w-1/5">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <span className='blog-createddate'>12. December 2023</span>
+                            </div>
+                            <div className="blog-btn w-3/5">
+                                <button className='bg-orange-500'>READ MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="blogs w-2/6 p-2 border-solid border-orange-300 border-2 rounded-lg">
+                        <div className="blog-img">
+                            <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image " className='w-full'/> 
+                        </div>
+                        <div className="blog-detail">
+                            <h2>
+                                10 Sun Hats For Beach Days,Long
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nostrum.
+                            </p>
+                        </div>
+                        <div className="blog-bottom flex">
+                            <div className="blog-date w-1/5">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <span className='blog-createddate'>12. December 2023</span>
+                            </div>
+                            <div className="blog-btn w-3/5">
+                                <button className='bg-orange-500'>READ MORE</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="blogs w-2/6 p-2 border-solid border-orange-300 border-2 rounded-lg">
+                        <div className="blog-img">
+                            <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image" className='w-full'/> 
+                        </div>
+                        <div className="blog-detail">
+                            <h2>
+                                10 Sun Hats For Beach Days,Long
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nostrum.
+                            </p>
+                        </div>
+                        <div className="blog-bottom flex">
+                            <div className="blog-date w-1/5">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <span className='blog-createddate'>12. December 2023</span>
+                            </div>
+                            <div className="blog-btn w-3/5">
+                                <button className='bg-orange-500'>READ MORE</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
