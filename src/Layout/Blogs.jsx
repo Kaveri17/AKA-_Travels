@@ -10,8 +10,10 @@ const Blogs = () => {
    <>
    <Header/>
    <div className='Blogs flex justify-between'>
-        <div className="blog-left w-4/6">
+        <div className="blog-left w-4/6 ps-12">
+        <a href="/blogdetail">
             <div className=' w-full my-11'>
+            
             <img src="\Image\picc.webp" alt="" className='pic3 h-96'/>
         <div className='blogscontainer border-2 border-slate-600 '>
                 <h1 className='font-extrabold leading-10 text-3xl font-serif'>The salty breeze that carries with it the unmistakable scent of the ocean, mingling with the faint whispers of palm trees swaying in the distance.</h1>
@@ -23,9 +25,13 @@ const Blogs = () => {
                </div>
                 <button className='font-bold readmore'>READ MORE <i class="bi bi-arrow-right text-lg"></i></button>
             </div>
+            
             </div>
+            </a>
+            
+           
 
-        
+        <a href="/blogdetaill">
         <div className='w-full my-11'>
             <img src="\Image\piccc.jpeg" alt="" className='pic2 h-96'/>
             <div className='blogscontainer border-2 border-slate-600'>
@@ -39,7 +45,12 @@ const Blogs = () => {
                 </div>
                 <button className='font-bold readmore'>READ MORE <i class="bi bi-arrow-right"></i></button>
             </div>
+            
             </div>
+            </a>
+            <a href="/blogdetailll">
+
+
            <div className='w-full my-11'>
             <img src="\Image\picccc.jpeg" alt="" className='pic1 h-96'/>
             <div className='blogscontainer border-2 border-slate-600'>
@@ -54,6 +65,7 @@ const Blogs = () => {
                 <button className='font-bold readmore'><span></span>READ MORE  <i class="bi bi-arrow-right"></i></button>
             </div>        
         </div>
+        </a>
         </div>
             
                     
