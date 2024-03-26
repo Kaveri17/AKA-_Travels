@@ -45,31 +45,30 @@ const Home = () => {
        
         </div>
 
-        <div className="div mt-5" >
-          <div className="div1 text-center">
-            <h5>Travel Essentials Tips</h5>
-            <h2 className='text-4xl font-bold'>Awesome Tips That Makes <br className='item-center' /> Your Travel Beautiful</h2>
-          </div>
-          <div className='flex items-center justify-between '>
-          <div className="img1 h-45 w-full pt-8" >
-            <img src="https://wordpress.vecurosoft.com/travolo/wp-content/uploads/2023/12/6-2-705x540.jpg" alt=""  className='pl-6 '/>
-          </div>
+{/* Tips awesome */}
+<div className='px-8 pt-16'>
+  <div className="Tips text-center">
+    <h6 className='text-xl pb-2'> Travel Essential Tips</h6>
+    <h1 className='text-4xl font-bold pb-6'>Awesome Tips That Makes Your Travel Beautiful</h1>
+  </div>
+  <div className='flex  '>
+  <img src="/Image/pic4.jpeg" alt="" className=' w-2/3' />
+  
+  <div className="sun ">
+    <div className='border-2 border-solid border-b-gray-400 mt-28 px-6 py-6 -ms-16' style={{backgroundColor:"wheat"}}>
+  <h1 className='text-xl pb-2'> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
+  <h1 className='text-2xl font-bold pb-3' >10 Sun Hats For Beach Days, Long Hikes, And </h1>
+  <p className='pb-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum corrupti officia quisquam ipsam, tempore deleniti?</p>
+  <button className='border-2 border-solid border-red-300  hover:bg-slate-500 px-2 py-2 '>Read More</button>
+  </div>
+  </div>
+  </div>
 
-          <div className="div3 -ms-96 bg-slate-300 border-solid border-2 border-black pt-16 pb-16 ps-6 rounded-lg">
-          <h1 className='font-bold text-xl'> <i class="fa-solid fa-calendar-days"></i>12.December 2023</h1>
-            <h1 className='font-bold text-2xl '> 10 Sun Hats For Beach Days, Long Hikes, And </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cumque eaque quam! Lorem ipsum dolor sit amet consectetur.</p>
-        <div>
-            <button className='mt-6  border-solid border-2 border-red-500 rounded-md py-3 px-3 text-xl hover:bg-slate-500'>Read More</button>
-          </div>
-          </div>
-         
-        </div>
-        </div>
+</div>
 
 
         {/*Adventure  */}
-        <div className="Adventure ">
+        {/* <div className="Adventure ">
           <div className="div1 flex items-center justify-between pt-9 ps-6">
             <div className="para rounded-lg ps-7 bg-slate-300 border-solid border-2 border-slate-900 w-2/4 py-11 -me-32 z-20 ">
               <h1 className='text-xl '> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
@@ -83,6 +82,19 @@ const Home = () => {
             <div className='w-2/4'>
               <img src="https://wordpress.vecurosoft.com/travolo/wp-content/uploads/2023/12/7-2-705x540.jpg" alt=""/>
             </div>
+          </div>
+        </div> */}
+        <div className="adventure ps-5 pe-4 ">
+          <div className='flex  '>
+            <div className="para border-2 border-solid border-b-gray-600 ps-3 py-5  w-2/3 my-28 -me-16 z-10 " style={{backgroundColor:"wheat"}}>
+          <h1 className='text-xl pb-2'> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
+          <h1 className='text-3xl font-bold pb-3'>Pokhara In August:Waiting for vistors</h1>
+          <p className='pb-3'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, laboriosam?</p>
+          <button className=' border-2 border-solid border-red-300 hover:bg-slate-400 px-3 py-2 '>Read More</button>
+          </div>
+          <div className=' pt-5'>
+            <img src="/Image/pic10.jpeg" alt="" className='' />
+          </div>
           </div>
         </div>
 
@@ -227,14 +239,14 @@ const Home = () => {
           
           <div className='flex flex-row h-80 space-x-2 pt-4 ' >
             <img src="/Image/2.jpg" alt="" className='w-2/4 ' />
-            <img src="/Image/2.jpg" alt="" className='w-2/4' />
+            <img src="/Image/pic2.webp" alt="" className='w-2/4' />
           </div>
           
           
             </div>       
           
         <div className=' '>
-          <img src="/Image/2.jpg" alt="" className='w-full h-full px-2' />
+          <img src="/Image/pic14.jpeg" alt="" className='w-full h-full px-2' />
           </div>
 
           </div>
