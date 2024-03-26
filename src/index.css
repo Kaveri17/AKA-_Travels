@@ -41,13 +41,17 @@
 }
 
 /* Activities.jsx */
-.activity-div img:hover{
+.activity-div:hover img{
   transform: scale(1.05);
-  transition: 1s;
+}
+.activity-div img{
+  transition: transform 1s;
 }
 .activity-div{
   height: 70vh;
+  overflow: hidden;
 }
+
 .activity-div:hover .overlay{
   display: flex;
   align-items: center;
@@ -84,6 +88,10 @@ background-image: url('/Image/back.jpg');
 background-size: cover;
 background-position: center;
 
+}
+.sita{
+  background-color: rgba(0, 0, 0,0.3);
+  
 }
 .special{
 background-color:wheat;
