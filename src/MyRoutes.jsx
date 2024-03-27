@@ -12,7 +12,8 @@ import TripTypes from './Pages/TripTypes'
 import BlogDetail from './Layout/BlogDetail'
 import BlogDetaill from './Layout/BlogDetaill'
 import BlogDetailll from './Layout/BlogDetailll'
-import Cart from './Pages/Cart'
+import Contact from './Layout/Contact'
+// import Cart from './Pages/Cart'
 
 
 
@@ -30,12 +31,14 @@ const MyRoutes = () => {
                     <Route path='/blogdetail' element={<BlogDetail/>}/>
                     <Route path='/blogdetaill' element={<BlogDetaill/>}/>
                     <Route path='/blogdetailll' element={<BlogDetailll/>}/>
+                    <Route path='/contact' element={<Contact/>}/>
+                    
                     
                     <Route path='/popular' element={<Popular/>}/>
                     <Route path='/activity' element={<Activities/>}/>
                     
                     <Route path='/triptypes' element={<TripTypes/>}/>
-                    <Route path='/cart' element={<Cart/>}/>
+                    {/* <Route path='/cart' element={<Cart/>}/> */}
                 </Route>
             </Routes>
         </BrowserRouter>

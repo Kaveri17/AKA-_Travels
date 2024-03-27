@@ -113,6 +113,17 @@ button:hover{
 } */
 
 
+.add{
+    border: 1px solid none;
+    border-radius: 50%;
+    background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+    padding: 2px;
+}
+.btn{
+    border: 1px solid none;
+    /* text-align: center; */
+}
+
 
 
    
