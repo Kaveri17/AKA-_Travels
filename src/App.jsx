@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import MyRoutes from './MyRoutes'
-// import Navbar from './components/Navbar'
+// import Navbar from './Components/Navbar'
 import './App.css'
 import { generateDate } from './utils/calendar'
 

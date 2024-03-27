@@ -103,14 +103,29 @@ button:hover{
 }
 .hiii{
     color: red;
-    border: 1px solid black;
-    border-radius: 50%;
+    /* border: 1px solid black;
+    border-radius: 50%; */
     
 }
 /* .fab{
     border: 1px solid black;
     border-radius: 50%;
 } */
+
+
+.add{
+    border: 1px solid none;
+    border-radius: 50%;
+    background-color: rgb(234 88 12 / var(--tw-bg-opacity));
+    padding: 2px;
+}
+.btn{
+    border: 1px solid none;
+    /* text-align: center; */
+}
+
+
+
    
 
 

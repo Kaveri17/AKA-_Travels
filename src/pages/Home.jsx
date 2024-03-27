@@ -45,50 +45,46 @@ const Home = () => {
        
         </div>
 
-        <div className="div mt-5" >
-          <div className="div1 text-center">
-            <h5>Travel Essentials Tips</h5>
-            <h2 className='text-4xl font-bold'>Awesome Tips That Makes <br className='item-center' /> Your Travel Beautiful</h2>
-          </div>
-          <div className='flex items-center justify-between '>
-          <div className="img1 h-45 w-full pt-8" >
-            <img src="https://wordpress.vecurosoft.com/travolo/wp-content/uploads/2023/12/6-2-705x540.jpg" alt=""  className='pl-6 '/>
-          </div>
+{/* Tips awesome */}
+<div className='px-8 pt-16'>
+  <div className="Tips text-center">
+    <h6 className='text-xl pb-2'> Travel Essential Tips</h6>
+    <h1 className='text-4xl font-bold pb-6'>Awesome Tips That Makes Your Travel Beautiful</h1>
+  </div>
+  <div className='flex  '>
+  <img src="/Image/pic4.jpeg" alt="" className=' w-2/3' />
+  
+  <div className="sun ">
+    <div className='border-2 border-solid border-b-gray-400 mt-28 px-6 py-6 -ms-16' style={{backgroundColor:"wheat"}}>
+  <h1 className='text-xl pb-2'> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
+  <h1 className='text-2xl font-bold pb-3' >10 Sun Hats For Beach Days, Long Hikes, And </h1>
+  <p className='pb-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum corrupti officia quisquam ipsam, tempore deleniti?</p>
+  <button className='border-2 border-solid border-red-300  hover:bg-slate-500 px-2 py-2 '>Read More</button>
+  </div>
+  </div>
+  </div>
 
-          <div className="div3 -ms-96 bg-slate-300 border-solid border-2 border-black pt-16 pb-16 ps-6 rounded-lg">
-          <h1 className='font-bold text-xl'> <i class="fa-solid fa-calendar-days"></i>12.December 2023</h1>
-            <h1 className='font-bold text-2xl '> 10 Sun Hats For Beach Days, Long Hikes, And </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta cumque eaque quam! Lorem ipsum dolor sit amet consectetur.</p>
-        <div>
-            <button className='mt-6  border-solid border-2 border-red-500 rounded-md py-3 px-3 text-xl hover:bg-slate-500'>Read More</button>
-          </div>
-          </div>
-         
-        </div>
-        </div>
+</div>
 
 
         {/*Adventure  */}
-        <div className="Adventure ">
-          <div className="div1 flex items-center justify-between pt-9 ps-6">
-            <div className="para rounded-lg ps-7 bg-slate-300 border-solid border-2 border-slate-900 w-2/4 py-11 -me-32 z-20 ">
-              <h1 className='text-xl '> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
-              <h1 className='font-bold text-2xl '>Cambodia In August: Island Hopping And Weather Tips</h1>
-              <p className='pt-4'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam obcaecati rerum sint velit incidunt error laboriosam.</p>
-              <div>
-                <button className='mt-6  border-solid border-2 border-red-500 rounded-md py-3 px-3 text-xl hover:bg-slate-500'> Read More </button>
-              </div>
-            </div>   
-            
-            <div className='w-2/4'>
-              <img src="https://wordpress.vecurosoft.com/travolo/wp-content/uploads/2023/12/7-2-705x540.jpg" alt=""/>
-            </div>
+        <div className="adventure ps-5 pe-4 ">
+          <div className='flex  '>
+            <div className="para border-2 border-solid border-b-gray-600 ps-3 py-5  w-2/3 my-28 -me-16 z-10 " style={{backgroundColor:"wheat"}}>
+          <h1 className='text-xl pb-2'> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
+          <h1 className='text-3xl font-bold pb-3'>Pokhara In August:Waiting for vistors</h1>
+          <p className='pb-3'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, laboriosam?</p>
+          <button className=' border-2 border-solid border-red-300 hover:bg-slate-400 px-3 py-2 '>Read More</button>
+          </div>
+          <div className=' pt-5'>
+            <img src="/Image/pic10.jpeg" alt="" className='' />
+          </div>
           </div>
         </div>
 
         {/* Awesome tour */}
 
-        <div className="aewsome " style={{backgroundColor:"#f9f9f9"}}>
+        {/* <div className="aewsome " style={{backgroundColor:"#f9f9f9"}}>
           
           
             <div className="para text-center pt-7">
@@ -213,11 +209,97 @@ const Home = () => {
        <div className='text-center'>
       <button className='mt-3 border-solid border-2 border-red-500 rounded-md py-2 px-9 hover:bg-slate-500'>View Details</button>
         </div>
+        </div> */}
+        <div className='ram'  style={{backgroundColor:"lightblue"}}></div>
+        <div className="blog text-center py-5 ">
+          <h4 >Awesome Tours</h4>
+          <h1 className='pt-2 text-4xl font-bold'>Best Holiday Package</h1>
+          <p className='py-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nam modi sequi! Laudantium, quia illum.</p>
         </div>
+        <div className="flex">
+          <div className="div ps-3 border-2 border-solid w-1/3">
+            <div className=''>
+              <img src="/Image/pic8.jpeg" alt="" className=' h-80 w-full' />
+              <h1>Experience the Incredible Nepal With AkA Travels</h1>
+              </div>
+              <div className="div flex   ">
+                <div className=''>
+                <h1>Manakama kurintar, Nepal</h1>
+                <h1>6 Days-2 Nights</h1>
+                </div>
+                <div className="discount border-l-2">
+                  
+                <button>83% off</button> 
+                  <div className="flex">
 
+                    <div className="price">
+                      $ 250
+                    </div>
+                    <div className="div">
+                      <strike>$1500</strike>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+          <div className="div ps-3 border-2 border-solid w-1/3">
+          <div className=''>
+            <img src="/Image/pic8.jpeg" alt="" className=' h-80 w-full' />
+            <h1>Experience the Incredible Nepal With AkA Travels</h1>
+            </div>
+            <div className="div flex   ">
+              <div className=''>
+              <h1>Manakama kurintar, Nepal</h1>
+              <h1>6 Days-2 Nights</h1>
+              </div>
+              <div className="discount border-l-2">
+                
+               <button>83% off</button> 
+                <div className="flex">
+
+                  <div className="price">
+                    $ 250
+                  </div>
+                  <div className="div">
+                    <strike>$1500</strike>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div className="div ps-3 border-2 border-solid w-1/3">
+          <div className=''>
+            <img src="/Image/pic8.jpeg" alt="" className=' h-80 w-full' />
+            <h1>Experience the Incredible Nepal With AkA Travels</h1>
+            </div>
+            <div className="div flex   ">
+              <div className=''>
+              <h1>Manakama kurintar, Nepal</h1>
+              <h1>6 Days-2 Nights</h1>
+              </div>
+              <div className="discount border-l-2">
+                
+               <button>83% off</button> 
+                <div className="flex">
+
+                  <div className="price">
+                    $ 250
+                  </div>
+                  <div className="div">
+                    <strike>$1500</strike>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
         {/*  Breathtaking cities*/}
         
-        <div className='flex pt-6'>
+        <div className='flex pt-9'>
         <div className="cities flex  flex-col px-4 ">
           <div className="para">
             <h6 className='text-xl'>Go & Discover</h6>
@@ -227,14 +309,14 @@ const Home = () => {
           
           <div className='flex flex-row h-80 space-x-2 pt-4 ' >
             <img src="/Image/2.jpg" alt="" className='w-2/4 ' />
-            <img src="/Image/2.jpg" alt="" className='w-2/4' />
+            <img src="/Image/pic2.webp" alt="" className='w-2/4' />
           </div>
           
           
             </div>       
           
-        <div className=' '>
-          <img src="/Image/2.jpg" alt="" className='w-full h-full px-2' />
+        <div className='pe-3 '>
+          <img src="/Image/pic14.jpeg" alt="" className='w-full h-full px-2' />
           </div>
 
           </div>
@@ -285,15 +367,15 @@ const Home = () => {
 
          {/* breathtaking cities */}
          
-<div className="breathtaking pt-5 ps-4 text-center  ">
+<div className="breathtaking pt-5 ps-4  text-center  ">
 
   <h6 className='text-xl '>Go & Discover</h6>
   <h1 className='text-4xl pt-2 pb-3 font-bold'>Breathtaking Cities</h1>
   <p className='pb-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, dict Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat dignissimos corporis ullam?</p>
  
 </div>
-<div className=" w-full ps-4 pe-4 ">
-<div className="slider-container">
+<div className=" w-full ps-4 pe-4 pb-16 ">
+<div className="slider-container w-full">
       <Slider {...settings}>
         <div>
         <div className='w-3/4 relative'>
@@ -341,12 +423,31 @@ const Home = () => {
     </div>
 
 </div>
+
+{/* Clients words */}
+<div className='flex py-5 px-5 ' style={{backgroundColor:"wheat"}}>
+  <div className="discover">
+    <h6 className='text-xl'>Go & Discover</h6>
+    <h1 className='text-4xl font-bold py-4'>What's Our Client's Words</h1>
+    <p className='pb-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sint aliquid cumque deleniti nostrum iure eum neque optio labore aperiam!</p>
+    <button className='px-4 py-2 border-2 border-solid border-red-300'>View More</button>
+  </div>
+  
+  <div className="ceo  ">
+   
+    <img src="/Image/women.jpg" alt="" className=' gita border-2 border-solid  px-2 py-2 w-10/12 m-auto border-b-gray-400' />
+    <h1 className='text-center pt-3 text-xl font-bold'>Alax Markun</h1>
+        <h4 className='text-center'>CEO, Vecuro</h4>
+  </div> 
+
+</div>
 {/* Our blog */}
       
-      <div className="blog text-center pt-28 pb-4">
+      <div className="blog text-center pt-24 pb-4">
         <h6 className='text-xl pb-3'> Blog & News</h6>
         <h1 className='text-5xl font-bold pb-4'>Our Latest Blog</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo mollitia tempora reiciendis quisquam id consequuntur. Tempora, fugiat beatae?</p>
+       
       </div>
 <div className="div1 flex pt-4 px-4 space-x-2">
 <div className='border-2 border-solid border-b-gray-300 ps-2 pt-2 pe-2 w-3/4'>
