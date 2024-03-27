@@ -12,7 +12,7 @@ import BlogDetail from './Layout/BlogDetail'
 import BlogDetaill from './Layout/BlogDetaill'
 import BlogDetailll from './Layout/BlogDetailll'
 import Contact from './Layout/Contact'
-// import Cart from './Pages/Cart'
+import Cart from './Pages/Cart'
 import Home from './Pages/Home'
 
 const MyRoutes = () => {
@@ -36,7 +36,7 @@ const MyRoutes = () => {
                     <Route path='/activity' element={<Activities/>}/>
                     
                     <Route path='/triptypes' element={<TripTypes/>}/>
-                    {/* <Route path='/cart' element={<Cart/>}/> */}
+                    <Route path='/cart' element={<Cart/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>

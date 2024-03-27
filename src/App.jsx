@@ -13,9 +13,7 @@ function App() {
     //   <Navbar/>
     // </div>
     <>
-      <MyRoutes/>
-
-   
+      <MyRoutes/>   
     </>
     
   )
