@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Layout from './Layout/Layout'
 import About from './Pages/About'
-// import Home from './Pages/Home'
 import Test from './Pages/Test'
 import Blogs from './Layout/Blogs'
 import Popular from './Layout/Popular'
@@ -10,8 +9,7 @@ import Activities from './Pages/Activities'
 import AutoPlay from './Pages/Autoplay'
 import TripTypes from './Pages/TripTypes'
 import Cart from './Pages/Cart'
-
-
+import Home from './Pages/Home'
 
 const MyRoutes = () => {
   return (

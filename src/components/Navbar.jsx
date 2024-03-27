@@ -19,13 +19,13 @@ const Navbar = () => {
 
       </div>
       <div className="nav-right flex space-x-2 ">
-        <div class="search-container flex items-center py-3 rounded-2xl relative">
+        <div className="search-container flex items-center py-3 rounded-2xl relative">
           <input type="text" placeholder="Search..."/>
-          <i class="fa-solid fa-magnifying-glass  right-2 text-xl absolute"></i>
+          <i className="fa-solid fa-magnifying-glass  right-2 text-xl absolute"></i>
 
         </div>
           <div>
-          <i class="fa-solid fa-user text-2xl py-3 "></i>
+          <i className="fa-solid fa-user text-2xl py-3 "></i>
           </div>
 
       </div>
