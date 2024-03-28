@@ -49,7 +49,7 @@
 }
 .activity-div{
   height: 70vh;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .activity-div:hover .overlay{

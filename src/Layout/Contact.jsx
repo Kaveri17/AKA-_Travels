@@ -5,7 +5,9 @@ import './Blogs.css'
 const Contact = () => {
   return (
     <>
-   
+   <div >
+   <div className='w-5/6 mx-auto'>
+    
     <div className='bg-orange-600 rounded-lg my-20 py-20 '>
         <div className='flex flex-wrap'>
             <div className='w-1/3 h-32  px-8 '>
@@ -74,38 +76,39 @@ const Contact = () => {
 
 
 
-    <div className='bg-gray-200 w-full h-full'>
+    <div className='bg-gray-200  h-full w-full'>
         <div className='text-orange-600 text-xl text-center py-12'>Contact Us</div>
         <div className='text-4xl text-center font-black '>GET IN TOUCH</div>
        <p className='text-center text-slate-500 py-2'> Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget<br/>consectetur sed, convgallis at tellus. Vestibulum ac diam sit.</p>
 
-        <div className='w-full m-3 flex py-3'>
+        <div className='m-3 flex py-3'>
             <input type="text" placeholder='Enter Your First Name' className='w-1/2 bg-white me-3 py-3 px-5' />
             {/* <input type="text" placeholder='Enter Your First Name' className="w-96 h-12 border border-gray-300 rounded-md px-4"/> */}
-            <input type="text" placeholder='Enter Your Last Name' className='w-1/2 bg-white px-5 ' />
+            <input type="text" placeholder='Enter Your Last Name' className='w-1/2 bg-white px-5' />
 
         
 
         </div>
        
 
-        <div className='w-full m-3 flex py-3'>
+        <div className='m-3 flex py-3'>
         <input type="email" placeholder='Your Email'  className='w-1/2 bg-white py-3 me-3 px-5' />
         <input type="number" placeholder='Phone Number' className='w-1/2 bg-white px-5 ' />
         </div>
 
-        <div className='w-full m-3 py-3'>
-        <input type="text" placeholder='Write Your Comment' className=' bg-white  h-32 w-full px-5' />
+        <div className='m-3 py-3'>
+        <input type="text" placeholder='Write Your Comment' className=' bg-white  h-32 w-full px-5'/>
         </div>
 
         {/* <button className='btn '>SEND MESSAGE</button> */}
-        <button className='btn  bg-orange-600 border-1 text-white font-bold justify-center items-center'>SEND MESSAGE</button>
+        <button className='block mx-auto  bg-orange-600 border-1 text-white font-bold  '>SEND MESSAGE</button>
+        </div>
+        </div>
+        </div>
 
 
 
 
-    </div>
-    
 
 
     </>

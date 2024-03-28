@@ -32,8 +32,8 @@ const Footer = () => {
         <div className='flex space-x-3 pt-3 text-xl'>
         <h1 ><i className="fa-brands fa-facebook rounded-full px-2 py-2 border-2 border-solid hover:bg-slate-300  text-white"></i></h1>
         <h1><i className="fa-brands fa-twitter  rounded-full px-2 py-2 border-2 border-solid hover:bg-slate-300  text-white"></i></h1>
-        <h1><i class="fa-brands fa-instagram  rounded-full px-2 py-2 border-2 border-solid hover:bg-slate-300  text-white"></i></h1>
-        <h1 ><i class="fa-brands fa-linkedin  rounded-full px-2 py-2 border-2 border-solid hover:bg-slate-300  text-white"></i></h1>
+        <h1><i className="fa-brands fa-instagram  rounded-full px-2 py-2 border-2 border-solid hover:bg-slate-300  text-white"></i></h1>
+        <h1 ><i className="fa-brands fa-linkedin  rounded-full px-2 py-2 border-2 border-solid hover:bg-slate-300  text-white"></i></h1>
         </div>
       </div>
       <div className='pt-24 w-1/4 ps-24 list-none'>

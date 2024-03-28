@@ -5,6 +5,7 @@ const BlogDetaill = () => {
     <>
 
     <div className='Blogs flex justify-between'>
+    <div className='mx-auto flex w-5/6'>
     <div className="blog-left w-4/6 ps-12">
     <div className=' w-full my-11'>
             <img src="\Image\piccc.jpeg" alt="" className='pic3 h-96'/>
@@ -34,19 +35,24 @@ const BlogDetaill = () => {
                  </div>
                  <p className='py-8'>Vestibulum ac diam sit amet for a quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus.</p>        
                 </div>
+                <h1 className='font-extrabold leading-10 text-3xl font-serif ' >LEAVE A COMMENT</h1>
+                    
+                    <p className='py-12 leading-10 text-1xl text-font-mono'>Your email address will not be published. Required fields are marked *</p>
+                     
+                     <div className='h-92 my-2'> <input type="text" placeholder='Write Your Comment' className='bg-gray-200'/></div>
+  
+                      <div className='my-2'><input type="text" placeholder='Enter Your Name' className='bg-gray-200' /></div>
+                      <input type="text" placeholder='Enter Your E-mail' className='bg-gray-200'/>
+  
+                     <div className='py-3'> Save my name, email, and website in this browser for the next time I comment.</div>
+                     {/* <button className='border border-gray-500 p-1'/>POST COMMENT */}
+                     <button className='font-bold readmore bg-gray-600 text-white px-3 py-2 rounded-md'>POST COMMENT</button>
+  
+  
 
 
                 
-                    <h1 className='font-extrabold leading-10 text-3xl font-serif ' >LEAVE A COMMENT</h1>
-                    <p className='py-12 leading-10 text-1xl text-font-mono'>Your email address will not be published. Required fields are marked *</p>
-                   <div className='w-full h-92'> <input type="text" placeholder='Write Your Comment' className='bg-gray-200'/></div>
-
-                    <input type="text" placeholder='Enter Your Name' className='bg-gray-200 ' />
-                    <input type="text" placeholder='Enter Your E-mail' className='bg-gray-200'/>
-
-                   <div className='py-3'> Save my name, email, and website in this browser for the next time I comment.</div>
-                   {/* <button className='border border-gray-500 p-1'/>POST COMMENT */}
-                   <button className='font-bold readmore bg-gray-600 text-white px-3 py-2 rounded-md'>POST COMMENT</button>
+                    
 
 
       </div>
@@ -108,6 +114,7 @@ const BlogDetaill = () => {
       <a href="" className='icons text-4xl'><i class=" hiiii bi bi-instagram pe-8 "></i></a>
       <a href="" className='icons text-4xl'><i class="hiiiii bi bi-twitter pe-8 "></i></a>
       <a href="" className='icons text-4xl'><i class=" hiii bi bi-pinterest pe-8 "></i></a>
+      </div>
       </div>
       </div>
 
