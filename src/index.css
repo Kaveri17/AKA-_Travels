@@ -49,7 +49,7 @@
 }
 .activity-div{
   height: 70vh;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .activity-div:hover .overlay{
@@ -98,4 +98,11 @@ background-color:wheat;
 }
 .special:hover {
   background-color:#f9f9f9;
+}
+.div1 span{
+  color: aqua;
+}
+.gita:hover{
+  transform: scale(1.05);
+  transition: 0.8s;
 }
