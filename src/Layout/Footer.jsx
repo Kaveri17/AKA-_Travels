@@ -4,12 +4,15 @@ const Footer = () => {
   return (
     <>
     <footer>
-      <div className='px-16 pt-16 -my-20 relative'>
-     <div className="Ready flex border-2 border-solid border-bg-slate-600 ps-8 pt-16 " style={{backgroundColor:"wheat"}}>
+      <div className='px-16  pt-16 -my-20 relative'>
+        <div className='w-5/6 mx-auto'>
+        <div className="Ready flex border-2 border-solid border-bg-slate-600 ps-8 pt-16 " style={{backgroundColor:"wheat"}}>
       <div>
         <h1 className='text-2xl font-bold pb-3'>Ready to get Started? </h1>
         <p className='text-xl pb-9' > It only takes a few minutes to register you FREE AKA Travel account.</p>
+        <div className='pb-5'>
         <button className='font-bold border-2 border-solid px-2 py-2 bg-slate-200 hover:bg-fuchsia-200'>OPEN AN ACCOUNT</button>
+        </div>
         </div>
         <div className='ps-80 ' >
         <img src="/Image/clip-removebg-preview.png" alt="" className='w-2/4' />
@@ -17,11 +20,15 @@ const Footer = () => {
      </div>
      </div>
 
+        </div>
+    
+
      {/* Aka trvael */}
-     <div className="foot flex pt-24 text-white  pb-16 ps-4 " style={{backgroundColor:"black"}}>
+     <div className="foot pt-24 text-white  pb-16 ps-4  " style={{backgroundColor:"black"}}>
+      <div className='w-5/6 mx-auto flex'>
       <div className="div w-1/4  ">
         <img src="/Image/logo2.png" alt="" className='w-1/2' />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos praesentium nihil hic perferendis dolor aperiam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos praesentium nihil hic perferendis dolor praesentium nihil hic perferendis dolor aperiam!</p>
         <div className='flex space-x-3 pt-3 text-xl'>
         <h1 ><i className="fa-brands fa-facebook rounded-full px-2 py-2 border-2 border-solid hover:bg-slate-300  text-white"></i></h1>
         <h1><i className="fa-brands fa-twitter  rounded-full px-2 py-2 border-2 border-solid hover:bg-slate-300  text-white"></i></h1>
@@ -65,10 +72,15 @@ const Footer = () => {
       </div>
       </div>
      </div>
+
+      </div>
+      
      <div className="div1 border-t-2 border-b-gray-300 " style={{backgroundColor:"black"}}>
+      <div className='mx-auto w-5/6'>
       <div className="text-white px-3 py-3 text-center font-bold">
         <h1 >Copyright @ 2024 AKA <span className=''>Travels.</span> All Rights Reserved By <span>Teams</span> </h1>
       </div>
+     </div>
      </div>
       
     </footer>

@@ -13,6 +13,7 @@ import BlogDetail from './Layout/BlogDetail'
 import BlogDetaill from './Layout/BlogDetaill'
 import BlogDetailll from './Layout/BlogDetailll'
 import Contact from './Layout/Contact'
+import Gallery from './Pages/Gallery'
 // import Cart from './Pages/Cart'
 
 
@@ -32,6 +33,8 @@ const MyRoutes = () => {
                     <Route path='/blogdetaill' element={<BlogDetaill/>}/>
                     <Route path='/blogdetailll' element={<BlogDetailll/>}/>
                     <Route path='/contact' element={<Contact/>}/>
+                    <Route path='/autoplay' element={<AutoPlay/>}/>
+                    <Route path='/gallery' element={<Gallery/>}/>
                     
                     
                     <Route path='/popular' element={<Popular/>}/>
