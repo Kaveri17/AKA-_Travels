@@ -14,6 +14,7 @@ import BlogDetailll from './Layout/BlogDetailll'
 import Contact from './Layout/Contact'
 import Cart from './Pages/Cart'
 import Home from './Pages/Home'
+import Modal from './components/Modal'
 
 const MyRoutes = () => {
   return (
@@ -33,6 +34,7 @@ const MyRoutes = () => {
                     <Route path='/activity' element={<Activities/>}/>
                     <Route path='/triptypes' element={<TripTypes/>}/>
                     <Route path='/cart' element={<Cart/>}/>
+                    <Route path='/modal' element={<Modal/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>

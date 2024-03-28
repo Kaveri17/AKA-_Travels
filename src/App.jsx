@@ -6,7 +6,6 @@ import { generateDate } from './utils/calendar'
 
 
 function App() {
-  console.log(generateDate());
   return (
     
     // <div className='container'>

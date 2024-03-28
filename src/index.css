@@ -48,10 +48,9 @@
   transition: transform 1s;
 }
 .activity-div{
-  height: 70vh;
+  height: 57vh;
   overflow: hidden !important;
 }
-
 .activity-div:hover .overlay{
   display: flex;
   align-items: center;
@@ -59,20 +58,25 @@
 }
 
 /* TripTypes.jsx */
-.triptypes-div img:hover{
-  transform:  scale(1.05);
-  transition: 1s;
+.triptypes-div:hover img{
+  transform: scale(1.05);
+}
+.triptypes-div img{
+  transition: transform 1s;
 }
 .triptypes-div{
-  height: 70vh;
-}
-.overlay{
-  display: none;
+  height: 57vh;
+  overflow: hidden !important;
 }
 .triptypes-div:hover .overlay{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* TripTypes & Activities */
+.overlay{
+  display: none;
 }
 .overlay button{
   color:white;
@@ -81,6 +85,8 @@
   color: rgb(18, 232, 232);
   background-color: white;
 }
+
+
 
 /* Home.jsx */
 .ram{
