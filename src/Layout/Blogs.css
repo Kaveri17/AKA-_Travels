@@ -33,6 +33,7 @@
 .pic1:hover{
     transform: scale(1.05);
     box-shadow: 0px 0px 20px gray;
+    overflow: hidden;
 }
 .pic3:hover{
     transform: scale(1.05);
@@ -119,10 +120,7 @@ button:hover{
     background-color: rgb(234 88 12 / var(--tw-bg-opacity));
     padding: 2px;
 }
-.btn{
-    border: 1px solid none;
-    /* text-align: center; */
-}
+
 
 
 
