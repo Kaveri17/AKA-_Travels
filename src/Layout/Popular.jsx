@@ -16,6 +16,7 @@ const Popular = () => {
 
     <>
    <Header/>
+   <div className='w-5/6 mx-auto'>
    <div className='text-4xl text-center font-black m-14'>INTERNATIONAL PACKAGES</div>
 
    <div className='flex flex-wrap pe-8 w-full'>
@@ -112,7 +113,7 @@ const Popular = () => {
    <div className="slider-container">
       <Slider {...settings}>
         <div>
-          <div className="border-2 border-orange-200 w-full">
+          <div className="border-2  w-full overflow-hidden">
       <img src="\Image\pic20.webp" alt="" className=' pic20 h-72'/>
 
       
@@ -136,11 +137,11 @@ const Popular = () => {
               </div>
               </div>
               </div>
-      <button className='w-1/2 hover:bg-orange-300 border-2'>VIEW DETAILS</button>
+      <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
           </div>
         </div>
         <div>
-          <div className="border-2 border-orange-200 w-full">
+          <div className="border-2 w-full overflow-hidden">
       <img src="Image\pic21.jpeg" alt="" className='pic21 h-72'/>
       <h1 className='text-center font-3xl font-black'>Dubai river:EXPLORE ITS BEAUTY</h1>
       <div className=" flex flex-row justify-center my-8">
@@ -162,11 +163,11 @@ const Popular = () => {
               </div>
               </div>
               </div>
-      <button className='w-1/2 hover:bg-orange-300 border-2'>VIEW DETAILS</button>
+      <button className=' w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
           </div>
         </div>
         <div>
-          <div className="border-2 border-orange-200 w-full">
+          <div className="border-2  w-full overflow-hidden">
       <img src="Image\pic22.jpeg" alt="" className='pic22 h-72'/>
       <h1 className='text-center font-3xl font-black'>Switzerland:EXPLORE ITS BEAUTY</h1>
       <div className=" flex flex-row justify-center my-8">
@@ -188,11 +189,11 @@ const Popular = () => {
               </div>
               </div>
               </div>
-      <button className='w-1/2 hover:bg-orange-300 border-2'>VIEW DETAILS</button>
+      <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
           </div>
         </div>
         <div>
-          <div className="border-2 border-orange-200 w-full">
+          <div className="border-2  w-full overflow-hidden">
       <img src="Image\pic23.jpeg" alt="" className='pic23 h-72'/>
       <h1 className='text-center font-3xl font-black'>FRANCE:EXPLORE ITS BEAUTY</h1>
       <div className=" flex flex-row justify-center my-8">
@@ -214,11 +215,11 @@ const Popular = () => {
               </div>
               </div>
               </div>
-      <button className='w-1/2 hover:bg-orange-300 border-2'>VIEW DETAILS</button>
+      <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
           </div>
         </div>
         <div>
-          <div className="border-2 border-orange-200 w-full ">
+          <div className="border-2 w-full overflow-hidden ">
       <img src="Image\pic24.jpeg" alt="" className='pic24 h-72'/>
       <h1 className='text-center font-3xl font-black'>RUSSIA:EXPLORE ITS BEAUTY</h1>
       <div className=" flex flex-row justify-center my-8">
@@ -241,11 +242,11 @@ const Popular = () => {
               </div>
               </div>
               
-      <button className='w-1/2 hover:bg-orange-300 border-2'>VIEW DETAILS</button>
+      <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
           </div>
         </div>
         <div>
-          <div className="border-2 border-orange-200 w-full">
+          <div className="border-2 w-full overflow-hidden">
       <img src="Image\pic25.webp" alt="" className='pic25 w-full h-72'/>
       <h1 className='text-center font-3xl font-black'>GREECE:EXPLORE ITS BEAUTY</h1>
       <div className=" flex flex-row justify-center my-8">
@@ -270,15 +271,17 @@ const Popular = () => {
               </div>
               </div>
      
-      <button className='w-1/2 hover:bg-orange-300 border-2'>VIEW DETAILS</button>
+      <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
      
       
           </div>
         </div>
       </Slider>
     </div>
+    </div>
     
    </div>
+   
 
 
 

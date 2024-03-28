@@ -10,9 +10,11 @@ const Blogs = () => {
    <>
    <Header/>
    <div className='Blogs flex justify-between'>
+
+    <div className="w-5/6 mx-auto flex">
         <div className="blog-left w-4/6 ps-12">
         <a href="/blogdetail">
-            <div className=' w-full my-11'>
+            <div className=' w-full my-12 overflow-hidden'>
             
             <img src="\Image\picc.webp" alt="" className='pic3 h-96'/>
         <div className='blogscontainer border-2 border-slate-600 '>
@@ -32,7 +34,7 @@ const Blogs = () => {
            
 
         <a href="/blogdetaill">
-        <div className='w-full my-11'>
+        <div className='w-full my-11  overflow-hidden'>
             <img src="\Image\piccc.jpeg" alt="" className='pic2 h-96'/>
             <div className='blogscontainer border-2 border-slate-600'>
                 <h1 className='font-extrabold leading-10 text-3xl font-serif'>ootprints are left behind in the sand, a testament to the countless souls who have found solace and serenity in this seaside sanctuary.</h1>
@@ -51,7 +53,7 @@ const Blogs = () => {
             <a href="/blogdetailll">
 
 
-           <div className='w-full my-11'>
+           <div className='w-full my-11  overflow-hidden'>
             <img src="\Image\picccc.jpeg" alt="" className='pic1 h-96'/>
             <div className='blogscontainer border-2 border-slate-600'>
                 <h1 className='font-extrabold leading-10 text-3xl font-serif'>ootprints are left behind in the sand, a testament to the countless souls who have found solace and serenity in this seaside sanctuary.</h1>
@@ -84,19 +86,19 @@ const Blogs = () => {
       <div className='m-5 flex flex-col justify-center w-full'>
       <img src="\Image\picc.webp" alt="" className='h-24 w-24 py-2 '/>
       <i class="bi bi-calendar pe-8">12 December 2023</i>
-      <h1>The number of tourists visiting the Maldives in 2023 surpassed the government's estimated figure by 78,537. </h1>
+      <h1>The number of tourists visiting the Maldives in 2023 surpassed the government's estimated figure by 78. </h1>
 
 
 
       <img src="\Image\piccc.jpeg" alt="" className='h-24 w-24 py-2 '/>
       <i class="bi bi-calendar pe-8">12 December 2023</i>
-      <h1>The messages for Greek tourism at ITB Berlin, one of the world's largest travel exhibitions, give high hopes for 2024.</h1>
+      <h1>The messages for Greek tourism at ITB Berlin, one of world's largest travel exhibitions, give high.</h1>
 
 
 
       <img src="\Image\picccc.jpeg" alt="" className='h-24 w-24 py-2 '/>
       <i class="bi bi-calendar pe-8">12 December 2023</i>
-      <h1>Thailand has positioned itself astutely to capture outbound travel demand from China with its bilateral visa waiver. </h1>
+      <h1>Thailand has positioned itself astutely to capture outbound travel demand from China. </h1>
       </div>
 
       <div className='font-extrabold leading-10 text-3xl font-serif underline m-5'>CATEGORIES</div>
@@ -144,6 +146,8 @@ const Blogs = () => {
 
 
       </div>
+
+    </div>
       
     </div>
      

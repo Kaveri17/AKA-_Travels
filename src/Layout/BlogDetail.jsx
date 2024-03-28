@@ -6,6 +6,7 @@ const BlogDetail = () => {
     <>
     <Header/>
     <div className='Blogs flex justify-between'>
+      <div className='mx-auto flex w-5/6'>
     <div className="blog-left w-4/6 ps-12">
     <div className=' w-full my-11'>
             <img src="\Image\picc.webp" alt="" className='pic3 h-96'/>
@@ -39,10 +40,12 @@ const BlogDetail = () => {
 
                 
                     <h1 className='font-extrabold leading-10 text-3xl font-serif ' >LEAVE A COMMENT</h1>
-                    <p className='py-12 leading-10 text-1xl text-font-mono'>Your email address will not be published. Required fields are marked *</p>
-                   <div className='w-full h-92'> <input type="text" placeholder='Write Your Comment' className='bg-gray-200'/></div>
+                    
+                  <p className='py-12 leading-10 text-1xl text-font-mono'>Your email address will not be published. Required fields are marked *</p>
+                   
+                   <div className='h-92 my-2'> <input type="text" placeholder='Write Your Comment' className='bg-gray-200'/></div>
 
-                    <input type="text" placeholder='Enter Your Name' className='bg-gray-200 ' />
+                    <div className='my-2'><input type="text" placeholder='Enter Your Name' className='bg-gray-200' /></div>
                     <input type="text" placeholder='Enter Your E-mail' className='bg-gray-200'/>
 
                    <div className='py-3'> Save my name, email, and website in this browser for the next time I comment.</div>
@@ -89,7 +92,7 @@ const BlogDetail = () => {
 
       <div className='font-extrabold leading-10 text-3xl font-serif underline m-5'>CATEGORIES</div>
       <ul className='list-unstyled'>
-       <div className=' py-4 px-6'>
+       <div className=' py-4 px-6 w-full'>
         <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">ADVENTURE(5)</a></li>
         <li className=' categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">FOOD(3)</a></li>
         <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">SUMMER(2)</a></li>
@@ -114,6 +117,7 @@ const BlogDetail = () => {
       <a href="" className='icons text-4xl'><i class=" hiii bi bi-pinterest pe-8 "></i></a>
       </div>
       </div>
+    </div>
 
 
 
