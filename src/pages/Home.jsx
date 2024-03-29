@@ -9,7 +9,7 @@ const Home = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // autoplay: true,
+     autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear"
@@ -338,16 +338,16 @@ const Home = () => {
 
          <div className='ram flex justify-between items-center   mt-9 bg-slate-50 ' >
          
-          <div className="sita w-full">
+          <div className="sita w-full ">
 
-            <div className="wrapper w-5/6 mx-auto flex  px-6 py-28">
-              <div className="offer">
+            <div className="wrapper w-5/6 mx-auto flex  px-6 py-28 ">
+              <div className="offer md:w-full lg:w-1/2 w-full">
                 <h6 className='text-xl'>Go & Discover</h6>
                 <h1 className='text-6xl font-bold pt-2'>Get Special Offer</h1>
                 <p className='pt-8 pb-5'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam dicta hic tenetur aut excepturi velit.</p>
                 <button className='border-2 border-solid border-slate-600 rounded-full py-2 px-2 hover:bg-slate-600'>OPEN AN ACCOUNT</button>
               </div>
-              <h1 className='text-9xl ml-10 font-bold'>35% off</h1>
+              <h1 className='text-9xl ml-10 font-bold w-full md:w-full lg:w-1/2'>35% off</h1>
 
             </div>
          
@@ -426,22 +426,25 @@ const Home = () => {
 
 {/* Clients words */}
 <div style={{backgroundColor:"wheat"}}>
- <div className='w-5/6 mx-auto flex py-5 px-5'>
+ <div className='w-5/6 mx-auto flex p-5'>
+  <div className='flex flex-wrap'>
 
- <div className="discover">
+ <div className="discover  md:w-full lg:w-1/2 ">
     <h6 className='text-xl'>Go & Discover</h6>
     <h1 className='text-4xl font-bold py-4'>What's Our Client's Words</h1>
     <p className='pb-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, sint aliquid cumque deleniti nostrum iure eum neque optio labore aperiam!</p>
     <button className='px-4 py-2 border-2 border-solid border-red-300'>View More</button>
   </div>
   
-  <div className="ceo  ">
+  <div className="ceo md:w-full lg:w-1/2 md:ps-28  ">
    
-    <img src="/Image/women.jpg" alt="" className=' gita border-2 border-solid  px-2 py-2 w-10/12 m-auto border-b-gray-400' />
+    <img src="/Image/women.jpg" alt="" className=' gita border-2 border-solid p-2  w-10/12 border-b-gray-400' />
     <h1 className='text-center pt-3 text-xl font-bold'>Alax Markun</h1>
         <h4 className='text-center'>CEO, Vecuro</h4>
-  </div> 
+        
 
+  </div> 
+  </div>
 </div>
  </div>
   
@@ -453,44 +456,53 @@ const Home = () => {
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo mollitia tempora reiciendis quisquam id consequuntur. Tempora, fugiat beatae?</p>
        
       </div>
-<div className="div1 flex pt-4 px-4 space-x-2 mx-auto w-5/6">
-<div className='border-2 border-solid border-b-gray-300 ps-2 pt-2 pe-2 w-3/4'>
-        <img src="/Image/pic4.jpeg" alt="" className='pic4' />
-        <h1 className='text-xl font-bold pt-3 pb-2'> 10 Sun Hats For Beach Days, Long</h1>
-        <p className='pb-3'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, autem?</p>
-        <div className='flex items-center pb-9'>
-        <h1 className='text-xl '> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
-        <div className='text-xl ps-9'>
-        <button className='text-xl border-2 border-solid  rounded-md bg-slate-400 hover:bg-slate-300  px-4 py-2'><a href="Blogs.html"> Read More</a></button>
-        </div>
-        </div>
-      </div>
-      <div className='border-2 border-solid border-b-gray-300 ps-2 pt-2 pe-2 w-3/4'>
-        <img src="/Image/pic9.webp" alt="" className='pic4' />
-        <h1 className='text-xl font-bold pt-3 pb-2'> Cambodia In USA: Island Hopping And Weather Tips</h1>
-        <p className='pb-3'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, autem?</p>
-        <div className='flex items-center pb-9'>
-        <h1 className='text-xl '> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
-        <div className='text-xl ps-9'>
-        <button className='text-xl border-2 border-solid  rounded-md bg-slate-400 hover:bg-slate-300 px-4 py-2 '><a href="Blogs.html"> Read More</a></button>
-        </div>
+<div className="div1 flex pt-4 px-4 mx-auto w-5/6 ">
+  <div className='flex flex-wrap'>
+      <div className="hari pe-1 md:w-1/2 lg:w-1/3 ">
+        <div className='border-2 border-solid border-b-gray-300 ps-2 pt-2 pe-2 w-full '>
+          <img src="/Image/pic4.jpeg" alt="" className='pic4' />
+          <h1 className='text-xl font-bold pt-3 pb-2'> 10 Sun Hats For Beach Days, Long</h1>
+          <p className='pb-3'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, autem?</p>
+          <div className='flex items-center pb-9'>
+          <h1 className='text-xl '> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
+          <div className='ps-3 '>
+          <button className='text-xl border-2 border-solid  rounded-md bg-slate-400 hover:bg-slate-300  px-3 py-2'><a href="Blogs.html"> Read More</a></button>
+          </div>
+          </div>
         </div>
       </div>
-      <div className='border-2 border-solid border-b-gray-300 ps-2 pt-2 pe-2 w-3/4'>
-        <img src="/Image/pic7.jpeg" alt="" className='pic4' />
-        <h1 className='text-xl font-bold pt-3 pb-2'> Beauty when sunset</h1>
-        <p className='pb-3'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, autem?</p>
-        <div className='flex items-center pb-9'>
-        <h1 className='text-xl '> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
-        <div className='text-xl ps-9'>
-        <button className='text-xl border-2 border-solid  rounded-md bg-slate-400 hover:bg-slate-300 px-4 py-2'><a href="Blogs.html"> Read More</a></button>
+      <div className="hari pe-1 md:w-1/2 lg:w-1/3">
+        <div className='border-2 border-solid border-b-gray-300 ps-2 pt-2 pe-2 w-full'>
+          <img src="/Image/pic9.webp" alt="" className='pic4' />
+          <h1 className='text-xl font-bold pb-2 pt-3'> USA IN August: Hoping for snow</h1>
+          <p className='pb-3'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, autem?</p>
+          <div className='flex items-center pb-9'>
+          <h1 className='text-xl '> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
+          <div className='text-xl ps-3'>
+          <button className='text-xl border-2 border-solid  rounded-md bg-slate-400 hover:bg-slate-300 px-3 py-2 '><a href="Blogs.html"> Read More</a></button>
+          </div>
+          </div>
         </div>
+      </div>
+      <div className="hari pe-1 md:w-1/2 lg:w-1/3">
+        <div className='border-2 border-solid border-b-gray-300 ps-2 pt-2 pe-2 w-full '>
+          <img src="/Image/pic7.jpeg" alt="" className='pic4' />
+          <h1 className='text-xl font-bold pt-3 pb-2'> Beauty when sunset</h1>
+          <p className='pb-3'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam, autem?</p>
+          <div className='flex items-center pb-9'>
+          <h1 className='text-xl '> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
+          <div className='text-xl ps-3'>
+          <button className='text-xl border-2 border-solid  rounded-md bg-slate-400 hover:bg-slate-300 px-3 py-2'><a href="Blogs.html"> Read More</a></button>
+          </div>
+          </div>
         </div>
+      </div>
       </div>
       </div>
       <div className='text-center py-8 '>
         <button className='text-xl border-2 border-solid  rounded-md bg-slate-400 hover:bg-slate-300 px-5 py-3' >View More</button>
       </div>
+     
 
 
     </>
