@@ -6,12 +6,12 @@ const Contact = () => {
   return (
     <>
    <div >
-   <div className='w-5/6 mx-auto'>
+   <div className='w-5/6 mx-auto pb-14'>
     
     <div className='bg-orange-600 rounded-lg my-20 py-20 '>
         <div className='flex flex-wrap'>
-            <div className='w-1/3 h-32  px-8 '>
-                <div className='bg-white h-full rounded-lg'>
+            <div className=' w-full md:w-1/3 px-8 py-2 '>
+                <div className='bg-white h-full rounded-lg py-4 px-2'>
 
                     <div className='flex px-8'>
                     <i class=" add bi bi-geo-alt text-2xl px-8 py-2 text-white "></i>
@@ -20,17 +20,14 @@ const Contact = () => {
                   </div>
 
                   <p className='text-center'>27 Rodn St, Brklyn, East Houston </p>
-                  <p className='text-center'>Street New York City</p>
+                  <p className='text-center '>Street New York City</p>
                     
                   </div>                   
             </div>
 
 
-
-
-
-            <div className='w-1/3 h-32  px-8 '>
-                <div className='bg-white h-full rounded-lg'>
+            <div className='w-full md:w-1/3  px-8 py-2'>
+                <div className='bg-white h-full rounded-lg py-4 px-2' >
 
                     <div className='flex px-8'>
                 <i class=" add bi bi-person-lines-fill text-2xl px-8 py-2 text-white"></i>
@@ -45,11 +42,8 @@ const Contact = () => {
                     
             </div>
 
-
-            
-
-            <div className='w-1/3 h-32  px-8 '>
-                <div className='bg-white h-full rounded-lg'>
+            <div className='w-full md:w-1/3  px-8 py-2'>
+                <div className='bg-white h-full rounded-lg py-4 px-2'>
 
 
                     <div className='flex px-8'>
