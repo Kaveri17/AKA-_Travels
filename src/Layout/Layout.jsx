@@ -7,14 +7,15 @@ import Navbar from '../components/Navbar'
 
 
 
+
 const Layout = () => {
   return (
     <>
-        <Navbar/>
-            <Outlet/>
-        <Footer/>
+      <Navbar />
+      <Outlet />
+      {/* <Footer /> */}
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

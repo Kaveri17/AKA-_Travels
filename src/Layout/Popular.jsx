@@ -15,8 +15,8 @@ const Popular = () => {
   return (
 
     <>
-   <Header/>
-   <div className='w-5/6 mx-auto'>
+  
+   <div className='w-5/6 mx-auto pb-10'>
    <div className='text-4xl text-center font-black m-14'>INTERNATIONAL PACKAGES</div>
 
    <div className='flex flex-wrap pe-8 w-full'>
@@ -107,7 +107,7 @@ const Popular = () => {
    <div className='text-4xl text-center font-extrabold m-14'>BEST HOLIDAY PACKAGE</div>
    <p className='text-center my-20'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vitae beatae optio officia,<br/> voluptatem omnis nihil et, in laudantium reprehenderit nostrum molestias quae unde repudiandae. Pariatur facilis cupiditate vero quasi.</p>
 
-   <div className='pe-8 w-full'>
+   <div className='pe-8  w-full'>
 
 
    <div className="slider-container">
@@ -117,14 +117,16 @@ const Popular = () => {
       <img src="\Image\pic20.webp" alt="" className=' pic20 h-72'/>
 
       
-      <h1 className='text-center font-3xl font-black'>EVEREST BASE CAMP:EXPLORE ITS BEAUTY</h1>
-      <div className=" flex flex-row justify-center my-8 ">
+      <h1 className='text-center font-3xl font-black'>Everest:EXPLORE ITS BEAUTY</h1>
+      {/* <div className=" flex flex-row justify-center my-8 ">
       <div className="leftt">
       <i class="bi bi-geo-alt">Solukhumbu</i>
       <br/>
       <i class="bi bi-clock">4Days-2Nights</i>
       <br/>
       </div>
+
+      
       <div className="righttt">
       <div className="discountprice border-2  border-blue-500 bg-blue-200">
                 10% off
@@ -136,33 +138,62 @@ const Popular = () => {
                 <strike>$1000</strike>
               </div>
               </div>
-              </div>
+              </div> */}
+
+
+
+<div class="flex flex-col sm:flex-row justify-center my-8">
+  <div class="leftt mb-4 sm:mb-0 sm:mr-4">
+    <i class="bi bi-geo-alt"></i>
+    <span class="ml-1">Solukhumbu</span>
+    <br/>
+    <i class="bi bi-clock"></i>
+    <span class="ml-1">4Days-2Nights</span>
+  </div>
+
+  <div class="righttt">
+    <div class="discountprice border-2 border-blue-500 bg-blue-200 mb-4 sm:mb-0 sm:mr-4">
+      10% off
+    </div>
+    <div class="price">
+      $900
+    </div>
+    <div>
+      <strike>$1000</strike>
+    </div>
+  </div>
+</div>
+
       <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
           </div>
         </div>
         <div>
           <div className="border-2 w-full overflow-hidden">
       <img src="Image\pic21.jpeg" alt="" className='pic21 h-72'/>
-      <h1 className='text-center font-3xl font-black'>Dubai river:EXPLORE ITS BEAUTY</h1>
-      <div className=" flex flex-row justify-center my-8">
-      <div className="leftt">
-      <i class="bi bi-geo-alt">Dubai</i>
-      <br/>
-      <i class="bi bi-clock">5Days-2Nights</i>
-      <br/>
-      </div>
-      <div className="righttt">
-      <div className="discountprice border-2 border-blue-500 bg-blue-200">
-                10% off
-              </div>
-              <div className="price">
-                $900
-              </div>
-              <div>
-                <strike>$1000</strike>
-              </div>
-              </div>
-              </div>
+      <h1 className='text-center font-3xl font-black'>Dubai:EXPLORE ITS BEAUTY</h1>
+     
+<div class="flex flex-col sm:flex-row justify-center my-8">
+  <div class="leftt mb-4 sm:mb-0 sm:mr-4">
+    <i class="bi bi-geo-alt"></i>
+    <span class="ml-1">Dubai</span>
+    <br/>
+    <i class="bi bi-clock"></i>
+    <span class="ml-1">4Days-2Nights</span>
+  </div>
+
+  <div class="righttt">
+    <div class="discountprice border-2 border-blue-500 bg-blue-200 mb-4 sm:mb-0 sm:mr-4">
+      10% off
+    </div>
+    <div class="price">
+      $900
+    </div>
+    <div>
+      <strike>$1000</strike>
+    </div>
+  </div>
+</div>
+
       <button className=' w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
           </div>
         </div>
@@ -170,25 +201,29 @@ const Popular = () => {
           <div className="border-2  w-full overflow-hidden">
       <img src="Image\pic22.jpeg" alt="" className='pic22 h-72'/>
       <h1 className='text-center font-3xl font-black'>Switzerland:EXPLORE ITS BEAUTY</h1>
-      <div className=" flex flex-row justify-center my-8">
-      <div className="leftt">
-      <i class="bi bi-geo-alt">Switzerland</i>
-      <br/>
-      <i class="bi bi-clock">6Days-4Nights</i>
-      <br/>
-      </div>
-      <div className="righttt">
-      <div className="discountprice border-2 border-blue-500 bg-blue-200">
-                10% off
-              </div>
-              <div className="price">
-                $900
-              </div>
-              <div>
-                <strike>$1000</strike>
-              </div>
-              </div>
-              </div>
+     
+              <div class="flex flex-col sm:flex-row justify-center my-8">
+  <div class="leftt mb-4 sm:mb-0 sm:mr-4">
+    <i class="bi bi-geo-alt"></i>
+    <span class="ml-1">Switzerland</span>
+    <br/>
+    <i class="bi bi-clock"></i>
+    <span class="ml-1">4Days-2Nights</span>
+  </div>
+
+  <div class="righttt">
+    <div class="discountprice border-2 border-blue-500 bg-blue-200 mb-4 sm:mb-0 sm:mr-4">
+      10% off
+    </div>
+    <div class="price">
+      $900
+    </div>
+    <div>
+      <strike>$1000</strike>
+    </div>
+  </div>
+</div>
+
       <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
           </div>
         </div>
@@ -196,25 +231,29 @@ const Popular = () => {
           <div className="border-2  w-full overflow-hidden">
       <img src="Image\pic23.jpeg" alt="" className='pic23 h-72'/>
       <h1 className='text-center font-3xl font-black'>FRANCE:EXPLORE ITS BEAUTY</h1>
-      <div className=" flex flex-row justify-center my-8">
-      <div className="leftt">
-      <i class="bi bi-geo-alt">France</i>
-      <br/>
-      <i class="bi bi-clock">3Days-2Nights</i>
-      <br/>
-      </div>
-      <div className="righttt">
-      <div className="discountprice border-2 border-blue-500 bg-blue-200">
-                10% off
-              </div>
-              <div className="price">
-                $900
-              </div>
-              <div>
-                <strike>$1000</strike>
-              </div>
-              </div>
-              </div>
+      
+              <div class="flex flex-col sm:flex-row justify-center my-8">
+  <div class="leftt mb-4 sm:mb-0 sm:mr-4">
+    <i class="bi bi-geo-alt"></i>
+    <span class="ml-1">France</span>
+    <br/>
+    <i class="bi bi-clock"></i>
+    <span class="ml-1">4Days-2Nights</span>
+  </div>
+
+  <div class="righttt">
+    <div class="discountprice border-2 border-blue-500 bg-blue-200 mb-4 sm:mb-0 sm:mr-4">
+      10% off
+    </div>
+    <div class="price">
+      $900
+    </div>
+    <div>
+      <strike>$1000</strike>
+    </div>
+  </div>
+</div>
+
       <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
           </div>
         </div>
@@ -222,25 +261,29 @@ const Popular = () => {
           <div className="border-2 w-full overflow-hidden ">
       <img src="Image\pic24.jpeg" alt="" className='pic24 h-72'/>
       <h1 className='text-center font-3xl font-black'>RUSSIA:EXPLORE ITS BEAUTY</h1>
-      <div className=" flex flex-row justify-center my-8">
-      <div className="leftt">
-      <i class="bi bi-geo-alt">Russia</i>
-      <br/>
-      <i class="bi bi-clock">4Days-2Nights</i>
-      <br/>
-      </div>
-      <div className="righttt">
-      <div className="discountprice border-2 border-blue-500 bg-blue-200 hover:orange-300">
-                10% off
-              </div>
-              <div className="price">
-                $900
-              </div>
-              <div>
-                <strike>$1000</strike>
-              </div>
-              </div>
-              </div>
+      
+              <div class="flex flex-col sm:flex-row justify-center my-8">
+  <div class="leftt mb-4 sm:mb-0 sm:mr-4">
+    <i class="bi bi-geo-alt"></i>
+    <span class="ml-1">Russia</span>
+    <br/>
+    <i class="bi bi-clock"></i>
+    <span class="ml-1">4Days-2Nights</span>
+  </div>
+
+  <div class="righttt">
+    <div class="discountprice border-2 border-blue-500 bg-blue-200 mb-4 sm:mb-0 sm:mr-4">
+      10% off
+    </div>
+    <div class="price">
+      $900
+    </div>
+    <div>
+      <strike>$1000</strike>
+    </div>
+  </div>
+</div>
+
               
       <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
           </div>
@@ -249,27 +292,29 @@ const Popular = () => {
           <div className="border-2 w-full overflow-hidden">
       <img src="Image\pic25.webp" alt="" className='pic25 w-full h-72'/>
       <h1 className='text-center font-3xl font-black'>GREECE:EXPLORE ITS BEAUTY</h1>
-      <div className=" flex flex-row justify-center my-8">
       
-      <div className="leftt">
-      <i class="bi bi-geo-alt">Greece</i>
-      <br/>
-      <i class="bi bi-clock">2Days-1Night</i>
-      <br/>
-      </div>
+              <div class="flex flex-col sm:flex-row justify-center my-8">
+  <div class="leftt mb-4 sm:mb-0 sm:mr-4">
+    <i class="bi bi-geo-alt"></i>
+    <span class="ml-1">Greece</span>
+    <br/>
+    <i class="bi bi-clock"></i>
+    <span class="ml-1">4Days-2Nights</span>
+  </div>
 
-      <div className="righttt">
-      <div className="discountprice border-2 border-blue-500 bg-blue-200">
-                10% off
-              </div>
-              <div className="price">
-                $900
-              </div>
-              <div>
-                <strike>$1000</strike>
-              </div>
-              </div>
-              </div>
+  <div class="righttt">
+    <div class="discountprice border-2 border-blue-500 bg-blue-200 mb-4 sm:mb-0 sm:mr-4">
+      10% off
+    </div>
+    <div class="price">
+      $900
+    </div>
+    <div>
+      <strike>$1000</strike>
+    </div>
+  </div>
+</div>
+
      
       <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
      
