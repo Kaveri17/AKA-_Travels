@@ -1,10 +1,11 @@
 import React from 'react'
+import './Blogs.css'
 
 const BlogDetaill = () => {
   return (
     <>
 
-    <div className='Blogs flex justify-between'>
+    <div className='Blogs flex justify-between pb-14'>
     <div className='mx-auto flex w-5/6'>
     <div className="blog-left w-4/6 ps-12">
     <div className=' w-full my-11'>
@@ -60,39 +61,55 @@ const BlogDetaill = () => {
 
 
 
-                   <div className="blog-right w-2/6 flex flex-col flex-wrap">
-        <div className="search">
-            <h1 className='font-extrabold leading-10 text-3xl font-serif underline m-5 '>SEARCH</h1>
+      <div className="blog-right w-2/6 flex flex-col">
+      {/* <div className="search">
+            <h1 className='font-extrabold leading-10 text-2xl font-serif underline m-5 '>SEARCH</h1>
              <input  type="text"
             className="w-2/5 py-2 pl-8 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 m-6 cursor-pointer"
             />SEARCH
         </div>
+        */}
+
+    <div class="search">
+    <h1 class='font-extrabold leading-10 text-2xl font-serif underline m-5 '>SEARCH</h1>
+    <input type="text" class="w-2/5 sm:w-2/5 py-2 pl-8 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 m-6 cursor-pointer" placeholder="Search..."/>
+    </div>
+
+        
+
+
+        {/* <div class="search">
+    <h1 class="font-extrabold leading-10 text-3xl font-serif underline m-5 ">SEARCH</h1>
+    <input type="text" className="w-full sm:w-2/5 py-2 pl-8 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 m-6 cursor-pointer" placeholder="SEARCH"/>
+</div> */}
+
         
         <div className="blogdown">
-        <h1 className='font-extrabold leading-10 text-3xl font-serif underline m-5'>RECENT POSTS</h1>
+        <h1 className='font-extrabold leading-10 text-2xl font-serif underline m-5'>RECENT POSTS</h1>
       </div>
-      <div className='m-5 flex flex-col justify-center w-full'>
+      <div className='m-5 flex flex-col justify-center '>
       <img src="\Image\picc.webp" alt="" className='h-24 w-24 py-2 '/>
-      <i class="bi bi-calendar pe-8">12 December 2023</i>
-      <h1>The number of tourists visiting the Maldives in 2023 surpassed the government's estimated figure by 78,537. </h1>
+      <i class="bi bi-calendar pe-8 ">12 December 2023</i>
+      <h1>The number of tourists visiting the Maldives in 2023 surpassed the government's estimated figure by 78. </h1>
 
 
 
       <img src="\Image\piccc.jpeg" alt="" className='h-24 w-24 py-2 '/>
       <i class="bi bi-calendar pe-8">12 December 2023</i>
-      <h1>The messages for Greek tourism at ITB Berlin, one of the world's largest travel exhibitions, give high hopes for 2024.</h1>
+      <h1>The messages for Greek tourism at ITB Berlin, one of world's largest travel exhibitions, give high.</h1>
 
 
 
       <img src="\Image\picccc.jpeg" alt="" className='h-24 w-24 py-2 '/>
       <i class="bi bi-calendar pe-8">12 December 2023</i>
-      <h1>Thailand has positioned itself astutely to capture outbound travel demand from China with its bilateral visa waiver. </h1>
+      <h1>Thailand has positioned itself astutely to capture outbound travel demand from China. </h1>
       </div>
 
-      <div className='font-extrabold leading-10 text-3xl font-serif underline m-5'>CATEGORIES</div>
-      <ul className='list-unstyled'>
+      <div className='font-extrabold leading-10 text-2xl font-serif underline m-5'>CATEGORY</div>
+      <ul className='list-unstyled w-full'>
        <div className=' py-4 px-6'>
-        <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">ADVENTURE(5)</a></li>
+        <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">LUXURY(5)</a></li>
+      
         <li className=' categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">FOOD(3)</a></li>
         <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">SUMMER(2)</a></li>
         <li className='categories py-4 ps-4 my-2 rounded-lg hover:bg-orange-400'><a href="">TRAVEL(6)</a></li>
@@ -102,23 +119,36 @@ const BlogDetaill = () => {
       </ul>
       
 
-      <div className='font-extrabold leading-10 text-3xl font-serif underline m-5'>NEWSLETTER</div>
-      <input type="email" placeholder='Enter your email here' name='user_email' required className='w-96 py-2 m-4' />
-      <button type='submit' className='w-96 py-2 m-3 border-2 bg-orange-400'>SUBSCRIBE</button>
+      <div className='font-extrabold leading-10 text-2xl font-serif underline m-5'>LETTER</div>
+      <input type="email" placeholder='Enter your email here' name='user_email' required className=' py-2 m-4' />
+      {/* <input type="email" placeholder="Enter your email here" name="user_email" required class="py-2 px-4 sm:mx-2 md:mx-4 lg:mx-6 xl:mx-8 my-2 w-full sm:w-auto md:w-64 lg:w-72 xl:w-96" /> */}
+
+      
+
+
+      <button type='submit' className=' py-2 m-3 border-2 bg-orange-400'>SUBSCRIBE</button>
 
 
 
-      <div className='font-extrabold leading-10 text-3xl font-serif underline m-5'>NEVER MISS NEWS</div>
+      <div className='font-extrabold leading-10 text-2xl font-serif underline m-5'>NEVER MISS NEWS</div>
       <div className='flex m-3 justify-center'>
       <a href="" className='icons text-4xl'><i class=" hi bi bi-facebook pe-8 "></i></a>
       <a href="" className='icons text-4xl'><i class=" hiiii bi bi-instagram pe-8 "></i></a>
       <a href="" className='icons text-4xl'><i class="hiiiii bi bi-twitter pe-8 "></i></a>
       <a href="" className='icons text-4xl'><i class=" hiii bi bi-pinterest pe-8 "></i></a>
       </div>
-      </div>
+
+
+
+
+
+
       </div>
 
-            </div>
+    </div>
+      
+    </div>
+
     </>
   )
 }
