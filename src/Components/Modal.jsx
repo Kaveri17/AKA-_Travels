@@ -21,34 +21,26 @@ const Modal = () => {
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div className="modal-dialog modal-lg">
+        <div className="modal-dialog modal-xl">
           <div className="modal-content">
-            {/* <div className="modal-header">
-              <h1 className="modal-title fs-5" id="exampleModalLabel">
-                Modal title
-              </h1>
+            <div className="modal-header border-b-0  ">
               <button
                 type="button"
-                className="btn-close"
+                className="btn-close "
                 data-bs-dismiss="modal"
                 aria-label="Close"
-              ></button>
-            </div> */}
+              >
+                <i className="bi bi-x text-3xl"></i>
+              </button>
+            </div>
             <div className="modal-body w-full">
               <Cart />
             </div>
-            {/* <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-secondary text-slate-800"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
+            <div className="modal-footer">
               <button type="button" className="btn btn-primary text-slate-800">
                 Save changes
               </button>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

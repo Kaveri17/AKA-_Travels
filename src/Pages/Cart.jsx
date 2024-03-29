@@ -14,8 +14,8 @@ const Cart = () => {
 
   return (
     <>
-      <div className="flex lg:divide-x justify-center w-11/12	mx-auto h-screen items-center lg:flex-row flex-col ">
-        <div className="w-full lg:w-3/5 h-96">
+      <div className="flex w-11/12 mx-auto lg:flex-row flex-col ">
+        <div className="w-full lg:w-3/5 lg:border-r">
           <div className="flex justify-between items-center">
             <h1 className="select-none font-semibold">
               {months[today.month()]}, {today.year()}
@@ -62,7 +62,7 @@ const Cart = () => {
                 return (
                   <div
                     key={index}
-                    className="p-2 h-14 border-t grid place-content-center text-sm"
+                    className="p-2 h-14 border-t  grid place-content-center text-sm"
                   >
                     <h1
                       className={cn(
@@ -87,8 +87,8 @@ const Cart = () => {
             )}
           </div>
         </div>
-        <div className="h-96 w-full lg:w-2/5 px-5 py-3 sm:px-5">
-          <h2 className="text-gray-400 text-sm font-semibold py-2 ">
+        <div className="w-full lg:w-2/5 lg:px-5">
+          <h2 className="text-gray-400 py-2 text-sm font-semibold flex justify-between">
             BOOKING SUMMARY
           </h2>
           <h1 className="package-name text-black font-semibold text-xl py-2">
@@ -104,12 +104,18 @@ const Cart = () => {
           <div className="border-y-2 py-3">
             <h1 className="italic font-semibold py-1">Travellers</h1>
             <p className="adult-traveller text-sm font-semibold py-1 flex justify-between">
-              1 Adult ($900/person)
+              1 Adult (Rs.1500/person)
               <span className="package-price text-md font-bold">$900</span>
             </p>
             <p className="child-traveller text-sm font-semibold py-1 flex justify-between">
-              1 Child ($600/person)
+              1 Child (Rs.1000/person)
               <span className="package-price text-sm font-bold">$600</span>
+            </p>
+          </div>
+          <div className="package-total text-end py-3 text-lg">
+            <p>
+              Total: Rs.{" "}
+              <span className="totalprice font-bold text-xl"> 2500</span>
             </p>
           </div>
         </div>
