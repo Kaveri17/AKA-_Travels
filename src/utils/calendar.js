@@ -16,7 +16,7 @@ export const generateDate = (
     {
         
         arrayOfDate.push({
-            currenMonth: false,
+            currentMonth: false,
             date: firstDateOfMonth.day(i)
         });
     }
@@ -25,7 +25,7 @@ export const generateDate = (
     for(let i = firstDateOfMonth.date(); i<=lastDateOfMonth.date();i++){
         arrayOfDate.push({
             date:firstDateOfMonth.date(i),
-            currenMonth:true,
+            currentMonth:true,
             today:firstDateOfMonth.date(i).toDate().toDateString() === dayjs().toDate().toDateString(),
         });
     }
