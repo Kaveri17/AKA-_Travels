@@ -16,6 +16,8 @@ import Cart from "./Pages/Cart";
 import Home from "./Pages/Home";
 import Modal from "./components/Modal";
 import Gallery from "./Pages/Gallery";
+import Packages from "./Pages/Packages";
+
 
 const MyRoutes = () => {
   return (
@@ -38,6 +40,7 @@ const MyRoutes = () => {
             <Route path="/triptypes" element={<TripTypes />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/modal" element={<Modal />} />
+            <Route path="/packages" element={<Packages/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
