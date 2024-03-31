@@ -12,10 +12,11 @@ import BlogDetail from "./Layout/BlogDetail";
 import BlogDetaill from "./Layout/BlogDetaill";
 import BlogDetailll from "./Layout/BlogDetailll";
 import Contact from "./Layout/Contact";
-import Cart from "./Pages/Cart";
+// import Cart from "./Pages/Cart";
 import Home from "./Pages/Home";
 import Modal from "./components/Modal";
 import Gallery from "./Pages/Gallery";
+import Details from "./Pages/Details";
 
 const MyRoutes = () => {
   return (
@@ -36,8 +37,9 @@ const MyRoutes = () => {
             <Route path="/popular" element={<Popular />} />
             <Route path="/activity" element={<Activities />} />
             <Route path="/triptypes" element={<TripTypes />} />
-            <Route path="/cart" element={<Cart />} />
+            {/* <Route path="/cart" element={<Cart />} /> */}
             <Route path="/modal" element={<Modal />} />
+            <Route path="/details" element={<Details/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
