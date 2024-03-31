@@ -14,9 +14,11 @@ import BlogDetailll from "./Layout/BlogDetailll";
 import Contact from "./Layout/Contact";
 // import Cart from "./Pages/Cart";
 import Home from "./Pages/Home";
-import Modal from "./components/Modal";
+import Modal from "./Components/Modal";
 import Gallery from "./Pages/Gallery";
 import Details from "./Pages/Details";
+import Packages from "./Pages/Packages";
+
 
 const MyRoutes = () => {
   return (
@@ -40,6 +42,7 @@ const MyRoutes = () => {
             {/* <Route path="/cart" element={<Cart />} /> */}
             <Route path="/modal" element={<Modal />} />
             <Route path="/details" element={<Details/>}/>
+            <Route path="/packages" element={<Packages/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -10,7 +10,7 @@ const Popular = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 2
   };
   return (
 
@@ -77,7 +77,7 @@ const Popular = () => {
     <div className='w-1/3 relative'>
     <img src="\Image\pic12.jpeg" alt="" className='pic12 w-full h-full  py-4 px-4'/>
     <p className='text-center'>LUMBINI<i class="bi bi-arrow-right"></i></p>
-    <p className='rounded-lg bg-cyan-300 absolute left-10 top-10 text-white font-'>(4Trips)</p>
+    <p className='rounded-lg bg-cyan-300 absolute left-10 top-10 text-white font-'>(4 Trips)</p>
     </div>
 
     <div className='w-1/3 relative'>
@@ -95,7 +95,7 @@ const Popular = () => {
     <div className='w-1/3 relative'>
     <img src="\Image\pic16.jpeg" alt="" className='pic16 w-full h-full py-4 px-4'/>
     <p className='text-center'>MUSTANG<i class="bi bi-arrow-right"></i></p>
-    <p className='rounded-lg bg-cyan-300 absolute left-10 top-10 text-white font-'>(1 Trip)</p>
+    <p className='rounded-lg bg-cyan-300 absolute left-10 top-10 text-white '>(1 Trip)</p>
     </div>
 
    </div>
@@ -105,9 +105,9 @@ const Popular = () => {
    <div className='text-orange-500 m-12 py-10 text-xl font-bold text-center font-serif'>AWESOME TOURS</div>
    
    <div className='text-4xl text-center font-extrabold m-14'>BEST HOLIDAY PACKAGE</div>
-   <p className='text-center my-20'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vitae beatae optio officia,<br/> voluptatem omnis nihil et, in laudantium reprehenderit nostrum molestias quae unde repudiandae. Pariatur facilis cupiditate vero quasi.</p>
+   <p className='text-center my-20 text-slate-500'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum vitae beatae optio officia,<br/> voluptatem omnis nihil et, in laudantium reprehenderit nostrum molestias quae unde repudiandae. Pariatur facilis cupiditate vero quasi.</p>
 
-   <div className='pe-8  w-full'>
+   <div className=' w-full me-3'>
 
 
    <div className="slider-container">
@@ -152,10 +152,11 @@ const Popular = () => {
   </div>
 
   <div class="righttt">
+  <div className="discount border-l-2 ps-2">
     <div class="discountprice border-2 border-blue-500 bg-blue-200 mb-4 sm:mb-0 sm:mr-4">
       10% off
     </div>
-    <div class="price">
+    <div className="price font-bold text-3xl">
       $900
     </div>
     <div>
@@ -163,14 +164,16 @@ const Popular = () => {
     </div>
   </div>
 </div>
+</div>
 
-      <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
+      <button className='w-1/2 bg-orange-300 border-2 rounded-lg  block mx-auto text-white font-bold'>VIEW DETAILS</button>
           </div>
         </div>
         <div>
-          <div className="border-2 w-full overflow-hidden">
+          <div className="border-2 w-full overflow-hidden relative">
       <img src="Image\pic21.jpeg" alt="" className='pic21 h-72'/>
       <h1 className='text-center font-3xl font-black'>Dubai:EXPLORE ITS BEAUTY</h1>
+      <p className='rounded-lg bg-cyan-300 absolute left-10 top-10 text-white'>Featured</p>
      
 <div class="flex flex-col sm:flex-row justify-center my-8">
   <div class="leftt mb-4 sm:mb-0 sm:mr-4">
@@ -182,10 +185,11 @@ const Popular = () => {
   </div>
 
   <div class="righttt">
+  <div className="discount border-l-2 ps-2">
     <div class="discountprice border-2 border-blue-500 bg-blue-200 mb-4 sm:mb-0 sm:mr-4">
       10% off
     </div>
-    <div class="price">
+    <div class="price font-bold text-3xl">
       $900
     </div>
     <div>
@@ -193,8 +197,9 @@ const Popular = () => {
     </div>
   </div>
 </div>
+</div>
 
-      <button className=' w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
+      <button className=' w-1/2 bg-orange-300 border-2 rounded-lg  block mx-auto text-white font-bold'>VIEW DETAILS</button>
           </div>
         </div>
         <div>
@@ -202,7 +207,7 @@ const Popular = () => {
       <img src="Image\pic22.jpeg" alt="" className='pic22 h-72'/>
       <h1 className='text-center font-3xl font-black'>Switzerland:EXPLORE ITS BEAUTY</h1>
      
-              <div class="flex flex-col sm:flex-row justify-center my-8">
+        <div class="flex flex-col sm:flex-row justify-center my-8">
   <div class="leftt mb-4 sm:mb-0 sm:mr-4">
     <i class="bi bi-geo-alt"></i>
     <span class="ml-1">Switzerland</span>
@@ -212,10 +217,11 @@ const Popular = () => {
   </div>
 
   <div class="righttt">
+  <div className="discount border-l-2 ps-2">
     <div class="discountprice border-2 border-blue-500 bg-blue-200 mb-4 sm:mb-0 sm:mr-4">
       10% off
     </div>
-    <div class="price">
+    <div class="price font-bold text-3xl">
       $900
     </div>
     <div>
@@ -223,8 +229,9 @@ const Popular = () => {
     </div>
   </div>
 </div>
+</div>
 
-      <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
+      <button className='w-1/2 bg-orange-300 border-2 rounded-lg  block mx-auto text-white font-bold'>VIEW DETAILS</button>
           </div>
         </div>
         <div>
@@ -242,10 +249,11 @@ const Popular = () => {
   </div>
 
   <div class="righttt">
+  <div className="discount border-l-2 ps-2">
     <div class="discountprice border-2 border-blue-500 bg-blue-200 mb-4 sm:mb-0 sm:mr-4">
       10% off
     </div>
-    <div class="price">
+    <div class="price font-bold text-3xl">
       $900
     </div>
     <div>
@@ -253,8 +261,9 @@ const Popular = () => {
     </div>
   </div>
 </div>
+</div>
 
-      <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
+      <button className='w-1/2 bg-orange-300 border-2 rounded-lg block mx-auto text-white font-bold'>VIEW DETAILS</button>
           </div>
         </div>
         <div>
@@ -262,8 +271,8 @@ const Popular = () => {
       <img src="Image\pic24.jpeg" alt="" className='pic24 h-72'/>
       <h1 className='text-center font-3xl font-black'>RUSSIA:EXPLORE ITS BEAUTY</h1>
       
-              <div class="flex flex-col sm:flex-row justify-center my-8">
-  <div class="leftt mb-4 sm:mb-0 sm:mr-4">
+      <div class="flex flex-col sm:flex-row justify-center my-8">
+    <div class="leftt mb-4 sm:mb-0 sm:mr-4">
     <i class="bi bi-geo-alt"></i>
     <span class="ml-1">Russia</span>
     <br/>
@@ -272,10 +281,11 @@ const Popular = () => {
   </div>
 
   <div class="righttt">
+  <div className="discount border-l-2 ps-2">
     <div class="discountprice border-2 border-blue-500 bg-blue-200 mb-4 sm:mb-0 sm:mr-4">
       10% off
     </div>
-    <div class="price">
+    <div class="price font-bold text-3xl">
       $900
     </div>
     <div>
@@ -283,9 +293,10 @@ const Popular = () => {
     </div>
   </div>
 </div>
+</div>
 
               
-      <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
+      <button className='w-1/2 bg-orange-300 border-2 rounded-lg  block mx-auto text-white font-bold'>VIEW DETAILS</button>
           </div>
         </div>
         <div>
@@ -294,29 +305,31 @@ const Popular = () => {
       <h1 className='text-center font-3xl font-black'>GREECE:EXPLORE ITS BEAUTY</h1>
       
               <div class="flex flex-col sm:flex-row justify-center my-8">
-  <div class="leftt mb-4 sm:mb-0 sm:mr-4">
-    <i class="bi bi-geo-alt"></i>
-    <span class="ml-1">Greece</span>
-    <br/>
-    <i class="bi bi-clock"></i>
-    <span class="ml-1">4Days-2Nights</span>
-  </div>
+     <div class="leftt mb-4 sm:mb-0 sm:mr-4">
+     <i class="bi bi-geo-alt"></i>
+     <span class="ml-1">Greece</span>
+     <br/>
+     <i class="bi bi-clock"></i>
+     <span class="ml-1">4Days-2Nights</span>
+    </div>
 
   <div class="righttt">
+  <div className="discount border-l-2 ps-2">
     <div class="discountprice border-2 border-blue-500 bg-blue-200 mb-4 sm:mb-0 sm:mr-4">
       10% off
     </div>
-    <div class="price">
+    <div class="price font-bold text-3xl">
       $900
     </div>
     <div>
       <strike>$1000</strike>
     </div>
   </div>
-</div>
+  </div>
+ </div>
 
      
-      <button className='w-1/2 bg-orange-100 border-2 block mx-auto'>VIEW DETAILS</button>
+      <button className='w-1/2 bg-orange-300 border-2 rounded-lg block mx-auto text-white font-bold'>VIEW DETAILS</button>
      
       
           </div>
@@ -324,6 +337,12 @@ const Popular = () => {
       </Slider>
     </div>
     </div>
+    <a href="/blogs">
+    <button className='w-1/5 h-12 bg-orange-400 border-2 rounded-lg block mx-auto my-16 text-white  font-bold '>VIEW MORE</button>
+    </a>
+
+
+    
     
    </div>
    
