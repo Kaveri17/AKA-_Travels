@@ -4,22 +4,13 @@ import Slider from "react-slick";
 function Test() {
 
   
-    // const settings = {
-    //   dots: true,
-    //   infinite: true,
-    //   slidesToShow: 3,
-    //   slidesToScroll: 1,
-    //   autoplay: true,
-    //   speed: 2000,
-    //   autoplaySpeed: 2000,
-    //   cssEase: "linear"
-    // };
+    
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 2
     
 
     

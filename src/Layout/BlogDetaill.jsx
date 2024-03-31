@@ -131,12 +131,19 @@ const BlogDetaill = () => {
 
 
       <div className='font-extrabold leading-10 text-2xl font-serif underline m-5'>NEVER MISS NEWS</div>
-      <div className='flex m-3 justify-center'>
+      {/* <div className='flex m-3 justify-center'>
       <a href="" className='icons text-4xl'><i class=" hi bi bi-facebook pe-8 "></i></a>
       <a href="" className='icons text-4xl'><i class=" hiiii bi bi-instagram pe-8 "></i></a>
       <a href="" className='icons text-4xl'><i class="hiiiii bi bi-twitter pe-8 "></i></a>
       <a href="" className='icons text-4xl'><i class=" hiii bi bi-pinterest pe-8 "></i></a>
-      </div>
+      </div> */}
+
+<div class="flex flex-wrap justify-center m-2">
+    <a href="" class="icons text-3xl md:w-auto md:p-2"><i class="hi bi bi-facebook pe-8"></i></a>
+    <a href="" class="icons text-3xl md:w-auto md:p-2"><i class="hiiii bi bi-instagram pe-8"></i></a>
+    <a href="" class="icons text-3xl md:w-auto md:p-2"><i class="hiiiii bi bi-twitter pe-8"></i></a>
+    <a href="" class="icons text-3xl md:w-auto md:p-2"><i class="hiii bi bi-pinterest pe-8"></i></a>
+</div>
 
 
 
