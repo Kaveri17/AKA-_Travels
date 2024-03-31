@@ -112,3 +112,21 @@ background-color:wheat;
   transform: scale(1.05);
   transition: 0.8s;
 }
+
+/* Gallery */
+
+.gallery-img{
+  height: 80vh;
+}
+
+/* Footer */
+
+.footer-up{
+  display: none;
+}
+
+@media (min-width: 1024px){
+  .footer-up{
+    display: block;
+  }
+}
