@@ -95,7 +95,7 @@ const Contact = () => {
         </div>
 
         {/* <button className='btn '>SEND MESSAGE</button> */}
-        <button className='block mx-auto  bg-orange-600 border-1 text-white font-bold  '>SEND MESSAGE</button>
+        <button className='block mx-auto  bg-orange-600 border-1 text-white font-bold w-1/5 rounded-lg h-10 '>SEND MESSAGE</button>
         </div>
         </div>
         </div>

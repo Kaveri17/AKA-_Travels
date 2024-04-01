@@ -261,10 +261,10 @@ const About = () => {
                         </div>
                         <div className="blog-detail py-3">
                             <h2 className='text-black text-2xl font-bold tracking-wide '>
-                                10 Sun Hats For Beach Days,Long
+                             10 Sun Hats For Beach Days,Long
                             </h2>
                             <p className='text-zinc-400 text-sm font-medium pt-1'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nostrum.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nostrum.
                             </p>
                         </div>
                         <div className="blog-bottom flex w-full items-center">
@@ -282,7 +282,7 @@ const About = () => {
                     </div>
                     <div className="blogs p-4 border-solid border-orange-300 border-2 rounded-lg" >
                         <div className="blog-img rounded-lg">
-                            <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image " className='w-full rounded-lg'/> 
+                        <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image " className='w-full rounded-lg'/> 
                         </div>
                         <div className="blog-detail py-3">
                             <h2 className='text-black text-2xl font-bold tracking-wide '>
@@ -294,8 +294,8 @@ const About = () => {
                         </div>
                         <div className="blog-bottom flex w-full items-center">
                             <div className="blog-date w-1/2 text-zinc-600  ">
-                                <i class="fa-solid fa-calendar-days"></i>
-                                <span className='blog-createddate'>12. December 2023</span>
+                            <i class="fa-solid fa-calendar-days"></i>
+                             <span className='blog-createddate'>12. December 2023</span>
                             </div>
                             <div className="blog-btn w-1/2 ps-3">
                                 <button className='bg-orange-500   px-3 py-2 rounded-lg font-bold text-white'>
