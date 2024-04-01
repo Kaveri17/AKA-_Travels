@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick';
 // import Navbar from '../components/Navbar'
-
+import './Home.css'
 
 const Home = () => {
   const settings = {
@@ -9,7 +9,7 @@ const Home = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-     autoplay: true,
+    //  autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear"
@@ -53,33 +53,36 @@ const Home = () => {
     <h6 className='text-xl pb-2'> Travel Essential Tips</h6>
     <h1 className='text-4xl font-bold pb-6'>Awesome Tips That Makes Your Travel Beautiful</h1>
   </div>
-  <div className='flex  '>
-  <img src="/Image/pic4.jpeg" alt="" className=' w-2/3' />
+  <div className='flex flex-wrap'>
   
-  <div className="sun ">
-    <div className='border-2 border-solid border-b-gray-400 mt-14 px-6 py-6 -ms-16' style={{backgroundColor:"wheat"}}>
+    <div className='w-full lg:w-1/2  '>
+  <img src="/Image/pic4.jpeg" alt="" className=' w-full' />
+  </div>
+  <div className='w-full  lg:w-1/2  '>
+    <div className='border-2 border-solid border-b-gray-400 mt-14 p-8 -ms-16 ' style={{backgroundColor:"wheat"}}>
   <h1 className='text-xl pb-2'> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
   <h1 className='text-2xl font-bold pb-3' >10 Sun Hats For Beach Days, Long Hikes, And </h1>
   <p className='pb-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum corrupti officia quisquam ipsam, tempore deleniti?</p>
   <button className='border-2 border-solid border-red-300  hover:bg-slate-500 px-2 py-2 '>Read More</button>
-  </div>
-  </div>
-  </div>
-
 </div>
+  </div>
+  </div>
+  </div>
 
 
         {/*Adventure  */}
-        <div className="adventure ps-5 pe-4  w-5/6 mx-auto">
-          <div className='flex  '>
-            <div className="para border-2 border-solid border-b-gray-600 ps-3 py-5  w-2/3 my-24 -me-16 z-10 " style={{backgroundColor:"wheat"}}>
+        <div className="adventure p-5 w-5/6 mx-auto ">
+          <div className='flex flex-wrap py-5'>
+            <div className='w-full lg:w-1/2  z-10 py-16'>
+            <div className="para border-2 border-solid border-b-gray-600 ps-14 py-4  -me-16 " style={{backgroundColor:"wheat"}}>
           <h1 className='text-xl pb-2'> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
           <h1 className='text-3xl font-bold pb-3'>Pokhara In August:Waiting for vistors</h1>
-          <p className='pb-3'> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, laboriosam?</p>
+          <p className='pb-3'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum corrupti officia quisquam ipsam, tempore deleniti?</p>
           <button className=' border-2 border-solid border-red-300 hover:bg-slate-400 px-3 py-2 '>Read More</button>
           </div>
-          <div className=' pt-5'>
-            <img src="/Image/pic10.jpeg" alt="" className='h-96' />
+          </div>
+          <div className='  w-full lg:w-1/2 '>
+            <img src="/Image/pic10.jpeg" alt="" className='w-full h-96' />
           </div>
           </div>
         </div>
@@ -277,9 +280,9 @@ const Home = () => {
         {/*  Breathtaking cities*/}
         
         
-        <div className='flex pt-9 w-5/6 mx-auto'>
+        <div className='flex flex-col lg:flex-row pt-9 w-5/6 mx-auto'>
           {/* <div className="wrapper w-4/5 mx-auto"> */}
-            <div className="cities flex  flex-col px-4 ">
+            <div className="cities flex flex-col px-4 ">
               <div className="para">
                 <h6 className='text-xl'>Go & Discover</h6>
                 <h1 className='pt-2 font-bold text-6xl  '>Breathtaking Cities</h1>
@@ -294,45 +297,50 @@ const Home = () => {
                 
               
               
-            <div className='pe-3 '>
+            <div className='pe-3 px-4 pt-3 lg:px-0 lg:pt-0'>
               
-              <img src="/Image/pic14.jpeg" alt="" className='w-full h-full px-2' />
+              <img src="/Image/pic14.jpeg" alt="" className='w-full h-full lg:px-2' />
               </div>
           {/* </div> */}
           </div>
 
           {/* special activities */}
           
-          <div className='pt-5  ps-3 flex justify-betwern items-center space-x-1 pe-3 ' >
-            <div className=' w-5/6  flex mx-auto space-x-3'>
-
-            <div className="special border-2 border-solid border-slate-500 w-1/4 text-center py-6 h-64" >
+          <div className='pt-5  ' >
+            <div className=' w-5/6  flex  flex-wrap mx-auto   '>
+<div className="ramp w-full md:w-1/2 lg:w-1/4 pe-2  ">
+            <div className="special border-2 border-solid border-slate-500  text-center  h-64    " >
               <h1 className='text-4xl  '><i class="fa-solid fa-star"></i></h1>
               <h1 className='pt-3 font-bold text-xl '>Special Activities</h1>
               <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni reiciendis vero omnis</p>
             </div>
-
-           
-       
-
-            <div className="special border-2 border-solid border-slate-500 w-1/4 text-center py-6 h-64 " >
+            </div>
+        
+            <div className="ramp w-full md:w-1/2 lg:w-1/4 pe-2   ">
+            <div className="special border-2 border-solid border-slate-500  text-center py-6 h-64  " >
               <h1 className='text-4xl '><i class="fa-solid fa-person"></i>
               </h1>
               <h1 className='pt-3 font-bold text-xl '>Proper Guide</h1>
               <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni reiciendis vero omnis .</p>
+              </div>
             </div>
-            <div className="special border-2 border-solid border-slate-500 w-1/4 text-center py-6 h-64 " >
+            <div className="ramp w-full md:w-1/2 lg:w-1/4 pe-2 ">
+            <div className="special border-2 border-solid border-slate-500 text-center py-6 h-64  " >
               <h1 className='text-4xl '><i class="fa-solid fa-plane"></i></h1>
               <h1 className='pt-3 font-bold text-xl '>Travel Arrangement</h1>
               <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni </p>
             </div>
-            <div className="special border-2 border-solid border-slate-500 w-1/4 text-center py-6 h-64" >
+            </div>
+            <div className="ramp w-full md:w-1/2 lg:w-1/4 pe-2 ">
+            <div className="special border-2 border-solid border-slate-500  text-center py-6 h-64 " >
               <h1 className='text-4xl '><i class="fa-solid fa-location-dot"></i></h1>
               <h1 className='pt-3 font-bold text-xl '>Location Manager </h1>
               <p className='pt-2 '>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni </p>
+              </div>
             </div>
             </div>
             </div>
+            
 
             {/* Get Special Offer */}
 
@@ -340,15 +348,20 @@ const Home = () => {
          
           <div className="sita w-full ">
 
-            <div className="wrapper w-5/6 mx-auto flex  px-6 py-28 ">
-              <div className="offer md:w-full lg:w-1/2 w-full">
+            <div className="wrapper w-5/6 mx-auto flex flex-wrap px-6 py-28 ">
+            
+                <div className='w-full lg:w-1/2'>
                 <h6 className='text-xl'>Go & Discover</h6>
                 <h1 className='text-6xl font-bold pt-2'>Get Special Offer</h1>
                 <p className='pt-8 pb-5'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam dicta hic tenetur aut excepturi velit.</p>
                 <button className='border-2 border-solid border-slate-600 rounded-full py-2 px-2 hover:bg-slate-600'>OPEN AN ACCOUNT</button>
-              </div>
-              <h1 className='text-9xl ml-10 font-bold w-full md:w-full lg:w-1/2'>35% off</h1>
+                </div>
+        
 
+              
+              <h1 className='text-9xl  font-bold w-full lg:w-1/2'>35% off</h1>
+          
+             
             </div>
          
               
@@ -373,21 +386,27 @@ const Home = () => {
 <div className="  ps-4 pe-4 pb-16  mx-auto w-5/6">
 <div className="slider-container w-full">
       <Slider {...settings}>
-        <div>
+        
+        <div className=''>
+          
         <div className='w-3/4 relative'>
   <img src="/Image/pic4.jpeg" alt=""className='pic4 h-96 '/>
   <h1 className='text-xl pt-2'>Maldives <i class="fa-solid fa-arrow-right"></i></h1>
   <p className='rounded-lg  bg-cyan-300 absolute left-10 top-10 text-white font-'>(2 Trips)</p>
+
 </div>
         </div>
         <div>
+      
         <div className='w-3/4 relative'>
   <img src="/Image/pic5.jpeg" alt=""className='pic5 h-96 '/>
   <h1 className='text-xl pt-2'>Colombo <i class="fa-solid fa-arrow-right"></i></h1>
   <p className='rounded-lg  bg-cyan-300 absolute left-10 top-10 text-white font-'>(2 Trips)</p>
 </div>
+      
         </div>
         <div>
+          
         <div className='w-3/4 relative'>
   <img src="/Image/pic6.webp" alt=""className=' pic6 h-96 '/>
   <h1 className='text-xl pt-2'>Bhutan <i class="fa-solid fa-arrow-right"></i></h1>

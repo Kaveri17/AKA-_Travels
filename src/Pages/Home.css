@@ -22,3 +22,13 @@ transition: 0.4s;
     transform: scale(1.05);
     transition: 0.4s;
     }       
+
+    .ramp{
+      padding-top: 0.5rem;
+    }
+    @media (min-width: 1024px){
+      .ramp{
+          padding-top: 0;
+      }
+
+    }
