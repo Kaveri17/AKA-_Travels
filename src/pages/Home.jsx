@@ -9,7 +9,7 @@ const Home = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    //  autoplay: true,
+     autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
     cssEase: "linear"
@@ -27,7 +27,7 @@ const Home = () => {
         <button className='mt-6 border-solid border-2 border-red-500 rounded-md h-12 w-40 text-xl hover:bg-slate-500 '>APPOINTMENT</button>
         
         
-        <form>
+        {/* <form>
             <div class="sm:col-span-3 ">
              <label for="Destination" class="block text-sm font-medium text-grey-900 mt-10">Destination</label>  
             <div class="md-2 ">
@@ -42,10 +42,26 @@ const Home = () => {
             </div>
 
   
-        </form>
+        </form> */}
        
         </div>
         </div>
+        <form>
+          <div className='mx-auto w-5/6'>
+            <label htmlFor="destination" ></label>
+            <select id="destination" className='px-5' >
+              <option value="choose Destination">
+              <i class="fa-solid fa-location-dot"></i>Destination
+              </option>
+              <option value="everest">Everest</option>
+              <option value="pokhara">Pokhara</option>
+              <option value="usa">USA</option>
+              <option value="maldives">Maldives</option>
+              <option value="bhutan">Bhutan</option>
+
+            </select>
+            </div>
+        </form>
 
 {/* Tips awesome */}
 <div className='px-8 pt-16 mx-auto w-5/6'>
@@ -59,7 +75,7 @@ const Home = () => {
   <img src="/Image/pic4.jpeg" alt="" className=' w-full' />
   </div>
   <div className='w-full  lg:w-1/2  '>
-    <div className='border-2 border-solid border-b-gray-400 mt-14 p-8 -ms-16 ' style={{backgroundColor:"wheat"}}>
+    <div className='border-2 border-solid border-b-gray-400 mt-14 p-8 lg:-ms-16 ' style={{backgroundColor:"wheat"}}>
   <h1 className='text-xl pb-2'> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
   <h1 className='text-2xl font-bold pb-3' >10 Sun Hats For Beach Days, Long Hikes, And </h1>
   <p className='pb-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum corrupti officia quisquam ipsam, tempore deleniti?</p>
@@ -74,9 +90,9 @@ const Home = () => {
         <div className="adventure p-5 w-5/6 mx-auto ">
           <div className='flex flex-wrap py-5'>
             <div className='w-full lg:w-1/2  z-10 py-16'>
-            <div className="para border-2 border-solid border-b-gray-600 ps-14 py-4  -me-16 " style={{backgroundColor:"wheat"}}>
+            <div className="para border-2 border-solid border-b-gray-600 ps-14 py-4  lg:-me-16 " style={{backgroundColor:"wheat"}}>
           <h1 className='text-xl pb-2'> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
-          <h1 className='text-3xl font-bold pb-3'>Pokhara In August:Waiting for vistors</h1>
+          <h1 className='text-2xl font-bold pb-3'>Pokhara In June:Waiting for vistors</h1>
           <p className='pb-3'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum corrupti officia quisquam ipsam, tempore deleniti?</p>
           <button className=' border-2 border-solid border-red-300 hover:bg-slate-400 px-3 py-2 '>Read More</button>
           </div>
@@ -285,7 +301,7 @@ const Home = () => {
             <div className="cities flex flex-col px-4 ">
               <div className="para">
                 <h6 className='text-xl'>Go & Discover</h6>
-                <h1 className='pt-2 font-bold text-6xl  '>Breathtaking Cities</h1>
+                <h1 className='pt-2 font-bold text-5xl  '>Breathtaking Cities</h1>
                 <p className='pt-3  '>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, vero. Similique minus odit corrupti perspiciatis ab accusantium iste.</p>
               </div>
               

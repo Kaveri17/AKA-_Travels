@@ -30,11 +30,22 @@
     border-radius: 30px;
     background: black;
   }  */
-  input[type="text"] {
     /* padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-right: 5px;
     font-size: 16px;
     width: 200px; */
+  
+.dropdown{
+  display: none;
+  background-color: white;
+  padding: 12px 20px;  
+  left: 33%;
+  top: 100%;
+ 
+}
+
+.navbar-pages:hover  .dropdown{
+  display: block;
 }
