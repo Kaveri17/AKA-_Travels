@@ -14,10 +14,11 @@ import BlogDetailll from "./Layout/BlogDetailll";
 import Contact from "./Layout/Contact";
 // import Cart from "./Pages/Cart";
 import Home from "./Pages/Home";
-import Modal from "./Components/Modal";
+import Modal from "./components/Modal";
 import Gallery from "./Pages/Gallery";
 import Details from "./Pages/Details";
 import Packages from "./Pages/Packages";
+import ImageSlider from "./components/ImageSlider";
 
 
 const MyRoutes = () => {
@@ -43,6 +44,7 @@ const MyRoutes = () => {
             <Route path="/modal" element={<Modal />} />
             <Route path="/details" element={<Details/>}/>
             <Route path="/packages" element={<Packages/>}/>
+            {/* <Route path="/slider" element={<ImageSlider/>}/> */}
           </Route>
         </Routes>
       </BrowserRouter>

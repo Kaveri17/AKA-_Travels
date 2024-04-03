@@ -7,11 +7,11 @@ const Modal = () => {
       {/* Button trigger modal */}
       <button
         type="button"
-        className="btn btn-primary text-slate-800"
+        //className="btn btn-primary text-slate-800"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
-        Launch demo modal
+        Check Availability
       </button>
       {/* Modal  */}
       <div
