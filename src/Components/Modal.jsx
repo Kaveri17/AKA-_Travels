@@ -7,7 +7,7 @@ const Modal = () => {
       {/* Button trigger modal */}
       <button
         type="button"
-        //className="btn btn-primary text-slate-800"
+        className="bg-orange-500 text-white px-16 lg:px-8 xl:px-16 py-3 text-lg rounded-md tracking-wide hover:bg-orange-600"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
@@ -36,11 +36,11 @@ const Modal = () => {
             <div className="modal-body w-full">
               <Cart />
             </div>
-            <div className="modal-footer">
+            {/* <div className="modal-footer">
               <button type="button" className="btn btn-primary text-slate-800">
                 Save changes
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -51,7 +51,7 @@ const Home = () => {
             <label htmlFor="destination" ></label>
             <select id="destination" className='px-5' >
               <option value="choose Destination">
-              <i class="fa-solid fa-location-dot"></i>Destination
+                Destination
               </option>
               <option value="everest">Everest</option>
               <option value="pokhara">Pokhara</option>

@@ -15,6 +15,10 @@
   background-color:#f9f9;
 } */
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* About.jsx*/
 .hdiv{
   padding-top: 5.5rem;
@@ -123,6 +127,8 @@ background-color:wheat;
 /* .detail-img h3 :hover{
   background-color:  white;
 } */
+
+/* cart */ 
 
 /* Footer */
 
