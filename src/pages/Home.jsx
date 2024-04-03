@@ -9,58 +9,130 @@ const Home = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-     autoplay: true,
+    autoplay: false,
     speed: 2000,
     autoplaySpeed: 2000,
-    cssEase: "linear"
+    cssEase: "linear",
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      },
+      // {
+      //   breakpoint: 480,
+      //   settings: {
+      //     slidesToShow: 1,
+      //     slidesToScroll: 1
+      //   }
+      // }
+    ]
   };
   return (
     <>
- 
-        <div className="home  w-full h-screen pt-32 ps-32" style={{backgroundImage: "url('https://wordpress.vecurosoft.com/travolo/wp-content/uploads/2023/11/banner-bg-1.png')"}} >
-          <div className='w-5/6 mx-auto'>
-    <h1 className='text-3xl font-bold ml-21 '>Travelling and Exploring the World And  
-        <br />
-        Find The Beauty
-        </h1> 
-        <p className='mt-8 text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sed quasi dolorum perspiciatis <br /> ratione totam ipsam incidunt explicabo earum aspernatur dolorem, sunt animi ullam. Odit?</p>
-        <button className='mt-6 border-solid border-2 border-red-500 rounded-md h-12 w-40 text-xl hover:bg-slate-500 '>APPOINTMENT</button>
-        
-        
-        {/* <form>
-            <div class="sm:col-span-3 ">
-             <label for="Destination" class="block text-sm font-medium text-grey-900 mt-10">Destination</label>  
-            <div class="md-2 ">
-                <select id="Destination" name='Destination' autoComplete='destination-name'clas='block w-full rounded-md border-solid border-2 text-grey-900 shadow-sm'>
-                    Destination
-<option >Bhutan</option>
-<option >pokhara</option>
-<option >Switzweland</option>
-<option>Unites state</option>
-                </select> 
-</div>
-            </div>
 
-  
-        </form> */}
+        <div className="home  w-full h-screen pt-28 " style={{backgroundImage: "url('https://wordpress.vecurosoft.com/travolo/wp-content/uploads/2023/11/banner-bg-1.png')"}} >
+          <div className='w-5/6 mx-auto flex flex-wrap'>
+          <div className=' w-full lg:w-1/2 '>
+            <h1 className='text-5xl font-bold leading-normal  '>Travelling and Exploring the  World And  
+              
+                Find The Beauty
+                </h1> 
+                <p className='mt-8 text-xl pb-6 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Assumenda sed quasi dolorum perspiciatis ratione totam ipsam  <br /> earum aspernatur dolorem, sunt animi ullam. Odit?</p>
+                <button className='mt-6 border-solid border-2 border-red-500 rounded-md h-12 w-40 text-xl hover:bg-slate-500  '>APPOINTMENT</button>
+        
+        </div>
+        
+            <div className="home-img w-1/3 flex  items-center lg:w-1/3 ">
+              <img src="/Image/tri.jpg" alt="" className='w-full rounded-full px-2 py-2 bg-white border-2 border-solid border-red-200 '/>
+             
+              <img src="/Image/trekking2.jpg" alt="" className='w-2/3 h-2/3 px-2 py-2 bg-white border-2 border-solid border-red-200 rounded-full -ml-11' />
+            </div>
+          
+            </div>
+    
+        
+        </div>
        
-        </div>
-        </div>
+       
+       
+       
         <form>
-          <div className='mx-auto w-5/6'>
+          <div className='pt-4'>
+         
+          <div className='mx-auto w-5/6 border-2 border-solid border-red-200 px-3 py-12 md:-mt-24 flex flex-wrap space-x-2  bg-white '>
+          
             <label htmlFor="destination" ></label>
-            <select id="destination" className='px-5' >
-              <option value="choose Destination">
-              <i class="fa-solid fa-location-dot"></i>Destination
+            <select id="destination" className='md:px-4 py-2 px-14 w-full md:w-1/2  lg:w-1/6 border-2 border-solid border-red-200' >
+            
+              <option value="" className='w-full ' disabled selected hidden>
+                Destination  
               </option>
               <option value="everest">Everest</option>
               <option value="pokhara">Pokhara</option>
               <option value="usa">USA</option>
               <option value="maldives">Maldives</option>
               <option value="bhutan">Bhutan</option>
+              <option value="gorkha">Gorkha</option>
+
 
             </select>
+
+            <label htmlFor="Activity" ></label>
+            <select id="activity" className='md:px-8 px-14   w-full md:w-1/2 lg:w-1/6  py-2 border-2 border-solid border-red-200' >
+              <option value="" className='w-full ' disabled selected hidden>
+           Activity 
+              </option>
+              <option value="boating">Boating</option>
+              <option value="cycling">Cycling</option>
+              <option value="jungle safari">Jungle Sufari</option>
+              <option value="trekking">Trekking</option>
+              <option value="hiking">Hiking</option>
+
+            </select>
+            <label htmlFor="days" ></label>
+            <select id="days" className='md:px-8 px-14 w-full md:w-1/2  lg:w-1/6 py-2 border-2 border-solid border-red-200 ' >
+              <option value="" className='w-full ' disabled selected hidden>
+            Days 
+              </option>
+              <option value="1-2 Days">1-2 days</option>
+              <option value="2-3 Days">2-3 days</option>
+              <option value="1-3 Days">1-3 days</option>
+              <option value="4-3 Days">4-3 days</option>
+              <option value="1-6 Days">1-6 days</option>
+            </select>
+            <label htmlFor="prices" ></label>
+            <select id="prices" className='px-14 py-2 w-full md:w-1/2  lg:w-1/6 md:px-8 border-2 border-solid border-red-200' >
+              <option value=""  className='w-full 'disabled selected hidden>
+            Prices  
+              </option>
+              <option value="everest">$300-$400</option>
+              <option value="pokhara">$400-$450</option>
+              <option value="usa">$900-$1000</option>
+              <option value="maldives">$500-$550</option>
+              <option value="bhutan">$700-$750</option>
+
+            </select>
+       <button className='border-2 border-solid border-red-200 hover:bg-slate-400 md:px-3 py-1 w-full md:w-1/2  lg:w-1/6 '>Find Now </button> 
+            
             </div>
+        
+            </div>
+          
+
         </form>
 
 {/* Tips awesome */}
@@ -87,12 +159,12 @@ const Home = () => {
 
 
         {/*Adventure  */}
-        <div className="adventure p-5 w-5/6 mx-auto ">
+        <div className="adventure px-8 w-5/6 mx-auto ">
           <div className='flex flex-wrap py-5'>
             <div className='w-full lg:w-1/2  z-10 py-16'>
-            <div className="para border-2 border-solid border-b-gray-600 ps-14 py-4  lg:-me-16 " style={{backgroundColor:"wheat"}}>
+            <div className="para border-2 border-solid border-b-gray-600 p-8 py-4  lg:-me-16 " style={{backgroundColor:"wheat"}}>
           <h1 className='text-xl pb-2'> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
-          <h1 className='text-2xl font-bold pb-3'>Pokhara In June:Waiting for vistors</h1>
+          <h1 className='text-2xl font-bold pb-3'>Pokhara In August:Waiting for vistors</h1>
           <p className='pb-3'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum corrupti officia quisquam ipsam, tempore deleniti?</p>
           <button className=' border-2 border-solid border-red-300 hover:bg-slate-400 px-3 py-2 '>Read More</button>
           </div>

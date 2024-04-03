@@ -53,7 +53,7 @@ const Packages = () => {
     <div className="year border-t-2 pb-14 pt-2  ">
         <h1 className='text-xl'>Available through out the year:</h1>
         <div className="flex flex-wrap justify-between">
-            <div className="div flex   w-full  lg:w-1/3 pt-3  ">
+            <div className="div flex flex-wrap  w-full  lg:w-1/2 pt-3  ">
                 <h1 className='pe-2'><i class="fa-regular fa-calendar-check text-xl font-bold text-red-500"></i></h1>
                 <h1 className='pe-2'>Jan</h1>
                 <h1 className='pe-2'>Feb</h1>
@@ -126,7 +126,7 @@ const Packages = () => {
         <div className="year border-t-2 pb-14 pt-2  ">
         <h1 className='text-xl'>Available through out the year:</h1>
         <div className="flex flex-wrap justify-between">
-            <div className="div flex   w-full  lg:w-1/3 pt-3  ">
+            <div className="div flex  flex-wrap  w-full  lg:w-1/2 pt-3  ">
                 <h1 className='pe-2'><i class="fa-regular fa-calendar-check text-xl font-bold text-red-500"></i></h1>
                 <h1 className='pe-2'>Jan</h1>
                 <h1 className='pe-2'>Feb</h1>
