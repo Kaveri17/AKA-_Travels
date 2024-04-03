@@ -74,20 +74,27 @@ const Contact = () => {
         <div className='text-orange-600 text-xl text-center py-12'>Contact Us</div>
         <div className='text-4xl text-center font-black '>GET IN TOUCH</div>
        <p className='text-center text-slate-500 py-2'> Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget<br/>consectetur sed, convgallis at tellus. Vestibulum ac diam sit.</p>
-
+{/* 
         <div className='m-3 flex py-3'>
-            <input type="text" placeholder='Enter Your First Name' className='w-1/2 bg-white me-3 py-3 px-5' />
-            {/* <input type="text" placeholder='Enter Your First Name' className="w-96 h-12 border border-gray-300 rounded-md px-4"/> */}
+            <input type="text" placeholder='Enter Your First Name' className='w-1/2 bg-white me-3 py-3 px-5' /> 
             <input type="text" placeholder='Enter Your Last Name' className='w-1/2 bg-white px-5' />
 
-        
+        </div> */}
+        <div class="m-3 flex flex-col sm:flex-row py-3">
+  <input type="text" placeholder="Enter Your First Name" class="w-full sm:w-1/2 bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md" />
+  <input type="text" placeholder="Enter Your Last Name" class="w-full sm:w-1/2 bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md" />
+</div>
 
-        </div>
        
 
-        <div className='m-3 flex py-3'>
-        <input type="email" placeholder='Your Email'  className='w-1/2 bg-white py-3 me-3 px-5' />
-        <input type="number" placeholder='Phone Number' className='w-1/2 bg-white px-5 ' />
+        <div className='m-3 flex  flex-col sm:flex-row py-3'>
+        {/* <input type="email" placeholder='Your Email'  className='w-1/2 bg-white py-3 me-3 px-5' />
+        
+         */}
+          <input type="email" placeholder="Your Email" class="w-full sm:w-1/2 bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md" />
+
+        {/* <input type="number" placeholder='Phone Number' className='w-1/2 bg-white px-5 ' /> */}
+        <input type="number" placeholder="Phone Number" class="w-full sm:w-1/2 bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md" />
         </div>
 
         <div className='m-3 py-3'>
@@ -95,7 +102,11 @@ const Contact = () => {
         </div>
 
         {/* <button className='btn '>SEND MESSAGE</button> */}
-        <button className='block mx-auto  bg-orange-600 border-1 text-white font-bold w-1/5 rounded-lg h-10 '>SEND MESSAGE</button>
+        {/* <button className='block mx-auto  bg-orange-600 border-1 text-white font-bold w-1/5 rounded-lg h-10 '>SEND MESSAGE</button> */}
+        <button class="block mx-auto bg-orange-600 border-1 text-white font-bold w-1/2 sm:w-1/5 rounded-lg h-10 md:w-1/4 lg:w-1/5 xl:w-1/6 mt-4 md:mt-0">
+       SEND MESSAGE
+       </button>
+
         </div>
         </div>
         </div>
