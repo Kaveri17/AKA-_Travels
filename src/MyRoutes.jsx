@@ -18,6 +18,7 @@ import Modal from "./components/Modal";
 import Gallery from "./Pages/Gallery";
 import Details from "./Pages/Details";
 import Packages from "./Pages/Packages";
+import ImageSlider from "./components/ImageSlider";
 
 
 const MyRoutes = () => {
@@ -43,6 +44,7 @@ const MyRoutes = () => {
             <Route path="/modal" element={<Modal />} />
             <Route path="/details" element={<Details/>}/>
             <Route path="/packages" element={<Packages/>}/>
+            {/* <Route path="/slider" element={<ImageSlider/>}/> */}
           </Route>
         </Routes>
       </BrowserRouter>

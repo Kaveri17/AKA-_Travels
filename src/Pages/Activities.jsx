@@ -21,9 +21,12 @@ const Activities = () => {
                   className="overlay absolute top-0 left-0 w-full h-full rounded-xl "
                   style={{ backgroundColor: "rgba(164,224,235,0.6)" }}
                 >
-                  <button className="border-solid border-1 px-3 py-2 text-lg font-semibold border-white rounded-md hover:bg-white hover:text-teal-300">
-                    View More
-                  </button>
+                  <Link to="/packages">
+                
+                    <button className="border-solid border-1 px-3 py-2 text-lg font-semibold border-white rounded-md hover:bg-white hover:text-teal-300">
+                      View More
+                    </button>
+                  </Link>
                 </div>
               </Link>
             </div>
@@ -45,9 +48,12 @@ const Activities = () => {
                   className="overlay absolute top-0 left-0 w-full h-full rounded-xl "
                   style={{ backgroundColor: "rgba(164,224,235,0.6)" }}
                 >
+                   <Link to="/packages">
+                  
                   <button className="border-solid border-1 px-3 py-2 text-lg font-semibold border-white rounded-md hover:bg-white hover:text-teal-300">
                     View More
                   </button>
+                  </Link>
                 </div>
               </Link>
             </div>
@@ -69,9 +75,11 @@ const Activities = () => {
                   className="overlay absolute top-0 left-0 w-full h-full rounded-xl "
                   style={{ backgroundColor: "rgba(164,224,235,0.6)" }}
                 >
+                  <Link to="/packages">
                   <button className="border-solid border-1 px-3 py-2 text-lg font-semibold border-white rounded-md hover:bg-white hover:text-teal-300">
                     View More
                   </button>
+                  </Link>
                 </div>
               </Link>
             </div>
@@ -93,9 +101,13 @@ const Activities = () => {
                   className="overlay absolute top-0 left-0 w-full h-full rounded-xl "
                   style={{ backgroundColor: "rgba(164,224,235,0.6)" }}
                 >
+                  <Link to="/packages">
+
                   <button className="border-solid border-1 px-3 py-2 text-lg font-semibold border-white rounded-md hover:bg-white hover:text-teal-300">
                     View More
                   </button>
+                  
+                  </Link>
                 </div>
               </Link>
             </div>
@@ -117,9 +129,12 @@ const Activities = () => {
                   className="overlay absolute top-0 left-0 w-full h-full rounded-xl "
                   style={{ backgroundColor: "rgba(164,224,235,0.6)" }}
                 >
+                  <Link to="/packages">
+
                   <button className="border-solid border-1 px-3 py-2 text-lg font-semibold border-white rounded-md hover:bg-white hover:text-teal-300">
                     View More
                   </button>
+                  </Link>
                 </div>
               </Link>
             </div>
@@ -141,9 +156,12 @@ const Activities = () => {
                   className="overlay absolute top-0 left-0 w-full h-full rounded-xl "
                   style={{ backgroundColor: "rgba(164,224,235,0.6)" }}
                 >
+                  <Link to="/packages">
+
                   <button className="border-solid border-1 px-3 py-2 text-lg font-semibold border-white rounded-md hover:bg-white hover:text-teal-300">
                     View More
                   </button>
+                  </Link>
                 </div>
               </Link>
             </div>
@@ -165,9 +183,12 @@ const Activities = () => {
                   className="overlay absolute top-0 left-0 w-full h-full rounded-xl "
                   style={{ backgroundColor: "rgba(164,224,235,0.6)" }}
                 >
+                  <Link to="/packages">
+
                   <button className="border-solid border-1 px-3 py-2 text-lg font-semibold border-white rounded-md hover:bg-white hover:text-teal-300">
                     View More
                   </button>
+                  </Link>
                 </div>
               </Link>
             </div>
@@ -189,9 +210,12 @@ const Activities = () => {
                   className="overlay absolute top-0 left-0 w-full h-full rounded-xl "
                   style={{ backgroundColor: "rgba(164,224,235,0.6)" }}
                 >
+                  <Link to="/packages">
+
                   <button className="border-solid border-1 px-3 py-2 text-lg font-semibold border-white rounded-md hover:bg-white hover:text-teal-300">
                     View More
                   </button>
+                  </Link>
                 </div>
               </Link>
             </div>
@@ -213,9 +237,12 @@ const Activities = () => {
                   className="overlay absolute top-0 left-0 w-full h-full rounded-xl "
                   style={{ backgroundColor: "rgba(164,224,235,0.6)" }}
                 >
+                  <Link to="/packages">
+
                   <button className="border-solid border-1 px-3 py-2 text-lg font-semibold border-white rounded-md hover:bg-white hover:text-teal-300">
                     View More
                   </button>
+                  </Link>
                 </div>
               </Link>
             </div>
