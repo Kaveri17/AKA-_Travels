@@ -5,12 +5,22 @@ import cn from "../utils/cn";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 
 const Cart = () => {
-  console.log(generateDate());
+  // console.log(generateDate());
 
   const days = ["S", "M", "T", "W", "T", "F", "S"];
   const currentDate = dayjs();
   const [today, setToday] = useState(currentDate);
   const [selectDate, setSelectDate] = useState(currentDate);
+  
+  // State to manage button visibility
+  const [showSecondBtn, setShowSecondBtn] = useState(false)
+  const [firstBtnState, setFirstBtnState] = useState(false)
+
+  // Function to handle click on first button
+  const handleShowBtn =()=>{
+    setShowSecondBtn(true); //Shows the second button
+    setFirstBtnState(true);
+  }
 
   return (
     <>
@@ -58,7 +68,7 @@ const Cart = () => {
           <div className="grid grid-cols-7">
             {generateDate(today.month(), today.year()).map(
               ({ date, currentMonth, today }, index) => {
-                console.log("Current Month:", currentMonth);
+                // console.log("Current Month:", currentMonth);
                 return (
                   <div
                     key={index}
@@ -85,6 +95,23 @@ const Cart = () => {
                 );
               }
             )}
+            <div className="confirmbtn col-start-2 sm:col-start-3  py-4">    
+              {/* Show the first button only if firstBtnClicked state is false */}
+              {!firstBtnState && (
+                <button 
+                  className="first-btn bg-orange-500 text-white px-16 lg:px-14 xl:px-16 py-3 text-lg rounded-sm tracking-wider hover:bg-orange-600" 
+                  onClick={handleShowBtn} //Calling handleShowBtn function on button click  
+                >
+                  Continue  
+                </button>
+              )}
+              {showSecondBtn && (
+                <button 
+                  className="second-btn bg-orange-500 text-white px-16 lg:px-14 xl:px-16 py-3 text-lg rounded-sm tracking-wider hover:bg-orange-600"  >
+                  Checkout 
+                </button>
+              )}
+            </div>
           </div>
         </div>
         <div className="w-full lg:w-2/5 lg:px-5">
@@ -120,6 +147,7 @@ const Cart = () => {
           </div>
         </div>
       </div>
+      
     </>
   );
 };

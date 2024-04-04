@@ -1,4 +1,8 @@
 import react from 'react'
+import React from 'react'
+import ImageSlider from '../components/ImageSlider'
+import { Link } from 'react-router-dom'
+import Modal from '../Components/Modal'
 
 // import ImageSlider from '../components/ImageSlider'
 import { Link } from 'react-router-dom'
@@ -214,7 +218,7 @@ const Details = () => {
                                 </span>
                             </p>
                         </div>
-                        <form action="" >
+                        <form action="" id='detailForms'>
                             <div className="flex flex-col py-3">
                                 <label htmlFor="fullname" className='text-black py-2'>
                                     Your Name
@@ -237,7 +241,14 @@ const Details = () => {
                                     </label>
                                     {/* <input type="text" placeholder='Enter Your Name *' className=' border-2 py-3 px-2 rounded-md' name='fullname' id='fullname' style={{fontSize:"14px"}}/> */}
                                     <select name="country" id="country" className=' border-2 border-zinc-300 py-3 px-2 rounded-md'>
-                                        <option value="Choose a country" selected> Choose a country</option>
+                                        <option value="" disabled selected hidden> Choose a country</option>
+                                        <option value="">Everest</option>
+                                        <option value="">Pokhara</option>
+                                        <option value="">USA</option>
+                                        <option value="">Bhutan</option>
+                                        <option value="">Maldives</option>
+                                        <option value="">Gorkha</option>
+                                        <option value="">Paris</option>
                                     </select>
                                 </div>
                                 <div className="flex flex-col py-3 w-full md:w-1/2">
@@ -319,15 +330,17 @@ const Details = () => {
                         </div>
                         <div className="cartbottom border-y border-slate-200 text-center py-4">
                                 {/* <button className='bg-orange-500 text-white px-16 lg:px-8 xl:px-16 py-3 text-lg rounded-md tracking-wide'>Check Availability</button> */}
-                            <button className='bg-orange-500 text-white px-16 lg:px-8 xl:px-16 py-3 text-lg rounded-md tracking-wide'>
+                            {/* <button className='bg-orange-500 text-white px-16 lg:px-8 xl:px-16 py-3 text-lg rounded-md tracking-wide'> */}
                                 <Modal/>
-                            </button>
+                            {/* </button> */}
                         </div>
                         <div className='text-center py-4'>
                             <p className='text-sm tracking-wide text-black'>
                                 Need help with booking?
                                 <span className='text-orange-600 ps-1'>
-                                    Send Us A Message
+                                    <Link to="#detailForms">
+                                        Send Us A Message
+                                    </Link> 
                                 </span>
                             </p>
                         </div>
