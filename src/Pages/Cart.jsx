@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { generateDate, months } from "../utils/calendar";
 import cn from "../utils/cn";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import { button } from "@material-tailwind/react";
 
 const Cart = () => {
   // console.log(generateDate());
@@ -13,13 +14,13 @@ const Cart = () => {
   const [selectDate, setSelectDate] = useState(currentDate);
   
   // State to manage button visibility
-  const [showSecondBtn, setShowSecondBtn] = useState(false)
-  const [firstBtnState, setFirstBtnState] = useState(false)
+  const [showBtn, setShowBtn] = useState(false)
+  // const [firstBtnState, setFirstBtnState] = useState(false)
 
   // Function to handle click on first button
   const handleShowBtn =()=>{
-    setShowSecondBtn(true); //Shows the second button
-    setFirstBtnState(true);
+    setShowBtn(!showBtn); // Negates the value of the button like if true then it becomes false and vice versa
+    // setFirstBtnState(true);
   }
 
   return (
@@ -97,7 +98,7 @@ const Cart = () => {
             )}
             <div className="confirmbtn col-start-2 sm:col-start-3  py-4">    
               {/* Show the first button only if firstBtnClicked state is false */}
-              {!firstBtnState && (
+              {/* {!firstBtnState && (
                 <button 
                   className="first-btn bg-orange-500 text-white px-16 lg:px-14 xl:px-16 py-3 text-lg rounded-sm tracking-wider hover:bg-orange-600" 
                   onClick={handleShowBtn} //Calling handleShowBtn function on button click  
@@ -110,7 +111,30 @@ const Cart = () => {
                   className="second-btn bg-orange-500 text-white px-16 lg:px-14 xl:px-16 py-3 text-lg rounded-sm tracking-wider hover:bg-orange-600"  >
                   Checkout 
                 </button>
-              )}
+              )} */}
+              {!showBtn ? 
+                <div className="flex items-center">
+                  <p 
+                    className="text-orange-500 cursor-pointer"
+                    onClick={handleShowBtn} >
+                    Back
+                  </p>
+
+                  <button 
+                    className="second-btn bg-orange-500 text-white px-16 lg:px-14 xl:px-16 py-3 text-lg rounded-sm tracking-wider hover:bg-orange-600"  
+                    
+                    >
+                    Checkout 
+                  </button>
+                </div>
+                :
+                <button 
+                  className="first-btn bg-orange-500 text-white px-16 lg:px-14 xl:px-16 py-3 text-lg rounded-sm tracking-wider hover:bg-orange-600" 
+                  onClick={handleShowBtn} //Calling handleShowBtn function on button click  
+                >
+                  Continue  
+                </button>
+              }
             </div>
           </div>
         </div>

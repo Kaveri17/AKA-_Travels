@@ -1,205 +1,90 @@
-import React, { useEffect } from 'react'
-// Initialization for ES Users
-// import {
-//     Carousel,
-//     initTWE,
-//   } from "tw-elements";
-  
+import React from 'react'
+import { Link } from 'react-router-dom';
+import Slider from "react-slick";
 
 const ImageSlider = () => {
-    // initTWE({ Carousel });
-
-//     useEffect(() => {
-//         // Initialize TWE with the Carousel component
-//         initTWE({ Carousel });
-//       }, []); // Empty dependency array to run the effect only once
-//   return (
-    // <>       
-    //     <div id="controls-carousel" className="relative w-full" data-carousel="slide">
-    //         {/* Carousel wrapper  */}
-    //         <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-    //             {/* Item 1 */}
-    //             <div className="hidden duration-700 ease-in-out" data-carousel-item>
-    //                 <img src="https://source.colostate.edu/wp-content/uploads/2017/06/CFCT-Nature-Hiking.jpeg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 bg-red-800" alt="..."/>
-    //             </div>
-    //             {/* Item 2 */}
-    //             <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
-    //                 <img src="/Image/bungeejump.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-    //             </div>
-    //             {/*  Item 3 */}
-    //             <div className="hidden duration-700 ease-in-out" data-carousel-item>
-    //                 <img src="/Image/pic22.jpeg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-    //             </div>
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      };
+  return (
+    <>
+        <div className="slider-container">
+            <Slider {...settings}>
+                <div>
+                    <div className="details-img w-full relative">
+                        <img src="/Image/pic24.jpeg" alt="" className='w-full rounded-md 'style={{height:"500px"}}/>
+                        <button className='bg-white rounded-full text-gray-600 absolute px-3 py-2 bottom-5 left-5 text-sm border-0'>
+                            <Link to='/gallery'>
+                                    <i className="fa-regular fa-image pe-2"></i>
+                                    Gallery
+                            </Link>
+                        </button>                    
+                    </div>
+                </div>
+                <div>
+                    <div className="details-img w-full relative">
+                        <img src="https://cosmosmagazine.com/wp-content/uploads/2020/02/191010_nature.jpg" alt="" className='w-full rounded-md 'style={{height:"500px"}}/>
+                        <button className='bg-white rounded-full text-gray-600 absolute px-3 py-2 bottom-5 left-5 text-sm border-0'>
+                            <Link to='/gallery'>
+                                    <i className="fa-regular fa-image pe-2"></i>
+                                    Gallery
+                            </Link>
+                        </button>                    
+                    </div>
+                </div>
+                <div>
+                    <div className="details-img w-full relative">
+                        <img src="https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg" alt="" className='w-full rounded-md' style={{height:"500px"}}/>
+                        <button className='bg-white rounded-full text-gray-600 absolute px-3 py-2 bottom-5 left-5 text-sm border-0'>
+                            <Link to='/gallery'>
+                                    <i className="fa-regular fa-image pe-2"></i>
+                                    Gallery
+                            </Link>
+                        </button>                    
+                    </div>
+                </div>
                 
-    //         </div>
-    //         {/* Slider controls  */}
-    //         <button type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-    //             <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-    //                 <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-    //                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4"/>
-    //                 </svg>
-    //                 <span className="sr-only">Previous</span>
-    //             </span>
-    //         </button>
-    //         <button type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-    //             <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-    //                 <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-    //                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
-    //                 </svg>
-    //                 <span className="sr-only">Next</span>
-    //             </span>
-    //         </button>
-    //     </div>
-    // </>
-    // <>
-        
+            </Slider>
+        </div>
+        {/* <Carousel
+        className="rounded-xl w-full"
+        navigation={({ setActiveIndex, activeIndex, length }) => (
+            <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+            {new Array(length).fill("").map((_, i) => (
+                <span
+                key={i}
+                className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                    activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+                }`}
+                onClick={() => setActiveIndex(i)}
+                />
+            ))}
+            </div>
+        )}
+        >
+        <img
+            src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+            alt="image 1"
+            className="h-full w-full object-cover"
+        />
+        <img
+            src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+            alt="image 2"
+            className="h-full w-full object-cover"
+        />
+        <img
+            src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
+            alt="image 3"
+            className="h-full w-full object-cover"
+        />
+        </Carousel> */}
 
-    //     <div id="default-carousel" class="relative w-full" data-carousel="slide">
-    //         {/* <!-- Carousel wrapper --> */}
-    //         <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-    //             {/* <!-- Item 1 --> */}
-    //             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-    //                 <img src="https://source.colostate.edu/wp-content/uploads/2017/06/CFCT-Nature-Hiking.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-    //             </div>
-    //             {/* <!-- Item 2 --> */}
-    //             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-    //                 <img src="https://source.colostate.edu/wp-content/uploads/2017/06/CFCT-Nature-Hiking.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-    //             </div>
-    //             {/* <!-- Item 3 --> */}
-    //             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-    //                 <img src="https://source.colostate.edu/wp-content/uploads/2017/06/CFCT-Nature-Hiking.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-    //             </div>
-    //             {/* <!-- Item 4 --> */}
-    //             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-    //                 <img src="https://source.colostate.edu/wp-content/uploads/2017/06/CFCT-Nature-Hiking.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-    //             </div>
-    //             {/* <!-- Item 5 --> */}
-    //             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-    //                 <img src="https://source.colostate.edu/wp-content/uploads/2017/06/CFCT-Nature-Hiking.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-    //             </div>
-    //         </div>
-    //         {/* <!-- Slider indicators --> */}
-    //         <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-    //             <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-    //             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-    //             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-    //             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-    //             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-    //         </div>
-    //         {/* <!-- Slider controls --> */}
-    //         <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-    //             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-    //                 <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-    //                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-    //                 </svg>
-    //                 <span class="sr-only">Previous</span>
-    //             </span>
-    //         </button>
-    //         <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-    //             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-    //                 <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-    //                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-    //                 </svg>
-    //                 <span class="sr-only">Next</span>
-    //             </span>
-    //         </button>
-    //     </div>
-
-    // </>
-
-//     <>
-//         <div
-//   id="carouselExampleControls"
-//   className="relative"
-//   data-twe-carousel-init
-//   data-twe-ride="carousel">
-//   {/* <!--Carousel items--> */}
-//   <div
-//     className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-//     {/* <!--First item--> */}
-//     <div
-//       className="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-//       data-twe-carousel-item
-//       data-twe-carousel-active>
-//       <img
-//         src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-//         className="block w-full"
-//         alt="Wild Landscape" />
-//     </div>
-//     {/* <!--Second item--> */}
-//     <div
-//       className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-//       data-twe-carousel-item>
-//       <img
-//         src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-//         className="block w-full"
-//         alt="Camera" />
-//     </div>
-//     {/* <!--Third item--> */}
-//     <div
-//       className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-//       data-twe-carousel-item>
-//       <img
-//         src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-//         className="block w-full"
-//         alt="Exotic Fruits" />
-//     </div>
-//   </div>
-
-//   {/* <!--Carousel controls - prev item--> */}
-//   <button
-//     className="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-//     type="button"
-//     data-twe-target="#carouselExampleControls"
-//     data-twe-slide="prev">
-//     <span className="inline-block h-8 w-8">
-//       <svg
-//         xmlns="http://www.w3.org/2000/svg"
-//         fill="none"
-//         viewBox="0 0 24 24"
-//         strokeWidth="1.5"
-//         stroke="currentColor"
-//         className="h-6 w-6">
-//         <path
-//           strokeLinecap="round"
-//           strokeLinejoin="round"
-//           d="M15.75 19.5L8.25 12l7.5-7.5" />
-//       </svg>
-//     </span>
-//     <span
-//       className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-//       >Previous</span
-//     >
-//   </button>
-//   {/* <!--Carousel controls - next item--> */}
-//   <button
-//     className="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-//     type="button"
-//     data-twe-target="#carouselExampleControls"
-//     data-twe-slide="next">
-//     <span className="inline-block h-8 w-8">
-//       <svg
-//         xmlns="http://www.w3.org/2000/svg"
-//         fill="none"
-//         viewBox="0 0 24 24"
-//         strokeWidth="1.5"
-//         stroke="currentColor"
-//         className="h-6 w-6">
-//         <path
-//           strokeLinecap="round"
-//           strokeLinejoin="round"
-//           d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-//       </svg>
-//     </span>
-//     <span
-//       className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-//       >Next</span
-//     >
-//   </button>
-// </div>
-//     </>
-// )
-  
+     </>
+  )
 }
 
 export default ImageSlider

@@ -1,7 +1,8 @@
 import React from 'react'
-import ImageSlider from '../components/ImageSlider'
+// import ImageSlider from '../components/ImageSlider'
 import { Link } from 'react-router-dom'
 import Modal from '../components/Modal'
+import ImageSlider from '../components/ImageSlider'
 
 const Details = () => {
 
@@ -24,8 +25,8 @@ const Details = () => {
                     </div>
                 </div>
 
-                <div className="details shadow-md rounded-md mb-3">
-                    <div className="details-img w-full relative">
+                <div className="details shadow-md rounded-md mb-3 lg:shadow-none">
+                    {/* <div className="details-img w-full relative">
                         <img src="/Image/pic24.jpeg" alt="" className='w-full rounded-md '/>
                         <button className='bg-white rounded-full text-gray-600 absolute px-3 py-2 bottom-5 left-5 text-sm '>
                             <Link to='/gallery'>
@@ -33,7 +34,8 @@ const Details = () => {
                                     Gallery
                             </Link>
                         </button>                    
-                    </div>
+                    </div> */}
+                    <ImageSlider/>
                     <div className="details-information lg:hidden">
                         <div className="package-info px-4 py-4 w-full flex flex-wrap">
                             <ul className='list-none text-black py-3 w-full sm:w-1/2'>
