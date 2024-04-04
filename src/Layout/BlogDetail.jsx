@@ -4,9 +4,9 @@ import './Blogs.css';
 const BlogDetail = () => {
   return (
     <>
-      <div className="Blogs flex flex-col sm:flex-row justify-between pb-14">
-        <div className="mx-auto w-full sm:w-5/6">
-          <div className="blog-left w-full sm:w-4/6 px-4 sm:px-12">
+      <div className="Blogs mx-auto w-5/6 ">
+        <div className="mx-auto w-full md:w-5/6 flex flex-col md:flex-row justify-between pb-14">
+          <div className="blog-left w-full md:w-4/6 px-4 md:px-12">
             <div className="w-full my-11">
               <img src="\Image\picc.webp" alt="" className="pic3 h-96" />
               <div className="blogscontainer">
@@ -34,18 +34,18 @@ const BlogDetail = () => {
 
             <h1 className="font-extrabold leading-10 text-3xl font-serif">LEAVE A COMMENT</h1>
             <p className="py-12 leading-10 text-1xl text-font-mono">Your email address will not be published. Required fields are marked *</p>
-            <input type="text" placeholder="Write Your Comment" className="bg-gray-200 mb-2" />
-            <input type="text" placeholder="Enter Your Name" className="bg-gray-200 mb-2" />
+            <input type="text" placeholder="Write Your Comment" className="bg-gray-200 mb-2 me-3" />
+            <input type="text" placeholder="Enter Your Name" className="bg-gray-200 mb-2 me-3" />
             <input type="text" placeholder="Enter Your E-mail" className="bg-gray-200 mb-2" />
             <div className="py-3">Save my name, email, and website in this browser for the next time I comment.</div>
             <button className="font-bold readmore bg-gray-600 text-white px-3 py-2 rounded-md">POST COMMENT</button>
           </div>
 
      
-          <div className="blog-right w-full sm:w-2/6 flex flex-col mt-8 sm:mt-0">
-         
-         <div class="search">
-         <h1 class='font-extrabold leading-10 text-2xl font-serif underline m-3 '>SEARCH</h1>
+          <div className="blog-right  flex flex-col w-full md:w-2/6  mt-8 ">
+          
+         <div className="search">
+         <h1 className='font-extrabold leading-10 text-2xl font-serif underline m-3 '>SEARCH</h1>
          <input type="text" class="w-2/5 sm:w-2/5 py-2 pl-8 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 m-6 cursor-pointer" placeholder="Search..."/>
          </div>
          <div className="blogdown">
@@ -76,11 +76,11 @@ const BlogDetail = () => {
          <input type="email" placeholder='Enter your email here' name='user_email' required className=' py-2 m-3' /> 
          <button type='submit' className=' py-2 m-3 border-2 bg-orange-400'>SUBSCRIBE</button>
          <div className='font-extrabold leading-10 text-2xl font-serif underline m-5'>NEVER MISS NEWS</div>
-         <div class="flex flex-wrap justify-center m-2">
-         <a href="" class="icons text-2xl md:w-auto md:p-2"><i class="hi bi bi-facebook pe-8"></i></a>
-         <a href="" class="icons text-2xl md:w-auto md:p-2"><i class="hiiii bi bi-instagram pe-8"></i></a>
-         <a href="" class="icons text-2xl md:w-auto md:p-2"><i class="hiiiii bi bi-twitter pe-8"></i></a>
-         <a href="" class="icons text-2xl md:w-auto md:p-2"><i class="hiii bi bi-pinterest pe-8"></i></a>
+         <div class="flex flex-wrap justify-center m-1">
+         <a href="" class="icons text-xl md: md:p-2"><i class="hi bi bi-facebook pe-3"></i></a>
+         <a href="" class="icons text-xl md: md:p-2"><i class="hiiii bi bi-instagram pe-3"></i></a>
+         <a href="" class="icons text-xl  md:p-2"><i class="hiiiii bi bi-twitter pe-3"></i></a>
+         <a href="" class="icons text-xl  md:p-2"><i class="hiii bi bi-pinterest pe-3"></i></a>
          </div>
          </div>
          </div>

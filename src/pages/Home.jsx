@@ -59,7 +59,7 @@ const Home = () => {
             <div className="home-img w-1/3 flex  items-center lg:w-1/3 ">
               <img src="/Image/tri.jpg" alt="" className='w-full rounded-full px-2 py-2 bg-white border-2 border-solid border-red-200 '/>
              
-              <img src="/Image/trekking2.jpg" alt="" className='w-2/3 h-2/3 px-2 py-2 bg-white border-2 border-solid border-red-200 rounded-full -ml-11' />
+              <img src="/Image/trekking2.jpg" alt="" className='w-2/3 h-2/3  px-2 py-2 bg-white border-2 border-solid border-red-200 rounded-full -ml-11' />
             </div>
           
             </div>

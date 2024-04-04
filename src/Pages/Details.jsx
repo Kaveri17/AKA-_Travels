@@ -1,12 +1,8 @@
-import React from 'react'
-<<<<<<< HEAD
-import ImageSlider from '../Components/ImageSlider'
-=======
-import ImageSlider from '../components/ImageSlider'
-import { Link } from 'react-router-dom'
-import Modal from '../components/Modal'
->>>>>>> c2151b2110c62cc7f4e31bc0e4a815d9817f1b25
+import react from 'react'
 
+// import ImageSlider from '../components/ImageSlider'
+import { Link } from 'react-router-dom'
+import Modal from '../Components/Modal'
 const Details = () => {
 
   return (
