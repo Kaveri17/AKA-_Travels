@@ -44,10 +44,13 @@ const Popular = () => {
   
    <div className='w-5/6 mx-auto pb-10'>
    {/* <div className='text-4xl text-center font-black m-14'>INTERNATIONAL PACKAGES</div> */}
-   <div class='text-4xl md:text-6xl text-center font-black mx-4 md:mx-14'>INTERNATIONAL PACKAGES</div>
+   {/* <div class='text-4xl md:text-6xl text-center font-black mx-4 md:mx-14'>INTERNATIONAL PACKAGES</div>
 
 
+   <div className='flex flex-wrap pe-8 w-full'> */}
+   <div className='text-4xl text-center font-black m-14'>INTERNATIONAL PACKAGES</div>
    <div className='flex flex-wrap pe-8 w-full'>
+
 
     <div className=' relative  w-full md:w-1/2 lg:w-1/3 '>
     <a href="/packages">
@@ -178,7 +181,7 @@ const Popular = () => {
       <i class="bi bi-clock">4Days-2Nights</i>
       <br/>
       </div>
-      <div className="righttt">
+      <div className="righttt mx-3">
       <div className="discountprice border-2  border-blue-500 bg-blue-200">
                 10% off
               </div>
@@ -204,7 +207,7 @@ const Popular = () => {
       <i class="bi bi-clock">5Days-2Nights</i>
       <br/>
       </div>
-      <div className="righttt">
+      <div className="righttt mx-3">
       <div className="discountprice border-2 border-blue-500 bg-blue-200">
                 10% off
               </div>
@@ -230,7 +233,7 @@ const Popular = () => {
       <i class="bi bi-clock">6Days-4Nights</i>
       <br/>
       </div>
-      <div className="righttt">
+      <div className="righttt mx-3">
       <div className="discountprice border-2 border-blue-500 bg-blue-200">
                 10% off
               </div>
@@ -256,7 +259,7 @@ const Popular = () => {
       <i class="bi bi-clock">3Days-2Nights</i>
       <br/>
       </div>
-      <div className="righttt">
+      <div className="righttt mx-3">
       <div className="discountprice border-2 border-blue-500 bg-blue-200">
                 10% off
               </div>
@@ -282,7 +285,7 @@ const Popular = () => {
       <i class="bi bi-clock">4Days-2Nights</i>
       <br/>
       </div>
-      <div className="righttt">
+      <div className="righttt mx-3">
       <div className="discountprice border-2 border-blue-500 bg-blue-200 hover:orange-300">
                 10% off
               </div>
@@ -311,7 +314,7 @@ const Popular = () => {
       <br/>
       </div>
 
-      <div className="righttt">
+      <div className="righttt mx-3">
       <div className="discountprice border-2 border-blue-500 bg-blue-200">
                 10% off
               </div>

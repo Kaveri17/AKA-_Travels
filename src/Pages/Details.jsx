@@ -1,5 +1,4 @@
-import React from 'react'
-// import ImageSlider from '../components/ImageSlider'
+import react from 'react'
 import { Link } from 'react-router-dom'
 import Modal from '../components/Modal'
 import ImageSlider from '../components/ImageSlider'
