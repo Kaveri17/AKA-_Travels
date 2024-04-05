@@ -9,9 +9,6 @@ const Layout = () => {
       <Navbar />
           <Outlet />
       <Footer />
-      
-        <Outlet />
-      <Footer />
     </>
   );
 };

@@ -96,7 +96,7 @@ const Cart = () => {
                 );
               }
             )}
-            <div className="confirmbtn col-start-2 sm:col-start-3  py-4">    
+            <div className="confirmbtn col-start-2 py-4">    
               {/* Show the first button only if firstBtnClicked state is false */}
               {/* {!firstBtnState && (
                 <button 
@@ -112,28 +112,27 @@ const Cart = () => {
                   Checkout 
                 </button>
               )} */}
-              {!showBtn ? 
+              {!showBtn ?
+                <button 
+                className="first-btn bg-orange-500 text-white px-16 lg:px-14 xl:px-16 xl:ms-24 lg:ms-14 md:ms-14 sm:ms-8 py-3 text-lg rounded-sm tracking-wider hover:bg-orange-600" 
+                onClick={handleShowBtn} //Calling handleShowBtn function on button click  
+                >
+                Continue  
+                </button>                
+                :                
                 <div className="flex items-center">
                   <p 
-                    className="text-orange-500 cursor-pointer"
+                    className="text-orange-500 cursor-pointer pe-3 sm:pe-24"
                     onClick={handleShowBtn} >
                     Back
                   </p>
 
                   <button 
-                    className="second-btn bg-orange-500 text-white px-16 lg:px-14 xl:px-16 py-3 text-lg rounded-sm tracking-wider hover:bg-orange-600"  
-                    
+                    className="second-btn bg-orange-500 text-white px-16 lg:px-14 xl:px-16 py-3 text-lg rounded-sm tracking-wider hover:bg-orange-600"                      
                     >
                     Checkout 
                   </button>
                 </div>
-                :
-                <button 
-                  className="first-btn bg-orange-500 text-white px-16 lg:px-14 xl:px-16 py-3 text-lg rounded-sm tracking-wider hover:bg-orange-600" 
-                  onClick={handleShowBtn} //Calling handleShowBtn function on button click  
-                >
-                  Continue  
-                </button>
               }
             </div>
           </div>
