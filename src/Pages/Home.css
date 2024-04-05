@@ -1,0 +1,34 @@
+.pic4:hover{
+transform: scale(1.05);
+transition: 0.4s;
+}
+.pic5:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+.pic6:hover{
+        transform: scale(1.05);
+        transition: 0.4s;
+          }
+               .pic7:hover{
+ transform: scale(1.05);
+transition: 0.4s;
+ } 
+ .pic8:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+   }  
+   .pic9:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
+    }       
+
+    .ramp{
+      padding-top: 0.5rem;
+    }
+    @media (min-width: 1024px){
+      .ramp{
+          padding-top: 0;
+      }
+
+    }

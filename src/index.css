@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* *{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+ 
+}  */
+/* .container{
+  width: 100vw;
+  min-height: 100vh; 
+  background-color:#f9f9;
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* About.jsx*/
+.hdiv{
+  padding-top: 5.5rem;
+  /* padding: 4rem 0; */
+}
+.history {
+  background-image:url("../public/Image/historybg.png") ;
+  background-position: center;
+  background-size:cover ;
+}
+.client-testimonials{
+  background-image: url("https://fptsoftware.com/-/media/project/fpt-software/fso/resources-center/client-testimonials/banner-testimonials-bg-desktop.webp?iar=0&extension=webp&modified=20230412113201&hash=2120A2214B4AF8AEF963E4F193B8EB3A");
+  background-position: center;
+  background-size:cover ;
+}
+.blogs{
+  width: 100%;
+}
+
+@media (min-width: 768px){
+  .blogs{
+    width: 32%;
+  }
+}
+
+/* Activities.jsx */
+.activity-div:hover img{
+  transform: scale(1.05);
+}
+.activity-div img{
+  transition: transform 1s;
+}
+.activity-div{
+  height: 57vh;
+  overflow: hidden !important;
+}
+.activity-div:hover .overlay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TripTypes.jsx */
+.triptypes-div:hover img{
+  transform: scale(1.05);
+}
+.triptypes-div img{
+  transition: transform 1s;
+}
+.triptypes-div{
+  height: 57vh;
+  overflow: hidden !important;
+}
+.triptypes-div:hover .overlay{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TripTypes & Activities */
+.overlay{
+  display: none;
+}
+.overlay button{
+  color:white;
+}
+.overlay button:hover{
+  color: rgb(18, 232, 232);
+  background-color: white;
+}
+
+
+
+/* Home.jsx */
+.ram{
+background-image: url('/Image/back.jpg');
+background-size: cover;
+background-position: center;
+
+}
+.sita{
+  background-color: rgba(0, 0, 0,0.3);
+  
+}
+.special{
+background-color:wheat;
+}
+.special:hover {
+  background-color:#f9f9f9;
+}
+.div1 span{
+  color: aqua;
+}
+.gita:hover{
+  transform: scale(1.05);
+  transition: 0.8s;
+}
+
+/* Gallery */
+
+.gallery-img{
+  height: 80vh;
+}
+
+/* Details.jsx */
+/* .detail-img h3 :hover{
+  background-color:  white;
+} */
+
+/* cart */ 
+
+/* Footer */
+
+.footer-up{
+  display: none;
+}
+
+@media (min-width: 1024px){
+  .footer-up{
+    display: block;
+  }
+}
