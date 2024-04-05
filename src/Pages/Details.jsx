@@ -1,12 +1,8 @@
 import react from 'react'
-import React from 'react'
-import ImageSlider from '../components/ImageSlider'
+import ImageSlider from '../Components/ImageSlider'
 import { Link } from 'react-router-dom'
 import Modal from '../Components/Modal'
 
-// import ImageSlider from '../components/ImageSlider'
-import { Link } from 'react-router-dom'
-import Modal from '../Components/Modal'
 const Details = () => {
 
   return (

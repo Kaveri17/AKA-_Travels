@@ -77,10 +77,10 @@ const BlogDetail = () => {
          <button type='submit' className=' py-2 m-3 border-2 bg-orange-400'>SUBSCRIBE</button>
          <div className='font-extrabold leading-10 text-2xl font-serif underline m-5'>NEVER MISS NEWS</div>
          <div class="flex flex-wrap justify-center m-1">
-         <a href="" class="icons text-xl md: md:p-2"><i class="hi bi bi-facebook pe-3"></i></a>
-         <a href="" class="icons text-xl md: md:p-2"><i class="hiiii bi bi-instagram pe-3"></i></a>
-         <a href="" class="icons text-xl  md:p-2"><i class="hiiiii bi bi-twitter pe-3"></i></a>
-         <a href="" class="icons text-xl  md:p-2"><i class="hiii bi bi-pinterest pe-3"></i></a>
+         <a href="" class="icons text-2xl  md:p-2"><i class="hi bi bi-facebook pe-3"></i></a>
+         <a href="" class="icons text-2xl  md:p-2"><i class="hiiii bi bi-instagram pe-3"></i></a>
+         <a href="" class="icons text-2xl  md:p-2"><i class="hiiiii bi bi-twitter pe-3"></i></a>
+         <a href="" class="icons text-2xl  md:p-2"><i class="hiii bi bi-pinterest pe-3"></i></a>
          </div>
          </div>
          </div>
