@@ -1,7 +1,13 @@
 import react from 'react'
+<<<<<<< HEAD:src/Pages/Details.jsx
+import ImageSlider from '../Components/ImageSlider'
+import { Link } from 'react-router-dom'
+import Modal from '../Components/Modal'
+=======
 import { Link } from 'react-router-dom'
 import Modal from '../components/Modal'
 import ImageSlider from '../components/ImageSlider'
+>>>>>>> 80460b887540052de0da5fca50e9665326bc5dcd:AKA_Travels/src/Pages/Details.jsx
 
 const Details = () => {
 
