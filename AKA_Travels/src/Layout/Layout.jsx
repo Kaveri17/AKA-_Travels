@@ -9,6 +9,11 @@ const Layout = () => {
       <Navbar />
           <Outlet />
       <Footer />
+<<<<<<< HEAD
+      
+       
+=======
+>>>>>>> 7671563af816c0623f4f484c9f77b9f894c5ae38
     </>
   );
 };
