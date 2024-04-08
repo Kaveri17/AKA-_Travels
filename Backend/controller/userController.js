@@ -1,4 +1,7 @@
 const User = require('../models/userModel')
+const Token = require('../models/tokenModel')
+const crypto = require('crypto')
+const sendEmail = require('../utils/emailSender')
 
 // register
 exports.register = async (req, res) => {
@@ -10,7 +13,6 @@ exports.register = async (req, res) => {
     console.log("Username:", username); // Add this line to log the username
     console.log("Email:", email); // Add this line to log the email
     console.log("Password:", password);*/
-
 
     // check username if already exists
     const usernameExists = await User.findOne({username})
@@ -35,5 +37,51 @@ exports.register = async (req, res) => {
         return res.status(400).json({error: "Something went wrong"})
     }
 
+    // generate token
+    const token = await Token.create({
+        token : crypto.randomBytes(24).toString('hex').toString('hex'),
+        user: new_user._id
+    })
+    if(!token){
+        return res.status(400).json({error:"Failed to generate token"})
+    }
+
+    // send verification email
+    const URL = `http://localhost:8000/verify/${token.token}`
+    
+    sendEmail({
+        from: "noreply@something.com",
+        to: email,
+        subject: "Verification Email",
+        text: "Please copy paste the following link in the browser to verify your email"+ URL,
+        html: `<a href='${URL}'><button>Verify Email</button></a>`
+    })
+
+
     res.send(new_user)
+}
+
+// verify email
+exports.verifyEmail = async (req, res) => {
+    // check if token is correct or not
+    let token = await Token.findOne({ token: req.params.token })
+    if (!token) {
+        return res.status(400).json({ error: "Token not found, or may have expired" })
+    }
+    // find user associated with token
+    let user = await User.findById(token.user)
+    if (!user) {
+        return res.status(400).json({ error: "User not found" })
+    }
+// check if user is already verified
+    if (user.isVerified) {
+        return res.status(400).json({ error: "User already verified. Login to continue" })
+    }
+    // verify user
+    user.isVerified = true
+    user = await user.save()
+    if(!user){
+        return res.status(400).json({error: "Failed to verify, please try again later"})
+    }
+    res.send({message: "User verified successfully"})
 }
