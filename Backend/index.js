@@ -8,6 +8,9 @@ const morgan = require('morgan')
 app.use(express.json())
 
 const CategoryRoute=require('./routes/categoryRoute')
+const ProductRoute=require('./routes/productRoute')
+
+
 const GalleryRoute= require('./routes/galleryRoute')
 const BlogRoute = require('./routes/blogRoute')
 const UserRoute = require('./routes/userRoute')
@@ -20,6 +23,7 @@ app.use(GalleryRoute)
 app.use(BlogRoute)
 app.use(CategoryRoute)
 app.use(UserRoute)
+app.use(ProductRoute)
 
 app.listen(port, ()=>{
     console.log(`Server started successfully at port ${port}`)
