@@ -107,17 +107,3 @@ exports.deleteProduct=(req,res)=>{
         return res.status(400).json({error:"Something went wrong"})
     })
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
