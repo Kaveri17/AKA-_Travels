@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const {ObjectId} = mongoose.Schema
 
 const blogSchema = mongoose.Schema({
     blog_name:{
@@ -7,22 +8,23 @@ const blogSchema = mongoose.Schema({
     },
     blog_description:{
         type: String,
-        // required:true
+         required:true
     },
     blog_image:{
         type: String,
-        // required: true
+         required: true
     },
     No_of_views: {
         type:Number,
-        // required:true
+         default: 0
     },
     comments: {
         type:String,
-        // required: true
+        default:0
     },
     author_name: {
         type: String,
+        required: true
        
     }
     

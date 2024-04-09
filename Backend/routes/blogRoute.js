@@ -1,7 +1,10 @@
 const express = require('express')
-const { addBlog } = require('../controller/blogController')
+const { addBlog, getAllBlog, getBlogDescriptions, updateBlog, } = require('../controller/blogController')
+const upload = require('../utils/fileUpload')
 const router = express.Router()
 
-router.post('/addblog',addBlog)
-
+router.post('/addblog', upload.single("blog_images"), addBlog)
+router.get('/getblog',getAllBlog)
+router.get('/getdescriptions/:id',getBlogDescriptions)
+router.put('/updateblog/:id', updateBlog)
 module.exports = router
