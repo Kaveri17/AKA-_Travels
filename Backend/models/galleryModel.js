@@ -2,12 +2,12 @@ const mongoose = require('mongoose')
 const {ObjectId} = mongoose.Schema
 
 const gallerySchema = new mongoose.Schema({
-    title:{
-        type:String,
+    image_title:{
+        type: String,
         required: true
     },
     image:{
-        type:String,
+        type: String,
         required: true
     },
 
