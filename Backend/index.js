@@ -8,6 +8,7 @@ const morgan = require('morgan')
 app.use(express.json())
 
 const CategoryRoute=require('./routes/categoryRoute')
+const ProductRoute=require('./routes/productRoute')
 
 
 
@@ -20,6 +21,7 @@ const UserRoute = require('./routes/userRoute')
 // app.use(TestRoute)
 app.use(CategoryRoute)
 app.use(UserRoute)
+app.use(ProductRoute)
 
 
 app.listen(port, ()=>{
