@@ -2,8 +2,8 @@ const express = require('express')
 require('dotenv').config()
 require('./database/connection')
 
-const port = process.env.PORT
 const app =express()
+const port = process.env.PORT
 const morgan = require('morgan')
 app.use(express.json())
 
@@ -21,8 +21,6 @@ app.use(BlogRoute)
 app.use(CategoryRoute)
 app.use(UserRoute)
 
-
 app.listen(port, ()=>{
     console.log(`Server started successfully at port ${port}`)
-
 })
