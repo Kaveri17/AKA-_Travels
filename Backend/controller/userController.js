@@ -2,6 +2,7 @@ const User = require('../models/userModel')
 const Token = require('../models/tokenModel')
 const crypto = require('crypto')
 const sendEmail = require('../utils/emailSender')
+const jwt = require('jsonwebtoken')
 
 // register
 exports.register = async (req, res) => {
@@ -175,6 +176,70 @@ exports.resetPassword = async (req,res) =>{
     }
     res.send({message: "Password has changed successfully."})
 
+}
+
+// signin 
+exports.signin = async(req,res) =>{
+    const {email, password} = req.body
+    // check if email is registeren=d or not
+    let user = await User.findOne({email})
+    if(!user){
+        return res.status(400).json({error: "Email is not registered. Please register."})
+    }
+    // check if password is correct or not 
+    if(!user.authenticate(password)){
+        return res.status(400).json({error: "Email and Password doesn't match."})
+    }
+    // check if user is verified or not
+    if(!user.isVerified){
+        return res.status(400).json({error: "Email Not Verified. Please verify your email."})
+    }
+    // generate login token
+    const token = jwt.sign({
+        _id:user._id, 
+        role:user.role,
+        username: user.username,
+        email:user.email
+    },process.env.JWT_SECRET)
+    // set token in cookie
+    res.cookie('myCookie',token, {expire:Date.now() + 86400})
+    // return user info to the frontend
+    const {_id, username, role} = user
+    res.json({token,user:{_id,username,email,role}})
+}
+
+// logout/signout
+exports.signout = (req,res) =>{
+    return res.clearCookie('myCookie')
+}
+
+// get userslist
+exports.getUsersList = async (req,res) => {
+    let users = await User.find()
+    if(!users){
+        return res.status(400).json({error: "Something went wrong"})
+    }
+    res.send(users)
+}
+
+// get a userdetails
+exports.getSingleUserDetails = async(req, res) => {
+    let user = await User.findById(req.params.id)
+    if(!user){
+        return res.status(400).json({error: "User Not Found"})
+    }
+    res.send(user)
+}
+
+// update user
+exports.updateUser = async(req, res) =>{
+    let user = await User.findByIdAndUpdate(req.params.id,{
+        role: req.body.role
+    },{new:true})
+    if(!user){
+        return res.status(400).json({error:"Something went wrong"})
+    }
+    res.send(user)
 }
 
 

@@ -6,5 +6,5 @@ const router = express.Router()
 router.post('/addblog', upload.single("blog_images"), addBlog)
 router.get('/getblog',getAllBlog)
 router.get('/getdescriptions/:id',getBlogDescriptions)
-router.put('/updateblog/:id', updateBlog)
+router.put('/updateblog/:id', upload.single("blog_images"), updateBlog)
 module.exports = router
