@@ -48,6 +48,10 @@ userSchema.methods = {
         catch{
             return ""
         }
+    },
+    // checks whether or not the password user send while reverifying the email matches with the password the user first entered
+    authenticate: function(password){
+        return this.hashed_password === this.encryptPassword(password)
     }
 }
 
