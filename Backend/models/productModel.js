@@ -1,4 +1,5 @@
 const mongoose=require('mongoose')
+const{ObjectId}=mongoose.Schema
 
 const productSchema=mongoose.Schema({
     product_title:{
@@ -69,6 +70,12 @@ const productSchema=mongoose.Schema({
     highlights:{
         type:String,
         required:true
+    },
+    category: {
+        type: ObjectId,
+        ref: "Category",
+        required: true
+
     }
     // itinery:[{
     //     type: ObjectId,
