@@ -52,7 +52,7 @@ exports.updateCategory=async(req,res)=>{
     let category=await Category.findByIdAndUpdate(req.params.id,{
         category_name:req.body.category_name,
         description:req.body.description,
-        image:req.body.image
+        category_image: req.file?.path,
 
     },{new:true})
     if(!category){
