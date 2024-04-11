@@ -84,8 +84,30 @@ exports.updateBlog = async(req, res) => {
 if(!blog){
     return res.status(400).json ({error: "Something went wrong"})
 }
+
 res.send(blog)
 }
+
+// to delete blog
+exports.deleteBlog = (req, res) => {
+   
+        Blog.findByIdAndDelete(req.params.id)
+        .then(blog =>{
+            if(!blog){
+                return res.status(400).json({error:"Blog not found"})
+            }
+            else{
+                res.send({msg:"Blog Deleted Successfully"})
+            }
+        })
+        .catch(error =>{
+            return res.status(400).json({error:"Something went Wrong"})
+        })
+    
+}
+
+
+
 
 
 

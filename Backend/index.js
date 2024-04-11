@@ -14,6 +14,7 @@ const ProductRoute=require('./routes/productRoute')
 const GalleryRoute= require('./routes/galleryRoute')
 const BlogRoute = require('./routes/blogRoute')
 const UserRoute = require('./routes/userRoute')
+const OrderRoute= require('./routes/orderRoute')
 
 // app.use(morgan('dev'))
 app.use(morgan('dev'))
@@ -24,6 +25,7 @@ app.use(BlogRoute)
 app.use(CategoryRoute)
 app.use(UserRoute)
 app.use(ProductRoute)
+app.use(OrderRoute)
 
 app.listen(port, ()=>{
     console.log(`Server started successfully at port ${port}`)

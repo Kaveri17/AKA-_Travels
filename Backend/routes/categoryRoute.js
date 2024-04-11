@@ -9,6 +9,7 @@ router.post('/addcategory',upload.single("category_image"), requireSignin, addCa
 
 router.get('/getcategorylist',getAllCategories)
 router.get('/getcategorydetails/:id',getCategoryDetails)
-router.put('/updatecategory/:id',requireSignin,updateCategory)
+router.put('/updatecategory/:id',requireSignin,upload.single("category_image"),updateCategory)
+
 
 module.exports=router
