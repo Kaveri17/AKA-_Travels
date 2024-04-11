@@ -2,7 +2,7 @@ const Product = require('../models/productModel')
 exports.addProduct = async (req, res) => {
     let product = await Product.findOne({ product_title: req.body.product_title })
     if (product) {
-        return res.status(400).json({ error: "Category already exists" })
+        return res.status(400).json({ error: "Product already exists" })
     }
    
     //add new product
@@ -22,9 +22,8 @@ exports.addProduct = async (req, res) => {
         maximum_age:req.body.maximum_age,
         meals:req.body.meals,
         overview:req.body.overview,
-        highlights:req.body.highlights
-
-
+        highlights:req.body.highlights,
+        category:req.body.category
 
 
     })
@@ -34,10 +33,10 @@ exports.addProduct = async (req, res) => {
     }
     res.send(product)
 }
-//to get all products
+//to get product list
 
 exports.getAllProducts=async(req,res)=>{
-    let products=await Product.find()
+    let products=await Product.find().populate('category', 'category_name')
     if(!products){
         return res.status(400).json({error:"Something went wrong"})
     
@@ -48,9 +47,9 @@ exports.getAllProducts=async(req,res)=>{
 
 
 
-//to get product detail
+//to get product details
 exports.getProductDetails=async(req,res)=>{
-    let product=await Product.findById(req.params.id)
+    let product=await Product.findById(req.params.id).populate('category', 'category_name')
     if(!product){
         return res.status(400).json({error:"Something went wrong"})
 
@@ -77,7 +76,8 @@ exports.updateProduct=async(req,res)=>{
         maximum_age:req.body.maximum_age,
         meals:req.body.meals,
         overview:req.body.overview,
-        highlights:req.body.highlights
+        highlights:req.body.highlights,
+        category:req.body.category
 
 
     },{new:true})
@@ -99,7 +99,7 @@ exports.deleteProduct=(req,res)=>{
     
         }
         else{
-            res.send({msg:"Category Deleted Sucessfully"})
+            res.send({msg:"Product Deleted Sucessfully"})
         }
 
     })
@@ -107,3 +107,17 @@ exports.deleteProduct=(req,res)=>{
         return res.status(400).json({error:"Something went wrong"})
     })
 }
+
+//to get product of category
+
+
+exports.getProductByCategory=async(req,res)=>{
+    let products=await Product.find({category: req.params.category_id}).populate('category', 'category_name')
+    if(!products){
+        return res.status(400).json({error:"Something went wrong"})
+
+    }
+    res.send(products)
+}
+
+

@@ -8,6 +8,7 @@ router.post('/addcategory',upload.single("category_image"), addCategory)
 
 router.get('/getcategorylist',getAllCategories)
 router.get('/getcategorydetails/:id',getCategoryDetails)
-router.put('/updatecategory/:id',updateCategory)
+router.put('/updatecategory/:id',upload.single("category_image"),updateCategory)
+
 
 module.exports=router
