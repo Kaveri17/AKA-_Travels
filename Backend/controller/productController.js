@@ -24,9 +24,6 @@ exports.addProduct = async (req, res) => {
         overview:req.body.overview,
         highlights:req.body.highlights
 
-
-
-
     })
     if(!product){
         return res.status(400).json({error:"Something went wrong"})
