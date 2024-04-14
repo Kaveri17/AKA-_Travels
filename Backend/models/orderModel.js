@@ -2,8 +2,14 @@ const mongoose = require('mongoose')
 const { ObjectId } = mongoose.Schema
 
 const orderSchema = new mongoose.Schema({
+    orderItems: [{
+        type: ObjectId,
+        ref: "OrderItems",
+        required:true
+    }],
     total: {
-        type:Number,
+        type: Number,
+      
         required: true
     },
     user: {
@@ -34,4 +40,4 @@ const orderSchema = new mongoose.Schema({
     }
 }, {timestamps:true})
 
-module.experts = mongoose.model("Order", orderSchema)
+module.exports = mongoose.model("Order", orderSchema)
