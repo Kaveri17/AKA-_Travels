@@ -42,7 +42,6 @@ const productSchema=mongoose.Schema({
     language:{
         type:String,
         required:true
-
     },
     wifi:{
         type:String,

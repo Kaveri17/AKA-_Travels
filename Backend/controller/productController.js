@@ -110,7 +110,6 @@ exports.deleteProduct=(req,res)=>{
 
 //to get product of category
 
-
 exports.getProductByCategory=async(req,res)=>{
     let products=await Product.find({category: req.params.category_id}).populate('category', 'category_name')
     if(!products){
@@ -119,5 +118,7 @@ exports.getProductByCategory=async(req,res)=>{
     }
     res.send(products)
 }
+
+
 
 
