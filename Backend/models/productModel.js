@@ -42,7 +42,6 @@ const productSchema=mongoose.Schema({
     language:{
         type:String,
         required:true
-
     },
     wifi:{
         type:String,
@@ -76,11 +75,12 @@ const productSchema=mongoose.Schema({
         ref: "Category",
         required: true
 
-    }
-    // itinery:[{
-    //     type: ObjectId,
-    //     ref: "Itinery",
-    //     required: true//
+    },
+    itenary:[{
+        type: ObjectId,
+        ref: "Itenary",
+        required: true
+    }],
 },{timestamps:true})
 module.exports=mongoose.model("Product",productSchema)
 

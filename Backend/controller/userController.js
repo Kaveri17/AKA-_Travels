@@ -3,6 +3,7 @@ const Token = require('../models/tokenModel')
 const crypto = require('crypto')
 const sendEmail = require('../utils/emailSender')
 const jwt = require('jsonwebtoken')
+const {expressjwt} = require('express-jwt')
 
 // register
 exports.register = async (req, res) => {
@@ -242,4 +243,27 @@ exports.updateUser = async(req, res) =>{
     res.send(user)
 }
 
+// find user by email 
+exports.findUserByEmail = async(req, res) => {
+    let user = await User.findOne({email : req.body.email})
+    if(!user){
+        return res.status(400).json({error:"User Email Not Found."})
+    }
+    res.send(user)
+}
+
+// find user by username
+exports.findUserByUsername = async(req, res) => {
+    let user = await User.findOne({username : req.body.username})
+    if(!user){
+        return res.status(400).json({error: "Username Not Found."})
+    }
+    res.send(user)
+}
+
+// authorization
+exports.requireSignin = expressjwt({
+    secret: process.env.JWT_SECRET,
+    algorithms: ["HS256"]
+})
 

@@ -1,5 +1,6 @@
 const Order = require('../models/orderModel')
 const OrderItems = require('../models/orderItemsModel')
+
 // to place order
 
 exports.placeOrder = async (req, res) => {
@@ -15,7 +16,6 @@ exports.placeOrder = async (req, res) => {
             })
             if(!ORDERITEM){
                 return res.status(400).json({error:"Something Went Wrong"})
-
             }
             return ORDERITEM._id
         })

@@ -1,4 +1,7 @@
 const Product = require('../models/productModel')
+const Itenary = require('../models/itenaryModel')
+
+
 exports.addProduct = async (req, res) => {
     let product = await Product.findOne({ product_title: req.body.product_title })
     if (product) {
@@ -6,6 +9,19 @@ exports.addProduct = async (req, res) => {
     }
    
     //add new product
+
+    let itenaryIds = await Promise.all(
+        req.body.itenary.map(async itenary=>{
+            let ITENARY = await Itenary.create({
+               days: itenary.days,
+               day_title: itenary.day_title 
+            })
+            if(!ITENARY){
+                return  res.status(400).json({error:"Something Went Wrong"})
+            }
+            return ITENARY._id
+        })
+    )
 
     product = await Product.create({
         product_title:req.body.product_title,
@@ -23,9 +39,8 @@ exports.addProduct = async (req, res) => {
         meals:req.body.meals,
         overview:req.body.overview,
         highlights:req.body.highlights,
-        category:req.body.category
-
-
+        category:req.body.category,
+        itenary: itenaryIds
     })
     if(!product){
         return res.status(400).json({error:"Something went wrong"})
@@ -79,7 +94,6 @@ exports.updateProduct=async(req,res)=>{
         highlights:req.body.highlights,
         category:req.body.category
 
-
     },{new:true})
     if(!product){
         return res.status(400).json({error:"Something went wrong"})
@@ -111,13 +125,27 @@ exports.deleteProduct=(req,res)=>{
 //to get product of category
 
 
-exports.getProductByCategory=async(req,res)=>{
-    let products=await Product.find({category: req.params.category_id}).populate('category', 'category_name')
-    if(!products){
-        return res.status(400).json({error:"Something went wrong"})
+// exports.getProductByCategory = async(req,res)=>{
+//     let products = await Product.find({category: req.params.category_id})
+//     if(!products){
+//         return res.status(400).json({error:"Something went wrong"})
+//     }
+//     res.send(products)
+// }
 
+exports.getProductByCategory = async (req, res) => {
+    try {
+        let products = await Product.find({ category: req.params.category_id });
+        if (products.length === 0) {
+            return res.status(404).json({ error: "No products found for this category" });
+        }
+        res.send(products);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Internal server error" });
     }
-    res.send(products)
-}
+};
+
+
 
 
