@@ -76,11 +76,12 @@ const productSchema=mongoose.Schema({
         ref: "Category",
         required: true
 
-    }
-    // itinery:[{
-    //     type: ObjectId,
-    //     ref: "Itinery",
-    //     required: true//
+    },
+    itenary:[{
+        type: ObjectId,
+        ref: "Itenary",
+        required: true
+    }],
 },{timestamps:true})
 module.exports=mongoose.model("Product",productSchema)
 

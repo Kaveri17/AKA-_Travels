@@ -8,7 +8,7 @@ router.get('/getproductlist',getAllProducts)
 router.get('/getproductdetails/:id',getProductDetails)
 router.put('/updateproduct/:id',requireSignin, updateProduct)
 
-router.get('getproductbycategory/:category_id', getProductByCategory)
+router.get('/getproductbycategory/:category_id', getProductByCategory)
 
 
 module.exports=router

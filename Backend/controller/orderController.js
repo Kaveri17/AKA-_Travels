@@ -1,5 +1,6 @@
 const Order = require('../models/orderModel')
 const OrderItems = require('../models/orderItemsModel')
+
 // to place order
 
 exports.placeOrder = async (req, res) => {
@@ -14,8 +15,7 @@ exports.placeOrder = async (req, res) => {
                 
             })
             if(!ORDERITEM){
-                return red.status(400).jsob({error:"Something Went Wrong"})
-
+                return res.status(400).json({error:"Something Went Wrong"})
             }
             return ORDERITEM._id
         })
@@ -44,15 +44,12 @@ let order_to_place = await Order.create({
       contact_number: req.body.contact_number,
       phone_no: req.body.phone_no,
       status: req.body.status,
-      payment_info: req.body.payment_info
-    
-
-
-
+      payment_info: req.body.payment_info 
 })
 if(!order_to_place){
     return res.status(400).json({error:"Failed to place order"})
 }
+res.send(order_to_place)
 }  
 
 // const Order = require('../models/orderModel')
