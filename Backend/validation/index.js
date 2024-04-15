@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const {check,validationResult}=require('express-validator')
 
 const categoryCheck =[
@@ -29,32 +28,3 @@ const productCheck = [
 ]
 
 module.exports={categoryCheck,validation,productCheck}
-=======
-const {check, validationResult} = require('express-validator')
-
-const validation = (req, res, next) => {
-    const errors = validationResult(req)
-    if(!errors.isEmpty()){
-        return res.status(400).json({error: errors.array()[0].msg.toString()})
-        // return res.status(400).json({error: errors.array().map(x => x.msg.toString())})
-    }
-    next()
-}
-
-const userCheck = [
-    check('username',"username is required.").notEmpty()
-    .isLength({min:3}).withMessage("Username must be at least 3 characters"),
-    check('email',"Email is required.").notEmpty()
-    .isEmail().withMessage("Email Format Incorrect"),
-    check('password',"Password is required").notEmpty()
-    .matches('[a-z]').withMessage("Password must consist of at least 1 lowercase letter")
-    .matches('[A-Z]').withMessage("Password must consist of at least 1 uppercase letter")
-    .matches('[0-9]').withMessage("Password must consist of at least 1 number")
-    .matches('[+@!#$%]').withMessage("Password must consist of at least 1 special character")
-    .isLength({min: 8}).withMessage("Password must be atleast 8 characters")
-    .isLength({max: 30}).withMessage("Password must not exceed 30 characters")
-    .not().isIn(['P@ssW0rd']).withMessage("Cannot use this password")
-]
-
-module.exports = {validation , userCheck}
->>>>>>> 2d42b15452c5477a1a5128751bdb3f0f98770c8d
