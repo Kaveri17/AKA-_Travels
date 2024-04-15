@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const {check,validationResult}=require('express-validator')
 
 const categoryCheck =[
@@ -27,20 +26,6 @@ const productCheck = [
         .matches(/^[0-9a-f]{24}$/).withMessage("Invalid Category")
 
 ]
-
-module.exports={categoryCheck,validation,productCheck}
-=======
-const {check, validationResult} = require('express-validator')
-
-const validation = (req, res, next) => {
-    const errors = validationResult(req)
-    if(!errors.isEmpty()){
-        return res.status(400).json({error: errors.array()[0].msg.toString()})
-        // return res.status(400).json({error: errors.array().map(x => x.msg.toString())})
-    }
-    next()
-}
-
 const userCheck = [
     check('username',"username is required.").notEmpty()
     .isLength({min:3}).withMessage("Username must be at least 3 characters"),
@@ -56,5 +41,5 @@ const userCheck = [
     .not().isIn(['P@ssW0rd']).withMessage("Cannot use this password")
 ]
 
-module.exports = {validation , userCheck}
->>>>>>> 2d42b15452c5477a1a5128751bdb3f0f98770c8d
+
+module.exports={categoryCheck,validation,productCheck,userCheck}
