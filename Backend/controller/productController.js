@@ -148,6 +148,4 @@ exports.getProductByCategory = async (req, res) => {
 
 
 
-// exports.getProductByCategory = async(req,res) =>{
-//     let products = await Product.find({category: req.params.category_id })
-// }
+
