@@ -155,6 +155,54 @@ exports.getOrderDetails = async (req, res) => {
     res.send(order)
 
 }
+// to get order of a user
+
+exports.getUserOrders = async(req, res) =>{
+    let orders = await Order.find({user: req.params.user_id})
+    .populate('user','username')
+.populate({path:'orderItems',populate:{path:"package"}})
+    if(!orders) {
+        return res.status(400).json({error:"Something Went Wrong"})
+    }
+    res.send(orders)
+}
+
+// to update order
+exports.updateOrder = async(req, res) => {
+    let order = await Order.findByIdAndUpdate(req.params.id,{
+        status: req.body.status,
+        payment_info: req.body.payment_info
+    }, {new: true})
+    if(!order){
+        return res.status(400).json({error:"Something went wrong"})
+    }
+    res.send(order)
+}
+// delete order
+exports.deleteOrder = (req, res) => {
+    Order.findByIdAndDelete(req.params.id)
+    .then(order=>{
+        if(!order){
+
+       
+        return res.status(400).json({error:"Order not found"})
+    }
+    else{
+        Promise.all(
+            order.orderItems.map(orderItem => {
+                OrderItems.findByIdAndDelete(orderItem)
+                .then(deleteItem=>{
+                    if(!deleteItem){
+                       return res.status(400).json({error:"Something went wrong"}) 
+                    }
+                })
+            })
+        )
+        res.send({message:"Order deleted successfully"})
+    }
+})
+.catch(error=>res.status(400).json({error:error.message}))
+}
     
 
 

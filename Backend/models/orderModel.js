@@ -33,10 +33,11 @@ const orderSchema = new mongoose.Schema({
     status: {
         type:String,
         ref: "Product",
-        required:true
+       default: "pending"
     },
     payment_info: {
-        type:String
+        type:String,
+        default: "pending"
     }
 }, {timestamps:true})
 
