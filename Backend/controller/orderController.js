@@ -44,7 +44,8 @@ let order_to_place = await Order.create({
       contact_number: req.body.contact_number,
       phone_no: req.body.phone_no,
       status: req.body.status,
-      payment_info: req.body.payment_info 
+      payment_info: req.body.payment_info
+    
 })
 if(!order_to_place){
     return res.status(400).json({error:"Failed to place order"})
@@ -128,3 +129,32 @@ res.send(order_to_place)
 //         return res.status(500).json({ error: "Internal server error" });
 //     }
 // };
+
+// to get order list
+
+exports.getAllOrders = async (req, res) => {
+    let orders = await Order.find()
+    .populate('user','username')
+.populate({path:'orderItems',populate:{path:"package"}})
+    if(!orders) {
+        return res.status(400).json({error:"Something Went Wrong"})
+    }
+    res.send(orders)
+
+}
+
+// to get order details
+
+exports.getOrderDetails = async (req, res) => {
+    let order = await Order.findById(req.params.id)
+    .populate('user','username')
+.populate({path:'orderItems',populate:{path:"package"}})
+    if(!order) {
+        return res.status(400).json({error:"Something Went Wrong"})
+    }
+    res.send(order)
+
+}
+    
+
+
