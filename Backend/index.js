@@ -1,6 +1,7 @@
 const express = require('express')
 require('dotenv').config()
 require('./database/connection')
+const cors = require('cors')
 
 const app =express()
 const port = process.env.PORT
@@ -18,6 +19,7 @@ const OrderRoute= require('./routes/orderRoute')
 
 // app.use(morgan('dev'))
 app.use(morgan('dev'))
+app.use(cors()) 
 
 app.use(express.json());
 app.use(GalleryRoute)

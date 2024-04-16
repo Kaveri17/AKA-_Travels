@@ -18,6 +18,7 @@ import Home from "./Pages/Home";
 import Gallery from "./Pages/Gallery";
 import Details from "./Pages/Details";
 import Packages from "./Pages/Packages";
+import Register from "./Pages/Register"
 
 
 const MyRoutes = () => {
@@ -43,6 +44,9 @@ const MyRoutes = () => {
             {/* <Route path="/modal" element={<Modal />} /> */}
             <Route path="/details" element={<Details/>}/>
             <Route path="/packages" element={<Packages/>}/>
+
+            {/* connection */}
+          <Route path="/register" element={<Register/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
