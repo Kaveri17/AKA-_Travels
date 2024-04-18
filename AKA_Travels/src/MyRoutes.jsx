@@ -19,6 +19,7 @@ import Gallery from "./Pages/Gallery";
 import Details from "./Pages/Details";
 import Packages from "./Pages/Packages";
 import Register from "./Pages/Register"
+import Login from "./Pages/Login";
 
 
 const MyRoutes = () => {
@@ -47,6 +48,7 @@ const MyRoutes = () => {
 
             {/* connection */}
           <Route path="/register" element={<Register/>}/>
+          <Route path="/login" element={<Login/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
