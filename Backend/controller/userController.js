@@ -49,7 +49,8 @@ exports.register = async (req, res) => {
     }
 
     // send verification email
-    const URL = `http://localhost:8000/verify/${token.token}`
+    // const URL = `http://localhost:8000/verify/${token.token}`
+    const URL = `${process.env.VITE_FRONTEND_URl}/verify/${token.token}`
     
     sendEmail({
         from: "noreply@something.com",
@@ -113,7 +114,8 @@ exports.resendVerification = async(req, res) => {
     }
 
     // send the email verification link
-    const URL = `http://localhost:8000/verify/${token.token}`
+    // const URL = `http://localhost:8000/verify/${token.token}`
+    const URL = `${process.env.VITE_FRONTEND_URl}/verify/${token.token}`
 
     sendEmail({
         from: "noreply@something.com",
@@ -144,7 +146,8 @@ exports.forgetpassword = async(req,res) => {
     }
 
     // sending password reset link in email
-    const URL = `http://localhost:8000/resetpassword/${token.token}`
+    // const URL = `http://localhost:8000/resetpassword/${token.token}`
+    const URL = `${process.env.VITE_FRONTEND_URlFRONTEND_URl}/resetpassword/${token.token}`
 
     sendEmail({
         from: "noreply@something.com",

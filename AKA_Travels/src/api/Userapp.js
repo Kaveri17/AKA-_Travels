@@ -35,3 +35,4 @@ export const verifyUser = (token) => {
         .then(response => response.json())
         .catch(error => console.log(error))
 }
+

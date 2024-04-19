@@ -20,6 +20,16 @@ import Details from "./Pages/Details";
 import Packages from "./Pages/Packages";
 import Register from "./Pages/Register"
 import Login from "./Pages/Login";
+import Verify from "./Pages/Verify/Token";
+
+
+
+
+
+
+
+
+
 
 
 const MyRoutes = () => {
@@ -48,6 +58,8 @@ const MyRoutes = () => {
 
             {/* connection */}
           <Route path="/register" element={<Register/>}/>
+          <Route path="/verify/:token" element={<Verify/>}/>
+      
           <Route path="/login" element={<Login/>}/>
           </Route>
         </Routes>

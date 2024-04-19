@@ -60,7 +60,10 @@ const Navbar = () => {
            
               <div className=' space-x-3'><input type="text" placeholder='search' className='bg-gray-200' />
               <i class="fa-solid fa-magnifying-glass text-2xl font-bold pe-3"></i>
-              <i class="fa-solid fa-user text-xl bold pe-3"></i>
+              <Link to="/register" >
+                <i class="fa-solid fa-user text-xl bold pe-3"></i>
+                
+              </Link>
               <i class="fa-solid fa-bars text-xl bold"></i>
               </div>
               
