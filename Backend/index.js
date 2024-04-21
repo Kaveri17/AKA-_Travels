@@ -1,11 +1,12 @@
 const express = require('express')
 require('dotenv').config()
 require('./database/connection')
-const cors = require('cors')
+
 
 const app =express()
 const port = process.env.PORT
 const morgan = require('morgan')
+const cors = require('cors')
 app.use(express.json())
 
 const CategoryRoute=require('./routes/categoryRoute')
