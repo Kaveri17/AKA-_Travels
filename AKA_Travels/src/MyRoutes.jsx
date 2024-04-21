@@ -26,12 +26,6 @@ import Verify from "./Pages/Verify/Token";
 
 
 
-
-
-
-
-
-
 const MyRoutes = () => {
   return (
     <>
@@ -61,6 +55,8 @@ const MyRoutes = () => {
           <Route path="/verify/:token" element={<Verify/>}/>
       
           <Route path="/login" element={<Login/>}/>
+          <Route path="admin/" element={<AdminRoute/>}/>
+              <Route path="addcategoty" element={<AddCategory/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
