@@ -36,3 +36,21 @@ export const verifyUser = (token) => {
         .catch(error => console.log(error))
 }
 
+// login
+export const login = (email, password) => {
+    console.log(API)
+    return fetch(`${API}/login`, {
+        method: "POST",
+        headers: {
+            "Content-Type":"application/json",
+        },
+      body: JSON.stringify({email,password})
+    })
+    .then(response => response.json())
+    .catch(error => console.log(error))
+  
+}
+// to keep logged in
+export const authenticate = (data) => {
+    localStorage.setItem('jwt', JSON.stringify(data))
+}
