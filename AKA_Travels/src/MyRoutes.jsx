@@ -21,6 +21,14 @@ import Packages from "./Pages/Packages";
 import Register from "./Pages/Register"
 import Login from "./Pages/Login";
 import Verify from "./Pages/Verify/Token";
+import AdminRoute from "./auth/AdminRoute";
+import Dashboard from "./Admin/Dashboard";
+// import AddBlog from "./Admin/AddBlog";
+
+
+import AddCategory from "./Admin/AddCategory";
+import AddProduct from "./Admin/AddProduct";
+import ShowCategory from "./Admin/ShowCategory";
 
 
 
@@ -49,17 +57,27 @@ const MyRoutes = () => {
             {/* <Route path="/modal" element={<Modal />} /> */}
             <Route path="/details" element={<Details/>}/>
             <Route path="/packages" element={<Packages/>}/>
+            
 
             {/* connection */}
           <Route path="/register" element={<Register/>}/>
           <Route path="/verify/:token" element={<Verify/>}/>
       
           <Route path="/login" element={<Login/>}/>
+
           <Route path="admin/" element={<AdminRoute/>}/>
-              <Route path="addcategoty" element={<AddCategory/>}/>
+          <Route path="dashboard" element={<Dashboard/>}/>
+              {/* <Route path="addblog" element={<AddBlog/>}/> */}
+              <Route path="addcategory" element={<AddCategory/>}/>
+              <Route path="addproduct" element={<AddProduct/>}/>
+              <Route path="showcategories" element={<ShowCategory/>}/>
+              
+              
+              
           </Route>
         </Routes>
-      </BrowserRouter>
+        </BrowserRouter>
+     
     </>
   );
 };

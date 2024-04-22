@@ -8,7 +8,7 @@ const {expressjwt} = require('express-jwt')
 // register
 exports.register = async (req, res) => {
     const {username, email , password} = req.body
-
+              
     /*
     const {username, email , password} = req.body
     console.log("Request Body:", req.body); // Add this line to log the entire request body
