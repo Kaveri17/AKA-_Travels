@@ -51,6 +51,7 @@ const MyRoutes = () => {
             {/* <Route path="/modal" element={<Modal />} /> */}
             <Route path="/details" element={<Details/>}/>
             <Route path="/packages" element={<Packages/>}/>
+            
 
             {/* connection */}
             <Route path="/register" element={<Register/>}/>
@@ -63,7 +64,8 @@ const MyRoutes = () => {
               {/* <Route path="addcategoty" element={<AddCategory/>}/> */}
           </Route>
         </Routes>
-      </BrowserRouter>
+        </BrowserRouter>
+     
     </>
   );
 };

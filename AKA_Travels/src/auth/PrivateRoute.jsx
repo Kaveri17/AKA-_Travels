@@ -1,13 +1,11 @@
 import React from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
-import AdminSidebar from '../Admin/AdminSidebar'
 
-const AdminRoute = () => {
+const PrivateRoute = () => {
   return (
 
     isAuthenticated() && isAuthenticated().user.role===0 ?
     <>
-    <AdminSidebar/>
     <Outlet/>
     
     
@@ -17,4 +15,4 @@ const AdminRoute = () => {
   )
 }
 
-export default AdminRoute
+export default PrivateRoute
