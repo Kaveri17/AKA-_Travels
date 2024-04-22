@@ -77,7 +77,9 @@ const Login = () => {
           <div className='text-center space-x-4 pt-4'>
 
             <button className=' font-semibold rounded-md px-4 py-2 text-lg border-2 border-solid bg-red-300 hover:bg-slate-400' onClick={handleLogin} >Login</button>
+            <Link to='/forgetpassword'>
             <button className=' font-semibold rounded-md px-4 py-2 text-lg border-2 border-solid bg-red-300 hover:bg-slate-400' >Forget password</button>
+            </Link>
             <button className=' font-semibold rounded-md px-4 py-2 text-lg border-2 border-solid bg-red-300 hover:bg-slate-400 'onClick={handleCancel}>Cancel</button>
           </div>
           <div className='text-xl  pt-3 text-center'>
