@@ -3,31 +3,36 @@ import { Link, useParams } from 'react-router-dom'
 import { verifyUser } from '../../api/Userapp'
 
 
+
+
 const Verify = () => {
+  
     const {token} = useParams()
 
     let [error, setError] = useState('')
-    let [success, setSuccess] = useState('')
+    let [success, setSuccess] = useState(false)
 
     let [isLoading, setIsLoading] = useState(true)
-    useEffect(() => { 
-        if (token) {
-        verifyUser(token)
-        .then(data=> {
-            if(data.error){
-                setError(data.error)
-            }
-            else{
-                setSuccess(data.message)
-            }
-           
-        })
-        .finally(()=>{
-            setIsLoading(false)
-        })
-       
-    }
+
+    useEffect(() => {
+        if(token){
+            verifyUser(token)
+            .then(data => {
+                if(data.error){
+                    setError(data.error)
+                    setSuccess('')
+                }
+                else{
+                    setSuccess(data.message)
+                    setError('')
+                }
+            })
+            .finally(()=>{
+                setIsLoading(false)
+            })
+        }
     }, [token])
+
     const showError = () =>{
         if(error) {
             return <div className='text-red-600 text-2xl font-bold text-center '>{error}
@@ -40,7 +45,8 @@ const Verify = () => {
         if(success) {
             return <div className='text-green-600 text-2xl font-bold text-center'>{success}
              <br />
-               <Link className='inline-block p-2 bg-yellow-500 rounded-lg ' to ="/login">Login</Link>
+               <Link className='inline-block p-2 bg-red-600 rounded-lg  ' to ="/login">Login</Link>
+             
                </div>
         }
     }
@@ -48,8 +54,9 @@ const Verify = () => {
   
     <div className='w-full flex flex-col justify-center items-center'style={{height:'100vh'}}>
     {isLoading ? <p>LOADING........</p> : <>
+    {showError()}
     {showSuccess()}
-        {showError()}
+       
 
     </>}
         
@@ -58,3 +65,4 @@ const Verify = () => {
 }
 
 export default Verify
+
