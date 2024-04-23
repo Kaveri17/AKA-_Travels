@@ -29,6 +29,7 @@ import Dashboard from "./Admin/Dashboard";
 import AddCategory from "./Admin/AddCategory";
 import AddProduct from "./Admin/AddProduct";
 import ShowCategory from "./Admin/ShowCategory";
+import EmailVerify from "./auth/EmailVerify";
 
 
 
@@ -39,7 +40,7 @@ const MyRoutes = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Layout />}/>
             <Route index element={<Home />} />
             <Route path="/test" element={<Test />} />
             <Route path="about" element={<About />} />
@@ -64,8 +65,11 @@ const MyRoutes = () => {
           <Route path="/verify/:token" element={<Verify/>}/>
       
           <Route path="/login" element={<Login/>}/>
+          <Route path="verify/:token" element={<EmailVerify/>}/>
+          {/* <Route path="/signup" element={<SignUp/>}/> */}
 
-          <Route path="admin/" element={<AdminRoute/>}/>
+
+          <Route path="admin/" element={<AdminRoute/>}>
           <Route path="dashboard" element={<Dashboard/>}/>
               {/* <Route path="addblog" element={<AddBlog/>}/> */}
               <Route path="addcategory" element={<AddCategory/>}/>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link,  useNavigate } from 'react-router-dom'
 import { authenticate, login } from '../api/Userapp'
+import { isAuthenticated } from '../auth/authindex'
+
 
 const Login = () => {
   let [email, setEmail] = useState('')
