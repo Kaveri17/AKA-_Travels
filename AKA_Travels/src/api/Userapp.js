@@ -54,3 +54,28 @@ export const login = (email, password) => {
 export const authenticate = (data) => {
     localStorage.setItem('jwt', JSON.stringify(data))
 }
+// to check if logged in
+export const isAuthenticate = () => {
+    if (localStorage.getItem('jwt')) {
+        return JSON.parse(localStorage.getItem('jwt'))
+    }
+    else {
+        return false
+    }
+}
+// for forget password
+export const forgetpassword = user => {
+    return fetch(`${API}/forgetpassword`, {
+        method: 'POST',
+        headers:{
+            Accept: "application/json",
+            "Content-Type": "application/json"
+
+        },
+        body: JSON.stringify(user)
+    })
+    .then(res => {
+        return res.json()
+    })
+    .catch(err=>console.log(err))
+}

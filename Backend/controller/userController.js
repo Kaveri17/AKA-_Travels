@@ -148,7 +148,7 @@ exports.forgetpassword = async(req,res) => {
 
     // sending password reset link in email
     // const URL = `http://localhost:8000/resetpassword/${token.token}`
-    const URL = `${process.env.VITE_FRONTEND_URlFRONTEND_URl}/resetpassword/${token.token}`
+    const URL = `${process.env.VITE_FRONTEND_URl}/resetpassword/${token.token}`
 
     sendEmail({
         from: "noreply@something.com",
