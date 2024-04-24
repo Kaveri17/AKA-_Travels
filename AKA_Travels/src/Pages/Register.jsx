@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { register } from '../api/Userapp'
+import { signup } from '../auth/authindex'
+
 
 const Register = () => {
   let [username, setUsername] = useState('')

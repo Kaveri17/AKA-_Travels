@@ -50,7 +50,8 @@ exports.register = async (req, res) => {
 
     // send verification email
     // const URL = `http://localhost:8000/verify/${token.token}`
-    const URL = `${process.env.VITE_FRONTEND_URl}/verify/${token.token}`
+    // const URL = `${process.env.VITE_FRONTEND_URl}/verify/${token.token}`
+    const URL =`${process.env.VITE_FRONTEND_URL}/verify/${token.token}`
     
     sendEmail({
         from: "noreply@something.com",

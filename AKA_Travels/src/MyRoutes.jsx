@@ -31,6 +31,11 @@ import AdminDashboard from "./Admin/AdminDashboard";
 
 
 
+import AddCategory from "./Admin/AddCategory";
+import AddProduct from "./Admin/AddProduct";
+import ShowCategory from "./Admin/ShowCategory";
+import EmailVerify from "./auth/EmailVerify";
+import AdminRoute from "./auth/AdminRoute";
 
 
 
@@ -41,7 +46,7 @@ const MyRoutes = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Layout />}/>
             <Route index element={<Home />} />
             <Route path="/test" element={<Test />} />
             <Route path="about" element={<About />} />
@@ -62,18 +67,25 @@ const MyRoutes = () => {
             
 
             {/* connection */}
-            <Route path="/register" element={<Register/>}/>
-            <Route path="/verify/:token" element={<Verify/>}/>
-            <Route path="/admindashboard" element={<AdminDashboard/>}/>
-        
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/forgetpassword" element={<ForgetPassword/>}/>
-            <Route path="/resetpassword/:token" element={<ResetPassword />} />
-            {/* <Route path="/adminsidebar" element={<AdminSidebar/>}/>
-           */}
+          <Route path="/register" element={<Register/>}/>
+          <Route path="/verify/:token" element={<Verify/>}/>
+      
+          <Route path="/login" element={<Login/>}/>
+          <Route path="verify/:token" element={<EmailVerify/>}/>
+          {/* <Route path="/signup" element={<SignUp/>}/> */}
 
-          {/* <Route path="admin/" element={<AdminRoute/>}/> */}
-              {/* <Route path="addcategoty" element={<AddCategory/>}/> */}
+
+          <Route path="admin/" element={<AdminRoute/>}>
+          {/* <Route path="dashboard" element={<Dashboard/>}/> */}
+              {/* <Route path="addblog" element={<AddBlog/>}/> */}
+              <Route path="addcategory" element={<AddCategory/>}/>
+              <Route path="addproduct" element={<AddProduct/>}/>
+              <Route path="showcategories" element={<ShowCategory/>}/>
+              <Route path="/admin/dashboard" element={<AdminDashboard/>}/>
+
+              
+              
+              
           </Route>
         </Routes>
         </BrowserRouter>
