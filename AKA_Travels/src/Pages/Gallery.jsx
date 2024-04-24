@@ -1,6 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { getGallery } from '../api/Gallapp';
+import { API } from '../config';
+
 
 const Gallery = () => {
+  // const[error, setError] = useState('');
+  const [galleries, setGalleries] = useState([])
+  
+  useEffect(() => {
+    getGallery()
+    .then( data => {
+      if (data?.error){
+        console.log(data.error)
+      }
+      else{
+        setGalleries(data)
+        console.log(data)
+      }
+    }
+    )
+  })
+
+
   return (
     <>
    
@@ -9,11 +30,24 @@ const Gallery = () => {
             <h1>Our Gallery</h1>
             </div>
 
-            <div className='flex flex-wrap pb-14 '>
-              <div className="gallery-img  w-full md:w-1/2 lg:w-1/3 py-10">
+            <div className='flex flex-wrap pb-14 '>         
+             {
+              galleries?.length > 0 && 
+              galleries.map( gallery => {
+                return <div key={gallery._id} className="gallery-img  w-full md:w-1/2 lg:w-1/3 py-10"> 
+                  <img src={`${API}/${gallery.gallery_image}`} alt={gallery.image_title} className='pic4 w-full h-full rounded-xl pe-3 ' />
+                  <h1 className='text-xl font-bold text-center py-3'> {gallery.image_title} </h1>
+                </div>
+              })
+
+
+             }
+              {/* <div className="gallery-img  w-full md:w-1/2 lg:w-1/3 py-10">
                 <img src="/Image/pic4.jpeg" alt="" className='pic4 w-full h-full rounded-xl pe-3 ' />
-                <h1 className='text-xl font-bold text-center py-3'>MALDIVES</h1>
+                <h1 className='text-xl font-bold text-center py-3'   >MALDIVES</h1>
+             
               </div>
+
               <div className="gallery-img  w-full md:w-1/2 lg:w-1/3 py-10">
                 <img src="/Image/pic5.jpeg" alt="" className='pic5 w-full h-full rounded-xl pe-3 ' />
                 <h1 className='text-xl font-bold text-center py-3'>COLOMBO</h1>
@@ -69,7 +103,7 @@ const Gallery = () => {
               <div className="gallery-img  w-full md:w-1/2 lg:w-1/3 py-10">
                 <img src="/Image/pic25.webp" alt="" className='pic4 w-full h-full rounded-xl pe-3 ' />
                 <h1 className='text-xl font-bold text-center py-3'>GREECE</h1>
-              </div>
+              </div> */}
 
               {/* <div className="gallery-img w-full md:w-1/2 lg:w-1/3 py-10">
                 <img src="/Image/pic4.jpeg" alt="" className=' pic4 w-full h-full rounded-xl'/>

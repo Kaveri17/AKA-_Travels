@@ -1,10 +1,14 @@
 
 
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Header';
 import './Blogs.css';
 
 const Blogs = () => {
+  const[readmore, setReadMore] = useState('')
+  const[error, setError] = useState('')
+  const[success, setsuccess] =useState('')
+  
   return (
     <>
       <div className="Blogs mx-auto  w-5/6">
@@ -47,7 +51,7 @@ const Blogs = () => {
 
     {/* <button className='font-bold readmore block mx-auto w-1/5 h-12 text-white bg-orange-400 border-2 rounded-lg'>READ MORE <i class="bi bi-arrow-right text-lg"></i></button> */}
     <button class='font-bold readmore mx-auto md:w-1/5 lg:w-1/6 xl:w-1/8 h-12 text-white bg-orange-400 border-2 rounded-lg flex items-center justify-center'>
-    <span class="mr-2">READ MORE</span> 
+    <span class="mr-2"  onChange={event =>SetReadMore(event.target.value)}>READ MORE</span> 
     <i class="bi bi-arrow-right text-lg"></i>
     </button>
 
@@ -94,7 +98,7 @@ const Blogs = () => {
     </div>
     </div>
     </div>
-    <button class='font-bold readmore block mx-auto md:w-1/5 lg:w-1/6 xl:w-1/8 h-12 text-white bg-orange-400 border-2 rounded-lg flex items-center justify-center'>
+    <button class='font-bold readmore  mx-auto md:w-1/5 lg:w-1/6 xl:w-1/8 h-12 text-white bg-orange-400 border-2 rounded-lg flex items-center justify-center'>
     <span class="mr-2">READ MORE</span> 
     <i class="bi bi-arrow-right text-lg"></i>
     </button>

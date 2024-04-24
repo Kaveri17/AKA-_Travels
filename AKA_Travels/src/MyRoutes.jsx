@@ -21,9 +21,11 @@ import Packages from "./Pages/Packages";
 import Register from "./Pages/Register"
 import Login from "./Pages/Login";
 import Verify from "./Pages/Verify/Token";
-import AdminDashboard from "./Pages/AdminDashboard";
+
 import ForgetPassword from "./Pages/ForgetPassword";
 import ResetPassword from "./Pages/ResetPassword";
+import AdminDashboard from "./Admin/AdminDashboard";
+// import AdminSidebar from "./Admin/AdminSidebar";
 
 
 
@@ -62,13 +64,14 @@ const MyRoutes = () => {
             {/* connection */}
             <Route path="/register" element={<Register/>}/>
             <Route path="/verify/:token" element={<Verify/>}/>
-            
+            <Route path="/admindashboard" element={<AdminDashboard/>}/>
         
             <Route path="/login" element={<Login/>}/>
             <Route path="/forgetpassword" element={<ForgetPassword/>}/>
             <Route path="/resetpassword/:token" element={<ResetPassword />} />
-           
-            <Route path="/admindashboard" element={<AdminDashboard/>}/>
+            {/* <Route path="/adminsidebar" element={<AdminSidebar/>}/>
+           */}
+
           {/* <Route path="admin/" element={<AdminRoute/>}/> */}
               {/* <Route path="addcategoty" element={<AddCategory/>}/> */}
           </Route>
