@@ -1,4 +1,5 @@
 import React from 'react'
+import { isAuthenticated } from './authindex'
 import { Navigate, Outlet } from 'react-router-dom'
 
 const PrivateRoute = () => {

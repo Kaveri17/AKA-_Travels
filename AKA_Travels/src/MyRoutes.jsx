@@ -29,13 +29,10 @@ import ResetPassword from "./Pages/ResetPassword";
 
 
 
-<<<<<<< HEAD
 import AddCategory from "./Admin/AddCategory";
 import AddProduct from "./Admin/AddProduct";
 import ShowCategory from "./Admin/ShowCategory";
 import EmailVerify from "./auth/EmailVerify";
-=======
->>>>>>> dcc8bab69d78044a71dae9bac8afa51607244d66
 
 
 
@@ -67,7 +64,6 @@ const MyRoutes = () => {
             
 
             {/* connection */}
-<<<<<<< HEAD
           <Route path="/register" element={<Register/>}/>
           <Route path="/verify/:token" element={<Verify/>}/>
       
@@ -85,7 +81,6 @@ const MyRoutes = () => {
               
               
               
-=======
             <Route path="/register" element={<Register/>}/>
             <Route path="/verify/:token" element={<Verify/>}/>
             
@@ -97,7 +92,6 @@ const MyRoutes = () => {
             <Route path="/admindashboard" element={<AdminDashboard/>}/>
           {/* <Route path="admin/" element={<AdminRoute/>}/> */}
               {/* <Route path="addcategoty" element={<AddCategory/>}/> */}
->>>>>>> dcc8bab69d78044a71dae9bac8afa51607244d66
           </Route>
         </Routes>
         </BrowserRouter>

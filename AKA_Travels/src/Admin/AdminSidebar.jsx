@@ -43,9 +43,9 @@ const AdminSidebar = () => {
               <li><Link to="#" className="text-decoration-none text-white">
                   <b>Email : </b> {email}
                 </Link></li>
-                <li><Link to="#" className="text-decoration-none text-white">
+                {/* <li><Link to="#" className="text-decoration-none text-white">
                   <b>Password : </b> {password}
-                </Link></li>
+                </Link></li> */}
             </ul>
 
             {/* <div className="img">
