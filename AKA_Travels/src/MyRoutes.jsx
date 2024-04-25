@@ -72,12 +72,16 @@ const MyRoutes = () => {
       
           <Route path="/login" element={<Login/>}/>
           <Route path="verify/:token" element={<EmailVerify/>}/>
-          {/* <Route path="/signup" element={<SignUp/>}/> */}
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/forgetpassword" element={<ForgetPassword/>}/>
+            <Route path="/resetpassword/:token" element={<ResetPassword />} />
 
+
+          {/* <Route path="/signup" element={<SignUp/>}/> */}
 
           <Route path="admin/" element={<AdminRoute/>}>
           {/* <Route path="dashboard" element={<Dashboard/>}/> */}
-              {/* <Route path="addblog" element={<AddBlog/>}/> */}
+              <Route path="addblog" element={<AddBlog/>}/>
               <Route path="addcategory" element={<AddCategory/>}/>
               <Route path="addproduct" element={<AddProduct/>}/>
               <Route path="showcategories" element={<ShowCategory/>}/>
@@ -86,6 +90,12 @@ const MyRoutes = () => {
               
               
               
+            
+        
+           
+            <Route path="/admin/admindashboard" element={<AdminDashboard/>}/>
+          {/* <Route path="admin/" element={<AdminRoute/>}/> */}
+              {/* <Route path="addcategoty" element={<AddCategory/>}/> */}
           </Route>
         </Routes>
         </BrowserRouter>

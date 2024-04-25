@@ -1,6 +1,7 @@
 import { data } from "autoprefixer";
 import{ API } from "../config";
 
+
 //signup
 export const signup=user=>{
   return fetch(`${API}/register`,{
