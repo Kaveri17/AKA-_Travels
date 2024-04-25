@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import { isAuthenticated } from '../auth/authindex';
 
+
 const AdminSidebar = () => {
   const navigate=useNavigate()
   const {name,email}=isAuthenticated().user //destructuring and it always use "{}" also useState always use "[]"

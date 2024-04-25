@@ -17,3 +17,12 @@ exports.addimage = async(req,res) => {
     }
     res.send(image)
 }
+
+// get all gallery list
+exports.getGallery = async(req,res) =>{
+    let galleries = await Gallery.find()
+    if(!galleries){
+        return res.status(400).json({error: "Something went wrong"})
+    }
+    res.send(galleries)
+}
