@@ -46,7 +46,7 @@ const MyRoutes = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout />}/>
+          <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/test" element={<Test />} />
             <Route path="about" element={<About />} />
@@ -64,7 +64,7 @@ const MyRoutes = () => {
             {/* <Route path="/modal" element={<Modal />} /> */}
             <Route path="/details" element={<Details/>}/>
             <Route path="/packages" element={<Packages/>}/>
-            
+          </Route>
 
             {/* connection */}
           <Route path="/register" element={<Register/>}/>
