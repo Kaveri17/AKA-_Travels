@@ -1,85 +1,84 @@
-import React, { useEffect, useState } from 'react'
-import { isAuthenticated } from '../auth/authindex'
+import React ,{useState,useEffect} from 'react'
+import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { API } from '../config'
+import { isAuthenticated } from '../auth/authindex'
+
+const UpdateProduct = () => {
+    const params=useParams()
+    const {token} = isAuthenticated()
+    const id=params.productId
+
+    const [initialValue,setInitialValue]=useState([])
+    const [categories,setCategories]=useState([])
+    const [product_title,setProductTitle]=useState('')
+    const [product_location,setProductLocation]=useState('')
+    const [accomodation,setAccomodation]=useState('')
+    const [maximum_altitude,setMaximumAltitude]=useState('')
+    const [best_season,setBestSeason]=useState('')
+    const [departure_city,setDepartureCity]=useState('')
+    const [transportation,setTransportation]=useState('')
+    const [tour_availability,setTourAvailability]=useState('')
+    const [language,setLanguage]=useState('')
+    const [wifi,setWifi]=useState('')
+    const [minimum_age,setMinimumAge]=useState('')
+    const [maximum_age,setMaximumAge]=useState('')
+    const [meals, setMeals] = useState('')
+
+    const [overview,setOverview]=useState('')
+    const [highlights,setHighlights]=useState('')
+    const [itenary,setItenary]=useState('')
 
 
-const AddProduct = () => {
-    const {token}=isAuthenticated()
-    const[categories,setCategories]=useState([])
-    const[productData,setProductData]=useState({
-        product_title:'',
-        product_location:'',
-        accomodation:'',
-        maximum_altitude:'',
-        best_season:'',
-        departure_city:'',
-        transportation:'',
-        tour_availability:'',
-        language:'',
-        wifi:'',
-        minimum_age:'',
-        maximum_age:'',
-        meals:'',
-        overview:'',
-        highlights:'',
-        
-        category:''
-        // itenary:''
-    })
+    // const [product_image,setProductImage]=useState(null)
+    const [categoryId,setCategoryId]=useState('')
 
-    // fetch categories 
+    const [error,setError]=useState('')
+    const [success,setSuccess]=useState(false)
+
+
+
+
+   
+
     useEffect(()=>{
         axios.get(`${API}/allcategory`)
         .then(res=>{
             setCategories(res.data)
         })
         .catch(err=>console.log(err))
-    },[])
 
-    // destructring productData 
-    const{
-      product_title,
-        product_location,
-        accomodation,
-        maximum_altitude,
-        best_season,
-        departure_city,
-        transportation,
-        tour_availability,
-        language,
-        wifi,
-        minimum_age,
-        maximum_age,
-        meals,
-        overview,
-        highlights,
-        
-        category
-        // itenary
-        
-    } =productData
-
-    const[error,setError]=useState('')
-    const[success,setSuccess]=useState(false)
-
-    const handleChange=name=>event=>{
-        setProductData({
-            ...productData,
-            error:false,
-            [name]:event.target.value
+        axios.get(`${API}/productdetail/${id}`)
+        .then(res=>{
+            setInitialValue(res.data)
+            setProductTitle(res.data.product_title)
+            setProductLocation(res.data.product_location)
+            setAccomodation(res.data.accomodation)
+            setMaximumAltitude(res.data.maximum_altitude)
+            setBestSeason(res.data.best_season)
+            setDepartureCity(res.data.departure_city)
+            setTransportation(res.data.transportation)
+            setTourAvailability(res.data.tour_availability)
+            setLanguage(res.data.language)
+            setWifi(res.data.wifi)
+            setMinimumAge(res.data.minimum_age)
+            setMaximumAge(res.data.maximum_age)
+            setMeals(res.data.meals)
+            setOverview(res.data.overview)
+            setHighlights(res.data.highlights)
+            setItenary(res.data.itenary)
+            setCategoryId(res.data.category._id)
         })
-    }
+        .catch(err=>console.log(err))
+    },[id])
 
-   
-
-    const handleSubmit=async event=>{
+    // handle submit
+    const handleSubmit=async(event)=>{
         event.preventDefault()
 
-        // passing form data instead of json
         try{
             const formData=new FormData()
-            formData.append('product_title',product_title)
+           formData.append('product_title',product_title)
             formData.append('product_location',product_location)
             formData.append('accomodation',accomodation)
             formData.append('maximum_altitude',maximum_altitude)
@@ -99,42 +98,24 @@ const AddProduct = () => {
             formData.append('meals',meals)
             formData.append('overview',overview)
             formData.append('highlights',highlights)
-           
-            formData.append('category',category)
             formData.append('itenary',itenary)
+           
+            formData.append('category',categoryId)
 
             const config={
                 headers:{
-                    "Content-Type":'application/json',
+                    "Content-Type":'multipart/form-data',
                     Authorization:`Bearer ${token}`
                 }
             }
 
-            const response=await axios.post(`${API}/postproduct`,formData,config)
+            const response=await axios.put(
+                `${API}/updateproduct/${id}`,
+                formData,
+                config
+            )
             setSuccess(true)
             setError('')
-            setProductData({
-              product_title,
-              product_location,
-              accomodation,
-              maximum_altitude,
-              best_season,
-              departure_city,
-              transportation,
-              tour_availability,
-              language,
-              wifi,
-              minimum_age,
-              maximum_age,
-              meals,
-              overview,
-              highlights,
-              
-              category,
-              itenary
-              
-
-            })
         }
         catch(err){
             setError(err.response.data.error)
@@ -143,7 +124,7 @@ const AddProduct = () => {
     }
 
     // to show error message
-     const showError=()=>(
+    const showError=()=>(
         error && <div className='alert alert-danger'>{error}</div>
     )
 
@@ -154,9 +135,9 @@ const AddProduct = () => {
         </div>
     )
 
-  return (
-    <>
-        <div className="container">
+    return (
+        <>
+             <div className="container">
             <div className="row d-flex justify-content-center">
                 <div className="col-md-5">
                     <form className="shadow p-3">
@@ -249,39 +230,33 @@ const AddProduct = () => {
                             <input type="text" name="highlights" id="highlights" className='form-control' 
                             value={highlights} onChange={handleChange('highlights')}/>
                         </div>
-                    
-
-
-
-
+                        
                         <div className="mb-2">
                             <label htmlFor="category">Category</label>
                             <select name="category" id="category" className='form-control' 
-                                onChange={handleChange('category')}>
-                                    <option>--- Select Category ---</option>
+                                onChange={e=>setCategoryId(e.target.value)}>
+                                    <option value={categoryId}>
+                                        {initialValue.category && initialValue.category.category_name}
+                                    </option>
                                     {categories && categories.map((c,i)=>(
-                                        <option value={c._id} key={i}>{c.category_name}</option>,
-                                        <option value={c._id} key={i}>{c.description}</option>
+                                        <option value={c._id} key={i}>
+                                            {c.category_name}
+                                        </option>
+                                    //     <option value={c._id} key={i}>
+                                    //     {c.description}
+                                    // </option>
                                     ))}
+
                             </select>
                         </div>
 
-                        <div className="mb-2">
-                            <label htmlFor="overview">Itenary</label>
-                            <input type="text" name="itenary" id="itenary" className='form-control' 
-                            value={itenary} onChange={handleChange('itenary')}/>
-                        </div>
-
-
-
-
-                        
+                       
                     </form>
                 </div>
             </div>
         </div>
-    </>
-  )
+        </>
+    )
 }
 
-export default AddProduct
+export default UpdateProduct

@@ -52,6 +52,7 @@ const ShowCategory = () => {
                         <thead>
                             <tr>
                                 <th>Category Name</th>
+                                <th>Description</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -59,6 +60,7 @@ const ShowCategory = () => {
                             {categories && categories.map((category,i)=>(
                                 <tr key={i}>
                                     <td>{category.category_name}</td>
+                                    <td>{category.description}</td>
                                     <td>
                                         <button className='btn btn-danger'onClick={()=>deleteCategory(category._id)} ><FaTrash/></button>
                                     </td>

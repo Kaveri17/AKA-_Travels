@@ -155,12 +155,6 @@ const Details = () => {
                                         Early trek to Poon Hill, Back To Ghorepani and Trek to Tadapani
                                     </span>
                                 </li>
-                                <li className='text-lg font-medium leading-10'>
-                                    Day 5 : 
-                                    <span className="font-normal" style={{fontSize:"15px"}}>
-                                        Tadapani to Chomrong
-                                    </span>
-                                </li>
                             </ul>
                         </div>
                         <div className="cost tracking-wide text-gray-700">
