@@ -36,6 +36,7 @@ import AddProduct from "./Admin/AddProduct";
 import ShowCategory from "./Admin/ShowCategory";
 import EmailVerify from "./auth/EmailVerify";
 import AdminRoute from "./auth/AdminRoute";
+import AddBlog from "./Admin/AddBlog";
 
 
 

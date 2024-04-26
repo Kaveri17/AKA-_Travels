@@ -5,6 +5,7 @@ import Header from './Header';
 import './Blogs.css';
 import { viewBlog } from '../api/Blog';
 import { API } from '../config';
+import { Link } from 'react-router-dom';
 
 const Blogs = () => {
  const [blogs, setBlogs] = useState([])
@@ -25,26 +26,24 @@ useEffect(()=> {
 },[])
 
 
+
+
   
   return (
     <>
-      <div className="Blogs mx-auto  w-5/6">
+      {/* <div className="Blogs mx-auto  w-5/6">
         <div className='mx-auto flex flex-col md:flex-row justify-between pb-14  w-full'>
      
             <div className="blog-left w-full md:w-4/6   px-4 md:px-12 ">
               
 
-            {/* <div className="Blogs ">
-            <div className="mx-auto w-full md:w-5/6 flex flex-col md:flex-row justify-between pb-14">
-              <div className="blog-left w-full md:w-4/6 px-4 md:px-12">
-                <div className="w-full my-11">
-              */}
+           
             
 
     <a href="/blogdetail">
     {
         blogs?.length > 0 &&
-        blogs.map(blog => {return <div key ={blog._id}  className=' w-full my-12 overflow-hidden'>   
+        blogs.map(blog =>  <div key ={blog._id}  className=' w-full my-12 overflow-hidden'>   
     <img src={`${API}/${blog.blog_image}`} alt={blog.blog_name} className='pic3 h-96'/>
     <div className='blogscontainer border-2 border-slate-600 px-4'>
     <h1 className='font-extrabold leading-10 text-3xl font-serif'>{blog.blog_name}</h1>
@@ -52,14 +51,9 @@ useEffect(()=> {
 
     <div class="border-t-2 border-orange-500 mx-6">
 
-    {/* <div class="m-3 flex flex-wrap items-center">
-    <i class="bi bi-calendar pe-8 mb-2 sm:mb-0">12 December 2023</i>
-    <i class="bi bi-eye-fill pe-8 mb-2 sm:mb-0">Views(367)</i>
-    <div className='border-l-2 ps-4 border-black'>
-    <i class="bi bi-chat-right-dots pe-8 mb-2 sm:mb-0 ">0 comments</i>
-    </div> */}
+    
     <div className="m-3 flex flex-wrap items-center">
-    <i class="bi bi-calendar pe-8 mb-2 sm:mb-0">12 December 2023</i>
+    <i class="bi bi-calendar pe-8 mb-2 sm:mb-0">{blog.createdAt}</i>
     <i class="bi bi-eye-fill pe-8 mb-2 sm:mb-0">{blog. No_of_views}</i>
     <div className='border-l-2 ps-4 border-black'>
       <i className="bi bi-chat-right-dots pe-2 sm:pe-8 mb-2 sm:mb-0">{blog.comments}</i>
@@ -69,17 +63,20 @@ useEffect(()=> {
     </div>
     </div>
 
-    {/* <button className='font-bold readmore block mx-auto w-1/5 h-12 text-white bg-orange-400 border-2 rounded-lg'>READ MORE <i class="bi bi-arrow-right text-lg"></i></button> */}
-    <button class='font-bold readmore mx-auto md:w-1/5 lg:w-1/6 xl:w-1/8 h-12 text-white bg-orange-400 border-2 rounded-lg flex items-center justify-center'>
-    <span class="mr-2">READ MORE</span> 
+  <Link to={`blog/${blog._id}`} className='read-more'>
+    <button class='font-bold readmore mx-auto md:w-1/5 lg:w-1/6 xl:w-1/8 h-12 text-white bg-orange-400 border-2 rounded-lg flex items-center justify-center '> 
+    <span class="mr-2" >READ MORE</span> 
     <i class="bi bi-arrow-right text-lg"></i>
     </button>
+    </Link>
 
     </div>
     </div>
-  })
+  )
 }
-    </a>
+    </a> 
+
+
 
 
     <a href="/blogdetaill">
@@ -105,8 +102,8 @@ useEffect(()=> {
 
     </div>
     </div>
-    </a>
-    <a href="/blogdetailll">
+    </a> 
+     <a href="/blogdetailll">
 
     <div className='w-full my-11 overflow-hidden'>
     <img src="\Image\picccc.jpeg" alt="" className='pic1 h-96'/>
@@ -127,11 +124,11 @@ useEffect(()=> {
     <i class="bi bi-arrow-right text-lg"></i>
     </button>
 
-    {/* <button className='font-bold readmore block mx-auto w-1/5 h-12 bg-orange-400 border-2 rounded-lg text-white'><span></span>READ MORE <i class="bi bi-arrow-right"></i></button> */}
+    
     </div> 
     </div>
-    </a>
-    <div className='flex flex-wrap justify-center'>
+    </a> 
+     <div className='flex flex-wrap justify-center'>
 
     <button className='font-bold block w-12 h-8 bg-orange-400 hover:bg-orange-400 border-2 rounded-md border-orange-600 text-black me-3 '>1</button>
     <a href="blogs" >
@@ -140,10 +137,10 @@ useEffect(()=> {
     <a href="blogs">
     <button className='font-bold block w-12 h-8 border-2 hover:bg-orange-400 rounded-md border-orange-600 text-black '><i class="bi bi-chevron-right font-bold"></i></button>
     </a>
-    </div>
+    </div> 
 
             </div>
-
+ 
             <div className="blog-right  flex flex-col w-full md:w-2/6  mt-8 ">
               
               <div className="search">
@@ -184,11 +181,41 @@ useEffect(()=> {
               <a href="" class="icons text-2xl md:w-auto md:p-2"><i class="hiiiii bi bi-twitter pe-8"></i></a>
               <a href="" class="icons text-2xl md:w-auto md:p-2"><i class="hiii bi bi-pinterest pe-8"></i></a>
               </div>
-            </div>
+            </div> 
 
         </div>
       </div>
-         
+          */}
+           <div className="Blogs mx-auto w-5/6">
+        <div className='mx-auto flex flex-col md:flex-row justify-between pb-14 w-full'>
+          <div className="blog-left w-full md:w-4/6 px-4 md:px-12 ">
+            {blogs?.length > 0 && blogs.map(blog => (
+              <div key={blog._id} className='w-full my-12 overflow-hidden'>
+                <img src={`${API}/${blog.blog_image}`} alt={blog.blog_name} className='pic3 h-96' />
+                <div className='blogscontainer border-2 border-slate-600 px-4'>
+                  <h1 className='font-extrabold leading-10 text-3xl font-serif'>{blog.blog_name}</h1>
+                  <p className='py-12 font-bold leading-10 text-1xl text-font-serif'>{blog.blog_description}</p>
+                  <div className="border-t-2 border-orange-500 mx-6">
+                    <div className="m-3 flex flex-wrap items-center">
+                      <i className="bi bi-calendar pe-8 mb-2 sm:mb-0">{blog.createdAt}</i>
+                      <i className="bi bi-eye-fill pe-8 mb-2 sm:mb-0">{blog.No_of_views}</i>
+                      <div className='border-l-2 ps-4 border-black'>
+                        <i className="bi bi-chat-right-dots pe-2 sm:pe-8 mb-2 sm:mb-0">{blog.comments}</i>
+                      </div>
+                    </div>
+                  </div>
+                  <Link to={`blog/${blog._id}`} className='read-more'>
+                    <button className='font-bold readmore mx-auto md:w-1/5 lg:w-1/6 xl:w-1/8 h-12 text-white bg-orange-400 border-2 rounded-lg flex items-center justify-center '>
+                      <span className="mr-2" >READ MORE</span>
+                      <i className="bi bi-arrow-right text-lg"></i>
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+          </div></div>
+
          
          
 

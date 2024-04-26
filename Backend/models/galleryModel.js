@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const { getDefaultHighWaterMark } = require('nodemailer/lib/xoauth2')
+// const { getDefaultHighWaterMark } = require('nodemailer/lib/xoauth2')
 const {ObjectId} = mongoose.Schema
 
 const gallerySchema = new mongoose.Schema({
