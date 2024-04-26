@@ -13,7 +13,7 @@ const AddCategory = () => {
     const handleSubmit=e=>{
         e.preventDefault()
         setError('')
-        setSuccess(false) //because conditions haru check garnu parxa first ma
+        setSuccess(false) 
 
         // request to post category
         fetch(`${API}/postcategory/`,{
@@ -24,6 +24,8 @@ const AddCategory = () => {
                 Authorization:`Bearer ${token}`
             },
             body:JSON.stringify({category_name}),
+            // body:JSON.stringify({description}),
+            // body:JSON.stringify({image})
         })
         .then(res=>res.json())
         .then(data=>{
@@ -35,6 +37,7 @@ const AddCategory = () => {
                 setError('')
                 setSuccess(true)
                 setCategory_name('')
+                setDescription('')
             }
         })
     }
@@ -60,9 +63,26 @@ const AddCategory = () => {
                         {showSuccess()}
                         <h2 className='text-center'>Add Category</h2>
                         <div className="mb-2">
-                            <label htmlFor="category">Category Name:</label>
+                            <label htmlFor="category">Category Name</label>
                             <input type="text" name="category" id="category" className='form-control' value={category_name} onChange={e=>setCategory_name(e.target.value)} />
                         </div>
+
+                        <div className="mb-2">
+                            <label htmlFor="description">Description</label>
+                            <input type="text" name="description" id="description" className='form-control' value={description} onChange={e=>description(e.target.value)} />
+                        </div>
+
+
+                        <div className="mb-2">
+                            <label htmlFor="category_image">Category Image</label>
+                            <input type="file" name="category_image" id="category_image" className='form-control' 
+                            onChange={handleImageChange}/>
+                        </div>
+                        <div className="mb-2">
+                            <button className="btn btn-primary" onClick={handleSubmit}>Add</button>
+                        </div>
+
+
                         <div className="mb-2">
                             <button className="btn btn-primary" onClick={handleSubmit}>Add</button>
                         </div>
