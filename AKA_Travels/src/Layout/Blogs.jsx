@@ -1,13 +1,30 @@
 
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from './Header';
 import './Blogs.css';
+import { viewBlog } from '../api/Blog';
+import { API } from '../config';
 
 const Blogs = () => {
-  const[readmore, setReadMore] = useState('')
-  const[error, setError] = useState('')
-  const[success, setsuccess] =useState('')
+ const [blogs, setBlogs] = useState([])
+//  const [error, setError] = useState('')
+
+useEffect(()=> {
+  viewBlog()
+  .then(data => {
+    if(data?.error){
+      console.log(data.error)
+    }
+    else{
+      setBlogs(data)
+      console.log(data)
+    }
+  })
+  .catch(error => console.error("error fetching blogs",error))
+},[])
+
+
   
   return (
     <>
@@ -15,6 +32,7 @@ const Blogs = () => {
         <div className='mx-auto flex flex-col md:flex-row justify-between pb-14  w-full'>
      
             <div className="blog-left w-full md:w-4/6   px-4 md:px-12 ">
+              
 
             {/* <div className="Blogs ">
             <div className="mx-auto w-full md:w-5/6 flex flex-col md:flex-row justify-between pb-14">
@@ -24,11 +42,13 @@ const Blogs = () => {
             
 
     <a href="/blogdetail">
-    <div className=' w-full my-12 overflow-hidden'>
-    <img src="\Image\picc.webp" alt="" className='pic3 h-96'/>
+    {
+        blogs?.length > 0 &&
+        blogs.map(blog => {return <div key ={blog._id}  className=' w-full my-12 overflow-hidden'>   
+    <img src={`${API}/${blog.blog_image}`} alt={blog.blog_name} className='pic3 h-96'/>
     <div className='blogscontainer border-2 border-slate-600 px-4'>
-    <h1 className='font-extrabold leading-10 text-3xl font-serif'>The salty breeze that carries with it the unmistakable scent of the ocean, mingling with the faint whispers of palm trees swaying in the distance.</h1>
-    <p className='py-12 font-bold leading-10 text-1xl text-font-serif'>As the sun dances upon the water's surface, it paints the horizon with hues of orange and pink, a breathtaking display of nature's artistry. Footprints are left behind in the sand, a testament to the countless souls who have found solace and serenity in this seaside sanctuary. Here, time seems to slow, allowing for moments of pure tranquility and connection with the natural world.</p>
+    <h1 className='font-extrabold leading-10 text-3xl font-serif'>{blog.blog_name}</h1>
+    <p className='py-12 font-bold leading-10 text-1xl text-font-serif'> {blog.blog_description} </p>
 
     <div class="border-t-2 border-orange-500 mx-6">
 
@@ -40,9 +60,9 @@ const Blogs = () => {
     </div> */}
     <div className="m-3 flex flex-wrap items-center">
     <i class="bi bi-calendar pe-8 mb-2 sm:mb-0">12 December 2023</i>
-    <i class="bi bi-eye-fill pe-8 mb-2 sm:mb-0">Views(367)</i>
+    <i class="bi bi-eye-fill pe-8 mb-2 sm:mb-0">{blog. No_of_views}</i>
     <div className='border-l-2 ps-4 border-black'>
-      <i className="bi bi-chat-right-dots pe-2 sm:pe-8 mb-2 sm:mb-0">0 comments</i>
+      <i className="bi bi-chat-right-dots pe-2 sm:pe-8 mb-2 sm:mb-0">{blog.comments}</i>
       </div>
 
 
@@ -51,13 +71,17 @@ const Blogs = () => {
 
     {/* <button className='font-bold readmore block mx-auto w-1/5 h-12 text-white bg-orange-400 border-2 rounded-lg'>READ MORE <i class="bi bi-arrow-right text-lg"></i></button> */}
     <button class='font-bold readmore mx-auto md:w-1/5 lg:w-1/6 xl:w-1/8 h-12 text-white bg-orange-400 border-2 rounded-lg flex items-center justify-center'>
-    <span class="mr-2"  onChange={event =>SetReadMore(event.target.value)}>READ MORE</span> 
+    <span class="mr-2">READ MORE</span> 
     <i class="bi bi-arrow-right text-lg"></i>
     </button>
 
     </div>
     </div>
+  })
+}
     </a>
+
+
     <a href="/blogdetaill">
     <div className='w-full my-11 overflow-hidden'>
     <img src="\Image\piccc.jpeg" alt="" className='pic2 h-96'/>
