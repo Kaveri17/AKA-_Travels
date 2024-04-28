@@ -7,4 +7,11 @@ export const viewBlog = () => {
     .catch(error => console.log(error))
 
 }
-// updateblog
+// Blog details
+export const BlogPost = () =>{
+    return fetch(`${API}/getblog`, )
+    .then(response => response.json())
+    .catch(error => console.log(error))
+
+
+}

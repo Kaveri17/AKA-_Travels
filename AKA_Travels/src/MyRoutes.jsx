@@ -32,6 +32,8 @@ import ShowCategory from "./Admin/ShowCategory";
 import EmailVerify from "./auth/EmailVerify";
 import AdminRoute from "./auth/AdminRoute";
 import AddBlog from "./Admin/AddBlog";
+import ShowProduct from "./Admin/ShowProduct";
+import AdminSidebar from "./Admin/AdminSidebar";
 
 
 
@@ -47,7 +49,7 @@ const MyRoutes = () => {
             <Route path="/test" element={<Test />} />
             <Route path="about" element={<About />} />
             <Route path="/blogs" element={<Blogs />} />
-            <Route path="/blogdetail" element={<BlogDetail />} />
+            <Route path="/blogdetail/:id" element={<BlogDetail />} />
             <Route path="/blogdetaill" element={<BlogDetaill />} />
             <Route path="/blogdetailll" element={<BlogDetailll />} />
             <Route path="/contact" element={<Contact />} />
@@ -80,11 +82,12 @@ const MyRoutes = () => {
               <Route path="addcategory" element={<AddCategory/>}/>
               <Route path="addproduct" element={<AddProduct/>}/>
               <Route path="showcategories" element={<ShowCategory/>}/>
+            
               <Route path="showproduct" element={<ShowProduct/>}/>
-              <Route path="showproduct" element={<ShowProduct/>}/>
-              <Route path="updateproduct" element={<UpdateProduct/>}/>
+              {/* <Route path="updateproduct" element={<UpdateProduct/>}/> */}
 
               <Route path="/admin/dashboard" element={<AdminDashboard/>}/>
+            
         
             <Route path="/admin/sidebar" element={<AdminSidebar/>}/>
           {/* <Route path="admin/" element={<AdminRoute/>}/> */}
