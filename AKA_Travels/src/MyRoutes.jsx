@@ -32,9 +32,6 @@ import ShowCategory from "./Admin/ShowCategory";
 import EmailVerify from "./auth/EmailVerify";
 import AdminRoute from "./auth/AdminRoute";
 import AddBlog from "./Admin/AddBlog";
-import ShowProduct from "./Admin/ShowProduct";
-import AdminSidebar from "./Admin/AdminSidebar";
-import UpdateProduct from "./Admin/UpdateProduct";
 
 
 
