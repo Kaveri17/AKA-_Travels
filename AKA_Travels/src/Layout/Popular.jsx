@@ -5,6 +5,7 @@ import './Popular.css'
 import Slider from "react-slick";
 
 const Popular = () => {
+  
   const settings = {
     dots: true,
     infinite: true,
