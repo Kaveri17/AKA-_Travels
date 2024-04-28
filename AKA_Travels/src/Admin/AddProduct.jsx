@@ -23,7 +23,6 @@ const AddProduct = () => {
         meals:'',
         overview:'',
         highlights:'',
-        
         category:''
         // itenary:''
     })
@@ -55,8 +54,8 @@ const AddProduct = () => {
         overview,
         highlights,
         
-        category
-        // itenary
+        category,
+        itenary
         
     } =productData
 
@@ -133,7 +132,6 @@ const AddProduct = () => {
               category,
               itenary
               
-
             })
         }
         catch(err){

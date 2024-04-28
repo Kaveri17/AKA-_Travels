@@ -19,3 +19,5 @@ export const getGallery = () => {
     .then(response => response.json())
     .catch(error => console.log(error))
 }
+
+
