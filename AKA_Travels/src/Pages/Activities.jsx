@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { API } from "../config";
 import { viewActivities } from "../api/Act";
 
 const Activities = () => {
   const [activities,setActivities]=useState([])
+
   useEffect(()=>{
     viewActivities()
     .then(data=>{
@@ -16,7 +18,7 @@ const Activities = () => {
       }
     })
     .catch(error=>console.error("error fetching products",error))
-  })
+  },[])
   
   return (
     <>
@@ -25,14 +27,24 @@ const Activities = () => {
           Activities
         </h1>
         <div className="activity flex flex-wrap justify-between"> 
-          <div className="w-full md:w-1/2 lg:w-4/12 py-10 px-2">
+        {activities?.length>0 && activities.map(activity=>(
+          
+        
+          <div  key={activity._id} className="w-full md:w-1/2 lg:w-4/12 py-10 px-2">
             <div className="activity-div w-full rounded-xl">
               <Link to="" className="activity-img relative">
-                <img
+                {/* <img
                   src="\Image\boating.jpg"
                   alt=""
                   className="w-full h-full rounded-xl"
-                />
+                /> */}
+
+<img src={`${API}/${activities.image}`} alt={activities.category_name} className='w-full h-full rounded-xl' />
+
+
+
+
+
                 <div
                   className="overlay absolute top-0 left-0 w-full h-full rounded-xl "
                   style={{ backgroundColor: "rgba(164,224,235,0.6)" }}
@@ -50,10 +62,20 @@ const Activities = () => {
                 Boating{" "}
                 <span className="totalnotrips text-sm"> (2 Trips) </span>
               </h1>
+            
+              
           </div>
+          )
+        )}
+
+
+
+
+
 
           <div className="w-full md:w-1/2 lg:w-4/12 py-10 px-2">
             <div className="activity-div w-full rounded-xl">
+              
               <Link to="" className="activity-img relative">
                 <img
                   src="\Image\citytour.jpg"
@@ -78,6 +100,8 @@ const Activities = () => {
               <span className="totalnotrips text-sm"> (2 Trips) </span>
             </h1>
           </div>
+
+
 
           <div className="w-full md:w-1/2 lg:w-4/12 py-10 px-2">
             <div className="activity-div w-full rounded-xl">
@@ -279,65 +303,4 @@ export default Activities;
 
 
 
-
-// import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
-
-// const Activities = () => {
-//   const [activities, setActivities] = useState([]);
-
-//   useEffect(() => {
-//     // Fetch data from backend API
-//     fetch("/api/getproductlist")
-//       .then((response) => response.json())
-//       .then((data) => setActivities(data))
-//       .catch((error) => console.error("Error fetching data:", error));
-//   }, []);
-
-//   return (
-//     <>
-//       <div className="wrapper w-10/12 mx-auto py-10">
-//         <h1 className="font-extrabold text-3xl text-center pt-6 pb-2">
-//           Activities
-//         </h1>
-//         <div className="activity flex flex-wrap justify-between">
-//           {activities.map((activity, index) => (
-//             <div
-//               key={index}
-//               className="w-full md:w-1/2 lg:w-4/12 py-10 px-2"
-//             >
-//               <div className="activity-div w-full rounded-xl">
-//                 <Link to="" className="activity-img relative">
-//                   <img
-//                     src={activity.image} // Assuming 'image' is a field in your activity data
-//                     alt={activity.name} // Assuming 'name' is a field in your activity data
-//                     className="w-full h-full rounded-xl"
-//                   />
-//                   <div
-//                     className="overlay absolute top-0 left-0 w-full h-full rounded-xl "
-//                     style={{
-//                       backgroundColor: "rgba(164,224,235,0.6)",
-//                     }}
-//                   >
-//                     <Link to="/packages">
-//                       <button className="border-solid border-1 px-3 py-2 text-lg font-semibold border-white rounded-md hover:bg-white hover:text-teal-300">
-//                         View More
-//                       </button>
-//                     </Link>
-//                   </div>
-//                 </Link>
-//               </div>
-//               <h1 className="font-bold text-xl pt-2">{activity.name}</h1>
-//               <span className="totalnotrips text-sm">
-//                 ({activity.trips} Trips)
-//               </span>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Activities;
 
