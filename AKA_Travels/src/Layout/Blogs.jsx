@@ -71,7 +71,7 @@ useEffect(()=> {
 
 
 
-
+{/* 
     <a href="/blogdetaill">
     <div className='w-full my-11 overflow-hidden'>
     <img src="\Image\piccc.jpeg" alt="" className='pic2 h-96'/>
@@ -95,8 +95,8 @@ useEffect(()=> {
 
     </div>
     </div>
-    </a> 
-     <a href="/blogdetailll">
+    </a>  */}
+     {/* <a href="/blogdetailll">
 
     <div className='w-full my-11 overflow-hidden'>
     <img src="\Image\picccc.jpeg" alt="" className='pic1 h-96'/>
@@ -120,7 +120,7 @@ useEffect(()=> {
     
     </div> 
     </div>
-    </a> 
+    </a>  */}
      <div className='flex flex-wrap justify-center'>
 
     <button className='font-bold block w-12 h-8 bg-orange-400 hover:bg-orange-400 border-2 rounded-md border-orange-600 text-black me-3 '>1</button>

@@ -16,7 +16,7 @@ const Activities = () => {
       }
     })
     .catch(error=>console.error("error fetching products",error))
-  })
+  },[])
   
   return (
     <>

@@ -30,6 +30,8 @@ app.use(UserRoute)
 app.use(ProductRoute)
 app.use(OrderRoute)
 
+app.use('/public/upload', express.static('public/upload'))
+
 app.listen(port, ()=>{
     console.log(`Server started successfully at port ${port}`)
 })
