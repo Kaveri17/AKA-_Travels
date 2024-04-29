@@ -23,8 +23,11 @@ const AddProduct = () => {
         meals:'',
         overview:'',
         highlights:'',
-        category:''
-        // itenary:''
+        category:'',
+        itenary:{
+            days,
+            day_title
+        }
     })
 
     // fetch categories 
@@ -53,9 +56,11 @@ const AddProduct = () => {
         meals,
         overview,
         highlights,
-        
         category,
-        itenary
+        itenary: {
+            days,
+            day_title
+        }
         
     } =productData
 
@@ -100,7 +105,10 @@ const AddProduct = () => {
             formData.append('highlights',highlights)
            
             formData.append('category',category)
-            formData.append('itenary',itenary)
+            // formData.append('itenary',itenary)
+            formData.append('itenary[days]', itenary.days); // Append days
+            formData.append('itenary[day_title]', itenary.day_title); // Append day_title
+        
 
             const config={
                 headers:{
@@ -130,7 +138,10 @@ const AddProduct = () => {
               highlights,
               
               category,
-              itenary
+              itenary:{
+                days,
+                day_title
+              }
               
             })
         }
@@ -265,10 +276,16 @@ const AddProduct = () => {
                         </div>
 
                         <div className="mb-2">
-                            <label htmlFor="overview">Itenary</label>
-                            <input type="text" name="itenary" id="itenary" className='form-control' 
-                            value={itenary} onChange={handleChange('itenary')}/>
-                        </div>
+                    <label htmlFor="days">Days</label>
+                    <input type="text" name="days" id="days" className='form-control' 
+                    value={days} onChange={handleChange('itenary')} />
+                </div>
+
+                <div className="mb-2">
+                    <label htmlFor="day_title">Day Title</label>
+                    <input type="text" name="day_title" id="day_title" className='form-control' 
+                    value={day_title} onChange={handleChange('itenary')} />
+                </div>
 
 
 

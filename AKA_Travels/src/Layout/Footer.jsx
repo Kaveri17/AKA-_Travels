@@ -19,7 +19,7 @@ const Footer = () => {
                   It only takes a few minutes to register you FREE AKA Travel
                   account.
                 </p>
-                <div className="pb-5">
+                <div className="pb-4">
                   <button className="font-bold border-2 border-solid px-2 py-2 bg-slate-200 hover:bg-fuchsia-200">
                     OPEN AN ACCOUNT
                   </button>

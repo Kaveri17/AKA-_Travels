@@ -33,6 +33,7 @@ import EmailVerify from "./auth/EmailVerify";
 import AdminRoute from "./auth/AdminRoute";
 import AddBlog from "./Admin/AddBlog";
 import ShowProduct from "./Admin/ShowProduct";
+import UpdateProduct from "./Admin/UpdateProduct";
 import AdminSidebar from "./Admin/AdminSidebar";
 
 
@@ -84,7 +85,8 @@ const MyRoutes = () => {
               <Route path="showcategories" element={<ShowCategory/>}/>
             
               <Route path="showproduct" element={<ShowProduct/>}/>
-              {/* <Route path="updateproduct" element={<UpdateProduct/>}/> */}
+              {/* <Route path="showproduct" element={<ShowProduct/>}/> */}
+              <Route path="updateproduct" element={<UpdateProduct/>}/>
 
               <Route path="/admin/dashboard" element={<AdminDashboard/>}/>
             
