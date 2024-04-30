@@ -34,10 +34,14 @@ exports.addBlog = async(req, res) => {
         blog_image: req.file.path,
         No_of_views: req.body.No_of_views,
         comments: req.body.comments,
-        author_name:req.body.author_name
+        author_name:req.body.author_name,
+        author_word: req.body.author_word,
+         blog_person: req.body.blog_person,
+         blog_det_desc:req.body.blog_det_desc
+
         
     })
-    
+
 
     if(!blog){
         return res.status(400).json({error:"Something went wrong"})
@@ -76,7 +80,10 @@ exports.updateBlog = async(req, res) => {
         blog_image: req.file?.path,
         No_of_views: req.body.No_of_views,
         comments: req.body.comments,
-        author_name:req.body.author_name
+        author_name:req.body.author_name,
+        author_word: req.body.author_word,
+        blog_person: req.body.blog_person,
+        blog_det_desc:req.body.blog_det_desc
 
     }, 
     {new:true})

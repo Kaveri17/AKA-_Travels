@@ -17,6 +17,7 @@ const GalleryRoute= require('./routes/galleryRoute')
 const BlogRoute = require('./routes/blogRoute')
 const UserRoute = require('./routes/userRoute')
 const OrderRoute= require('./routes/orderRoute')
+const PostRoute = require('./routes/postRoute')
 
 // app.use(morgan('dev'))
 app.use(morgan('dev'))
@@ -29,6 +30,7 @@ app.use(CategoryRoute)
 app.use(UserRoute)
 app.use(ProductRoute)
 app.use(OrderRoute)
+app.use(PostRoute)
 
 app.use('/public/upload', express.static('public/upload'))
 

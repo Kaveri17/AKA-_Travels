@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Blogs.css';
-import { BlogDet } from '../api/Blog';
+import { BlogDet, gpost } from '../api/Blog';
 import { API } from '../config';
 import { useParams } from 'react-router-dom';
 
@@ -8,21 +8,13 @@ import { useParams } from 'react-router-dom';
 const BlogDetail = () => {
   const { id }= useParams()
   const [bdetail, setBdetail] = useState({})
-  // useEffect(() => {
-  //   const fetchBlogDetail = async () => {
-  //     try {
-  //       const data = await BlogDet(id);
-  //       setBdetail(data);
-  //     } catch (error) {
-  //       console.error("Error fetching blog detail:", error);
-  //     }
-  //   };
-
-  //   fetchBlogDetail();
-  // }, [id]);
-
-
-
+  const [postname, setPostname] = useState('')
+  const [postcomment, setPostcomment] = useState('')
+  const [postemail, setpostemail] = useState('')
+ 
+const handlePost = (event) => {
+  event.preventDefault()
+}
   useEffect(() => {
     BlogDet(id)
     .then(data => {
@@ -36,6 +28,18 @@ const BlogDetail = () => {
       }
     })
     .catch(error => console.error("error fetching blogs detail",error))
+    gpost(id)
+    .then(data => {
+      if(data?.error) {
+        console.log(data.error)
+      }
+      else{
+        setBdetail(data)
+        console.log(data)
+        // console.log(bdetail)
+      }
+    })
+    .catch(error => console.error("error fetching comments",error))
   },[id])
 
 
@@ -47,19 +51,19 @@ const BlogDetail = () => {
           
 
               <div className="w-full my-11">
-             
+            
             
                 <img src={`${API}/${bdetail.blog_image}`}alt={bdetail.blog_name}className="pic3 h-96" />
                 <div className="blogscontainer">
                   <h1 className="font-extrabold leading-10 text-3xl font-serif py-8">{bdetail.blog_name}</h1>
-                  <i className="bi bi-calendar pe-2 sm:pe-8 py-2 sm:py-8">{bdetail.CreatedAt}</i>
+                  <i className="bi bi-calendar pe-2 sm:pe-8 py-2 sm:py-8">{bdetail.createdAt}</i>
                   <i className="bi bi-person text-lg">Wp-travolo</i>
                   <p className="py-12 leading-10 text-1xl text-font-mono">Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet for a quam vehicula elementum sed sit amet dui.  molestie malesuada. Donec sollicitudin molestie malesuada. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing ipsum dolor sit amet, consectetur elit.<br />Vestibulum ac diam sit amet for a quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim.<br />Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing ipsum dolor sit amet, consectetur elit.</p>
                 </div>
   
                 <div className="bg-gray-200 opacity-75 border-l-4 border-orange-600 py-4">
                   <h1 className="italic text-3xl">Lorem ipsum dolor sit amet, consectetur adipiscing ipsum dolor in sit amget, consectetur elit.</h1>
-                  <i className="bi bi-dash text-4xl text-red-600 py-12">{bdetail.author_nam}</i>
+                  <i className="bi bi-dash text-4xl text-red-600 py-12">{bdetail.author_name}</i>
                 </div>
   
                 <h1 className="font-extrabold leading-10 text-3xl font-serif py-5 ">Lorem ipsum dolor sit amet consectetur.</h1>
@@ -79,11 +83,11 @@ const BlogDetail = () => {
               
             <h1 className="font-extrabold leading-10 text-3xl font-serif">LEAVE A COMMENT</h1>
             <p className="py-12 leading-10 text-1xl text-font-mono">Your email address will not be published. Required fields are marked *</p>
-            <input type="text" placeholder="Write Your Comment" className="bg-gray-200 mb-2 me-3" />
-            <input type="text" placeholder="Enter Your Name" className="bg-gray-200 mb-2 me-3"/>
-            <input type="text" placeholder="Enter Your E-mail" className="bg-gray-200 mb-2" />
+            <input type="text" placeholder="Write Your Comment" className="bg-gray-200 mb-2 me-3"onChange={event=>{setPostcomment(event.target.value)}}  />
+            <input type="text" placeholder="Enter Your Name" className="bg-gray-200 mb-2 me-3"onChange={event=>{setPostname(event.target.value)}}/>
+            <input type="text" placeholder="Enter Your E-mail" className="bg-gray-200 mb-2" onChange={event=>{setpostemail(event.target.value)}}/>
             <div className="py-3">Save my name, email, and website in this browser for the next time I comment.</div>
-            <button className="font-bold readmore bg-gray-600 text-white px-3 py-2 rounded-md">POST COMMENT</button>
+            <button className="font-bold readmore bg-gray-600 text-white px-3 py-2 rounded-md"onClick={handlePost}>POST COMMENT</button>
           </div>
            
 
@@ -92,7 +96,7 @@ const BlogDetail = () => {
           
          <div className="search">
          <h1 className='font-extrabold leading-10 text-2xl font-serif underline m-3 '>SEARCH</h1>
-         <input type="text" class="w-2/5 sm:w-2/5 py-2 pl-8 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 m-6 cursor-pointer" placeholder="Search..."onChange={event => setSearch(event.target.value)}/>
+         <input type="text" class="w-2/5 sm:w-2/5 py-2 pl-8 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 m-6 cursor-pointer" placeholder="Search..."/>
          </div>
               
          <div className="blogdown">
