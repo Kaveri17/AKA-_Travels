@@ -35,8 +35,9 @@ const Gallery = () => {
               galleries?.length > 0 && 
               galleries.map( gallery => {
                 return <div key={gallery._id} className="gallery-img  w-full md:w-1/2 lg:w-1/3 py-10"> 
-                  <img src={`${API}/${gallery.image}`} alt={gallery.image_title} className='pic4 w-full h-full rounded-xl pe-3 ' />
+                  <img src={`${API}/${gallery.image}`} alt={gallery.image} className='pic4 w-full h-full rounded-xl pe-3 ' />
                   <h1 className='text-xl font-bold text-center py-3'> {gallery.image_title} </h1>
+                  {console.log(gallery.image)}
                 </div>
               })
 

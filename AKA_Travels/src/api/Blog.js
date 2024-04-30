@@ -8,8 +8,8 @@ export const viewBlog = () => {
 
 }
 // Blog details
-export const BlogPost = () =>{
-    return fetch(`${API}/getblog`, )
+export const BlogDet = (id) =>{
+    return fetch(`${API}/getdescriptions/${id}`, )
     .then(response => response.json())
     .catch(error => console.log(error))
 
