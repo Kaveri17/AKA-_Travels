@@ -2,13 +2,41 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Modal from '../components/Modal'
 import ImageSlider from '../components/ImageSlider'
+import { getDetails } from '../api/Detaill'
 
 const Details = () => {
+    const [details, setDetails] = useState([])
+
+    useEffect(() => {
+        getDetails()
+        .then( data => {
+          if (data?.error){
+            console.log(data.error)
+          }
+          else{
+            setDetails(data)
+            console.log(data)
+          }
+        }
+        )
+      },[])
+      
+      console.log(details);
+
+
 
   return (
     <>
         <div className="wrapper w-5/6 mx-auto py-10 flex flex-col lg:flex-row">
             <div className="details-left w-full lg:w-2/3 ">
+                {
+                    details?.length >0 &&
+                    details.map(detail=>{
+                        <a key={details._id} href="`/Details/${details._id}`}"></a>
+
+
+
+
                 {/* <ImageSlider/> */}
                 <div className="dleft-top">
                     <div className="package-title flex justify-between pb-10">
@@ -23,6 +51,8 @@ const Details = () => {
                         </div>
                     </div>
                 </div>
+                 })
+                }
 
                 <div className="details shadow-md rounded-md mb-3 lg:shadow-none">
                     {/* <div className="details-img w-full relative">

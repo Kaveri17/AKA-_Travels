@@ -1,6 +1,6 @@
 
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';             
 import Header from './Header';
 import './Blogs.css'
 import { viewBlog } from '../api/Blog';
@@ -11,6 +11,7 @@ const Blogs = () => {
  const [blogs, setBlogs] = useState([])
 
   // const [error, setError] = useState('')
+
  
   
 
