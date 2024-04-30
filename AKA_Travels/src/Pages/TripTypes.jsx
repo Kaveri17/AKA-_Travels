@@ -1,7 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { getTripTypes } from '../api/Trip'
 
 const TripTypes = () => {
+const [triptypes,setTripTypes]=useState([])
+useEffect(() => {
+    getTripTypes()
+    .then( data => {
+      if (data?.error){
+        console.log(data.error)
+      }
+      else{
+        setTripTypes(data)
+        console.log(data)
+      }
+    }
+    )
+  },[])
+  
+  console.log(triptypes);
+
+    
   return (
     <>
         <div className="wrapper w-10/12 mx-auto py-10">
@@ -9,6 +28,12 @@ const TripTypes = () => {
                 Trip Types
             </h1>
             <div className="triptypes flex flex-wrap justify-between">
+             
+
+
+
+
+
                 
                 <div className="w-full md:w-1/2 lg:w-4/12 py-10 px-2">
                     <div className="triptypes-div w-full rounded-xl">

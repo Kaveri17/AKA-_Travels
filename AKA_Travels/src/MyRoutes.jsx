@@ -87,6 +87,7 @@ const MyRoutes = () => {
               <Route path="showproduct" element={<ShowProduct/>}/>
               {/* <Route path="showproduct" element={<ShowProduct/>}/> */}
               <Route path="updateproduct" element={<UpdateProduct/>}/>
+              {/* <Route path="updateproduct" element={<UpdateProduct/>}/> */}
 
               <Route path="/admin/dashboard" element={<AdminDashboard/>}/>
             

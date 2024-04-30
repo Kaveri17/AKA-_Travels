@@ -1,25 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { API } from "../config";
-import { viewActivities } from "../api/Act";
+import { getActivities } from "../api/Act";
+import { act } from "react";
 
 const Activities = () => {
-  const [activities,setActivities]=useState([])
+  // const [activities,setActivities]=useState([])
+  const [activities, setActivities] = useState([])
 
-  useEffect(()=>{
-    viewActivities()
-    .then(data=>{
-      if(data?.error){
+  useEffect(() => {
+    getActivities()
+    .then( data => {
+      if (data?.error){
         console.log(data.error)
       }
       else{
         setActivities(data)
         console.log(data)
       }
-    })
-    .catch(error=>console.error("error fetching products",error))
+    }
+    )
   },[])
   
+  console.log(activities);
   return (
     <>
       <div className="wrapper w-10/12 mx-auto py-10">
@@ -27,53 +30,45 @@ const Activities = () => {
           Activities
         </h1>
         <div className="activity flex flex-wrap justify-between"> 
-        {activities?.length>0 && activities.map(activity=>(
-          
-        
-          <div  key={activity._id} className="w-full md:w-1/2 lg:w-4/12 py-10 px-2">
-            <div className="activity-div w-full rounded-xl">
-              <Link to="" className="activity-img relative">
-                {/* <img
-                  src="\Image\boating.jpg"
-                  alt=""
-                  className="w-full h-full rounded-xl"
-                /> */}
 
-<img src={`${API}/${activities.image}`} alt={activities.category_name} className='w-full h-full rounded-xl' />
+      
 
+            {
+              activities?.length > 0 && 
+              activities.map( activity => {
+                return <div className="w-full md:w-1/2 lg:w-4/12 py-10 px-2">
+                  <div className="activity-div w-full rounded-xl">
+                    <Link to="" className="activity-img relative">
+                    <img
+                      src={`${API}/${activity.image}`}
+                      alt=""
+                      className="w-full h-full rounded-xl"
+                    />
+                    <div
+                      className="overlay absolute top-0 left-0 w-full h-full rounded-xl "
+                      style={{ backgroundColor: "rgba(164,224,235,0.6)" }}
+                    >
+                      <Link to="/packages">
+                      
+                      <button className="border-solid border-1 px-3 py-2 text-lg font-semibold border-white rounded-md hover:bg-white hover:text-teal-300">
+                        View More
+                      </button>
+                      </Link>
+                    </div>
+                    </Link>
 
-
-
-
-                <div
-                  className="overlay absolute top-0 left-0 w-full h-full rounded-xl "
-                  style={{ backgroundColor: "rgba(164,224,235,0.6)" }}
-                >
-                  <Link to="/packages">
-                
-                    <button className="border-solid border-1 px-3 py-2 text-lg font-semibold border-white rounded-md hover:bg-white hover:text-teal-300">
-                      View More
-                    </button>
-                  </Link>
-                </div>
-              </Link>
-            </div>
-              <h1 className="font-bold text-xl pt-2">
-                Boating{" "}
-                <span className="totalnotrips text-sm"> (2 Trips) </span>
-              </h1>
-            
+                  </div>
+                  <h1 className="font-bold text-xl pt-2">
+                    {activity.category_name}{" "}
+                    <span className="totalnotrips text-sm"> ({activity.description}) </span>
+                  </h1>
+                </div>   
+              })
+            }
               
-          </div>
-          )
-        )}
+              
 
-
-
-
-
-
-          <div className="w-full md:w-1/2 lg:w-4/12 py-10 px-2">
+          {/* <div className="w-full md:w-1/2 lg:w-4/12 py-10 px-2">
             <div className="activity-div w-full rounded-xl">
               
               <Link to="" className="activity-img relative">
@@ -100,8 +95,6 @@ const Activities = () => {
               <span className="totalnotrips text-sm"> (2 Trips) </span>
             </h1>
           </div>
-
-
 
           <div className="w-full md:w-1/2 lg:w-4/12 py-10 px-2">
             <div className="activity-div w-full rounded-xl">
@@ -290,7 +283,7 @@ const Activities = () => {
              Trekking{" "}
               <span className="totalnotrips text-sm"> (3 Trips) </span>
             </h1>
-          </div>
+          </div> */}
 
         </div>
       </div>
