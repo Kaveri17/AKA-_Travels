@@ -40,6 +40,7 @@ const handlePost = (event) => {
       }
     })
     .catch(error => console.error("error fetching comments",error))
+    
   },[id])
 
 
@@ -51,6 +52,7 @@ const handlePost = (event) => {
           
 
               <div className="w-full my-11">
+                <div className='image'>
             
             
                 <img src={`${API}/${bdetail.blog_image}`}alt={bdetail.blog_name}className="pic3 h-96" />
@@ -75,8 +77,9 @@ const handlePost = (event) => {
                   <img src="\Image\pic24.jpeg" alt="" className="h-35 w-1/3 py-2 px-4 sm:px-2" />
                 </div>
                 <p className="py-8">Vestibulum ac diam sit amet for a quam vehicula elementum sed sit amet dui. Donec sollicitudin . Donec sollicitudin molestie malesuada. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus.</p>
+              
               </div>
-                    
+                    </div>
               
             
           
