@@ -1,24 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { getTripTypes } from '../api/Trip'
+// import { getTripTypes } from '../api/Package'
 
 const TripTypes = () => {
-const [triptypes,setTripTypes]=useState([])
-useEffect(() => {
-    getTripTypes()
-    .then( data => {
-      if (data?.error){
-        console.log(data.error)
-      }
-      else{
-        setTripTypes(data)
-        console.log(data)
-      }
-    }
-    )
-  },[])
-  
-  console.log(triptypes);
+
 
     
   return (

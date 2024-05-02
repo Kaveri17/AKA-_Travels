@@ -1,14 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+
+import { API } from '../config';
+import { Link, useParams } from 'react-router-dom'
 import Modal from '../components/Modal'
 import ImageSlider from '../components/ImageSlider'
-import { getDetails } from '../api/Detaill'
+import { Det } from '../api/Detaill'
 
 const Details = () => {
-    const [details, setDetails] = useState([])
+    const { id} =useParams()
+    const [details, setDetails] = useState({})
 
     useEffect(() => {
-        getDetails()
+        Det(id)
         .then( data => {
           if (data?.error){
             console.log(data.error)
@@ -19,9 +22,10 @@ const Details = () => {
           }
         }
         )
-      },[])
+        .catch(error => console.error("error fetching details",error))
+      },[id])
       
-      console.log(details);
+      
 
 
 
@@ -29,19 +33,13 @@ const Details = () => {
     <>
         <div className="wrapper w-5/6 mx-auto py-10 flex flex-col lg:flex-row">
             <div className="details-left w-full lg:w-2/3 ">
-                {
-                    details?.length >0 &&
-                    details.map(detail=>{
-                        <a key={details._id} href="`/Details/${details._id}`}"></a>
-
-
-
+                
 
                 {/* <ImageSlider/> */}
                 <div className="dleft-top">
                     <div className="package-title flex justify-between pb-10">
                         <h1 className='text-xl sm:text-3xl font-semibold w-3/5 sm:w-9/12 '>
-                            Bhutan Cultural Tour: Explore the Himalayan Kingdom
+                            {details.product_location}
                         </h1>
                         <div className="flex flex-col rounded-md shadow-md text-center w-1/5 sm:w-1/12 ">
                             <h2 className='bg-orange-600 text-white text-3xl font-semibold py-1 rounded-t-md'>
@@ -51,8 +49,10 @@ const Details = () => {
                         </div>
                     </div>
                 </div>
-                 })
-                }
+                
+                
+                 
+                
 
                 <div className="details shadow-md rounded-md mb-3 lg:shadow-none">
                     {/* <div className="details-img w-full relative">
@@ -70,77 +70,77 @@ const Details = () => {
                             <ul className='list-none text-black py-3 w-full sm:w-1/2'>
                                 <li>
                                     <i className="fa-solid fa-hotel text-orange-500"></i>
-                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Accomodation</span>
+                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>{details.accomodation}</span>
                                 </li>
-                                <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>4 Stars Hotels</li>
+                                <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>Accomodation</li>
                             </ul>
                             <ul className='list-none text-black py-3 w-full sm:w-1/2'>
                                 <li>
                                     <i className="fa-solid fa-bus text-orange-500"></i>
-                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Transportation</span>
+                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>{details.transportation}</span>
                                 </li>
                                 <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>Airplanes, Bus</li>
                             </ul>
                             <ul className='list-none text-black py-3 w-full sm:w-1/2'>
                                 <li>
                                     <i className="fa-solid fa-mountain text-orange-500"></i>
-                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Maximum Altitude</span>
+                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>{details.maximum_altitude}</span>
                                 </li>
                                 <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>5,416</li>
                             </ul>
                             <ul className='list-none text-black py-3 w-full sm:w-1/2'>
                                 <li>
                                     <i className="fa-solid fa-tree-city text-orange-500"></i>
-                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Departure City</span>
+                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>{details.product_location}</span>
                                 </li>
                                 <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>Kathmandu</li>
                             </ul>
                             <ul className='list-none text-black py-3 w-full sm:w-1/2'>
                                 <li>
                                     <i className="fa-solid fa-cloud-sun text-orange-500"></i>
-                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Best Season</span>
+                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>{details.best_season}</span>
                                 </li>
                                 <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>Feb, Mar, Apr & May</li>
                             </ul>
                             <ul className='list-none text-black py-3 w-full sm:w-1/2'>
                                 <li>
                                     <i className="fa-solid fa-person-hiking text-orange-500"></i>
-                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Tour Availability</span>
+                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>{details.tour_availability}</span>
                                 </li>
                                 <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>Available</li>
                             </ul>
                             <ul className='list-none text-black py-3 w-full sm:w-1/2'>
                                 <li>
                                     <i className="fa-solid fa-bowl-food text-orange-500"></i>
-                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Meals</span>
+                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>{details.meals}</span>
                                 </li>
                                 <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>Brekfast & Dinner</li>
                             </ul>
                             <ul className='list-none text-black py-3 w-full sm:w-1/2'>
                                 <li>
                                     <i className="fa-solid fa-language text-orange-500"></i>
-                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Language</span>
+                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>{details.language}</span>
                                 </li>
                                 <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>English, Spanish, French, Chinese</li>
                             </ul>
                             <ul className='list-none text-black py-3 w-full sm:w-1/2'>
                                 <li>
                                     <i className="fa-solid fa-wifi text-orange-500"></i>
-                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Wifi</span>
+                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>{details.wifi}</span>
                                 </li>
                                 <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>Available</li>
                             </ul>
                             <ul className='list-none text-black py-3 w-full sm:w-1/2'>
                                 <li>
                                     <i className="fa-solid fa-child text-orange-500"></i>
-                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Minimum Age</span>
+                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>{details.minimum_age}</span>
                                 </li>
                                 <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>12</li>
                             </ul>
                             <ul className='list-none text-black py-3 w-full sm:w-1/2'>
                                 <li>
                                     <i className="fa-solid fa-male text-orange-500"></i>
-                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Maximum Age</span>
+                                    <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>{details.maximum_age}</span>
                                 </li>
                                 <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>65</li>
                             </ul>
@@ -151,7 +151,7 @@ const Details = () => {
                 <div className="px-4 pb-5 w-full shadow-md rounded-md">
                     <div className="package-info" style={{fontSize:"15px"}}>
                         <div className="overview py-5">
-                            <h1 className='py-2 font-bold text-2xl pb-4'>Overview</h1>
+                            <h1 className='py-2 font-bold text-2xl pb-4'>{details.overview}</h1>
                             <p className='tracking-wide text-gray-700'>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eius molestiae ex expedita corporis repellat voluptate, similique fugiat minus reiciendis. Dolores quo magni, laborum eaque dicta odio veniam consectetur commodi quas quisquam a atque? Corrupti aliquam rerum voluptates hic laudantium!
                                 <br/> <br />
@@ -159,12 +159,12 @@ const Details = () => {
                             </p>
                         </div>
                         <div className="itinerary pb-5">
-                            <h1 className='py-2 font-bold text-2xl pb-3'>Itinerary</h1>
+                            <h1 className='py-2 font-bold text-2xl pb-3'>Itenary</h1>
                             <ul className='tracking-wide text-gray-700'>
                                 <li className='text-lg font-medium leading-10'>
-                                    Day 1 :
+                                    {details.days}
                                     <span className="font-normal" style={{fontSize:"15px"}}>
-                                        Kathmandu to Pokhara (By flight or Bus), the city of Lakes, adventures and serenity.
+                                        {details.day_title}
                                     </span> 
                                 </li>
                                 <li className='text-lg font-medium leading-10'>

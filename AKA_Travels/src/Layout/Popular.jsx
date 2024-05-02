@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import Header from './Header'
 import Footer from './Footer'
 import './Popular.css'
 import Slider from "react-slick";
 
 const Popular = () => {
+
+  const [packages,setPackages]=useState([])
+
+    useEffect(()=>{
+        getPackages()
+        .then(data=>{
+            if(data?.error){
+                console.log(data.error)
+            }
+            else{
+                setPackages(data)
+                console.log(data)
+            }
+        })
+    },[])
   
   const settings = {
     dots: true,
@@ -50,6 +65,12 @@ const Popular = () => {
 
    <div className='flex flex-wrap pe-8 w-full'> */}
    <div className='text-4xl text-center font-black m-14'>INTERNATIONAL PACKAGES</div>
+{/* {
+  packages?.length > 0 && 
+  packages.map( package => {
+} */}
+
+
    <div className='flex flex-wrap pe-8 w-full'>
 
 

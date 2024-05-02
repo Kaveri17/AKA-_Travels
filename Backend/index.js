@@ -30,13 +30,10 @@ app.use(UserRoute)
 app.use(ProductRoute)
 app.use(OrderRoute)
 
-<<<<<<< HEAD
 app.use('/public/upload',express.static('public/upload'))
 app.use('/public/uploads',express.static('public/uploads'))
 
-=======
 app.use('/public/upload', express.static('public/upload'))
->>>>>>> 46587568d9458819f007056926bf28e68fc819b9
 
 app.listen(port, ()=>{
     console.log(`Server started successfully at port ${port}`)

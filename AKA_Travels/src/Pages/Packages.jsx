@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { getPackages } from '../api/Package'
+import { API } from '../config'
 
 const Packages = () => {
+    
+
+
+
+
+
+
   return (
    
    <>
@@ -9,8 +18,14 @@ const Packages = () => {
            
         <h1 className='text-4xl font-bold  '>CITY TOUR</h1>
         <div className="tour flex flex-wrap pt-6 pb-6 ">
+
+            
+            
             <div className="img-tour  w-full md:w-1/2  lg:w-2/5 ">
                 <img src="/Image/pic4.jpeg" alt="" className='w-full h-full' />
+
+
+                {/* <img src={`${API}/${package.image}`} alt="" className='w-full h-full' /> */}
             </div>
             <div className="beauty  w-full md:1/2  lg:w-1/3 ps-4">
                 <h1 className='text-2xl font-bold pb-4'> 7 Days tour to Explore the beauty of Maldives <i class="fa-solid fa-heart text-red-800 ps-14"></i></h1>
@@ -39,6 +54,7 @@ const Packages = () => {
                 
                
             </div>
+        
           
             <div className="div pt-3">
                <h1>Next Departure</h1>
@@ -46,8 +62,9 @@ const Packages = () => {
                 <h1><i class="fa-solid fa-check pt-2 pe-2 text-red-400"></i>Apr 03</h1>
                 <h1><i class="fa-solid fa-check pt-2 pe-2 text-red-400"></i>Apr 04</h1>
 
-
+            
             </div>
+        
             </div>
             
         </div>
@@ -166,3 +183,42 @@ const Packages = () => {
 }
 
 export default Packages
+
+
+
+
+
+// import React, { useEffect, useState } from 'react';
+// import { Link } from 'react-router-dom';
+
+// const Packages = () => {
+//     const [packages, setPackages] = useState([]);
+
+//     useEffect(() => {
+//         fetch('/api/packages') // Assuming your backend is running on the same domain
+//             .then(response => response.json())
+//             .then(data => {
+//                 setPackages(data);
+//             })
+//             .catch(error => {
+//                 console.error('Error fetching packages:', error);
+//             });
+//     }, []);
+
+//     return (
+//         <>
+//             <div className='mx-auto w-5/6 pt-6'>
+//                 <h1 className='text-4xl font-bold'>CITY TOUR</h1>
+//                 <div className="tour flex flex-wrap pt-6 pb-6 ">
+//                     {packages.map(package => (
+//                         <div key={package.id} className="package">
+//                             {/* Render package details here */}
+//                         </div>
+//                     ))}
+//                 </div>
+//             </div>
+//         </>
+//     );
+// };
+
+// export default Packages;
