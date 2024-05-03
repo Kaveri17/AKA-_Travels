@@ -37,6 +37,7 @@ app.use(ContactRoute)
 app.use('/public/upload',express.static('public/upload'))
 app.use('/public/uploads',express.static('public/uploads'))
 
+app.use('/public/upload', express.static('public/upload'))
 
 app.listen(port, ()=>{
     console.log(`Server started successfully at port ${port}`)

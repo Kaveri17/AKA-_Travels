@@ -39,6 +39,10 @@ exports.addProduct = async (req, res) => {
         meals:req.body.meals,
         overview:req.body.overview,
         highlights:req.body.highlights,
+        product_image: req.file?.path,
+        price:req.body.price,
+        product_people:req.body.product_people,
+        cost:req.body.cost,
         category:req.body.category,
         itenary: itenaryIds
     })
@@ -92,6 +96,10 @@ exports.updateProduct=async(req,res)=>{
         meals:req.body.meals,
         overview:req.body.overview,
         highlights:req.body.highlights,
+       product_image: req.file?.path,
+        price:req.body.price,
+        product_people:req.body.product_people,
+        cost:req.body.cost,
         category:req.body.category
 
     },{new:true})

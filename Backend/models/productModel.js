@@ -70,6 +70,26 @@ const productSchema=mongoose.Schema({
         type:String,
         required:true
     },
+
+    product_image:{
+        type:String,
+        
+    },
+    price:{
+        type:Number,
+        required:true
+    },
+    product_people:{
+        type:String,
+        required:true
+    },
+    cost:{
+        type:String,
+        required:true
+
+    },
+
+    
     category: {
         type: ObjectId,
         ref: "Category",
