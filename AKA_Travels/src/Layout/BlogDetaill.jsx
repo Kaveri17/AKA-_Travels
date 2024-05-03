@@ -2,6 +2,7 @@ import React from 'react';
 import './Blogs.css';
 
 const BlogDetail = () => {
+  
   return (
     <>
       <div className="Blogs mx-auto w-5/6 ">

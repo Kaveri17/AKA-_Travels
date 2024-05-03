@@ -26,7 +26,21 @@ const blogSchema = mongoose.Schema({
         type: String,
         required: true
        
+    },
+    author_word: {
+        type: String,
+        required: true
+    },
+    blog_person : {
+        type: String,
+        required: true
+    },
+    blog_det_desc: {
+        type: String,
+        required: true
+
     }
+    
     
 
 

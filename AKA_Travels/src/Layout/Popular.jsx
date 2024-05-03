@@ -6,20 +6,20 @@ import Slider from "react-slick";
 
 const Popular = () => {
 
-  const [packages,setPackages]=useState([])
+  // const [packages,setPackages]=useState([])
 
-    useEffect(()=>{
-        getPackages()
-        .then(data=>{
-            if(data?.error){
-                console.log(data.error)
-            }
-            else{
-                setPackages(data)
-                console.log(data)
-            }
-        })
-    },[])
+  //   useEffect(()=>{
+  //       getPackages()
+  //       .then(data=>{
+  //           if(data?.error){
+  //               console.log(data.error)
+  //           }
+  //           else{
+  //               setPackages(data)
+  //               console.log(data)
+  //           }
+  //       })
+  //   },[])
   
   const settings = {
     dots: true,

@@ -72,8 +72,8 @@ useEffect(()=> {
 
 
 
-{/* 
-    <a href="/blogdetaill">
+{/*  
+   <a href="/blogdetaill">
     <div className='w-full my-11 overflow-hidden'>
     <img src="\Image\piccc.jpeg" alt="" className='pic2 h-96'/>
     <div className='blogscontainer border-2 border-slate-600 px-4'>
@@ -96,7 +96,7 @@ useEffect(()=> {
 
     </div>
     </div>
-    </a>  */}
+    </a>    */}
      {/* <a href="/blogdetailll">
 
     <div className='w-full my-11 overflow-hidden'>

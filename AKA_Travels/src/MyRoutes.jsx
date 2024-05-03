@@ -16,7 +16,7 @@ import Contact from "./Layout/Contact";
 import Home from "./Pages/Home";
 // import Modal from "./components/Modal";
 import Gallery from "./Pages/Gallery";
-import Details from "./Pages/Details";
+// import Details from "./Pages/Details";
 import Packages from "./Pages/Packages";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
@@ -35,6 +35,7 @@ import AddBlog from "./Admin/AddBlog";
 import ShowProduct from "./Admin/ShowProduct";
 import UpdateProduct from "./Admin/UpdateProduct";
 import AdminSidebar from "./Admin/AdminSidebar";
+import Profile from "./Pages/Profile";
 
 
 
@@ -61,7 +62,7 @@ const MyRoutes = () => {
             <Route path="/triptypes" element={<TripTypes />} />
             {/* <Route path="/cart" element={<Cart />} /> */}
             {/* <Route path="/modal" element={<Modal />} /> */}
-            <Route path="/details" element={<Details/>}/>
+            {/* <Route path="/details/:id" element={<Details/>}/> */}
             <Route path="/packages" element={<Packages/>}/>
           </Route>
 
@@ -74,6 +75,7 @@ const MyRoutes = () => {
             <Route path="/login" element={<Login/>}/>
             <Route path="/forgetpassword" element={<ForgetPassword/>}/>
             <Route path="/resetpassword/:token" element={<ResetPassword />} />
+            <Route path="profile" element={<Profile/>}/>
 
           {/* <Route path="/signup" element={<SignUp/>}/> */}
 
@@ -90,6 +92,7 @@ const MyRoutes = () => {
               {/* <Route path="updateproduct" element={<UpdateProduct/>}/> */}
 
               <Route path="/admin/dashboard" element={<AdminDashboard/>}/>
+             
             
         
             <Route path="/admin/sidebar" element={<AdminSidebar/>}/>
