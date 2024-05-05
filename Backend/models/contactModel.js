@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const {ObjectId} = mongoose.Schema
+
 
 const contactSchema = mongoose.Schema({
     contact_fname: {
@@ -24,4 +24,4 @@ const contactSchema = mongoose.Schema({
     }
 
 },{timestamps: true})
-module.exports = mongoose.model("ContactMessage",contactSchema)
+module.exports = mongoose.model("Contactmessage",contactSchema)

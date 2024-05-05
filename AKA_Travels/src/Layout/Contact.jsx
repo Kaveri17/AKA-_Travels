@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Header from './Header'
 import './Blogs.css'
+import { submitmessage } from '../api/Submitsend'
 
 const Contact = () => {
   const [firstname , setFname] = useState('')
@@ -14,7 +15,36 @@ const Contact = () => {
 
   const handleSend = (event) => {
     event.preventDefault();
+    submitmessage({firstname, lastname, email, phoneno, message})
+    .then(data => {
+      if(data.error){
+        setError(data.error)
+        setSuccess(false)
+
+      }
+      else{
+        setError('')
+        setSuccess(true)
+        setFname('')
+        setLname('')
+        setEmail('')
+        setPhoneno('')
+        setMessage('')
+      }
+    })
+    .catch(error => console.log(error))
   }
+  const showError = () => {
+    if(error){
+      return <div className='font-bold text-red-300 text-lg text-center'>{error}</div>
+    }
+  }
+  const showSuccess = () => {
+    if(success){
+        return <div className='text-green-500 text-xl font-bold text-center py-5'>"Message Sent"</div>
+    }
+}
+
   return (
     <>
    <div >
@@ -83,14 +113,16 @@ const Contact = () => {
 
 
     <div className='bg-gray-200  h-full w-full'>
+    
         <div className='text-orange-600 text-xl text-center py-12'>Contact Us</div>
         <div className='text-4xl text-center font-black '>GET IN TOUCH</div>
        <p className='text-center text-slate-500 py-2'> Curabitur aliquet quam id dui posuere blandit. Vivamus magna justo, lacinia eget<br/>consectetur sed, convgallis at tellus. Vestibulum ac diam sit.</p>
 
-        
+       {showError()}
+      {showSuccess()}
 <div class="m-3 flex flex-col sm:flex-row py-2 justify-center">
   <input type="text" placeholder="Enter Your First Name" class="w-full sm:w-2/5 bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md" onChange={event =>setFname(event.target.value)} />
-  <input type="text" placeholder="Enter Your Last Name" class="w-full sm:w-2/5 bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md"onChange={event => setLname(event.target.value)} />
+  <input type="text" placeholder="Enter Your Last Name" class="w-full sm:w-2/5 bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md" onChange={event => setLname(event.target.value)} />
 </div>
 
        
