@@ -73,6 +73,7 @@ const productSchema=mongoose.Schema({
 
     product_image:{
         type:String,
+        required:true
         
     },
     price:{
@@ -87,6 +88,14 @@ const productSchema=mongoose.Schema({
         type:String,
         required:true
 
+    },
+    strike:{
+        type:Number,
+        required:true
+    },
+    day:{
+        type:Number,
+        required:true
     },
 
     

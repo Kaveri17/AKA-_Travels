@@ -43,6 +43,8 @@ exports.addProduct = async (req, res) => {
         price:req.body.price,
         product_people:req.body.product_people,
         cost:req.body.cost,
+        strike:req.body.strike,
+        day:req.body.day,
         category:req.body.category,
         itenary: itenaryIds
     })
@@ -96,13 +98,21 @@ exports.updateProduct=async(req,res)=>{
         meals:req.body.meals,
         overview:req.body.overview,
         highlights:req.body.highlights,
-       product_image: req.file?.path,
+        product_image: req.file?.path,
         price:req.body.price,
         product_people:req.body.product_people,
         cost:req.body.cost,
+        strike:req.body.strike,
+        day:req.body.day,
         category:req.body.category
 
     },{new:true})
+    if(req.file){
+        product = await Product.findByIdAndUpdate(req.params.id,{
+            image: req.file?.path
+        },
+        {new: true})
+    }
     if(!product){
         return res.status(400).json({error:"Something went wrong"})
 
