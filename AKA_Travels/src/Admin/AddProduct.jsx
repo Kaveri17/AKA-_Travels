@@ -23,6 +23,11 @@ const AddProduct = () => {
         meals:'',
         overview:'',
         highlights:'',
+        cost:'',
+        price:'',
+        product_people:'',
+        strike:'',
+        day:'',
         category:'',
         itenary:{
             days,
@@ -56,6 +61,11 @@ const AddProduct = () => {
         meals,
         overview,
         highlights,
+        cost,
+        price,
+        product_people,
+        strike,
+        day,
         category,
         itenary: {
             days,
@@ -103,6 +113,15 @@ const AddProduct = () => {
             formData.append('meals',meals)
             formData.append('overview',overview)
             formData.append('highlights',highlights)
+            formData.append('cost',cost)
+            formData.append('price',price)
+            formData.append('product_people',product_people)
+           
+            formData.append('strike',strike)
+            formData.append('day',day)
+           
+           
+           
            
             formData.append('category',category)
             // formData.append('itenary',itenary)
@@ -136,6 +155,11 @@ const AddProduct = () => {
               meals,
               overview,
               highlights,
+              cost,
+              price,
+              product_people,
+              strike,
+              day,
               
               category,
               itenary:{
@@ -257,6 +281,31 @@ const AddProduct = () => {
                             <label htmlFor="highlights">Highlights</label>
                             <input type="text" name="highlights" id="highlights" className='form-control' 
                             value={highlights} onChange={handleChange('highlights')}/>
+                        </div>
+                        <div className="mb-2">
+                            <label htmlFor="cost">Cost</label>
+                            <input type="text" name="cost" id="cost" className='form-control' 
+                            value={cost} onChange={handleChange('cost')}/>
+                        </div>
+                        <div className="mb-2">
+                            <label htmlFor="price">Price</label>
+                            <input type="text" name="price" id="price" className='form-control' 
+                            value={price} onChange={handleChange('price')}/>
+                        </div>
+                        <div className="mb-2">
+                            <label htmlFor="ppeople">Product People</label>
+                            <input type="text" name="ppeople" id="ppeople" className='form-control' 
+                            value={product_people} onChange={handleChange('ppeople')}/>
+                        </div>
+                        <div className="mb-2">
+                            <label htmlFor="strike">Strike</label>
+                            <input type="text" name="strike" id="strike" className='form-control' 
+                            value={strike} onChange={handleChange('strike')}/>
+                        </div>
+                        <div className="mb-2">
+                            <label htmlFor="day">Day</label>
+                            <input type="text" name="day" id="day" className='form-control' 
+                            value={day} onChange={handleChange('day')}/>
                         </div>
                     
 
