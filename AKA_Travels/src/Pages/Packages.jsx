@@ -61,15 +61,15 @@ console.log(packages)
                             </div>
                             <strike className=' ps-3 '>{pack.strike}</strike>
                         </div>
+                <div className=''>
+                    <Link to='/details/{product._id}'>
+                        <button className='border-2 border-solid border-red-300 px-3 py-2 rounded-md hover:bg-slate-400 '>View Trip</button>
+                    </Link>
+                </div>
                     </div>
                 </div>
             ))
         }
-    </div>
-    <div className=''>
-        <Link to='/details/{product._id}'>
-            <button className='border-2 border-solid border-red-300 px-3 py-2 rounded-md hover:bg-slate-400 '>View Trip</button>
-        </Link>
     </div>
 
 
