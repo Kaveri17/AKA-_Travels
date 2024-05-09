@@ -27,16 +27,16 @@ console.log(packages)
 
 
   return (
-   
+                
    <>
        <div className='mx-auto w-5/6 pt-6 pb-48'>
-    <h1 className='text-4xl font-bold text-center '>CITY TOUR</h1>
+    <h1 className='text-4xl font-bold text-center'>CITY TOUR</h1>
     <div className="tour flex flex-wrap pt-6 pb-6 py-12">
         {
             packages.length > 0 && packages.map(pack => (
                 <div className="img-tour w-full md:w-1/2 lg:w-2/5" key={pack._id}>
                     <img src={`${API}/${pack.product_image}`} alt="" className="w-full h-1/2 px-8 " />
-                    <div className="beauty  w-full md:1/2  lg:w-1/3 ps-8">
+                    <div className="beauty  w-full md:1/2  lg:w-1/3 ps-8 ">
                         
 
                    <div className='hello flex justify-center items-center'>

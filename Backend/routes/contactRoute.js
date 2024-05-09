@@ -6,3 +6,23 @@ const router = express.Router()
 router.post('/submitmessage', submitMessage)
 
 module.exports=router
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

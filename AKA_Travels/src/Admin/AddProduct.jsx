@@ -23,6 +23,7 @@ const AddProduct = () => {
         meals:'',
         overview:'',
         highlights:'',
+        product_image:'',
         cost:'',
         price:'',
         product_people:'',
@@ -61,6 +62,7 @@ const AddProduct = () => {
         meals,
         overview,
         highlights,
+        product_image,
         cost,
         price,
         product_people,
@@ -113,6 +115,7 @@ const AddProduct = () => {
             formData.append('meals',meals)
             formData.append('overview',overview)
             formData.append('highlights',highlights)
+            formData.append('product_image',product_image)
             formData.append('cost',cost)
             formData.append('price',price)
             formData.append('product_people',product_people)
@@ -155,6 +158,7 @@ const AddProduct = () => {
               meals,
               overview,
               highlights,
+              product_image,
               cost,
               price,
               product_people,
@@ -282,6 +286,18 @@ const AddProduct = () => {
                             <input type="text" name="highlights" id="highlights" className='form-control' 
                             value={highlights} onChange={handleChange('highlights')}/>
                         </div>
+                        <div className="mb-2">
+                                <label htmlFor="category_image">Category Image</label>
+                                <input type="file" name="category_image" id="category_image" className='form-control' onChange={handleImageChange} />
+                            </div>
+
+
+
+
+
+
+
+
                         <div className="mb-2">
                             <label htmlFor="cost">Cost</label>
                             <input type="text" name="cost" id="cost" className='form-control' 
