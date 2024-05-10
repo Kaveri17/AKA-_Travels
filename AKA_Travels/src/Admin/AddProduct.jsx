@@ -164,7 +164,6 @@ const AddProduct = () => {
               product_people,
               strike,
               day,
-              
               category,
               itenary:{
                 days,
@@ -323,6 +322,20 @@ const AddProduct = () => {
                             <input type="text" name="day" id="day" className='form-control' 
                             value={day} onChange={handleChange('day')}/>
                         </div>
+
+
+                        <div className="mb-2">
+                    <label htmlFor="days">Days</label>
+                    <input type="text" name="days" id="days" className='form-control' 
+                    value={days} onChange={handleChange('itenary')} />
+                </div>
+
+                <div className="mb-2">
+                    <label htmlFor="day_title">Day Title</label>
+                    <input type="text" name="day_title" id="day_title" className='form-control' 
+                    value={day_title} onChange={handleChange('itenary')} />
+                </div>
+
                     
 
 
@@ -340,18 +353,7 @@ const AddProduct = () => {
                             </select>
                         </div>
 
-                        <div className="mb-2">
-                    <label htmlFor="days">Days</label>
-                    <input type="text" name="days" id="days" className='form-control' 
-                    value={days} onChange={handleChange('itenary')} />
-                </div>
-
-                <div className="mb-2">
-                    <label htmlFor="day_title">Day Title</label>
-                    <input type="text" name="day_title" id="day_title" className='form-control' 
-                    value={day_title} onChange={handleChange('itenary')} />
-                </div>
-
+                       
 
 
 

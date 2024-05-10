@@ -6,9 +6,9 @@ import AdminSidebar from '../Admin/AdminSidebar'
 const PrivateRoute = () => {
   return (
 
-    isAuthenticated() && isAuthenticated().user.role===0 ?
+    isAuthenticated() && isAuthenticated().user.role === 1 ?
     <>
-    {/* <AdminSidebar/> */}
+    <AdminSidebar/>
     <Outlet/>
     
     

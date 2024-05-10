@@ -271,3 +271,21 @@ exports.requireSignin = expressjwt({
     algorithms: ["HS256"]
 })
 
+// admin
+// exports.requireAdmin = (req, res, next) => {
+//     expressjwt({
+//         secret: process.env.JWT_SECRET,
+//         algorithms: ['HS256'],
+//         userProperty: 'auth'
+//     })(req, res, (error) => {
+//         if(error) {
+//             return res.status(401).json({error: "You need to login to access this resources."})
+//         }
+//         else if(req.auth.role != 1){
+//             return res.status(403).json({error: "You don't have permission to access this resource."})
+//         }
+//         else{
+//             next()
+//         }
+//     })
+// }

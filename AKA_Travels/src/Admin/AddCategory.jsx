@@ -11,6 +11,7 @@ const AddCategory = () => {
 
     // Destructuring token
     const { token } = isAuthenticated();
+    console.log(token)
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -22,7 +23,7 @@ const AddCategory = () => {
         formData.append('description', description);
         formData.append('category_image', category_image); // Append the selected image to the FormData
 
-        fetch(`${API}/postcategory/`, {
+        fetch(`${API}/addcategory/`, {
             method: 'POST',
             headers: {
                 Authorization: `Bearer ${token}`

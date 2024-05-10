@@ -70,7 +70,7 @@ exports.getAllProducts=async(req,res)=>{
 
 //to get product details
 exports.getProductDetails=async(req,res)=>{
-    let product=await Product.findById(req.params.id).populate('category', 'category_name')
+    let product=await Product.findById(req.params.id).populate('category', 'category_name').populate('itenary')
     if(!product){
         return res.status(400).json({error:"Something went wrong"})
 

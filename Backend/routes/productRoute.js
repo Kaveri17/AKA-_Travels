@@ -9,8 +9,8 @@ router.post('/addproduct',productCheck,validation,requireSignin, addProduct)
 router.get('/getproductlist',getAllProducts)
 router.get('/getproductdetails/:id',getProductDetails)
 
-router.delete('/deleteproduct/:id',deleteProduct)
-router.put('/updateproduct/:id',upload.single("product_image"),requireSignin, updateProduct)
+router.delete('/deleteproduct/:id',requireSignin, deleteProduct)
+router.put('/updateproduct/:id',upload.single("product_image"), updateProduct)
 
 router.get('/getproductbycategory/:category_id', getProductByCategory)
 

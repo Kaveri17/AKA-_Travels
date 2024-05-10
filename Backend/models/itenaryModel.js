@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const{ObjectId}=mongoose.Schema
 
 const ItenarySchema = new mongoose.Schema({
     days:{
@@ -9,6 +10,11 @@ const ItenarySchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    package:{
+        type: ObjectId,
+        ref: "Product",
+        // required: true
+    }
 
 })
 module.exports = mongoose.model("Itenary", ItenarySchema)

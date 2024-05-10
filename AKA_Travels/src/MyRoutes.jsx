@@ -16,7 +16,7 @@ import Contact from "./Layout/Contact";
 import Home from "./Pages/Home";
 // import Modal from "./components/Modal";
 import Gallery from "./Pages/Gallery";
-// import Details from "./Pages/Details";
+import Details from "./Pages/Details";
 import Packages from "./Pages/Packages";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
@@ -62,7 +62,7 @@ const MyRoutes = () => {
             <Route path="/triptypes" element={<TripTypes />} />
             {/* <Route path="/cart" element={<Cart />} /> */}
             {/* <Route path="/modal" element={<Modal />} /> */}
-            {/* <Route path="/details/:id" element={<Details/>}/> */}
+            <Route path="/details/:id" element={<Details/>}/>
             <Route path="/packages" element={<Packages/>}/>
           </Route>
 

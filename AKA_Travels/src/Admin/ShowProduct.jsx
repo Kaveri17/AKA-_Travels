@@ -63,7 +63,13 @@ const ShowProduct = () => {
                                   <th>Meals</th>
                                   <th>Overview</th>
                                   <th>Highlightts</th>
-                                  
+                                 
+                                  <th>Cost</th>
+                                  <th>Price</th>
+                                 
+                                  <th>Product People</th>
+                                  <th>Strike</th>
+                                  <th>Day</th>  
                                   <th>Category</th>
                                   <th>Itenary</th>
                                   <th>Action</th>
@@ -87,6 +93,11 @@ const ShowProduct = () => {
                                       <td>{product.meals}</td>
                                       <td>{product.overview}</td>
                                       <td>{product.hilghlights}</td>
+                                      <td>{product.cost}</td>
+                                      <td>{product.price}</td>
+                                      <td>{product.product_people}</td>
+                                      <td>{product.strike}</td>
+                                      <td>{product.day}</td>
                                       <td>{product.itenary}</td>
 
 

@@ -39,7 +39,7 @@ const Details = () => {
                 <div className="dleft-top">
                     <div className="package-title flex justify-between pb-10">
                         <h1 className='text-xl sm:text-3xl font-semibold w-3/5 sm:w-9/12 '>
-                            {details.product_location}
+                            {details.product_title}
                         </h1>
                         <div className="flex flex-col rounded-md shadow-md text-center w-1/5 sm:w-1/12 ">
                             <h2 className='bg-orange-600 text-white text-3xl font-semibold py-1 rounded-t-md'>
@@ -153,37 +153,25 @@ const Details = () => {
                         <div className="overview py-5">
                             <h1 className='py-2 font-bold text-2xl pb-4'></h1>
                             <p className='tracking-wide text-gray-700'>
-                            {details.overview}
+                           <h1 className='text-2xl font-bold'> Overview</h1>{details.overview}
                                
                             </p>
                         </div>
                         <div className="itinerary pb-5">
                             <h1 className='py-2 font-bold text-2xl pb-3'>Itenary</h1>
                             <ul className='tracking-wide text-gray-700'>
-                                <li className='text-lg font-medium leading-10'>
-                                    {details.days}
-                                    <span className="font-normal" style={{fontSize:"15px"}}>
-                                        {details.day_title}
+    
+                            {
+                                details.itenary?.length > 0 &&
+                                details.itenary.map(iti => {
+                                    return  <li className='text-lg font-medium leading-10'>
+                                    Day {iti.days}: 
+                                    <span className="font-normal capitalize" style={{fontSize:"15px"}}>
+                                        {" "}{iti.day_title}
                                     </span> 
                                 </li>
-                                <li className='text-lg font-medium leading-10'>
-                                    Day 2 :
-                                    <span className="font-normal" style={{fontSize:"15px"}}>
-                                        Drive to Nayapul and trek to Ulleri
-                                    </span>
-                                </li>
-                                <li className='text-lg font-medium leading-10'>
-                                    Day 3 : 
-                                    <span className="font-normal" style={{fontSize:"15px"}}>
-                                        Trek to Ghorepani
-                                    </span>
-                                </li>
-                                <li className='text-lg font-medium leading-10'>
-                                    Day 4 :
-                                    <span className="font-normal" style={{fontSize:"15px"}}> 
-                                        Early trek to Poon Hill, Back To Ghorepani and Trek to Tadapani
-                                    </span>
-                                </li>
+                                })
+                            }
                             </ul>
                         </div>
                         <div className="cost tracking-wide text-gray-700">
