@@ -36,6 +36,7 @@ import ShowProduct from "./Admin/ShowProduct";
 import UpdateProduct from "./Admin/UpdateProduct";
 import AdminSidebar from "./Admin/AdminSidebar";
 import Profile from "./Pages/Profile";
+import AdminSidebars from "./Layout/AdminSidebars";
 
 
 
@@ -76,6 +77,7 @@ const MyRoutes = () => {
             <Route path="/forgetpassword" element={<ForgetPassword/>}/>
             <Route path="/resetpassword/:token" element={<ResetPassword />} />
             <Route path="profile" element={<Profile/>}/>
+            <Route path ="adminsidebars" element={<AdminSidebars/>}/>
 
           {/* <Route path="/signup" element={<SignUp/>}/> */}
 
@@ -85,6 +87,7 @@ const MyRoutes = () => {
               <Route path="addcategory" element={<AddCategory/>}/>
               <Route path="addproduct" element={<AddProduct/>}/>
               <Route path="showcategories" element={<ShowCategory/>}/>
+             
             
               <Route path="showproduct" element={<ShowProduct/>}/>
               {/* <Route path="showproduct" element={<ShowProduct/>}/> */}
@@ -92,6 +95,7 @@ const MyRoutes = () => {
               {/* <Route path="updateproduct" element={<UpdateProduct/>}/> */}
 
               <Route path="/admin/dashboard" element={<AdminDashboard/>}/>
+
              
             
         

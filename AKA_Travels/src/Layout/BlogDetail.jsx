@@ -28,7 +28,7 @@ const handlePost = (event) => {
       }
     })
     .catch(error => console.error("error fetching blogs detail",error))
-    gpost(id)
+    gpost(postname, postemail, postcomment)
     .then(data => {
       if(data?.error) {
         console.log(data.error)

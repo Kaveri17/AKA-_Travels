@@ -17,7 +17,7 @@ export const BlogDet = (id) =>{
 }
 // getall post
 export const gpost= (id) => {
-    return fetch(`${API}/getpost/${id}`,)
+    return fetch(`${API}/getpost`,)
     .then(response => response.json())
     .catch(error => console.log(error))
 }
