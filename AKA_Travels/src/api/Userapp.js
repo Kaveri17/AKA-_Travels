@@ -79,3 +79,16 @@ export const forgetpassword = user => {
     })
     .catch(err=>console.log(err))
 }
+
+// LOGOUT
+export const signout = next => {
+    localStorage.removeItem('jwt')
+    next()
+    return fetch(`${API}/signout`, {
+        method: 'POST'
+    })
+        .then(res => {
+            console.log('signout', res)
+        })
+        .catch(err => console.log(err))
+}

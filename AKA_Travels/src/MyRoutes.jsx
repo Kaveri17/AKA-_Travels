@@ -71,13 +71,13 @@ const MyRoutes = () => {
           <Route path="/register" element={<Register/>}/>
           <Route path="/verify/:token" element={<Verify/>}/>
       
-          <Route path="/login" element={<Login/>}/>
+          {/* <Route path="/login" element={<Login/>}/> */}
           <Route path="verify/:token" element={<EmailVerify/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/forgetpassword" element={<ForgetPassword/>}/>
             <Route path="/resetpassword/:token" element={<ResetPassword />} />
             <Route path="profile" element={<Profile/>}/>
-            <Route path ="adminsidebars" element={<AdminSidebars/>}/>
+            {/* <Route path ="adminsidebars" element={<AdminSidebars/>}/> */}
 
           {/* <Route path="/signup" element={<SignUp/>}/> */}
 
