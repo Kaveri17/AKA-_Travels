@@ -41,8 +41,9 @@ const Login = () => {
     }
   }
   const redirect = () => {
+    // role= isAuthenticate().user.role
     if (success) {
-      if (isAuthenticate().user.role === '1') {
+      if (isAuthenticate().user.role === 1) {
         return navigate('/admin/dashboard')
       }
       else {
