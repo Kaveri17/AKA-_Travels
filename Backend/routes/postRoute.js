@@ -4,7 +4,7 @@ const { requireSignin } = require('../controller/userController')
 
 const router = express.Router()
 router.post('/addpost',addPost)
-router.get('/getpost/:id',getPost)
+router.get('/getpost',getPost)
 // router.put('/updatepost/:id', requireSignin,updatePost)
 // router.delete('/deletepost/:id',requireSignin,deletePost)
 router.put('/updatepost/:id', updatePost)

@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
   return (
@@ -68,25 +70,26 @@ const Footer = () => {
               <div className="pt-24 w-full md:ps-24 list-none md:w-1/2 lg:w-1/4">
                 <h1 className="font-bold text-3xl pb-5 ">Useful Links</h1>
                 <li className="pb-2 text-xl">
-                  <a href="">Home</a>
+                  <Link to="/">Home</Link>
                 </li>
                 <li className="pb-2 text-xl">
-                  <a href="">Popular</a>
+                  <Link to="/popular">Popular</Link>
                 </li>
                 <li className="pb-2 text-xl">
-                  <a href="">Pages</a>
+                  <Link to="/pages">Pages</Link>
                 </li>
                 <li className="pb-2 text-xl">
-                  <a href="">Gallery</a>
+                
+                  <Link to ="/gallery">Gallery</Link>
                 </li>
                 <li className="pb-2 text-xl">
-                  <a href="">About</a>
+                  <Link to="/about">About</Link>
                 </li>
                 <li className="pb-2 text-xl">
-                  <a href="">Blogs</a>
+                  <Link to="/blogs">Blogs</Link>
                 </li>
                 <li className="pb-2 text-xl">
-                  <a href="">Contact</a>
+                  <Link to="/contact">Contact</Link>
                 </li>
               </div>
               <div className="flex flex-col w-full pt-24 md:w-1/2 lg:w-1/4 ">

@@ -4,18 +4,18 @@ import './Blogs.css'
 import { submitmessage } from '../api/Submitsend'
 
 const Contact = () => {
-  const [firstname , setFname] = useState('')
-  const [lastname, setLname] = useState('')
-  const [email, setEmail] = useState('')
-  const [phoneno, setPhoneno] = useState('')
-  const [message, setMessage] = useState('')
-
+  const [contact_fname, setContactFname] = useState('');
+const [contact_lname, setContactLname] = useState('');
+const [contact_email, setContactEmail] = useState('');
+const [contact_phoneno, setContactPhoneno] = useState('');
+const [contact_message, setContactMessage] = useState('');
   const [error, setError] = useState('')
   const[success, setSuccess] = useState(false)
 
   const handleSend = (event) => {
     event.preventDefault();
-    submitmessage({firstname, lastname, email, phoneno, message})
+    submitmessage({ contact_fname, contact_lname, contact_email, contact_phoneno, contact_message })
+
     .then(data => {
       if(data.error){
         setError(data.error)
@@ -25,11 +25,12 @@ const Contact = () => {
       else{
         setError('')
         setSuccess(true)
-        setFname('')
-        setLname('')
-        setEmail('')
-        setPhoneno('')
-        setMessage('')
+     
+        setContactFname('')
+        setContactLname('')
+        setContactEmail('')
+        setContactMessage('')
+        setContactPhoneno('')
       }
     })
     .catch(error => console.log(error))
@@ -121,8 +122,8 @@ const Contact = () => {
        {showError()}
       {showSuccess()}
 <div class="m-3 flex flex-col sm:flex-row py-2 justify-center">
-  <input type="text" placeholder="Enter Your First Name" class="w-full sm:w-2/5 bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md" onChange={event =>setFname(event.target.value)} />
-  <input type="text" placeholder="Enter Your Last Name" class="w-full sm:w-2/5 bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md" onChange={event => setLname(event.target.value)} />
+  <input type="text" placeholder="Enter Your First Name" value={contact_fname} class="w-full sm:w-2/5 bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md" onChange={event =>setContactFname(event.target.value)} />
+  <input type="text" placeholder="Enter Your Last Name" value={contact_lname} class="w-full sm:w-2/5 bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md" onChange={event => setContactLname(event.target.value)} />
 </div>
 
        
@@ -131,15 +132,15 @@ const Contact = () => {
         {/* <input type="email" placeholder='Your Email'  className='w-1/2 bg-white py-3 me-3 px-5' />
         
          */}
-          <input type="email" placeholder="Your Email" class="w-full sm:w-2/5  bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md"onChange={event=>setEmail(event.target.value)} />
+          <input type="email" placeholder="Your Email" value={contact_email} name='contact_email' class="w-full sm:w-2/5  bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md" onChange={event=>setContactEmail(event.target.value)} />
 
         {/* <input type="number" placeholder='Phone Number' className='w-1/2 bg-white px-5 ' /> */}
-        <input type="number" placeholder="Phone Number" class="w-full sm:w-2/5  bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md" onChange={event=> setPhoneno(event.target.value)} />
+        <input type="number" placeholder="Phone Number" value={contact_phoneno} class="w-full sm:w-2/5  bg-white mb-3 sm:mb-0 sm:me-3 py-3 px-4 sm:px-5 rounded-md" onChange={event=>setContactPhoneno(event.target.value)} />
         </div>
 
         
         <div className='m-1 py-2 flex justify-center'>
-  <input type="text" placeholder='Write Your Comment' className='bg-white h-32 w-full sm:w-4/5 px-5 rounded-md' onChange={event=>setMessage(event.target.value)}/>
+  <input type="text" placeholder='Write Your Comment' value={contact_message} className='bg-white h-32 w-full sm:w-4/5 px-5 rounded-md' onChange={event=>setContactMessage(event.target.value)}/>
 </div>
 
 

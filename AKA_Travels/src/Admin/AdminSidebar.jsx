@@ -4,7 +4,7 @@ import { isAuthenticated } from '../auth/authindex';
 
 
 const AdminSidebar = () => {
-  const navigate=useNavigate()
+  const navigate =useNavigate()
    const {username,email}=isAuthenticated().user //destructuring and it always use "{}" also useState always use "[]"
   return (
     <>

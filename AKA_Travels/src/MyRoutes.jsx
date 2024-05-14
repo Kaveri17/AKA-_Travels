@@ -37,6 +37,7 @@ import ShowProduct from "./Admin/ShowProduct";
 import UpdateCategory from "./Admin/UpdateCategory";
 import AdminSidebar from "./Admin/AdminSidebar";
 import Profile from "./Pages/Profile";
+import AdminSidebars from "./Layout/AdminSidebars";
 
 
 
@@ -71,12 +72,13 @@ const MyRoutes = () => {
           <Route path="/register" element={<Register/>}/>
           <Route path="/verify/:token" element={<Verify/>}/>
       
-          <Route path="/login" element={<Login/>}/>
+          {/* <Route path="/login" element={<Login/>}/> */}
           <Route path="verify/:token" element={<EmailVerify/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/forgetpassword" element={<ForgetPassword/>}/>
             <Route path="/resetpassword/:token" element={<ResetPassword />} />
             <Route path="profile" element={<Profile/>}/>
+            {/* <Route path ="adminsidebars" element={<AdminSidebars/>}/> */}
 
           {/* <Route path="/signup" element={<SignUp/>}/> */}
 
@@ -86,6 +88,7 @@ const MyRoutes = () => {
               <Route path="addcategory" element={<AddCategory/>}/>
               <Route path="addproduct" element={<AddProduct/>}/>
               <Route path="showcategories" element={<ShowCategory/>}/>
+             
             
               <Route path="showproduct" element={<ShowProduct/>}/>
               {/* <Route path="showproduct" element={<ShowProduct/>}/> */}
@@ -94,6 +97,7 @@ const MyRoutes = () => {
               {/* <Route path="updateproduct" element={<UpdateProduct/>}/> */}
 
               <Route path="/admin/dashboard" element={<AdminDashboard/>}/>
+
              
             
         

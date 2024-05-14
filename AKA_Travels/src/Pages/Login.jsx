@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { Link,  useNavigate } from 'react-router-dom'
-import { authenticate, login } from '../api/Userapp'
-import { isAuthenticated } from '../auth/authindex'
+import { authenticate, isAuthenticate, login } from '../api/Userapp'
 
 
 const Login = () => {
+
+
+
   let [email, setEmail] = useState('')
   let[password , setPassword] = useState('')
   let [error, setError] = useState('')
@@ -40,8 +42,8 @@ const Login = () => {
   }
   const redirect = () => {
     if (success) {
-      if (user.role === 1) {
-        return navigate('/admindashboard')
+      if (isAuthenticate().user.role === '1') {
+        return navigate('/admin/dashboard')
       }
       else {
         return navigate('/')
