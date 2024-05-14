@@ -286,10 +286,11 @@ const AddProduct = () => {
                             value={highlights} onChange={handleChange('highlights')}/>
                         </div>
                         <div className="mb-2">
-                                <label htmlFor="category_image">Category Image</label>
-                                <input type="file" name="category_image" id="category_image" className='form-control' onChange={handleImageChange} />
+                                <label htmlFor="product_image">Product Image</label>
+                                <input type="file" name="product_image" id="product_image" className='form-control' onChange={handleImageChange} />
                             </div>
 
+                            
 
 
 
@@ -347,11 +348,14 @@ const AddProduct = () => {
                                 onChange={handleChange('category')}>
                                     <option>--- Select Category ---</option>
                                     {categories && categories.map((c,i)=>(
-                                        <option value={c._id} key={i}>{c.category_name}</option>,
-                                        <option value={c._id} key={i}>{c.description}</option>
+                                        <option value={c._id} key={i}>{c.category_name}</option>
+                                        // <option value={c._id} key={i}>{c.description}</option>
                                     ))}
                             </select>
                         </div>
+                        <div className="mb-2">
+                                <button className="btn btn-primary" onClick={handleSubmit}>Add</button>
+                            </div>
 
                        
 

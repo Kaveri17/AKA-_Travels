@@ -6,6 +6,7 @@ import { isAuthenticated } from '../auth/authindex'
 
 const UpdateProduct = () => {
     const params=useParams()
+    console.log(params)
     const {token} = isAuthenticated()
     const id=params.productId
 
@@ -48,7 +49,7 @@ const UpdateProduct = () => {
         })
         .catch(err=>console.log(err))
 
-        axios.get(`${API}/productdetail/${id}`)
+        axios.get(`${API}/getproductdetails/${id}`)
         .then(res=>{
             setInitialValue(res.data)
             setProductTitle(res.data.product_title)
@@ -70,7 +71,7 @@ const UpdateProduct = () => {
             setCategoryId(res.data.category._id)
         })
         .catch(err=>console.log(err))
-    },[id])
+    },[])
 
     // handle submit
     const handleSubmit=async(event)=>{
@@ -147,69 +148,69 @@ const UpdateProduct = () => {
                         <div className="mb-2">
                             <label htmlFor="ptitle">Product Title</label>
                             <input type="text" name="ptitle" id="ptitle" className='form-control' 
-                            value={product_title} onChange={handleChange('product_title')}/>
+                            value={product_title}   onChange={e=>setProductTitle(e.target.value)} />
                         </div>
                         <div className="mb-2">
                             <label htmlFor="pname">Product Location</label>
                             <input type="text" name="price" id="price" className='form-control' 
-                            value={product_location} onChange={handleChange('product_location')}/>
+                            value={product_location}  onChange={e=>setProductLocation(e.target.value)}/>
                         </div>
                         <div className="mb-2">
                             <label htmlFor="accomodation">Accomodation</label>
                             <input type="text" name="accomodation" id="stock" className='form-control' 
-                            value={accomodation} onChange={handleChange('accomodation')}/>
+                            value={accomodation}  onChange={e=>setAccomodation(e.target.value)}/>
                         </div>
 
                         <div className="mb-2">
                             <label htmlFor="maxaltitude">Maximum Altitude</label>
                             <input type="text" name="maxaltitude" id="maxaltitude" className='form-control' 
-                            value={maximum_altitude} onChange={handleChange('maximum_altitude')}/>
+                            value={maximum_altitude}  onChange={e=>setMaximumAltitude(e.target.value)}/>
                         </div>
 
                         <div className="mb-2">
                             <label htmlFor="bestseason">Best Season</label>
                             <input type="text" name="bestseason" id="bestseason" className='form-control' 
-                            value={best_season} onChange={handleChange('best_season')}/>
+                            value={best_season}  onChange={e=>setBestSeason(e.target.value)}/>
                         </div>
 
                         <div className="mb-2">
                             <label htmlFor="deptcity">Deaparture City</label>
                             <input type="text" name="deptcity" id="deptcity" className='form-control' 
-                            value={departure_city} onChange={handleChange('departure_city')}/>
+                            value={departure_city}  onChange={e=>setDepartureCity(e.target.value)}/>
                         </div>
 
                         <div className="mb-2">
                             <label htmlFor="trans">Transportation</label>
                             <input type="text" name="trans" id="trans" className='form-control' 
-                            value={transportation} onChange={handleChange('transportation')}/>
+                            value={transportation}  onChange={e=>setTransportation(e.target.value)}/>
                         </div>
 
                         <div className="mb-2">
                             <label htmlFor="availability">Tour Availability</label>
                             <input type="text" name="availability" id="availability" className='form-control' 
-                            value={tour_availability} onChange={handleChange('tour_availability')}/>
+                            value={tour_availability}  onChange={e=>setTourAvailability(e.target.value)}/>
                         </div>
                         <div className="mb-2">
                             <label htmlFor="language">Language</label>
                             <input type="text" name="language" id="language" className='form-control' 
-                            value={language} onChange={handleChange('language')}/>
+                            value={language}  onChange={e=>setLanguage(e.target.value)}/>
                         </div>
 
                         <div className="mb-2">
                             <label htmlFor="wifi">Wifi</label>
                             <input type="text" name="wifi" id="wifi" className='form-control' 
-                            value={wifi} onChange={handleChange('wifi')}/>
+                            value={wifi}  onChange={e=>setWifi(e.target.value)}/>
                         </div>
 
                         <div className="mb-2">
                             <label htmlFor="minage">Minimum Age</label>
                             <input type="text" name="minage" id="minage" className='form-control' 
-                            value={minimum_age} onChange={handleChange('minimum_age')}/>
+                            value={minimum_age}  onChange={e=>setMinimumAge(e.target.value)}/>
                         </div>
                         <div className="mb-2">
                             <label htmlFor="maxage">Maximum Age</label>
                             <input type="text" name="maxage" id="ptitle" className='form-control' 
-                            value={maximum_age} onChange={handleChange('maximum_age')}/>
+                            value={maximum_age}  onChange={e=>setMaximumAge(e.target.value)}/>
                         </div>
 
 
@@ -217,18 +218,18 @@ const UpdateProduct = () => {
                         <div className="mb-2">
                             <label htmlFor="meals">Meals</label>
                             <input type="text" name="meals" id="meals" className='form-control' 
-                            value={meals} onChange={handleChange('meals')}/>
+                            value={meals}  onChange={e=>setMeals(e.target.value)}/>
                         </div>
 
                         <div className="mb-2">
                             <label htmlFor="overview">Overview</label>
                             <input type="text" name="overview" id="overview" className='form-control' 
-                            value={overview} onChange={handleChange('overview')}/>
+                            value={overview}  onChange={e=>setOverview(e.target.value)}/>
                         </div>
                         <div className="mb-2">
                             <label htmlFor="highlights">Highlights</label>
                             <input type="text" name="highlights" id="highlights" className='form-control' 
-                            value={highlights} onChange={handleChange('highlights')}/>
+                            value={highlights}  onChange={e=>setHighlights(e.target.value)}/>
                         </div>
                         
                         <div className="mb-2">
@@ -249,6 +250,27 @@ const UpdateProduct = () => {
 
                             </select>
                         </div>
+                        {/* <div className="mb-2">
+                            <label htmlFor="image">Product Image</label>
+                            <input type="file" name="image" id="image" className='form-control' 
+                            onChange={e=>setProductImage(e.target.files[0])}/>
+                        </div> */}
+
+                         <div className="mb-2">
+                                <label htmlFor="product_image">Product Image</label>
+                                <input
+                                    type="file"
+                                    name="product_image"
+                                    id="product_image"
+                                    className='form-control'
+                                    onChange={(e) => setProductImage(e.target.files[0])}
+                                />
+                            </div>
+                        <div className="mb-2">
+                            <button className="btn btn-primary" onClick={handleSubmit}>Update Product</button>
+                        </div>
+
+
 
                        
                     </form>

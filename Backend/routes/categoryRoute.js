@@ -10,9 +10,9 @@ router.post('/addcategory',upload.single("category_image"), requireSignin,catego
 
 router.get('/getcategorylist',getAllCategories)
 router.get('/getcategorydetails/:id',getCategoryDetails)
-// router.put('/updatecategory/:id',upload.single("category_image"),updateCategory)
+router.put('/updatecategory/:id',upload.single("category_image"),updateCategory)
 router.delete('/deletecategory/:id',requireSignin,deleteCategory)
-router.put('/updatecategory/:id',requireSignin,upload.single("category_image"),updateCategory)
+// router.put('/updatecategory/:id',requireSignin,upload.single("category_image"),updateCategory)
 
 
 module.exports=router
