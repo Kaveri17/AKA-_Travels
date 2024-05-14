@@ -33,7 +33,8 @@ import EmailVerify from "./auth/EmailVerify";
 import AdminRoute from "./auth/AdminRoute";
 import AddBlog from "./Admin/AddBlog";
 import ShowProduct from "./Admin/ShowProduct";
-import UpdateProduct from "./Admin/UpdateProduct";
+// import UpdateProduct from "./Admin/UpdateProduct";
+import UpdateCategory from "./Admin/UpdateCategory";
 import AdminSidebar from "./Admin/AdminSidebar";
 import Profile from "./Pages/Profile";
 
@@ -81,14 +82,15 @@ const MyRoutes = () => {
 
           <Route path="admin/" element={<AdminRoute/>}>
           {/* <Route path="dashboard" element={<Dashboard/>}/> */}
-              <Route path="addblog" element={<AddBlog/>}/>
+              {/* <Route path="addblog" element={<AddBlog/>}/> */}
               <Route path="addcategory" element={<AddCategory/>}/>
               <Route path="addproduct" element={<AddProduct/>}/>
               <Route path="showcategories" element={<ShowCategory/>}/>
             
               <Route path="showproduct" element={<ShowProduct/>}/>
               {/* <Route path="showproduct" element={<ShowProduct/>}/> */}
-              <Route path="updateproduct" element={<UpdateProduct/>}/>
+              {/* <Route path="updateproduct" element={<UpdateProduct/>}/> */}
+              <Route path="updatecategory/:id" element={<UpdateCategory/>}/>
               {/* <Route path="updateproduct" element={<UpdateProduct/>}/> */}
 
               <Route path="/admin/dashboard" element={<AdminDashboard/>}/>
