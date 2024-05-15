@@ -8,20 +8,20 @@ exports.addProduct = async (req, res) => {
         return res.status(400).json({ error: "Product already exists" })
     }
    
-    //add new product
+    // add new product
 
-    let itenaryIds = await Promise.all(
-        req.body.itenary.map(async itenary=>{
-            let ITENARY = await Itenary.create({
-               days: itenary.days,
-               day_title: itenary.day_title 
-            })
-            if(!ITENARY){
-                return  res.status(400).json({error:"Something Went Wrong"})
-            }
-            return ITENARY._id
-        })
-    )
+    // let itenaryIds = await Promise.all(
+    //     req.body.itenary.map(async itenary=>{
+    //         let ITENARY = await Itenary.create({
+    //            days: itenary.days,
+    //            day_title: itenary.day_title 
+    //         })
+    //         if(!ITENARY){
+    //             return  res.status(400).json({error:"Something Went Wrong"})
+    //         }
+    //         return ITENARY._id
+    //     })
+    // )
 
     product = await Product.create({
         product_title:req.body.product_title,
@@ -45,8 +45,8 @@ exports.addProduct = async (req, res) => {
         cost:req.body.cost,
         strike:req.body.strike,
         day:req.body.day,
-        category:req.body.category,
-        itenary: itenaryIds
+        category:req.body.category
+        // itenary: itenaryIds
     })
     if(!product){
         return res.status(400).json({error:"Something went wrong"})

@@ -46,7 +46,7 @@ const ShowCategory = () => {
   return (
     <>
         <ToastContainer position="top-right" theme="colored"/>
-        <div className="container">
+        <div className="container py-32">
             <div className="row d-flex justify-content-center">
                 <div className="col-md-5">
                     <table className="table table-bordered table-striped">
@@ -54,6 +54,7 @@ const ShowCategory = () => {
                             <tr>
                                 <th>Category Name</th>
                                 <th>Description</th>
+                                <th>Image</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -63,10 +64,15 @@ const ShowCategory = () => {
                                     <td>{category.category_name}</td>
                                     <td>{category.description}</td>
                                     <td>
+                                        <img src={`${API}/${category.image}`} 
+                                        alt={category.category_image} width={'100'}/>
+                                          
+                                      </td>
+                                    <td>
                                   <Link to={`/admin/updatecategory/${category._id}`} className='btn btn-primary'><FaEdit/></Link>
 
                                         <button className='btn btn-danger'onClick={()=>deleteCategory(category._id)} ><FaTrash/></button>
-                                        {/* <button><FaTrash/></button> */}
+                                     
                                     </td>
                                 </tr>
                             ))}
