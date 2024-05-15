@@ -31,13 +31,13 @@ import AddProduct from "./Admin/AddProduct";
 import ShowCategory from "./Admin/ShowCategory";
 import EmailVerify from "./auth/EmailVerify";
 import AdminRoute from "./auth/AdminRoute";
-import AddBlog from "./Admin/AddBlog";
+// import AddBlog from "./Admin/AddBlog";
 import ShowProduct from "./Admin/ShowProduct";
 // import UpdateProduct from "./Admin/UpdateProduct";
 import UpdateCategory from "./Admin/UpdateCategory";
-import AdminSidebar from "./Admin/AdminSidebar";
+// import AdminSidebar from "./Admin/AdminSidebar";
 import Profile from "./Pages/Profile";
-import AdminSidebars from "./Layout/AdminSidebars";
+// import AdminSidebars from "./Layout/AdminSidebars";
 
 
 
@@ -101,7 +101,7 @@ const MyRoutes = () => {
              
             
         
-            <Route path="/admin/sidebar" element={<AdminSidebar/>}/>
+            {/* <Route path="/admin/sidebar" element={<AdminSidebar/>}/> */}
           {/* <Route path="admin/" element={<AdminRoute/>}/> */}
               {/* <Route path="addcategoty" element={<AddCategory/>}/> */}
           </Route>

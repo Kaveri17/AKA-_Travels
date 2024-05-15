@@ -25,7 +25,7 @@ const AdminSidebars = () => {
           <Link to=''><i class="fa-solid fa-comments text-2xl"></i><span className='pl-2 font-semibold rams'>Messages</span></Link>
         </li>
         <li className='py-2'>
-          <Link to=''><i class="fa-solid fa-blog text-2xl"></i><span className='pl-2 font-semibold rams'>Blogs</span></Link>
+          <Link to=''><i class="fa-solid fa-blog text-2xl"></i><span className='pl-2 font-semibold rams'>Category</span></Link>
         </li>
         <li className='py-2'>
           <Link to='packages'><i className="fa-regular fa-newspaper text-2xl"></i><span className='pl-2 font-semibold rams'>Packages</span></Link>
