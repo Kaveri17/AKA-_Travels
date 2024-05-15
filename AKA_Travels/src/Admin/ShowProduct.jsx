@@ -11,7 +11,7 @@ const ShowProduct = () => {
   const {token}=isAuthenticated()
   const[products,setProducts]=useState([])
   useEffect(()=>{
-    axios.get(`${API}/allproduct`)
+    axios.get(`${API}/getproductlist`)
     .then(res=>{
       setProducts(res.data)
     })
@@ -41,7 +41,7 @@ const ShowProduct = () => {
   return (
     <>
     <ToastContainer position="top-right" theme="colored"/>
-    <div className="container">
+    <div className="container py-32">
         <div className="row d-flex justify-content-center">
             <div className="col-md-10">
               <table className="table table-bordered table-striped shadow">
@@ -53,25 +53,7 @@ const ShowProduct = () => {
                                   <th>Accomodation</th>
                                   <th>Maximum Altitude</th>
                                   <th>Best Season</th>
-                                  <th>Departure City</th>
-                                  <th>Transportation</th>
-                                  <th>Tour Availability</th>
-                                  <th>Language</th>
-                                  <th>Wifi</th>
-                                  <th>Minimum Age</th>
-                                  <th>Maximum Age</th>
-                                  <th>Meals</th>
-                                  <th>Overview</th>
-                                  <th>Highlightts</th>
-                                 
-                                  <th>Cost</th>
-                                  <th>Price</th>
-                                 
-                                  <th>Product People</th>
-                                  <th>Strike</th>
-                                  <th>Day</th>  
-                                  <th>Category</th>
-                                  <th>Itenary</th>
+                                 {/* <th>Category</th> */}
                                   <th>Action</th>
                               </tr>
                           </thead>
@@ -83,31 +65,8 @@ const ShowProduct = () => {
                                       <td>{product.accomodation}</td>
                                       <td>{product.maximum_altitude}</td>
                                       <td>{product.best_season}</td>
-                                      <td>{product.departure_city}</td>
-                                      <td>{product.transportation}</td>
-                                      <td>{product.tour_availability}</td>
-                                      <td>{product.language}</td>
-                                      <td>{product.wifi}</td>
-                                      <td>{product.minimum_age}</td>
-                                      <td>{product.maximum_age}</td>
-                                      <td>{product.meals}</td>
-                                      <td>{product.overview}</td>
-                                      <td>{product.hilghlights}</td>
-                                      <td>{product.cost}</td>
-                                      <td>{product.price}</td>
-                                      <td>{product.product_people}</td>
-                                      <td>{product.strike}</td>
-                                      <td>{product.day}</td>
-                                      <td>{product.itenary}</td>
-
-
-
-
-                                      {/* <td>
-                                         <img src={`${IMG_URL}/${product.product_image}`}  
-                                         alt={product.product_image} width={'100'}/> 
-                                      </td> */}
-                                      <td>{product.category.category_name}</td>
+                                      
+                                      {/* <td>{product.category.category_name}</td> */}
                                       <td>
                                           <Link to={`/admin/updateproduct/${product._id}`} className='btn btn-primary'><FaEdit/></Link>
                                           <button className='btn btn-danger'onClick={()=>deleteProduct(product._id)} ><FaTrash/></button>

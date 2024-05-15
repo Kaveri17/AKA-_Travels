@@ -26,76 +26,76 @@ const productSchema=mongoose.Schema({
     },
    departure_city:{
         type:String,
-        required:true
+        // required:true
 
     },
    transportation:{
         type:String,
-        required:true
+        // required:true
 
     },
     tour_availability:{
         type:String,
-        required:true
+        // required:true
 
     },
     language:{
         type:String,
-        required:true
+        // required:true
     },
     wifi:{
         type:String,
-        required:true
+        // required:true
 
     },
    minimum_age:{
         type:Number,
-        required:true
+        // required:true
 
     },
     maximum_age:{
         type:Number,
-        required:true
+        // required:true
     },
     meals:{
         type:String,
-        required:true
+        // required:true
 
     },
     overview:{
         type:String,
-        required:true
+        // required:true
     },
     highlights:{
         type:String,
-        required:true
+        // required:true
     },
 
     product_image:{
         type:String,
-        required:true
+        // required:true
         
     },
     price:{
         type:Number,
-        required:true
+        // required:true
     },
     product_people:{
         type:String,
-        required:true
+        // required:true
     },
     cost:{
         type:String,
-        required:true
+        // required:true
 
     },
     strike:{
         type:Number,
-        required:true
+        // required:true
     },
     day:{
         type:Number,
-        required:true
+        // required:true
     },
 
     
@@ -108,7 +108,7 @@ const productSchema=mongoose.Schema({
     itenary:[{
         type: ObjectId,
         ref: "Itenary",
-        required: true
+        // required: true
     }],
 },{timestamps:true})
 module.exports=mongoose.model("Product",productSchema)

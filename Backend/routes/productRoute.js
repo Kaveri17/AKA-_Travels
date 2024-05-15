@@ -5,7 +5,9 @@ const { requireSignin } = require('../controller/userController')
 const { productCheck, validation } = require('../validation')
 const upload = require('../utils/fileUpload')
 const router=express.Router()
-router.post('/addproduct',productCheck,validation,requireSignin, addProduct)
+// router.post('/addproduct',productCheck,validation,requireSignin, addProduct)
+router.post('/addproduct', validation,addProduct)
+
 router.get('/getproductlist',getAllProducts)
 router.get('/getproductdetails/:id',getProductDetails)
 

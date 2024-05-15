@@ -29,18 +29,16 @@ const AddProduct = () => {
         product_people:'',
         strike:'',
         day:'',
-        category:'',
-        itenary:{
-            days,
-            day_title
-        }
+        category:''
+       
     })
 
     // fetch categories 
     useEffect(()=>{
-        axios.get(`${API}/allcategory`)
+        axios.get(`${API}/getcategorylist`)
         .then(res=>{
             setCategories(res.data)
+            console.log("cat:",categories)
         })
         .catch(err=>console.log(err))
     },[])
@@ -68,11 +66,8 @@ const AddProduct = () => {
         product_people,
         strike,
         day,
-        category,
-        itenary: {
-            days,
-            day_title
-        }
+        category
+        
         
     } =productData
 
@@ -87,14 +82,22 @@ const AddProduct = () => {
         })
     }
 
-   
+    const handleImageChange = event => {
+        setProductData({
+            ...productData,
+            product_image: event.target.files[0] // Update the image file in state
+        });
+
+        // formData.append('product_image',event.target.files[0])
+
+    }
 
     const handleSubmit=async event=>{
         event.preventDefault()
 
         // passing form data instead of json
         try{
-            const formData=new FormData()
+            const formData=new FormData
             formData.append('product_title',product_title)
             formData.append('product_location',product_location)
             formData.append('accomodation',accomodation)
@@ -124,12 +127,10 @@ const AddProduct = () => {
             formData.append('day',day)
            
            
-           
-           
             formData.append('category',category)
             // formData.append('itenary',itenary)
-            formData.append('itenary[days]', itenary.days); // Append days
-            formData.append('itenary[day_title]', itenary.day_title); // Append day_title
+            // formData.append('itenary[days]', itenary.days); // Append days
+            // formData.append('itenary[day_title]', itenary.day_title); // Append day_title
         
 
             const config={
@@ -139,7 +140,7 @@ const AddProduct = () => {
                 }
             }
 
-            const response=await axios.post(`${API}/postproduct`,formData,config)
+            const response=await axios.post(`${API}/addproduct`,formData,config)
             setSuccess(true)
             setError('')
             setProductData({
@@ -164,11 +165,8 @@ const AddProduct = () => {
               product_people,
               strike,
               day,
-              category,
-              itenary:{
-                days,
-                day_title
-              }
+              category
+             
               
             })
         }
@@ -192,7 +190,7 @@ const AddProduct = () => {
 
   return (
     <>
-        <div className="container">
+        <div className="container ">
             <div className="row d-flex justify-content-center">
                 <div className="col-md-5">
                     <form className="shadow p-3">
@@ -228,7 +226,7 @@ const AddProduct = () => {
                         </div>
 
                         <div className="mb-2">
-                            <label htmlFor="deptcity">Deaparture City</label>
+                            <label htmlFor="deptcity">Departure City</label>
                             <input type="text" name="deptcity" id="deptcity" className='form-control' 
                             value={departure_city} onChange={handleChange('departure_city')}/>
                         </div>
@@ -267,8 +265,6 @@ const AddProduct = () => {
                             value={maximum_age} onChange={handleChange('maximum_age')}/>
                         </div>
 
-
-
                         <div className="mb-2">
                             <label htmlFor="meals">Meals</label>
                             <input type="text" name="meals" id="meals" className='form-control' 
@@ -288,14 +284,7 @@ const AddProduct = () => {
                         <div className="mb-2">
                                 <label htmlFor="product_image">Product Image</label>
                                 <input type="file" name="product_image" id="product_image" className='form-control' onChange={handleImageChange} />
-                            </div>
-
-                            
-
-
-
-
-
+                            </div> 
 
 
                         <div className="mb-2">
@@ -308,11 +297,7 @@ const AddProduct = () => {
                             <input type="text" name="price" id="price" className='form-control' 
                             value={price} onChange={handleChange('price')}/>
                         </div>
-                        <div className="mb-2">
-                            <label htmlFor="ppeople">Product People</label>
-                            <input type="text" name="ppeople" id="ppeople" className='form-control' 
-                            value={product_people} onChange={handleChange('ppeople')}/>
-                        </div>
+                        
                         <div className="mb-2">
                             <label htmlFor="strike">Strike</label>
                             <input type="text" name="strike" id="strike" className='form-control' 
@@ -324,8 +309,8 @@ const AddProduct = () => {
                             value={day} onChange={handleChange('day')}/>
                         </div>
 
-
-                        <div className="mb-2">
+                           {/* itenary */}
+                        {/* <div className="mb-2">
                     <label htmlFor="days">Days</label>
                     <input type="text" name="days" id="days" className='form-control' 
                     value={days} onChange={handleChange('itenary')} />
@@ -335,11 +320,7 @@ const AddProduct = () => {
                     <label htmlFor="day_title">Day Title</label>
                     <input type="text" name="day_title" id="day_title" className='form-control' 
                     value={day_title} onChange={handleChange('itenary')} />
-                </div>
-
-                    
-
-
+                </div> */}
 
 
                         <div className="mb-2">
@@ -347,10 +328,12 @@ const AddProduct = () => {
                             <select name="category" id="category" className='form-control' 
                                 onChange={handleChange('category')}>
                                     <option>--- Select Category ---</option>
-                                    {categories && categories.map((c,i)=>(
-                                        <option value={c._id} key={i}>{c.category_name}</option>
-                                        // <option value={c._id} key={i}>{c.description}</option>
-                                    ))}
+                                    
+                                        {categories.length>0 && categories.map(c=>{
+                                            return <option value={c._id}>{c.category_name}</option>
+                                            
+                                        })
+                                    }
                             </select>
                         </div>
                         <div className="mb-2">
