@@ -148,3 +148,18 @@ background-color:wheat;
   
 } */
 
+.rams{
+  display: none;
+}
+.gitas{
+  font-size: 16px;
+}
+
+@media (min-width: 500px) {
+  .rams{
+    display: inline;    
+  }
+  .gitas {
+    font-size: 2rem;
+  }
+}
