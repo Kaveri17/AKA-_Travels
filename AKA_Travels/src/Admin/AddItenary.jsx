@@ -44,9 +44,6 @@ const AddItenary = () => {
         })
         .catch(err => console.log(err));
     }
-
-    
-
     // To show error message
     const showError = () => (
         error && <div className='alert alert-danger'>{error}</div>
@@ -75,10 +72,7 @@ const AddItenary = () => {
                                 <label htmlFor="daytitle">Day Title</label>
                                 <input type="text" name="daytitle" id="daytitle" className='form-control' value={day_title} onChange={e => setDay_title(e.target.value)} />
                             </div>
-
-                            
-                            
-                            <div className="mb-2">
+                               <div className="mb-2">
                                 <button className="btn btn-primary" onClick={handleSubmit}>Add</button>
                             </div>
                         </form>

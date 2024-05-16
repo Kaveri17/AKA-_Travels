@@ -40,6 +40,8 @@ import Profile from "./Pages/Profile";
 import AddItenary from "./Admin/AddItenary";
 import AdminMessage from "./Admin/AdminMessage";
 import MessageView from "./Layout/MessageView";
+import Setting from "./Layout/Setting";
+import Save from "./Layout/Save";
 // import AdminSidebars from "./Layout/AdminSidebars";
 
 
@@ -60,6 +62,9 @@ const MyRoutes = () => {
             <Route path="/blogdetaill" element={<BlogDetaill />} />
             <Route path="/blogdetailll" element={<BlogDetailll />} />
             <Route path="/contact" element={<Contact />} />
+        <Route path="/setting" element={<Setting/>} />
+        <Route path="/save-response" element={<Save/>} />
+    
           
             <Route path="/autoplay" element={<AutoPlay />} />
             <Route path="/gallery" element={<Gallery />} />
@@ -111,9 +116,6 @@ const MyRoutes = () => {
              
             
         
-            {/* <Route path="/admin/sidebar" element={<AdminSidebar/>}/> */}
-          {/* <Route path="admin/" element={<AdminRoute/>}/> */}
-              {/* <Route path="addcategoty" element={<AddCategory/>}/> */}
           </Route>
         </Routes>
         </BrowserRouter>
