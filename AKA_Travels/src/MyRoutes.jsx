@@ -40,6 +40,10 @@ import Profile from "./Pages/Profile";
 import AdminSidebars from "./Layout/AdminSidebars";
 import AddItenary from "./Admin/AddItenary";
 
+import Setting from "./Layout/Setting";
+import Save from "./Layout/Save";
+import { Switch } from "@headlessui/react";
+
 
 
 
@@ -59,6 +63,9 @@ const MyRoutes = () => {
             <Route path="/blogdetaill" element={<BlogDetaill />} />
             <Route path="/blogdetailll" element={<BlogDetailll />} />
             <Route path="/contact" element={<Contact />} />
+        <Route path="/setting" element={<Setting/>} />
+        <Route path="/save-response" element={<Save/>} />
+    
           
             <Route path="/autoplay" element={<AutoPlay />} />
             <Route path="/gallery" element={<Gallery />} />
