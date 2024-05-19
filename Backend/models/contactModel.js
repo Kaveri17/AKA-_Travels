@@ -4,11 +4,11 @@ const mongoose = require('mongoose')
 const contactSchema = mongoose.Schema({
     contact_fname: {
         type: String,
-        required: true
+        // required: true
     },
     contact_lname: {
         type: String,
-        required: true
+        // required: true
     },
     contact_email: {
         type: String,
@@ -16,11 +16,11 @@ const contactSchema = mongoose.Schema({
     },
     contact_phoneno:{
         type: String,
-        required: true
+        // required: true
     },
     contact_message: {
         type: String,
-        required: true
+        // required: true
     }
 
 },{timestamps: true})

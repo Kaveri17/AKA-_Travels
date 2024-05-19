@@ -43,8 +43,7 @@ const Home = () => {
   };
   return (
     <>
-
-        <div className="home  w-full h-screen pt-28 " style={{backgroundImage: "url('https://wordpress.vecurosoft.com/travolo/wp-content/uploads/2023/11/banner-bg-1.png')"}} >
+<div className="home  w-full h-screen pt-28 " style={{backgroundImage: "url('https://wordpress.vecurosoft.com/travolo/wp-content/uploads/2023/11/banner-bg-1.png')"}} >
           <div className='w-5/6 mx-auto flex flex-wrap'>
           <div className=' w-full lg:w-1/2 '>
             <h1 className='text-5xl font-bold leading-normal  '>Travelling and Exploring the  World And  
@@ -69,16 +68,16 @@ const Home = () => {
        
        
        
-       
+{/*        
         <form>
           <div className='pt-4'>
          
-          <div className='mx-auto w-5/6 border-2 border-solid border-red-200 px-3 py-12 md:-mt-24 flex flex-wrap space-x-2  bg-white '>
+          <div className='mx-auto w-5/6 border-2 border-solid border-red-200 px-3 py-12 md:-mt-24 flex flex-wrap space-x-2  bg-white  '>
           
             <label htmlFor="destination" ></label>
             <select id="destination" className='md:px-4 py-2 px-14 w-full md:w-1/2  lg:w-1/6 border-2 border-solid border-red-200' >
             
-              <option value="" className='w-full ' disabled selected hidden>
+              <option value="" className='w-full  ' disabled selected hidden>
                 Destination  
               </option>
               <option value="everest">Everest</option>
@@ -133,7 +132,9 @@ const Home = () => {
             </div>
           
 
-        </form>
+        </form> */}
+
+{/* Tips awesome */}
 
 {/* Tips awesome */}
 <div className='px-8 pt-16 mx-auto w-5/6'>

@@ -14,6 +14,43 @@ const [contact_message, setContactMessage] = useState('');
 
   const handleSend = (event) => {
     event.preventDefault();
+
+    // validation
+    if(!contact_fname){
+      setError("Please fill your firstname.")
+    }
+    else if(contact_fname.length < 2){
+      setError("FirstName Should be more than 2 characters")
+    }
+    else if(!contact_lname){
+      setError("Please fill your lastname.")
+    }
+    else if(contact_lname.length < 2 ){
+      setError("LastName Should be more than 2 characters")
+    }
+    else if(!contact_email){
+      setError("please fill your email")
+
+    }
+    else if(!contact_email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)){
+      setError("Invalid Email")
+    }
+    else if(!contact_message){
+      setError("Please fill your message")
+    }
+    else if(contact_message.length < 10){
+      setError("Message should be more tha 10 characters")
+    }
+    else if(!contact_phoneno) {
+      setError("please fill you phoneno")
+    }
+    else if(!contact_phoneno.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/)){
+      setError("invalid phone number")
+    }
+
+else{
+
+
     submitmessage({ contact_fname, contact_lname, contact_email, contact_phoneno, contact_message })
 
     .then(data => {
@@ -35,6 +72,7 @@ const [contact_message, setContactMessage] = useState('');
     })
     .catch(error => console.log(error))
   }
+}
   const showError = () => {
     if(error){
       return <div className='font-bold text-red-300 text-lg text-center'>{error}</div>
