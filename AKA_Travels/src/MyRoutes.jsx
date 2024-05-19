@@ -38,10 +38,11 @@ import UpdateCategory from "./Admin/UpdateCategory";
 // import AdminSidebar from "./Admin/AdminSidebar";
 import Profile from "./Pages/Profile";
 import AddItenary from "./Admin/AddItenary";
-
+import AdminMessage from "./Admin/AdminMessage";
+import MessageView from "./Layout/MessageView";
 import Setting from "./Layout/Setting";
 import Save from "./Layout/Save";
-import { Switch } from "@headlessui/react";
+
 
 // import AdminSidebars from "./Layout/AdminSidebars";
 
@@ -63,6 +64,8 @@ const MyRoutes = () => {
             <Route path="/blogdetaill" element={<BlogDetaill />} />
             <Route path="/blogdetailll" element={<BlogDetailll />} />
             <Route path="/contact" element={<Contact />} />
+          
+         
         <Route path="/setting" element={<Setting/>} />
         <Route path="/save-response" element={<Save/>} />
     
@@ -76,6 +79,8 @@ const MyRoutes = () => {
             {/* <Route path="/modal" element={<Modal />} /> */}
             <Route path="/details/:id" element={<Details/>}/>
             <Route path="/packages" element={<Packages/>}/>
+
+            
           </Route>
 
             {/* connection */}
@@ -88,6 +93,7 @@ const MyRoutes = () => {
             <Route path="/forgetpassword" element={<ForgetPassword/>}/>
             <Route path="/resetpassword/:token" element={<ResetPassword />} />
             <Route path="profile" element={<Profile/>}/>
+            <Route path="/messageview/:id" element={<MessageView/>}/>
             {/* <Route path ="adminsidebars" element={<AdminSidebars/>}/> */}
 
           {/* <Route path="/signup" element={<SignUp/>}/> */}
@@ -98,6 +104,7 @@ const MyRoutes = () => {
               <Route path="addcategory" element={<AddCategory/>}/>
               <Route path="addproduct" element={<AddProduct/>}/>
               <Route path="additenary" element={<AddItenary/>}/>
+              <Route path="adminmessage" element={<AdminMessage/>}/>
 
               <Route path="showcategories" element={<ShowCategory/>}/>
              

@@ -164,4 +164,9 @@ background-color:wheat;
   }
 }
 
+.panda:hover{
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px gray;
+  
+}
 

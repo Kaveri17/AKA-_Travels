@@ -1,76 +1,34 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-// import { useHistory } from "react-router-dom";
 
+
+
+
+import React from 'react';
+import { isAuthenticated } from '../auth/authindex';
 
 const Setting = () => {
- 
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [notificationsEnabled, setNotificationsEnabled] = useState(false);
+    const { user } = isAuthenticated();
 
-  // const history=useHistory();
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    
-    console.log("Settings saved:", { username, email, notificationsEnabled });
-    // history.push(`/save-response?username=${username}&email=${email}&notificationsEnabled=${notificationsEnabled}`);
-  };
-
- 
-  
-
-  return (
-    <div className="container mx-auto p-4 ">
-      <h1 className="text-3xl font-bold mb-4 justify-center flex">Settings</h1>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4 w-1/2">
-          <label htmlFor="username" className="block text-gray-700 font-bold mb-2 ">Username</label>
-          <input
-            type="text"
-            id="username"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Enter your username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
+    return (
+        <div className="container mx-auto mt-8 px-4">
+            {/* <h2 className="text-2xl font-bold mb-4">User Profile<i class="bi bi-person-circle text-3xl"></i></h2> */}
+            <h2 className="text-2xl font-bold mb-4 flex items-center">User Profile
+    <i className="bi bi-person-circle text-3xl ml-2"></i>
+</h2>
+             <div className="bg-white rounded-lg shadow-md p-6 mb-4">
+                <div className="mb-2">
+                    <strong className="text-gray-700">Name:</strong> {user.username}
+                </div>
+                <div className="mb-2">
+                    <strong className="text-gray-700">Email:</strong> {user.email}
+                </div>
+                <div className="mb-2">
+                    <strong className="text-gray-700">Role:</strong> {user.role}
+                </div>
+            </div>
         </div>
-
-
-        <div className="mb-4 w-1/2">
-          <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email</label>
-          <input
-            type="email" 
-            id="email"
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Enter your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700 font-bold">
-            <input
-              type="checkbox"
-              className="mr-2 leading-tight"
-              checked={notificationsEnabled}
-              onChange={(e) => setNotificationsEnabled(e.target.checked)}
-            />
-            Enable Notifications
-          </label>
-        </div>
-        <Link to="/save-response">
-        <button
-          type="submit"
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
-          Save Response
-        </button>
-        </Link>
-      </form>
-    </div>
-  );
+    );
 };
 
 export default Setting;
+
+
