@@ -137,9 +137,11 @@ const Footer = () => {
                   account.
                 </p>
                 <div className="pb-4">
+                  <a href="/contact">
                   <button className="font-bold border-2 border-solid px-2 py-2 bg-slate-200 hover:bg-fuchsia-200">
                     OPEN AN ACCOUNT
                   </button>
+                  </a>
                 </div>
               </div>
               <div className="footer-up ps-48 w-2/5 ">
