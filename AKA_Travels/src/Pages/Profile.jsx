@@ -23,7 +23,7 @@ const Profile = () => {
 
   return (
     <div className="container mx-auto p-4 ">
-      <h1 className="text-3xl font-bold mb-4 justify-center flex"><i class="bi bi-gear-fill text-4xl"></i></h1>
+      <h1 className="text-3xl font-bold mb-4 justify-center flex"><i class="bi bi-person-circle text-4xl"></i></h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-4 w-1/2">
           <label htmlFor="username" className="block text-gray-700 font-bold mb-2 ">Username</label>

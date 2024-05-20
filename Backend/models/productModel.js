@@ -36,21 +36,21 @@ const productSchema=mongoose.Schema({
     },
     tour_availability:{
         type:String,
-        // required:true
+        required:true
 
     },
     language:{
         type:String,
-        // required:true
+        required:true
     },
     wifi:{
         type:String,
-        // required:true
+        required:true
 
     },
    minimum_age:{
         type:Number,
-        // required:true
+        required:true
 
     },
     maximum_age:{
@@ -59,16 +59,16 @@ const productSchema=mongoose.Schema({
     },
     meals:{
         type:String,
-        // required:true
+        required:true
 
     },
     overview:{
         type:String,
-        // required:true
+        required:true
     },
     highlights:{
         type:String,
-        // required:true
+        required:true
     },
 
     product_image:{

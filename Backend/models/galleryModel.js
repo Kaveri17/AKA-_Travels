@@ -5,12 +5,16 @@ const {ObjectId} = mongoose.Schema
 const gallerySchema = new mongoose.Schema({
     image_title:{
         type: String,
-        required: true
+        // required: true
     },
     image:{
         type: String,
-        required: true
+        // required: true
     },
+    type:{
+        type:String,
+        required:true
+    }
 
 })
 module.exports = mongoose.model("gallery", gallerySchema)
