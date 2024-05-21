@@ -20,6 +20,7 @@ const Activities = () => {
       }
     }
     )
+    
   },[])
   
   console.log(activities);
