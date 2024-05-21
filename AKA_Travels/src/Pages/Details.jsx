@@ -361,77 +361,77 @@ const Details = () => {
                                 <i className="fa-solid fa-hotel text-orange-500"></i>
                                 <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Accomodation</span>
                             </li>
-                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>4 Stars Hotels</li>
+                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>{details.accomodation}</li>
                         </ul>
                         <ul className='list-none text-black py-3'>
                             <li>
                                 <i className="fa-solid fa-bus text-orange-500"></i>
                                 <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Transportation</span>
                             </li>
-                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>Airplanes, Bus</li>
+                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>{details.transportation}</li>
                         </ul>
                         <ul className='list-none text-black py-3'>
                             <li>
                                 <i className="fa-solid fa-mountain text-orange-500"></i>
                                 <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Maximum Altitude</span>
                             </li>
-                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>5,416</li>
+                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>{details.maximum_altitude}</li>
                         </ul>
                         <ul className='list-none text-black py-3'>
                             <li>
                                 <i className="fa-solid fa-tree-city text-orange-500"></i>
                                 <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Departure City</span>
                             </li>
-                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>Kathmandu</li>
+                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>{details.departure_city}</li>
                         </ul>
                         <ul className='list-none text-black py-3'>
                             <li>
                                 <i className="fa-solid fa-cloud-sun text-orange-500"></i>
                                 <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Best Season</span>
                             </li>
-                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>Feb, Mar, Apr & May</li>
+                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>{details.best_season}</li>
                         </ul>
                         <ul className='list-none text-black py-3'>
                             <li>
                                 <i className="fa-solid fa-person-hiking text-orange-500"></i>
                                 <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Tour Availability</span>
                             </li>
-                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>Available</li>
+                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>{details.tour_availability}</li>
                         </ul>
                         <ul className='list-none text-black py-3'>
                             <li>
                                 <i className="fa-solid fa-bowl-food text-orange-500"></i>
                                 <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Meals</span>
                             </li>
-                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>Brekfast & Dinner</li>
+                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>{details.meals}</li>
                         </ul>
                         <ul className='list-none text-black py-3'>
                             <li>
                                 <i className="fa-solid fa-language text-orange-500"></i>
                                 <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Language</span>
                             </li>
-                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>English, Spanish, French, Chinese</li>
+                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>{details.language}</li>
                         </ul>
                         <ul className='list-none text-black py-3'>
                             <li>
                                 <i className="fa-solid fa-wifi text-orange-500"></i>
                                 <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Wifi</span>
                             </li>
-                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>Available</li>
+                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>{details.wifi}</li>
                         </ul>
                         <ul className='list-none text-black py-3'>
                             <li>
                                 <i className="fa-solid fa-child text-orange-500"></i>
                                 <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Minimum Age</span>
                             </li>
-                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>12</li>
+                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>{details.minimum_age}</li>
                         </ul>
                         <ul className='list-none text-black py-3'>
                             <li>
                                 <i className="fa-solid fa-male text-orange-500"></i>
                                 <span className='ps-2 text-zinc-400' style={{fontSize:"14px"}}>Maximum Age</span>
                             </li>
-                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>65</li>
+                            <li className='text-sm leading-8 text-neutral-800' style={{fontSize:"15px"}}>{details.maximum_age}</li>
                         </ul>
                     </div>
                 </div>

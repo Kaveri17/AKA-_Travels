@@ -231,10 +231,13 @@ const Popular = () => {
               </div>
               </div>
               </div>
+              <a href="/blogs">
               <button className='w-1/2 bg-orange-300 border-2 rounded-lg  block mx-auto text-white font-bold'>VIEW DETAILS</button>
+              </a>
           </div>
         </div>
         <div>
+
           <div className="border-2 border-orange-200 w-full">
       <img src="Image\pic21.jpeg" alt="" className='pic21 h-72'/>
       <h1 className='text-center font-3xl font-black'>Dubai river:EXPLORE ITS BEAUTY</h1>
@@ -257,7 +260,9 @@ const Popular = () => {
               </div>
               </div>
               </div>
+              <a href="/blogs">
               <button className='w-1/2 bg-orange-300 border-2 rounded-lg  block mx-auto text-white font-bold'>VIEW DETAILS</button>
+         </a>
           </div>
         </div>
         <div>
@@ -283,7 +288,9 @@ const Popular = () => {
               </div>
               </div>
               </div>
+              <a href="/blogs">
               <button className='w-1/2 bg-orange-300 border-2 rounded-lg  block mx-auto text-white font-bold'>VIEW DETAILS</button>
+          </a>
           </div>
         </div>
         <div>
@@ -309,8 +316,11 @@ const Popular = () => {
               </div>
               </div>
               </div>
+              <a href="/blogs">
               <button className='w-1/2 bg-orange-300 border-2 rounded-lg  block mx-auto text-white font-bold'>VIEW DETAILS</button>
+          </a>
           </div>
+          
         </div>
         <div>
           <div className="border-2 border-orange-200 w-full ">
@@ -335,8 +345,9 @@ const Popular = () => {
               </div>
               </div>
               </div>
-              
+              <a href="/blogs">
               <button className='w-1/2 bg-orange-300 border-2 rounded-lg  block mx-auto text-white font-bold'>VIEW DETAILS</button>
+          </a>
           </div>
         </div>
         <div>
@@ -364,9 +375,9 @@ const Popular = () => {
               </div>
               </div>
               </div>
-     
+              <a href="/blogs">
               <button className='w-1/2 bg-orange-300 border-2 rounded-lg  block mx-auto text-white font-bold'>VIEW DETAILS</button>
-     
+     </a>
       
           </div>
         </div>
