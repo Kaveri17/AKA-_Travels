@@ -28,17 +28,20 @@ const handlePost = (event) => {
       }
     })
     .catch(error => console.error("error fetching blogs detail",error))
-    gpost(postname, postemail, postcomment)
-    .then(data => {
-      if(data?.error) {
-        console.log(data.error)
-      }
-      else{
-        setBdetail(data)
-        console.log(data)
-        // console.log(bdetail)
-      }
-    })
+
+    // gpost(postname, postemail, postcomment)
+    // .then(data => {
+    //   if(data?.error) {
+    //     console.log(data.error)
+    //   }
+    //   else{
+    //     setPostname('')
+    //     setPostcomment('')
+    //     setpostemail('')
+    //     console.log(data)
+    //     // console.log(bdetail)
+    //   }
+    // })
     .catch(error => console.error("error fetching comments",error))
     
   },[id])

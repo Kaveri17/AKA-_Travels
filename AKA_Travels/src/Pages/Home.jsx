@@ -2,16 +2,20 @@ import React, { useEffect, useState } from 'react'
 import Slider from 'react-slick';
 // import Navbar from '../components/Navbar'
 import './Home.css'
-import { viewBlog } from '../api/Blog';
+import {  viewBlog } from '../api/Blog';
 import { API } from '../config';
 import { Link } from 'react-router-dom';
+import { getProd } from '../api/Pop';
 import { getGallery } from '../api/Gallapp';
+
 
 
 
 const Home = () => {
 
+
   const [blog, setBlog] = useState([])
+  const [prod, setprod] = useState([])
   const [gallery, setGallery] = useState([])
 
 
@@ -40,9 +44,21 @@ const Home = () => {
           console.log("GA", data)
         }
       })
+    getProd()
+    .then(data => {
+      if(data?.error){
+        console.log(data.error)
+      }
+      else{
+        setprod(data)
+        console.log("product", data)
+      }
+    })
+   
+      
   }, [])
 
-  // console.log(gallery)
+  //  console.log(popular)
 
 
   const settings = {
@@ -85,6 +101,9 @@ const Home = () => {
   return (
     <>
       <div className="home  w-full h-screen pt-28 " style={{ backgroundImage: "url('https://wordpress.vecurosoft.com/travolo/wp-content/uploads/2023/11/banner-bg-1.png')" }} >
+        {
+         
+        }
         <div className='w-5/6 mx-auto flex flex-wrap'>
           <div className=' w-full lg:w-1/2 '>
             <h1 className='text-5xl font-bold leading-normal  '>Travelling and Exploring the  World And
@@ -184,36 +203,68 @@ const Home = () => {
           <h1 className='text-4xl font-bold pb-6'>Awesome Tips That Makes Your Travel Beautiful</h1>
         </div>
         <div className='flex flex-wrap'>
-
-          <div className='w-full lg:w-1/2  '>
-            <img src="/Image/pic4.jpeg" alt="" className=' w-full' />
-          </div>
-          <div className='w-full  lg:w-1/2  '>
-            <div className='border-2 border-solid border-b-gray-400 mt-14 p-8 lg:-ms-16 ' style={{ backgroundColor: "wheat" }}>
-              <h1 className='text-xl pb-2'> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
-              <h1 className='text-2xl font-bold pb-3' >10 Sun Hats For Beach Days, Long Hikes, And </h1>
-              <p className='pb-3'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum corrupti officia quisquam ipsam, tempore deleniti?</p>
-              <button className='border-2 border-solid border-red-300  hover:bg-slate-500 px-2 py-2 '>Read More</button>
-            </div>
-          </div>
+  {blog?.slice(0, 1).map(blogs => (
+    <React.Fragment key={blogs.id}>
+      <div className='w-full lg:w-1/2'>
+        <img 
+          src={`${API}/${blogs.blog_image}`} 
+          alt={blogs.blog_name} 
+          className='w-full' 
+        />
+      </div>
+      <div className='w-full lg:w-1/2'>
+        <div 
+          className='border-2 border-solid border-b-gray-400 mt-14 p-8 lg:-ms-16' 
+          style={{ backgroundColor: "wheat" }}
+        >
+          <h1 className='text-xl pb-2'>
+            <i className="fa-solid fa-calendar-days"></i>                
+            {new Date(blogs.createdAt).toLocaleDateString()}
+          </h1>
+          <h1 className='text-2xl font-bold pb-3'>
+           {blogs.blog_name}
+          </h1>
+          <p className='pb-3'>
+           {blogs.author_word}
+          </p>
+        
+          <button className='bg-slate-500 hover:bg-slate-400   px-2 py-2 '>
+                                <a href={`/BlogDetail/${blogs._id}`}>  READ MORE 
+                                  </a>
+                                </button>
+         
         </div>
+      </div>
+    </React.Fragment>
+  ))}
+</div>
+
       </div>
 
 
       {/*Adventure  */}
       <div className="adventure px-8 w-5/6 mx-auto ">
         <div className='flex flex-wrap py-5'>
+        {blog?.slice( 1,2).map(blogs => (
+    <React.Fragment key={blogs.id}>
           <div className='w-full lg:w-1/2  z-10 py-16'>
             <div className="para border-2 border-solid border-b-gray-600 p-8 py-4  lg:-me-16 " style={{ backgroundColor: "wheat" }}>
-              <h1 className='text-xl pb-2'> <i class="fa-solid fa-calendar-days"></i> 12. December 2023</h1>
-              <h1 className='text-2xl font-bold pb-3'>Pokhara In August:Waiting for vistors</h1>
-              <p className='pb-3'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum corrupti officia quisquam ipsam, tempore deleniti?</p>
-              <button className=' border-2 border-solid border-red-300 hover:bg-slate-400 px-3 py-2 '>Read More</button>
+              <h1 className='text-xl pb-2'> <i class="fa-solid fa-calendar-days"></i>    {new Date(blogs.createdAt).toLocaleDateString()}</h1>
+              <h1 className='text-2xl font-bold pb-3'>{blogs.blog_name}</h1>
+              <p className='pb-3'>{blogs.author_word}</p>
+              
+              {/* <button className=' border-2 border-solid border-red-300 hover:bg-slate-400 px-3 py-2 '>  <a href={`/BlogDetail/${blogs._id}`}> Read More</a></button> */}
+              <button className='bg-slate-500 hover:bg-slate-400   px-2 py-2 '>
+                                <a href={`/BlogDetail/${blogs._id}`}>  READ MORE 
+                                  </a>
+                                </button>
             </div>
           </div>
           <div className='  w-full lg:w-1/2 '>
-            <img src="/Image/pic10.jpeg" alt="" className='w-full h-96' />
+            <img src={`${API}/${blogs.blog_image}`}  alt="" className='w-full h-96' />
           </div>
+          </React.Fragment>
+  ))}
         </div>
       </div>
 
@@ -227,19 +278,19 @@ const Home = () => {
 
           <div className="slider-container">
             <Slider {...settings}>
-              {gallery.map(gall => {
+              {prod?. length > 0 && prod.map(product => {
 
            
               return<div className='pe-2'>
                 <div className="div border-2 border-solid ">
                   <div className='px-3 py-3 w-full'>
-                    <img src={`${API}/${gall.image}`} alt="" className=' h-80 w-full' />
-                    <h1 className='pt-4 font-bold text-xl '>Experience the Incredible England With AkA Travels</h1>
+                    <img src={`${API}/${product.product_image}`} alt="" className=' h-80 w-full' />
+                    <h1 className='pt-4 font-bold text-xl '>{product.product_title}</h1>
                   </div>
-                  <div className="div flex ">
-                    <div className='ps-2'>
-                      <h1 className='mr-14 pb-2'> <i class="fa-solid fa-location-dot text-xl"></i> High Tower,England</h1>
-                      <h1 className='mr-20'> <i className="fa-regular fa-clock text-xl"></i>  6 Days-2 Nights</h1>
+                  <div className="div flex  ">
+                    <div className='ps-3'>
+                      <h1 className='pb-2 text-left'> <i class="fa-solid fa-location-dot text-xl "></i>{product.product_location}</h1>
+                      <h1 className='mr-9'> <i className="fa-regular fa-clock text-xl"></i>  6 Days-2 Nights</h1>
                     </div>
                     <div className="discount border-l-2 ps-2">
 
@@ -247,10 +298,10 @@ const Home = () => {
                       <div className="flex">
 
                         <div className="price text-2xl font-bold pb-7">
-                          $ 250
+                        ${product.price}
                         </div>
                         <div className="div ps-2">
-                          <strike className='text-xl '>$1500</strike>
+                          <strike className='text-xl '>${product.strike}</strike>
                         </div>
                       </div>
                     </div>
