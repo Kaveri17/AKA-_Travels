@@ -28,17 +28,20 @@ const handlePost = (event) => {
       }
     })
     .catch(error => console.error("error fetching blogs detail",error))
-    gpost(postname, postemail, postcomment)
-    .then(data => {
-      if(data?.error) {
-        console.log(data.error)
-      }
-      else{
-        setBdetail(data)
-        console.log(data)
-        // console.log(bdetail)
-      }
-    })
+
+    // gpost(postname, postemail, postcomment)
+    // .then(data => {
+    //   if(data?.error) {
+    //     console.log(data.error)
+    //   }
+    //   else{
+    //     setPostname('')
+    //     setPostcomment('')
+    //     setpostemail('')
+    //     console.log(data)
+    //     // console.log(bdetail)
+    //   }
+    // })
     .catch(error => console.error("error fetching comments",error))
     
   },[id])
@@ -58,7 +61,7 @@ const handlePost = (event) => {
                 <img src={`${API}/${bdetail.blog_image}`}alt={bdetail.blog_name}className="pic3 h-96" />
                 <div className="blogscontainer">
                   <h1 className="font-extrabold leading-10 text-3xl font-serif py-8">{bdetail.blog_name}</h1>
-                  <i className="bi bi-calendar pe-2 sm:pe-8 py-2 sm:py-8">{bdetail.createdAt}</i>
+                  <i className="bi bi-calendar pe-2 sm:pe-8 py-2 sm:py-8">{new Date(bdetail.createdAt).toLocaleDateString()}</i>
                   <i className="bi bi-person text-lg">Wp-travolo</i>
                   <p className="py-12 leading-10 text-1xl text-font-mono">Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet for a quam vehicula elementum sed sit amet dui.  molestie malesuada. Donec sollicitudin molestie malesuada. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing ipsum dolor sit amet, consectetur elit.<br />Vestibulum ac diam sit amet for a quam vehicula elementum sed sit amet dui. Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim.<br />Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing ipsum dolor sit amet, consectetur elit.</p>
                 </div>

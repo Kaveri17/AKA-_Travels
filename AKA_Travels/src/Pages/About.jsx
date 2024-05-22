@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { viewBlog } from '../api/Blog'
+import { API } from '../config'
 
 const About = () => {
+    const [blog, setBlog] = useState('')
+
+    useEffect(() => {
+        viewBlog()
+        .then(data => {
+            if(data?.error){
+                console.log(data.error)
+            }
+            else{
+                setBlog(data)
+                console.log(data)
+            }
+        })
+        .catch(error => console.log(error))
+    },[])
   return (
     <>
     {/* Home Part */}
@@ -36,7 +53,9 @@ const About = () => {
                             <li>Lorem ipsum dolor sit amet.</li>
                     
                     </p>
+                <Link to='/contact'>
                     <button className='bg-orange-500 text-white py-3 px-6 rounded-lg font-bold text-sm tracking-widest'>CONTACT US</button>
+                    </Link>
                 </div> 
             </div>
         </div>
@@ -222,6 +241,7 @@ const About = () => {
         
         <div className="blogandnews">
             <div className="wrapper w-10/12 mx-auto py-20">
+
                 <div className="blog-title w-1/2 mx-auto pb-9">
                     <h2 className='text-center text-orange-500 text-lg tracking-wider font-bold py-2'>Blog & News</h2>
                     <h1 className='text-center tracking-wide font-extrabold pb-4' style={{fontSize:'2.5rem'}}>Our Latest Blog</h1>
@@ -231,32 +251,37 @@ const About = () => {
                 </div>
                 
                 <div className="blogs-container flex flex-col md:flex-row justify-between content-aroun w-full">
-                    <div className="blogs p-4 border-solid border-orange-300 border-2 rounded-lg" >
+                    {blog?.length > 0 && blog.map(blogs => {
+                        
+               
+                    return<div key={blogs._id} className="blogs p-4 border-solid border-orange-300 border-2 rounded-lg" >
                         <div className="blog-img rounded-lg">
-                            <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image " className='w-full rounded-lg'/> 
+                            <img src={`${API}/${blogs.blog_image}`}alt="beach-image " className='w-full rounded-lg'/> 
                         </div>
                         <div className="blog-detail py-3">
                             <h2 className='text-black text-2xl font-bold tracking-wide '>
-                                10 Sun Hats For Beach Days,Long
+                               {blogs.blog_name}
                             </h2>
                             <p className='text-zinc-400 text-sm font-medium pt-1'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nostrum.
+                               {blogs.author_word}
                             </p>
                         </div>
                         <div className="blog-bottom flex w-full items-center">
                             <div className="blog-date w-1/2 text-zinc-600  ">
                                 <i class="fa-solid fa-calendar-days"></i>
-                                <span className='blog-createddate'>12. December 2023</span>
+                                <span className='blog-createddate'>{new Date(blogs.createdAt).toLocaleDateString()}</span>
                             </div>
-                            <div className="blog-btn w-1/2 ps-3">
-                                <button className='bg-orange-500   px-3 py-2 rounded-lg font-bold text-white'>
-                                    READ MORE 
-                                    <i class="bi bi-arrow-right"></i>
+                            <div className="blog-btn  ps-8">
+                                
+                                <button className='bg-orange-500   px-1 py-2 rounded-lg font-bold text-white'>
+                                <a href={`/BlogDetail/${blogs._id}`}>  READ MORE 
+                                   <i class="bi bi-arrow-right"></i> </a>
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div className="blogs p-4 border-solid border-orange-300 border-2 rounded-lg " >
+                         })}
+                    {/* <div className="blogs p-4 border-solid border-orange-300 border-2 rounded-lg " >
                         <div className="blog-img rounded-lg">
                             <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image " className='w-full rounded-lg'/> 
                         </div>
@@ -280,8 +305,8 @@ const About = () => {
                                 </button>
                             </div>
                         </div>
-                    </div>
-                    <div className="blogs p-4 border-solid border-orange-300 border-2 rounded-lg" >
+                    </div> */}
+                    {/* <div className="blogs p-4 border-solid border-orange-300 border-2 rounded-lg" >
                         <div className="blog-img rounded-lg">
                         <img src="https://cityfurnish.com/blog/wp-content/uploads/2023/08/beach-near-hotel-min-1200x800.jpg" alt="beach-image " className='w-full rounded-lg'/> 
                         </div>
@@ -305,7 +330,7 @@ const About = () => {
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
