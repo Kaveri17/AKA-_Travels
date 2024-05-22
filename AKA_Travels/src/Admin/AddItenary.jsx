@@ -27,7 +27,7 @@ const AddItenary = () => {
             headers: {
                 Authorization: `Bearer ${token}`
             },
-            body: formData // Send FormData object instead of JSON
+            body: formData 
         })
         .then(res => res.json())
         .then(data => {

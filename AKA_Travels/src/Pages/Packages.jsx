@@ -46,8 +46,8 @@ console.log(packages)
                 <div className="flex justify-between items-center">
                     <button className=" bg-orange-600 border-1  text-white px-4 py-2 rounded-full hover:bg-red-600">10% Off</button>
                     <div className="flex items-center">
-                        <span className="text-xl font-bold">{pack.price}</span>
-                        <span className="ml-2 line-through text-gray-600">{pack.strike}</span>
+                        <span className="text-xl font-bold">${pack.price}</span>
+                        <span className="ml-2 line-through text-gray-600">${pack.strike}</span>
                     </div>
                 </div>
             </div>

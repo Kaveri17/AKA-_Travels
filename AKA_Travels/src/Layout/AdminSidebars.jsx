@@ -37,7 +37,7 @@ const AdminSidebars = () => {
           <Link to='popular'><i class="fa-solid fa-fire text-2xl"></i><span className='pl-2 font-semibold rams'>Popular</span></Link>
         </li>
         <li className='py-2'>
-          <Link to=''><i className="fa-solid fa-gear text-2xl"></i><span className='pl-2 font-semibold rams'>Settings</span></Link>
+          <Link to='/setting'><i className="fa-solid fa-gear text-2xl"></i><span className='pl-2 font-semibold rams'>Settings</span></Link>
         </li>
       </ul>
       <Link to='' onClick={signout} className="flex items-center py-2">
