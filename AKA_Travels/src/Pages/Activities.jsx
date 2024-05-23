@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { API } from "../config";
 import { getActivities } from "../api/Act";
 import { act } from "react";
+import { findDOMNode } from "react-dom";
 
 const Activities = () => {
   // const [activities,setActivities]=useState([])
@@ -66,7 +67,7 @@ const Activities = () => {
                 </div>   
               })
             }
-              
+             
               
 
           {/* <div className="w-full md:w-1/2 lg:w-4/12 py-10 px-2">

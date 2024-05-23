@@ -35,6 +35,7 @@ const Popular = () => {
   }, [])
 
   console.log(popular)
+  
 
   const settings = {
     dots: true,
@@ -221,7 +222,7 @@ const Popular = () => {
                 prod?.length > 0 && prod.map (product => {
                   return  <div>
                 <div className="border-2 border-orange-200 w-full">
-                  <img src="\Image\pic20.webp" alt="" className=' pic20 h-72' />
+                  <img src={`${API}/${product.product_image}`} alt="" className=' pic20 h-72' />
 
 
                   <h1 className='text-center font-3xl font-black'>{product.product_title}</h1>

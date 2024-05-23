@@ -19,25 +19,25 @@ const AdminSidebars = () => {
           <Link to='/'><i class="fa-solid fa-house text-2xl"></i><span className='pl-2 font-semibold rams'>Homepage</span></Link>
         </li>
         <li className='py-2'>
-          <Link to=''><i class="fa-solid fa-user text-2xl"></i><span className='pl-2 font-semibold rams'>User</span></Link>
+          <Link to='/profile'><i class="fa-solid fa-user text-2xl"></i><span className='pl-2 font-semibold rams'>User</span></Link>
         </li>
         <li className='py-2'>
           <Link to='/admin/adminmessage'><i class="fa-solid fa-comments text-2xl"></i><span className='pl-2 font-semibold rams'>Messages</span></Link>
         </li>
         <li className='py-2'>
-          <Link to=''><i class="fa-solid fa-layer-group text-2xl"></i><span className='pl-2 font-semibold rams'>Category</span></Link>
+          <Link to='/admin/admincategory'><i class="fa-solid fa-layer-group text-2xl"></i><span className='pl-2 font-semibold rams'>Category</span></Link>
         </li>
-        <li className='py-2'>
-          <Link to='packages'><i className="fa-regular fa-newspaper text-2xl"></i><span className='pl-2 font-semibold rams'>Packages</span></Link>
-        </li>
+        {/* <li className='py-2'>
+          <Link to='/packages'><i className="fa-regular fa-newspaper text-2xl"></i><span className='pl-2 font-semibold rams'>Packages</span></Link>
+        </li> */}
         <li className='py-2'>
           <Link to='gallery'><i class="fa-brands fa-envira text-2xl"></i><span className='pl-2 font-semibold rams'>Gallery</span></Link>
         </li>
-        <li className='py-2'>
+        {/* <li className='py-2'>
           <Link to='popular'><i class="fa-solid fa-fire text-2xl"></i><span className='pl-2 font-semibold rams'>Popular</span></Link>
-        </li>
+        </li> */}
         <li className='py-2'>
-          <Link to=''><i className="fa-solid fa-gear text-2xl"></i><span className='pl-2 font-semibold rams'>Settings</span></Link>
+          <Link to='/setting'><i className="fa-solid fa-gear text-2xl"></i><span className='pl-2 font-semibold rams'>Settings</span></Link>
         </li>
       </ul>
       <Link to='' onClick={signout} className="flex items-center py-2">

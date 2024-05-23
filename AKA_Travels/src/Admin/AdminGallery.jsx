@@ -15,7 +15,7 @@ const AdminGallery = () => {
       setGallery(data.reverse())
     }
     })
-  })
+  },[])
   return (
     <div>
       <h1 className='font-bold text-5xl ps-11 py-12'>GALLERY</h1>
