@@ -3,7 +3,7 @@ const { addimage, getGallery, updateGallery }  = require('../controller/galleryC
 const upload = require('../utils/fileUpload')
 const router = express.Router()
 
-router.post('/addimage', upload.single('gallery_image'),addimage)
+router.post('/addimage', upload.single('gallery_rsimage'),addimage)
 router.get('/getgallery', getGallery )
 router.put('/updategallery/:id',upload.single("gallery_image"),updateGallery)
 

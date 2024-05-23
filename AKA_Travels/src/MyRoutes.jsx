@@ -43,6 +43,7 @@ import MessageView from "./Layout/MessageView";
 import Setting from "./Layout/Setting";
 import Save from "./Layout/Save";
 import AdminGallery from "./Admin/AdminGallery";
+import AddGallery from "./Admin/AddGallery";
 
 
 // import AdminSidebars from "./Layout/AdminSidebars";
@@ -107,6 +108,7 @@ const MyRoutes = () => {
               <Route path="additenary" element={<AddItenary/>}/>
               <Route path="adminmessage" element={<AdminMessage/>}/>
               <Route path='admingallery' element={<AdminGallery/>}/>
+              <Route path="addgallery" element={<AddGallery/>}/>
 
               <Route path="showcategories" element={<ShowCategory/>}/>
              

@@ -726,7 +726,7 @@ const Home = () => {
         </a>
       </div> */}
       <Link to="/blogs">
-        <button className='w-1/5 h-12 bg-slate-400  hover:bg-slate-300 border-2 rounded-lg block mx-auto my-16 text-white  font-bold '>VIEW MORE</button>
+        <button className='w-1/5 h-12 bg-slate-400  hover:bg-slate-300 border-2 rounded-lg block mx-auto my-16 text-white  font-bold  '>VIEW MORE</button>
       </Link>
 
 
