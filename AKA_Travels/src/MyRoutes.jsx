@@ -43,6 +43,8 @@ import MessageView from "./Layout/MessageView";
 import Setting from "./Layout/Setting";
 import Save from "./Layout/Save";
 import AdminGallery from "./Admin/AdminGallery";
+import AdminCategory from "./Admin/AdminCategory";
+import AdminPopular from "./Admin/AdminPopular";
 
 
 // import AdminSidebars from "./Layout/AdminSidebars";
@@ -93,7 +95,7 @@ const MyRoutes = () => {
             <Route path="/login" element={<Login/>}/>
             <Route path="/forgetpassword" element={<ForgetPassword/>}/>
             <Route path="/resetpassword/:token" element={<ResetPassword />} />
-            <Route path="profile" element={<Profile/>}/>
+            <Route path="/profile" element={<Profile/>}/>
             <Route path="/messageview/:id" element={<MessageView/>}/>
             {/* <Route path ="adminsidebars" element={<AdminSidebars/>}/> */}
 
@@ -104,9 +106,13 @@ const MyRoutes = () => {
               {/* <Route path="addblog" element={<AddBlog/>}/> */}
               <Route path="addcategory" element={<AddCategory/>}/>
               <Route path="addproduct" element={<AddProduct/>}/>
-              <Route path="additenary" element={<AddItenary/>}/>
+              <Route path="additenary/:id" element={<AddItenary/>}/>
               <Route path="adminmessage" element={<AdminMessage/>}/>
               <Route path='admingallery' element={<AdminGallery/>}/>
+              <Route path='admincategory' element={<AdminCategory/>}/>
+              <Route path='adminpopular' element={<AdminPopular/>}/>
+
+
 
               <Route path="showcategories" element={<ShowCategory/>}/>
              

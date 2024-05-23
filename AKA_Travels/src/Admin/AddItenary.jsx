@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { isAuthenticated } from '../auth/authindex';
 import { API } from '../config'; 
+import { useParams } from 'react-router-dom';
 
 const AddItenary = () => {
     const [days, setDays] = useState('');
@@ -11,23 +12,26 @@ const AddItenary = () => {
     // Destructuring token
     const { token } = isAuthenticated();
     console.log(token)
+    const{id} = useParams();
 
     const handleSubmit = e => {
         e.preventDefault();
         setError('');
         setSuccess(false);
 
-        const formData = new FormData();
-        formData.append('days', days);
-        formData.append('day_title', day_title);
+        // const formData = new FormData;
+        // formData.set('days', days);
+        // formData.set('daytitle', day_title);
         
 
-        fetch(`${API}/additenary/`, {
+        fetch(`${API}/additenary/${id}`, {
             method: 'POST',
             headers: {
-                Authorization: `Bearer ${token}`
+                "Content-Type":"application/json"
+                // Authorization: `Bearer ${token}`
             },
-            body: formData 
+            // body: formData 
+            body: JSON.stringify({days, day_title}) 
         })
         .then(res => res.json())
         .then(data => {
@@ -39,6 +43,7 @@ const AddItenary = () => {
                 setSuccess(true);
                 setDays('');
                 setDay_title('');
+                console.log(data);
                 
             }
         })
@@ -51,7 +56,7 @@ const AddItenary = () => {
 
     // To show success message
     const showSuccess = () => (
-        success && <div className='alert alert-success'>Category has been added successfully.</div>
+        success && <div className='alert alert-success'>Itenary has been added successfully.</div>
     );
 
     return (

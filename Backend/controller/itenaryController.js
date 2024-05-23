@@ -1,4 +1,4 @@
-// const Product = require('../models/productModel')
+const Product = require('../models/productModel')
 const Itenary=require('../models/itenaryModel')
 
 const { populate } = require('../models/userModel')
@@ -10,6 +10,7 @@ exports.addItenary = async (req, res) => {
     
     })
 
+    
     if(!itenary){
         return res.status(400).json({error:"Something went wrong"})
     }
@@ -22,8 +23,8 @@ exports.addItenary = async (req, res) => {
         return res.status(404).json({ error: "Product not found" });
     }
 
-    // res.send(itenary)
-    res.send(product)
+    res.send(itenary)
+    // res.send(product)
 
 
 }
