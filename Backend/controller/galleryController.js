@@ -11,7 +11,7 @@ exports.addimage = async(req,res) => {
     let image = await Gallery.create({
         image_title: req.body.image_title,
         image: req.file.path,
-        type:req.body.type
+        // type:req.body.type
     })
     if(!image){
         return res.status(400).json({error: "Something went wrong."})

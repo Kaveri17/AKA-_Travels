@@ -45,6 +45,8 @@ import Save from "./Layout/Save";
 import AdminGallery from "./Admin/AdminGallery";
 import AdminCategory from "./Admin/AdminCategory";
 import AdminPopular from "./Admin/AdminPopular";
+import AddGallery from "./Admin/AddGallery";
+import UpdateGallery from "./Admin/UpdateGallery";
 
 
 
@@ -110,6 +112,8 @@ const MyRoutes = () => {
               <Route path="additenary/:id" element={<AddItenary/>}/>
               <Route path="adminmessage" element={<AdminMessage/>}/>
               <Route path='admingallery' element={<AdminGallery/>}/>
+              <Route path='addgallery' element={<AddGallery/>}/>
+              <Route path="updategallery" element={<UpdateGallery/>}/>
               
               <Route path='admincategory' element={<AdminCategory/>}/>
               <Route path='adminpopular' element={<AdminPopular/>}/>

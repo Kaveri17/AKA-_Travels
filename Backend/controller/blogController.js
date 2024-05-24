@@ -64,7 +64,7 @@ exports.getAllBlog = async(req, res) => {
 // to get blog Descriptions
 
 exports.getBlogDescriptions = async(req, res)=> {
-    let blog = await Blog.findById(req.params.id)
+    let blog = await Blog.findById(req.params.id).populate('comment')
     if(!blog){
         return res.status(400).json({error: "Something Went Wrong"})
     }
