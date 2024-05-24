@@ -2,11 +2,6 @@ import React from 'react'
 import AdminSidebars from '../Layout/AdminSidebars'
 import Adminani from '../components/Adminani'
 
-
-
-
-
-
 const AdminDashboard = () => {
   return (
   <>

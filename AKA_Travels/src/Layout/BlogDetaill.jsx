@@ -65,6 +65,7 @@ const BlogDetail = () => {
          </div>
          <div className='font-extrabold leading-10 text-2xl font-serif underline m-3'>CATEGORY</div>
          <ul className='list-unstyled w-full'>
+          <a href="/blogs">
          <div className=' py-4 px-6'>
          <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">LUXURY(5)</a></li>
          <li className=' categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">FOOD(3)</a></li>
@@ -72,6 +73,7 @@ const BlogDetail = () => {
          <li className='categories py-4 ps-4 my-2 rounded-lg hover:bg-orange-400'><a href="">TRAVEL(6)</a></li>
          <li className='categories py-4 ps-4 my-2 rounded-lg hover:bg-orange-400'><a href="">NEW YEAR(4)</a></li>
          </div>
+         </a>
          </ul>
          <div className='font-extrabold leading-10 text-2xl font-serif underline m-5'>LETTER</div>
          <input type="email" placeholder='Enter your email here' name='user_email' required className=' py-2 m-3' /> 

@@ -45,6 +45,9 @@ import Save from "./Layout/Save";
 import AdminGallery from "./Admin/AdminGallery";
 import AdminCategory from "./Admin/AdminCategory";
 import AdminPopular from "./Admin/AdminPopular";
+import AddPopular from "./Admin/AddPopular";
+import ShowPopular from "./Admin/ShowPopular";
+import UpdatePopular from "./Admin/UpdatePopular";
 
 
 // import AdminSidebars from "./Layout/AdminSidebars";
@@ -105,6 +108,7 @@ const MyRoutes = () => {
           {/* <Route path="dashboard" element={<Dashboard/>}/> */}
               {/* <Route path="addblog" element={<AddBlog/>}/> */}
               <Route path="addcategory" element={<AddCategory/>}/>
+              <Route path="addpopular" element={<AddPopular/>}/>
               <Route path="addproduct" element={<AddProduct/>}/>
               <Route path="additenary/:id" element={<AddItenary/>}/>
               <Route path="adminmessage" element={<AdminMessage/>}/>
@@ -115,12 +119,14 @@ const MyRoutes = () => {
 
 
               <Route path="showcategories" element={<ShowCategory/>}/>
+              <Route path="showpopulars" element={<ShowPopular/>}/>
              
             
               <Route path="showproduct" element={<ShowProduct/>}/>
             
              <Route path="updateproduct/:id" element={<UpdateProduct/>}/> 
               <Route path="updatecategory/:id" element={<UpdateCategory/>}/>
+              <Route path="updatepopular/:id" element={<UpdatePopular/>}/>
             
 
               <Route path="/admin/dashboard" element={<AdminDashboard/>}/>
