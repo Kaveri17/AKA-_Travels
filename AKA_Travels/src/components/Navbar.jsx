@@ -64,7 +64,7 @@ const Navbar = () => {
                 <i class="fa-solid fa-user text-xl bold pe-3"></i>
                 
               </Link>
-              <i class="fa-solid fa-bars text-xl bold"></i>
+              {/* <i class="fa-solid fa-bars text-xl bold"></i> */}
               </div>
               
                   

@@ -21,7 +21,12 @@ export const gpost= () => {
     .then(response => response.json())
     .catch(error => console.log(error))
 }
+export const getActivities = () => {
+    return fetch(`${API}/getcategorylist`)
+    .then(response => response.json())
+    .catch(error => console.log(error))
 
+}
 
 
 

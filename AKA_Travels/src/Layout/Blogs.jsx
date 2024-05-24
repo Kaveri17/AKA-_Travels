@@ -5,15 +5,14 @@ import Header from './Header';
 import './Blogs.css'
 import { viewBlog } from '../api/Blog';
 import { API } from '../config';
+import { getActivities } from "../api/Act";
 
 
 const Blogs = () => {
  const [blogs, setBlogs] = useState([])
+ const[cat,setCat]=useState([])
 
   // const [error, setError] = useState('')
-
- 
-  
 
 useEffect(()=> {
   viewBlog()
@@ -28,8 +27,26 @@ useEffect(()=> {
       
     }
   })
-  .catch(error => console.error("error fetching blogs",error))
+  // .catch(error => console.error("error fetching blogs",error))
 },[])
+
+useEffect(()=>{
+  getActivities()
+  .then(data=>{
+      if(data?.error){
+          console.log(data.error)
+      }
+      else{
+          setCat(data)
+          console.log(data)
+      }
+  })
+
+
+},[])
+
+console.log(blogs)
+
   
 
 
@@ -125,10 +142,10 @@ useEffect(()=> {
      <div className='flex flex-wrap justify-center'>
 
     <button className='font-bold block w-12 h-8 bg-orange-400 hover:bg-orange-400 border-2 rounded-md border-orange-600 text-black me-3 '>1</button>
-    <a href="blogs" >
+    <a href="/blogs" >
     <button className='font-bold block w-12 h-8 hover:bg-orange-400 border-2 rounded-md border-orange-600 text-black me-3'>2</button>
     </a>
-    <a href="blogs">
+    <a href="/blogs">
     <button className='font-bold block w-12 h-8 border-2 hover:bg-orange-400 rounded-md border-orange-600 text-black '><i class="bi bi-chevron-right font-bold"></i></button>
     </a>
     </div> 
@@ -156,15 +173,27 @@ useEffect(()=> {
               <h1 className='font-bold'>Thailand has positioned itself astutely to capture outbound travel demand from China. </h1>
               </div>
               <div className='font-extrabold leading-10 text-2xl font-serif underline m-3'>CATEGORY</div>
-              <ul className='list-unstyled w-full'>
-              <div className=' py-4 px-6'>
-              <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">LUXURY(5)</a></li>
-              <li className=' categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">FOOD(3)</a></li>
+              {
+                cat?.length>0 &&
+                 cat.slice(0,5).map(category=>{
+
+               
+              return <ul className='list-unstyled w-full'>
+                <a href="/blogs">
+              <div className='  px-6'>
+              <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">{category.category_name}</a></li>
+              {/* <li className=' categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">FOOD(3)</a></li>
               <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">SUMMER(2)</a></li>
               <li className='categories py-4 ps-4 my-2 rounded-lg hover:bg-orange-400'><a href="">TRAVEL(6)</a></li>
-              <li className='categories py-4 ps-4 my-2 rounded-lg hover:bg-orange-400'><a href="">NEW YEAR(4)</a></li>
+              <li className='categories py-4 ps-4 my-2 rounded-lg hover:bg-orange-400'><a href="">NEW YEAR(4)</a></li> */}
               </div>
+              </a>
               </ul>
+                })
+              } 
+
+
+
               <div className='font-extrabold leading-10 text-2xl font-serif underline m-5'>LETTER</div>
               <input type="email" placeholder='Enter your email here' name='user_email' required className=' py-2 m-3' /> 
               <button type='submit' className=' py-2 m-3 border-2 bg-orange-400'>SUBSCRIBE</button>

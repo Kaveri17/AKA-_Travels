@@ -15,7 +15,7 @@ exports.addCategory=async(req,res)=>{
         category_name:req.body.category_name,
         description:req.body.description,
         image:req.file.path,
-        title:req.body.title
+        
 
     })
     if(!category){
@@ -54,7 +54,7 @@ exports.updateCategory=async(req,res)=>{
         category_name:req.body.category_name,
         description:req.body.description,
         category_image: req.file?.path,
-        title:req.body.title
+       
 
     },{new:true})
     if(!category){

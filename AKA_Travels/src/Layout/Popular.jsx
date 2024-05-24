@@ -42,13 +42,13 @@ const Popular = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 2,
+    // slidesToScroll: 2,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          // slidesToScroll: 2,
           infinite: true,
           dots: true
         }
@@ -57,7 +57,7 @@ const Popular = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
+          // slidesToScroll: 1,
           initialSlide: 1
         }
       },
@@ -245,7 +245,9 @@ const Popular = () => {
                       </div>
                     </div>
                   </div>
+                  <a href="/packages">
                   <button className='w-1/2 bg-orange-300 border-2 rounded-lg  block mx-auto text-white font-bold'>VIEW DETAILS</button>
+                  </a>
                 </div>
               </div>
                 })
