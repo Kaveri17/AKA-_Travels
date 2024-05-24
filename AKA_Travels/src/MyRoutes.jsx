@@ -50,6 +50,7 @@ import ShowPopular from "./Admin/ShowPopular";
 import UpdatePopular from "./Admin/UpdatePopular";
 
 
+
 // import AdminSidebars from "./Layout/AdminSidebars";
 
 
@@ -113,6 +114,7 @@ const MyRoutes = () => {
               <Route path="additenary/:id" element={<AddItenary/>}/>
               <Route path="adminmessage" element={<AdminMessage/>}/>
               <Route path='admingallery' element={<AdminGallery/>}/>
+              
               <Route path='admincategory' element={<AdminCategory/>}/>
               <Route path='adminpopular' element={<AdminPopular/>}/>
 

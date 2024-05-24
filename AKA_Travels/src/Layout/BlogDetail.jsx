@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Blogs.css';
-import { BlogDet, gpost } from '../api/Blog';
+import { BlogDet } from '../api/Blog';
 import { API } from '../config';
 import { useParams } from 'react-router-dom';
 
@@ -8,13 +8,12 @@ import { useParams } from 'react-router-dom';
 const BlogDetail = () => {
   const { id }= useParams()
   const [bdetail, setBdetail] = useState({})
-  const [postname, setPostname] = useState('')
-  const [postcomment, setPostcomment] = useState('')
-  const [postemail, setpostemail] = useState('')
- 
-const handlePost = (event) => {
-  event.preventDefault()
-}
+  const [post_name, setPost_name] = useState('')
+  const [post_comment, setPost_comment] = useState('')
+  const [post_email, setPost_email] = useState('')
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
+
   useEffect(() => {
     BlogDet(id)
     .then(data => {
@@ -29,23 +28,61 @@ const handlePost = (event) => {
     })
     .catch(error => console.error("error fetching blogs detail",error))
 
-    // gpost(postname, postemail, postcomment)
-    // .then(data => {
-    //   if(data?.error) {
-    //     console.log(data.error)
-    //   }
-    //   else{
-    //     setPostname('')
-    //     setPostcomment('')
-    //     setpostemail('')
-    //     console.log(data)
-    //     // console.log(bdetail)
-    //   }
-    // })
-    .catch(error => console.error("error fetching comments",error))
-    
-  },[id])
 
+
+  
+  },[id])
+  
+  const handlePost = event => {
+    event.preventDefault()
+    setError('')
+    setSuccess(false)
+    
+fetch(`${API}/addpost`) , {
+  method: 'POST', 
+  headers:{
+    // Accept:'application/json',
+    "Content-Type": 'application/json'
+},
+body: JSON.stringify({post_name, post_email, post_comment })
+}
+.then(res => res.json())
+.then(data => {
+    if(data.error) {
+        setError(data.error)
+        setSuccess(false)
+
+    }
+    else{
+        setError('')
+        setSuccess(true)
+        // setPassword('')
+        setPost_comment('')
+        setPost_name('')
+        setPost_email('')
+    }
+   
+})
+.catch(err => console.log(err))
+
+ 
+ 
+
+ 
+  }
+
+
+  const showError = () => {
+    if(error) {
+        return <div className='text-bold text-center text-red-600 '>{error}</div>
+    }
+}
+const showSuccess = () => {
+    if(success) {
+        return<div className='text-green-500 text-bold text-center'>"Your post comment has Successfully add"</div>
+
+    }
+}
 
   return (
     <>
@@ -89,11 +126,14 @@ const handlePost = (event) => {
               
             <h1 className="font-extrabold leading-10 text-3xl font-serif">LEAVE A COMMENT</h1>
             <p className="py-12 leading-10 text-1xl text-font-mono">Your email address will not be published. Required fields are marked *</p>
-            <input type="text" placeholder="Write Your Comment" className="bg-gray-200 mb-2 me-3"onChange={event=>{setPostcomment(event.target.value)}}  />
-            <input type="text" placeholder="Enter Your Name" className="bg-gray-200 mb-2 me-3"onChange={event=>{setPostname(event.target.value)}}/>
-            <input type="text" placeholder="Enter Your E-mail" className="bg-gray-200 mb-2" onChange={event=>{setpostemail(event.target.value)}}/>
+            {showError()}
+          {showSuccess()}
+   
+            <input type="text" placeholder="Write Your Comment" className="bg-gray-200 mb-2 me-3" onChange={event => setPost_comment(event.target.value)} />
+            <input type="text" placeholder="Enter Your Name" className="bg-gray-200 mb-2 me-3" onChange={event => setPost_name(event.target.value)}/>
+            <input type="text" placeholder="Enter Your E-mail" className="bg-gray-200 mb-2" onChange={event => setPost_email(event.target.value) }/>
             <div className="py-3">Save my name, email, and website in this browser for the next time I comment.</div>
-            <button className="font-bold readmore bg-gray-600 text-white px-3 py-2 rounded-md"onClick={handlePost}>POST COMMENT</button>
+            <button className="font-bold readmore bg-gray-600 text-white px-3 py-2 rounded-md" onClick={handlePost}>POST COMMENT</button>
           </div>
            
 
