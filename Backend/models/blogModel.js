@@ -18,10 +18,6 @@ const blogSchema = mongoose.Schema({
         type:Number,
          default: 0
     },
-    comments: {
-        type:String,
-        default:0
-    },
     author_name: {
         type: String,
         required: true
@@ -33,17 +29,18 @@ const blogSchema = mongoose.Schema({
     },
     blog_person : {
         type: String,
-        required: true
+        // required: true
+       
     },
     blog_det_desc: {
         type: String,
         required: true
 
-    }
-    
-    
-
-
-
+    },
+    comment:[{
+        type: ObjectId,
+        ref: "Post",
+        // required: true
+    }],
 },{timestamps: true})
 module.exports = mongoose.model("Blog", blogSchema)

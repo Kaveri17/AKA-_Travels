@@ -45,9 +45,12 @@ import Save from "./Layout/Save";
 import AdminGallery from "./Admin/AdminGallery";
 import AdminCategory from "./Admin/AdminCategory";
 import AdminPopular from "./Admin/AdminPopular";
+import AddGallery from "./Admin/AddGallery";
+import UpdateGallery from "./Admin/UpdateGallery";
 import AddPopular from "./Admin/AddPopular";
 import ShowPopular from "./Admin/ShowPopular";
 import UpdatePopular from "./Admin/UpdatePopular";
+
 
 
 
@@ -71,6 +74,7 @@ const MyRoutes = () => {
             <Route path="/blogdetaill" element={<BlogDetaill />} />
             <Route path="/blogdetailll" element={<BlogDetailll />} />
             <Route path="/contact" element={<Contact />} />
+         
           
          
         <Route path="/setting" element={<Setting/>} />
@@ -114,6 +118,8 @@ const MyRoutes = () => {
               <Route path="additenary/:id" element={<AddItenary/>}/>
               <Route path="adminmessage" element={<AdminMessage/>}/>
               <Route path='admingallery' element={<AdminGallery/>}/>
+              <Route path='addgallery' element={<AddGallery/>}/>
+              <Route path="updategallery" element={<UpdateGallery/>}/>
               
               <Route path='admincategory' element={<AdminCategory/>}/>
               <Route path='adminpopular' element={<AdminPopular/>}/>

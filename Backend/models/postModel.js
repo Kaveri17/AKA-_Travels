@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const{ObjectId}=mongoose.Schema
 
 const postSchema = mongoose.Schema({
     post_comment: {
@@ -12,6 +13,10 @@ const postSchema = mongoose.Schema({
     post_email: {
         type: String,
         required: true
+    },
+    blog:{
+            type: ObjectId,
+            ref: "Blog",
     }
 }, {timestamps: true})
 module.exports = mongoose.model("Post",postSchema)

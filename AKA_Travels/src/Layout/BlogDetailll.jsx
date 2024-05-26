@@ -44,14 +44,14 @@ const BlogDetail = () => {
      
           <div className="blog-right  flex flex-col w-full md:w-2/6  mt-8 ">
           
-         <div className="search">
+         {/* <div className="search">
          <h1 className='font-extrabold leading-10 text-2xl font-serif underline m-3 '>SEARCH</h1>
          <input type="text" class="w-2/5 sm:w-2/5 py-2 pl-8 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 m-6 cursor-pointer" placeholder="Search..."/>
-         </div>
+         </div> */}
          <div className="blogdown">
          <h1 className='font-extrabold leading-10 text-2xl font-serif underline m-3'>RECENT POSTS</h1>
          </div>
-         <div className='m-5 flex flex-col justify-center '>
+         <div className='m-3 flex flex-col justify-center '>
          <img src="\Image\picc.webp" alt="" className='h-24 w-24 py-2 '/>
          <i class="bi bi-calendar pe-8 ">12 December 2023</i>
          <h1 className='font-bold'>The number of tourists visiting the Maldives in 2023 surpassed the government's estimated figure by 78. </h1>

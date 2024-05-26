@@ -82,11 +82,11 @@ const Popular = () => {
         <div className='flex flex-wrap justify-center pe-8 w-full' >
           {
             popular?.length > 0 &&
-            popular.map(popp => {
+            popular.slice(0,6).map(popp => {
 
               return <div className=' relative  w-full md:w-1/2 lg:w-1/3' key={popp._id}>
                 <a href="/packages">
-                  <img src={`${API}/${popp.popular_image}`} alt="" className=' pic4 w-full h-full py-4 px-4' />
+                  <img src={`${API}/${popp.popular_image}`} alt="" className=' pic4 w-full h-64 py-4 px-4' />
                   <p className='text-center'>{popp.popular_name}<i class="bi bi-arrow-right"></i></p>
 
 
@@ -150,21 +150,29 @@ const Popular = () => {
 
 
 
+
         <div className='text-4xl text-center font-black m-14'>NATIONAL PACKAGES</div>
 
 
-
         <div className='flex flex-wrap pe-8 w-full'>
+          {
+            popular?.length>0&&
+            popular.slice(6,12).map(popp=>{
 
-          <div className=' relative  w-full md:w-1/2 lg:w-1/3'>
+           
+
+          return<div className=' relative  w-full md:w-1/2 lg:w-1/3'>
             <a href="/packages">
-              <img src="\Image\pic12.jpeg" alt="" className=' pic10 w-full h-full py-4 px-4' />
-              <p className='text-center'>POKHARA<i class="bi bi-arrow-right"></i></p>
+              <img src={`${API}/${popp.popular_image}`} alt="" className=' pic10 w-full h-64 py-4 px-4' />
+              <p className='text-center'>{popp.popular_name}<i class="bi bi-arrow-right"></i></p>
               <p className='rounded-lg bg-cyan-300 absolute left-10 top-10 text-white font-'>(1 Trip)</p>
             </a>
-          </div>
 
+        
 
+      
+
+{/* 
           <div className=' relative  w-full md:w-1/2 lg:w-1/3 '>
             <a href="/packages">
               <img src="\Image\pic11.jpeg" alt="" className='pic11 w-full h-full py-4 px-4 ' />
@@ -204,10 +212,13 @@ const Popular = () => {
               <p className='rounded-lg bg-cyan-300 absolute left-10 top-10 text-white '>(1 Trip)</p>
             </a>
           </div>
+        </div> */}
+
+
         </div>
-
-
-
+         })
+        }
+        </div>
 
 
         <div className='text-orange-500 m-12 py-10 text-xl font-bold text-center font-serif'>AWESOME TOURS</div>

@@ -58,14 +58,24 @@ const Navbar = () => {
             <li className='pe-3'>  <Link to="contact">contact</Link></li>
               </div>
            
-              <div className=' space-x-3'><input type="text" placeholder='search' className='bg-gray-200' />
-              <i class="fa-solid fa-magnifying-glass text-2xl font-bold pe-3"></i>
-              <Link to="/register" >
-                <i class="fa-solid fa-user text-xl bold pe-3"></i>
-                
+              {/* <div className=' space-x-3'><input type="text" placeholder='search' className='bg-gray-200' /> */}
+              {/* <i class="fa-solid fa-magnifying-glass text-2xl font-bold pe-3"></i> */}
+              <Link to="/setting" >
+              <i class="bi bi-gear-fill text-xl bold "></i>
               </Link>
+              <Link to="/register" >
+                <i class="fa-solid fa-user text-xl bold "></i> 
+              </Link>
+              
+
+
+
+
+
+
+
               {/* <i class="fa-solid fa-bars text-xl bold"></i> */}
-              </div>
+              {/* </div> */}
               
                   
    
