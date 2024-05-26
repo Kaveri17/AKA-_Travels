@@ -3,6 +3,7 @@ import './Blogs.css';
 import { BlogDet } from '../api/Blog';
 import { API } from '../config';
 import { useParams } from 'react-router-dom';
+import { getActivities } from "../api/Act";
 
 
 const BlogDetail = () => {
@@ -13,6 +14,8 @@ const BlogDetail = () => {
   const [post_email, setPost_email] = useState('')
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
+  const [cat,setCat]=useState([])
+
 
   useEffect(() => {
     BlogDet(id)
@@ -28,10 +31,34 @@ const BlogDetail = () => {
     })
     .catch(error => console.error("error fetching blogs detail",error))
 
-
-
   
   },[id])
+
+
+
+  useEffect(()=>{
+    getActivities()
+    .then(data=>{
+        if(data?.error){
+            console.log(data.error)
+        }
+        else{
+            setCat(data)
+            console.log(data)
+        }
+    })
+  
+  
+  },[])
+
+
+
+
+
+
+
+
+
   
   const handlePost = event => {
     event.preventDefault()
@@ -160,17 +187,31 @@ const showSuccess = () => {
          <h1 className='font-bold'>Thailand has positioned itself astutely to capture outbound travel demand from China. </h1>
          </div>
          <div className='font-extrabold leading-10 text-2xl font-serif underline m-3'>CATEGORY</div>
-         <ul className='list-unstyled w-full'>
-          <a href="/blogs">
-         <div className=' py-4 px-6'>
-         <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">LUXURY(5)</a></li>
-         <li className=' categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">FOOD(3)</a></li>
-         <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">SUMMER(2)</a></li>
-         <li className='categories py-4 ps-4 my-2 rounded-lg hover:bg-orange-400'><a href="">TRAVEL(6)</a></li>
-         <li className='categories py-4 ps-4 my-2 rounded-lg hover:bg-orange-400'><a href="">NEW YEAR(4)</a></li>
-         </div>
-         </a>
-         </ul>
+         {
+                cat?.length>0 &&
+                 cat.slice(0,5).map(category=>{
+
+               
+              return <ul className='list-unstyled w-full'>
+                <a href="/activity">
+              <div className='  px-6'>
+              <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">{category.category_name}</a></li>
+              {/* <li className=' categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">FOOD(3)</a></li>
+              <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">SUMMER(2)</a></li>
+              <li className='categories py-4 ps-4 my-2 rounded-lg hover:bg-orange-400'><a href="">TRAVEL(6)</a></li>
+              <li className='categories py-4 ps-4 my-2 rounded-lg hover:bg-orange-400'><a href="">NEW YEAR(4)</a></li> */}
+              </div>
+              </a>
+              </ul>
+                })
+              } 
+
+
+         
+
+
+
+
          <div className='font-extrabold leading-10 text-2xl font-serif underline m-5'>LETTER</div>
          <input type="email" placeholder='Enter your email here' name='user_email' required className=' py-2 m-3' /> 
          <button type='submit' className=' py-2 m-3 border-2 bg-orange-400'>SUBSCRIBE</button>

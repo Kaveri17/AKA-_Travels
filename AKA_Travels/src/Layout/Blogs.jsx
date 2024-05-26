@@ -179,7 +179,7 @@ console.log(blogs)
 
                
               return <ul className='list-unstyled w-full'>
-                <a href="/blogs">
+                <a href="/activity">
               <div className='  px-6'>
               <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">{category.category_name}</a></li>
               {/* <li className=' categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">FOOD(3)</a></li>
