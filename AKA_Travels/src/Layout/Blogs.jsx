@@ -204,7 +204,7 @@ const showSuccess = () => {
     </div> 
     </div>
     </a>  */}
-     <div className='flex flex-wrap justify-center'>
+     {/* <div className='flex flex-wrap justify-center'>
 
     <button className='font-bold block w-12 h-8 bg-orange-400 hover:bg-orange-400 border-2 rounded-md border-orange-600 text-black me-3 '>1</button>
     <a href="/blogs" >
@@ -213,16 +213,16 @@ const showSuccess = () => {
     <a href="/blogs">
     <button className='font-bold block w-12 h-8 border-2 hover:bg-orange-400 rounded-md border-orange-600 text-black '><i class="bi bi-chevron-right font-bold"></i></button>
     </a>
-    </div> 
+    </div>  */}
 
             </div>
  
             <div className="blog-right  flex flex-col w-full md:w-2/6  mt-8 ">
               
-              <div className="search">
+              {/* <div className="search">
               <h1 className='font-extrabold leading-10 text-2xl font-serif underline m-3 '>SEARCH</h1>
               <input type="text" class="w-2/5 sm:w-2/5 py-2 pl-8 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 m-6 cursor-pointer" placeholder="Search..."/>
-              </div>
+              </div> */}
               <div className="blogdown">
               <h1 className='font-extrabold leading-10 text-2xl font-serif underline m-3'>RECENT POSTS</h1>
               </div>
@@ -243,6 +243,17 @@ const showSuccess = () => {
        
          </div>
          })}
+              <div className='m-3 flex flex-col justify-center '>
+              <img src="\Image\picc.webp" alt="" className='h-24 w-24 py-2 '/>
+              <i class="bi bi-calendar pe-8 ">12 December 2023</i>
+              <h1 className='font-bold'>The number of tourists visiting the Maldives in 2023 surpassed the government's estimated figure by 78. </h1>
+              <img src="\Image\piccc.jpeg" alt="" className='h-24 w-24 py-2 '/>
+              <i class="bi bi-calendar pe-8">12 December 2023</i>
+              <h1 className='font-bold'>The messages for Greek tourism at ITB Berlin, one of world's largest travel exhibitions, give high.</h1>
+              <img src="\Image\picccc.jpeg" alt="" className='h-24 w-24 py-2 '/>
+              <i class="bi bi-calendar pe-8">12 December 2023</i>
+              <h1 className='font-bold'>Thailand has positioned itself astutely to capture outbound travel demand from China. </h1>
+              </div>
               <div className='font-extrabold leading-10 text-2xl font-serif underline m-3'>CATEGORY</div>
               {
                 cat?.length>0 &&
@@ -250,7 +261,7 @@ const showSuccess = () => {
 
                
               return <ul className='list-unstyled w-full'>
-                <a href="/blogs">
+                <a href="/activity">
               <div className='  px-6'>
               <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">{category.category_name}</a></li>
               {/* <li className=' categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">FOOD(3)</a></li>

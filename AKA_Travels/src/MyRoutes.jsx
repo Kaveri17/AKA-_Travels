@@ -54,6 +54,7 @@ import ShowGallery from "./Admin/ShowGallery";
 
 
 
+
 // import AdminSidebars from "./Layout/AdminSidebars";
 
 
@@ -74,6 +75,7 @@ const MyRoutes = () => {
             <Route path="/blogdetaill" element={<BlogDetaill />} />
             <Route path="/blogdetailll" element={<BlogDetailll />} />
             <Route path="/contact" element={<Contact />} />
+         
           
          
         <Route path="/setting" element={<Setting/>} />

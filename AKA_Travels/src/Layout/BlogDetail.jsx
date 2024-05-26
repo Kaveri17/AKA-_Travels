@@ -5,6 +5,7 @@ import { API } from '../config';
 import { useParams } from 'react-router-dom';
 import { getGallery } from '../api/Gallapp';
 import { submitmessage } from '../api/Submitsend';
+import { getActivities } from "../api/Act";
 
 
 const BlogDetail = () => {
@@ -25,6 +26,8 @@ const BlogDetail = () => {
   const [contact_message] = useState('I Would like to know more about AKA Travels.');
 
  
+  const [cat,setCat]=useState([])
+
 
   useEffect(() => {
     BlogDet(id)
@@ -62,8 +65,25 @@ const BlogDetail = () => {
       })
     
 
+  
+  },[id])
 
-  }, [id])
+
+
+  useEffect(()=>{
+    getActivities()
+    .then(data=>{
+        if(data?.error){
+            console.log(data.error)
+        }
+        else{
+            setCat(data)
+            console.log(data)
+        }
+    })
+  
+  
+  },[])
 
 
   const handlePost = event => {
@@ -296,10 +316,10 @@ const BlogDetail = () => {
  */}
 
           
-         <div className="search">
+         {/* <div className="search">
          <h1 className='font-extrabold leading-10 text-2xl font-serif underline m-3 '>SEARCH</h1>
          <input type="text" class="w-2/5 sm:w-2/5 py-2 pl-8 pr-4 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 m-6 cursor-pointer" placeholder="Search..."/>
-         </div>
+         </div> */}
               
          <div className="blogdown">
          <h1 className='font-extrabold leading-10 text-2xl font-serif underline m-3'>RECENT POSTS</h1>
@@ -313,6 +333,11 @@ const BlogDetail = () => {
          <h1 className='font-bold'>{blog.blog_name}. </h1>
        
          {/* <img src="\Image\piccc.jpeg" alt="" className='h-24 w-24 py-2 '/>
+         <div className='m-3 flex flex-col justify-center '>
+         <img src="\Image\picc.webp" alt="" className='h-24 w-24 py-2 '/>
+         <i class="bi bi-calendar pe-8 ">12 December 2023</i>
+         <h1 className='font-bold'>The number of tourists visiting the Maldives in 2023 surpassed the government's estimated figure by 78. </h1>
+         <img src="\Image\piccc.jpeg" alt="" className='h-24 w-24 py-2 '/>
          <i class="bi bi-calendar pe-8">12 December 2023</i>
          <h1 className='font-bold'>The messages for Greek tourism at ITB Berlin, one of world's largest travel exhibitions, give high.</h1>
          <img src="\Image\picccc.jpeg" alt="" className='h-24 w-24 py-2 '/>
@@ -323,17 +348,31 @@ const BlogDetail = () => {
          })}
          
          <div className='font-extrabold leading-10 text-2xl font-serif underline m-3'>CATEGORY</div>
-         <ul className='list-unstyled w-full'>
-          <a href="/blogs">
-         <div className=' py-4 px-6'>
-         <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">LUXURY(5)</a></li>
-         <li className=' categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">FOOD(3)</a></li>
-         <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">SUMMER(2)</a></li>
-         <li className='categories py-4 ps-4 my-2 rounded-lg hover:bg-orange-400'><a href="">TRAVEL(6)</a></li>
-         <li className='categories py-4 ps-4 my-2 rounded-lg hover:bg-orange-400'><a href="">NEW YEAR(4)</a></li>
-         </div>
-         </a>
-         </ul>
+         {
+                cat?.length>0 &&
+                 cat.slice(0,5).map(category=>{
+
+               
+              return <ul className='list-unstyled w-full'>
+                <a href="/activity">
+              <div className='  px-6'>
+              <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">{category.category_name}</a></li>
+              {/* <li className=' categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">FOOD(3)</a></li>
+              <li className='categories py-4 ps-4 my-1 rounded-lg hover:bg-orange-400'><a href="">SUMMER(2)</a></li>
+              <li className='categories py-4 ps-4 my-2 rounded-lg hover:bg-orange-400'><a href="">TRAVEL(6)</a></li>
+              <li className='categories py-4 ps-4 my-2 rounded-lg hover:bg-orange-400'><a href="">NEW YEAR(4)</a></li> */}
+              </div>
+              </a>
+              </ul>
+                })
+              } 
+
+
+         
+
+
+
+
          <div className='font-extrabold leading-10 text-2xl font-serif underline m-5'>LETTER</div>
          
          {/* <input type="email" placeholder='Enter your email here' name='user_email' required className=' py-2 m-3' /> 

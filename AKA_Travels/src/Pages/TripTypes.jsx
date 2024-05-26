@@ -22,10 +22,6 @@ const TripTypes = () => {
       )
     },[])
   
-  
-
-
-
 
     
   return (
