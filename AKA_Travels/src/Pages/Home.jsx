@@ -111,8 +111,9 @@ const Home = () => {
               Find The Beauty
             </h1>
             <p className='mt-8 text-xl pb-6 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Assumenda sed quasi dolorum perspiciatis ratione totam ipsam  <br /> earum aspernatur dolorem, sunt animi ullam. Odit?</p>
+            <Link to='/contact'>
             <button className='mt-6 border-solid border-2 border-red-500 rounded-md h-12 w-40 text-xl hover:bg-slate-500  '>APPOINTMENT</button>
-
+            </Link>
           </div>
 
           <div className="home-img w-1/3 flex  items-center lg:w-1/3 ">

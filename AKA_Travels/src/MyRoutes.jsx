@@ -50,6 +50,7 @@ import UpdateGallery from "./Admin/UpdateGallery";
 import AddPopular from "./Admin/AddPopular";
 import ShowPopular from "./Admin/ShowPopular";
 import UpdatePopular from "./Admin/UpdatePopular";
+import ShowGallery from "./Admin/ShowGallery";
 
 
 
@@ -117,7 +118,8 @@ const MyRoutes = () => {
               <Route path="adminmessage" element={<AdminMessage/>}/>
               <Route path='admingallery' element={<AdminGallery/>}/>
               <Route path='addgallery' element={<AddGallery/>}/>
-              <Route path="updategallery" element={<UpdateGallery/>}/>
+              <Route path="updategallery/:id" element={<UpdateGallery/>}/>
+              <Route path="showgallery" element={<ShowGallery/>}/>
               
               <Route path='admincategory' element={<AdminCategory/>}/>
               <Route path='adminpopular' element={<AdminPopular/>}/>
