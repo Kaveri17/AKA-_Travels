@@ -102,7 +102,7 @@ const UpdatePopular = () => {
                                     onChange={(e) => setPopularImage(e.target.files[0])}
                                 />
                             </div>
-                            <button type="submit" className="btn btn-primary text-gray-700">Update Product</button>
+                            <button type="submit" className="btn btn-primary text-gray-700" onClick={handleSubmit}>Update Product</button>
                         </form>
                     </div>
                 </div>

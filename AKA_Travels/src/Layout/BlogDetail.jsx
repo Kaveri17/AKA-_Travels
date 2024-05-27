@@ -1,19 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import './Blogs.css';
-import { BlogDet } from '../api/Blog';
+import { BlogDet, viewBlog } from '../api/Blog';
 import { API } from '../config';
 import { useParams } from 'react-router-dom';
+import { getGallery } from '../api/Gallapp';
+import { submitmessage } from '../api/Submitsend';
 import { getActivities } from "../api/Act";
 
 
 const BlogDetail = () => {
   const { id } = useParams()
+  
   const [bdetail, setBdetail] = useState({})
   const [post_name, setPost_name] = useState('')
   const [post_comment, setPost_comment] = useState('')
   const [post_email, setPost_email] = useState('')
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
+  const [gallery, setGallery] = useState([])
+  const [blogs, setBlogs] = useState([])
+  const [contact_email, setContactEmail] = useState('');
+  const [contact_fname, setContactFname] = useState('');
+  const [contact_lname, setContactLname] = useState('');
+  const [contact_phoneno, setContactphoneno] = useState('');
+  const [contact_message] = useState('I Would like to know more about AKA Travels.');
+
+ 
   const [cat,setCat]=useState([])
 
 
@@ -30,6 +42,28 @@ const BlogDetail = () => {
         }
       })
       .catch(error => console.error("error fetching blogs detail", error))
+      getGallery()
+      .then(data => {
+        if(data?.error){
+          console.log(data.error)
+        }
+        else{
+          setGallery(data)
+          console.log(data)
+        }
+      })
+    
+      viewBlog()
+      .then(data => {
+        if(data?.error){
+          console.log(data.error)
+        }
+        else{
+          setBlogs(data)
+          console.log(data)
+        }
+      })
+    
 
   
   },[id])
@@ -50,6 +84,7 @@ const BlogDetail = () => {
   
   
   },[])
+
 
   const handlePost = event => {
     event.preventDefault();
@@ -82,7 +117,53 @@ const BlogDetail = () => {
       .catch(error => console.log(error))
 
   }
+  const handleSubmits = (event) => {
+    event.preventDefault();
 
+    // validation
+
+    if (!contact_email) {
+      setError("please fill your email")
+
+    }
+    else if (!contact_email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+      setError("Invalid Email")
+    }
+    else {
+
+
+
+      const fname = contact_email.substring(0, contact_email.indexOf('@'));
+      setContactFname(fname);
+
+      const messageData = {
+        contact_email,
+        contact_fname: fname,
+        contact_message,
+        contact_lname,
+        contact_phoneno
+      };
+      console.log(messageData)
+
+      submitmessage(messageData)
+        .then(data => {
+          if (data.error) {
+            setError(data.error);
+            setSuccess(false);
+          } else {
+            setError('');
+            setSuccess(true);
+            setContactEmail('');
+            setContactFname('');
+            setContactLname('');
+            setContactphoneno('');
+            console.log(data)
+          }
+        })
+        .catch(error => console.log(error));
+    };
+  }
+  
 
   const showError = () => {
     if (error) {
@@ -91,7 +172,7 @@ const BlogDetail = () => {
   }
   const showSuccess = () => {
     if (success) {
-      return <div className='text-green-500 text-bold text-center'>"Your post comment has Successfully add"</div>
+      return <div className='text-green-500 text-bold text-center'>"successfully done"</div>
 
     }
   }
@@ -123,15 +204,26 @@ const BlogDetail = () => {
                 <h1 className="font-extrabold leading-10 text-3xl font-serif py-5 ">Lorem ipsum dolor sit amet consectetur.</h1>
                 <p className="py-8">Vestibulum ac diam sit amet for a quam vehicula elementum sed sit amet dui. Donec sollicitudin . Donec sollicitudin molestie malesuada. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
                 </p>
-                <div className="flex flex-wrap">
-                  <img src="\Image\pic22.jpeg" alt="" className="h-35 w-1/3 py-2 px-4 sm:px-2" />
-                  <img src="\Image\pic23.jpeg" alt="" className="h-35 w-1/3 py-2 px-4 sm:px-2" />
-                  <img src="\Image\pic24.jpeg" alt="" className="h-35 w-1/3 py-2 px-4 sm:px-2" />
+             
+
+                
+                <div className='flex flex-wrap'>
+                {
+                  gallery?.slice(3,6).map(gall => {
+                  return<img src={`${API}/${gall.image}`} alt="" className="h-35 w-1/3 py-2 px-4 sm:px-2  key={gall._id} " />
+                })
+              }
+                  {/* <img src="\Image\pic23.jpeg" alt="" className="h-35 w-1/3 py-2 px-4 sm:px-2" />
+                  <img src="\Image\pic24.jpeg" alt="" className="h-35 w-1/3 py-2 px-4 sm:px-2" /> */}
                 </div>
+                
+
                 <p className="py-8">Vestibulum ac diam sit amet for a quam vehicula elementum sed sit amet dui. Donec sollicitudin . Donec sollicitudin molestie malesuada. Proin eget tortor risus. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Pellentesque in ipsum id orci porta dapibus.</p>
 
               </div>
+          
             </div>
+            
 
 
 
@@ -165,8 +257,8 @@ const BlogDetail = () => {
               bdetail.comment?.length > 0
                && bdetail.comment.map( comment => {
                 return <div className='w-full bg-white text-black text-base flex list-none space-x-4'>
-                  <li>Name: {comment.post_name} </li>
-                  <li>Comment: {comment.post_comment} </li>
+                  <li className='py-2'>Name: {comment.post_name} </li>
+                  <li className='py-2'>Comment: {comment.post_comment} </li>
 
                 </div>
                }
@@ -232,6 +324,15 @@ const BlogDetail = () => {
          <div className="blogdown">
          <h1 className='font-extrabold leading-10 text-2xl font-serif underline m-3'>RECENT POSTS</h1>
          </div>
+         {blogs?.length > 0 && blogs.map(blog => {
+         return<div className='m-5 flex flex-col justify-center 'key={blog._id}>
+         
+            
+              <img src={`${API}/${blog.blog_image}`} alt="" className='h-24 w-24 py-2 ' /> 
+         <i class="bi bi-calendar pe-8 ">{new Date(blog.createdAt).toLocaleDateString()}</i> 
+         <h1 className='font-bold'>{blog.blog_name}. </h1>
+       
+         {/* <img src="\Image\piccc.jpeg" alt="" className='h-24 w-24 py-2 '/>
          <div className='m-3 flex flex-col justify-center '>
          <img src="\Image\picc.webp" alt="" className='h-24 w-24 py-2 '/>
          <i class="bi bi-calendar pe-8 ">12 December 2023</i>
@@ -241,8 +342,11 @@ const BlogDetail = () => {
          <h1 className='font-bold'>The messages for Greek tourism at ITB Berlin, one of world's largest travel exhibitions, give high.</h1>
          <img src="\Image\picccc.jpeg" alt="" className='h-24 w-24 py-2 '/>
          <i class="bi bi-calendar pe-8">12 December 2023</i>
-         <h1 className='font-bold'>Thailand has positioned itself astutely to capture outbound travel demand from China. </h1>
+         <h1 className='font-bold'>Thailand has positioned itself astutely to capture outbound travel demand from China. </h1> */}
+       
          </div>
+         })}
+         
          <div className='font-extrabold leading-10 text-2xl font-serif underline m-3'>CATEGORY</div>
          {
                 cat?.length>0 &&
@@ -270,8 +374,21 @@ const BlogDetail = () => {
 
 
          <div className='font-extrabold leading-10 text-2xl font-serif underline m-5'>LETTER</div>
-         <input type="email" placeholder='Enter your email here' name='user_email' required className=' py-2 m-3' /> 
-         <button type='submit' className=' py-2 m-3 border-2 bg-orange-400'>SUBSCRIBE</button>
+         
+         {/* <input type="email" placeholder='Enter your email here' name='user_email' required className=' py-2 m-3' /> 
+         <button type='submit' className=' py-2 m-3 border-2 bg-orange-400'>SUBSCRIBE</button> */}
+           {showError()}
+            {showSuccess()}
+
+                <form className="flex pt-2 gap-2 justify-center">
+               
+                  <input className='pt-2 rounded-md mt-1 text-black' type="email" placeholder="Enter Email" value={contact_email} onChange={event => setContactEmail(event.target.value)} />
+                  <input type="hidden" value={contact_fname} />
+                  <input type="hidden" value={contact_lname} />
+                  <input type="hidden" value={contact_phoneno} />
+                  <input type="hidden" value={contact_message} />
+                  <button className="bg-red-400 p-2 rounded-lg mt-1" onClick={handleSubmits}>Subscribe</button>
+                </form>
          <div className='font-extrabold leading-10 text-2xl font-serif underline m-5'>NEVER MISS NEWS</div>
          <div class="flex flex-wrap justify-center m-1">
          <a href="" class="icons text-2xl  md:p-2"><i class="hi bi bi-facebook pe-3"></i></a>

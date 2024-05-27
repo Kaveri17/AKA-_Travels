@@ -6,12 +6,21 @@ import './Blogs.css'
 import { viewBlog } from '../api/Blog';
 import { API } from '../config';
 import { getActivities } from "../api/Act";
+import { submitmessage } from '../api/Submitsend';
+
 
 
 const Blogs = () => {
  const [blogs, setBlogs] = useState([])
  const[cat,setCat]=useState([])
-
+ const [contact_email, setContactEmail] = useState('');
+  const [contact_fname, setContactFname] = useState('');
+  const [contact_lname, setContactLname] = useState('');
+  const [contact_phoneno, setContactphoneno] = useState('');
+  const [contact_message] = useState('I Would like to know more about AKA Travels.');
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
+  
   // const [error, setError] = useState('')
 
 useEffect(()=> {
@@ -27,10 +36,7 @@ useEffect(()=> {
       
     }
   })
-  // .catch(error => console.error("error fetching blogs",error))
-},[])
 
-useEffect(()=>{
   getActivities()
   .then(data=>{
       if(data?.error){
@@ -42,10 +48,69 @@ useEffect(()=>{
       }
   })
 
-
+  // .catch(error => console.error("error fetching blogs",error))
 },[])
+const handleSubmits = (event) => {
+  event.preventDefault();
 
-console.log(blogs)
+  // validation
+
+  if (!contact_email) {
+    setError("please fill your email")
+
+  }
+  else if (!contact_email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+    setError("Invalid Email")
+  }
+  else {
+
+
+
+    const fname = contact_email.substring(0, contact_email.indexOf('@'));
+    setContactFname(fname);
+
+    const messageData = {
+      contact_email,
+      contact_fname: fname,
+      contact_message,
+      contact_lname,
+      contact_phoneno
+    };
+    console.log(messageData)
+
+    submitmessage(messageData)
+      .then(data => {
+        if (data.error) {
+          setError(data.error);
+          setSuccess(false);
+        } else {
+          setError('');
+          setSuccess(true);
+          setContactEmail('');
+          setContactFname('');
+          setContactLname('');
+          setContactphoneno('');
+          console.log(data)
+        }
+      })
+      .catch(error => console.log(error));
+  };
+}
+
+
+const showError = () => {
+  if (error) {
+    return <div className='text-bold text-center text-red-600 '>{error}</div>
+  }
+}
+const showSuccess = () => {
+  if (success) {
+    return <div className='text-green-500 text-bold text-center'>"successfully done"</div>
+
+  }
+}
+
+
 
   
 
@@ -161,6 +226,23 @@ console.log(blogs)
               <div className="blogdown">
               <h1 className='font-extrabold leading-10 text-2xl font-serif underline m-3'>RECENT POSTS</h1>
               </div>
+              {blogs?.length > 0 && blogs.map(blog => {
+         return<div className='m-5 flex flex-col justify-center 'key={blog._id}>
+         
+            
+              <img src={`${API}/${blog.blog_image}`} alt="" className='h-24 w-24 py-2 ' /> 
+         <i class="bi bi-calendar pe-8 ">{new Date(blog.createdAt).toLocaleDateString()}</i> 
+         <h1 className='font-bold'>{blog.blog_name}. </h1>
+       
+         {/* <img src="\Image\piccc.jpeg" alt="" className='h-24 w-24 py-2 '/>
+         <i class="bi bi-calendar pe-8">12 December 2023</i>
+         <h1 className='font-bold'>The messages for Greek tourism at ITB Berlin, one of world's largest travel exhibitions, give high.</h1>
+         <img src="\Image\picccc.jpeg" alt="" className='h-24 w-24 py-2 '/>
+         <i class="bi bi-calendar pe-8">12 December 2023</i>
+         <h1 className='font-bold'>Thailand has positioned itself astutely to capture outbound travel demand from China. </h1> */}
+       
+         </div>
+         })}
               <div className='m-3 flex flex-col justify-center '>
               <img src="\Image\picc.webp" alt="" className='h-24 w-24 py-2 '/>
               <i class="bi bi-calendar pe-8 ">12 December 2023</i>
@@ -195,8 +277,19 @@ console.log(blogs)
 
 
               <div className='font-extrabold leading-10 text-2xl font-serif underline m-5'>LETTER</div>
-              <input type="email" placeholder='Enter your email here' name='user_email' required className=' py-2 m-3' /> 
-              <button type='submit' className=' py-2 m-3 border-2 bg-orange-400'>SUBSCRIBE</button>
+              {/* <input type="email" placeholder='Enter your email here' name='user_email' required className=' py-2 m-3' /> 
+              <button type='submit' className=' py-2 m-3 border-2 bg-orange-400'>SUBSCRIBE</button> */}
+            {showError()}
+            {showSuccess()}
+              <form className="flex pt-2 gap-2 justify-center">
+               
+               <input className='pt-2 rounded-md mt-1 text-black' type="email" placeholder="Enter Email" value={contact_email} onChange={event => setContactEmail(event.target.value)} />
+               <input type="hidden" value={contact_fname} />
+               <input type="hidden" value={contact_lname} />
+               <input type="hidden" value={contact_phoneno} />
+               <input type="hidden" value={contact_message} />
+               <button className="bg-red-400 p-2 rounded-lg mt-1" onClick={handleSubmits}>Subscribe</button>
+             </form>
               <div className='font-extrabold leading-10 text-2xl font-serif underline m-5'>NEVER MISS NEWS</div>
               <div class="flex flex-wrap justify-center m-2">
               <a href="" class="icons text-2xl md:w-auto md:p-2"><i class="hi bi bi-facebook pe-8"></i></a>

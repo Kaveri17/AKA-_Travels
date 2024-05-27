@@ -29,9 +29,9 @@ exports.getGallery = async(req,res) =>{
 }
 exports.updateGallery=async(req,res)=>{
     let gallery=await Gallery.findByIdAndUpdate(req.params.id,{
-        // image_title: req.body.image_title,
-        // image: req.file.path,
-        type:req.body.type
+        image_title: req.body.image_title,
+        image: req.file.path,
+        // type:req.body.type
 
     },{new:true})
     if(!gallery){
@@ -42,3 +42,30 @@ exports.updateGallery=async(req,res)=>{
 
 }
 
+
+//to get gallery detail
+exports.getGalleryDetails=async(req,res)=>{
+    let gallery=await Gallery.findById(req.params.id)
+    if(!gallery){
+        return res.status(400).json({error:"Something went wrong"})
+
+    }
+    res.send(gallery)
+    
+}
+
+
+exports.deleteGallery = (req, res) => {
+    Gallery.findByIdAndDelete(req.params.id)
+    .then(gallery => {
+        if(!gallery){
+            return res.status(400).json({error:"Gallery not found"})
+        }
+        else{
+            res.send({msg:"Gallery Deleted Successfully"})
+        }
+    })
+    .catch(error => {
+        return res.status(400).json({error:"Something went Wrong"})
+    })
+}
