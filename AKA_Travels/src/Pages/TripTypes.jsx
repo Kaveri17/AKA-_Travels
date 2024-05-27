@@ -33,7 +33,7 @@ const TripTypes = () => {
             <div className="triptypes flex flex-wrap justify-between">
             {
   galleries?.length > 0 &&
-  galleries.map((gallery) => (
+  galleries.slice(0,6).map((gallery) => (
     <div key={gallery._id} className="w-full md:w-1/2 lg:w-4/12 py-10 px-2">
       <div className="triptypes-div w-full rounded-xl">
         <Link to="" className="triptypes-img relative">
