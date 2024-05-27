@@ -243,7 +243,7 @@ const showSuccess = () => {
        
          </div>
          })}
-              <div className='m-3 flex flex-col justify-center '>
+              {/* <div className='m-3 flex flex-col justify-center '>
               <img src="\Image\picc.webp" alt="" className='h-24 w-24 py-2 '/>
               <i class="bi bi-calendar pe-8 ">12 December 2023</i>
               <h1 className='font-bold'>The number of tourists visiting the Maldives in 2023 surpassed the government's estimated figure by 78. </h1>
@@ -253,7 +253,7 @@ const showSuccess = () => {
               <img src="\Image\picccc.jpeg" alt="" className='h-24 w-24 py-2 '/>
               <i class="bi bi-calendar pe-8">12 December 2023</i>
               <h1 className='font-bold'>Thailand has positioned itself astutely to capture outbound travel demand from China. </h1>
-              </div>
+              </div> */}
               <div className='font-extrabold leading-10 text-2xl font-serif underline m-3'>CATEGORY</div>
               {
                 cat?.length>0 &&
