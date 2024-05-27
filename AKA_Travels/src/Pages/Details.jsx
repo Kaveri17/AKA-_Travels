@@ -215,6 +215,8 @@ const Details = () => {
                         </div>
                     </div>
                 </div>
+
+{/* 
                 <div className="py-3 my-2 w-full ">
                     <div className="details-form text-gray-700 shadow-md rounded-md py-5 px-3">
                         <div className="form-title ">
@@ -247,7 +249,7 @@ const Details = () => {
                                         Country
                                         <span className='required px-1 text-red-500'>*</span>
                                     </label>
-                                    {/* <input type="text" placeholder='Enter Your Name *' className=' border-2 py-3 px-2 rounded-md' name='fullname' id='fullname' style={{fontSize:"14px"}}/> */}
+                        
                                     <select name="country" id="country" className=' border-2 border-zinc-300 py-3 px-2 rounded-md'>
                                         <option value="" disabled selected hidden> Choose a country</option>
                                         <option value="">Everest</option>
@@ -293,7 +295,7 @@ const Details = () => {
                                     Your Message 
                                     <span className='required px-1 text-red-500'>*</span>
                                 </label>
-                                {/* <input type="email" placeholder='Enter Your Email *' className='border-2 py-3 px-2 rounded-md' name='fullname' id='fullname' style={{fontSize:"14px"}}/> */}
+
                                 <textarea name="message" id="message" cols="30" rows="10" placeholder='Enter Your Message*' className='border-2 border-zinc-300 rounded-md py-3 px-2' style={{fontSize:"14px"}}></textarea>
                             </div>
                             <button className='bg-orange-500 text-white text-center w-full py-3 font-semibold rounded-md'>
@@ -301,8 +303,15 @@ const Details = () => {
                             </button>
                         </form>
                     </div>
-                </div>
+                </div> */}
+                
             </div>
+            
+
+
+
+
+            
             <div className="details-right w-full lg:w-1/3 ps-4 ">
                 <div className="details-cart bg-neutral-100 px-4 py-5 w-full rounded-md">
                     <div className="cart-div bg-white w-full rounded-md pt-3">
