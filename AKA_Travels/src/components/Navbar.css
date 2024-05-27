@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+/*  
+>>>>>>> 46d9f8aa43cafdfd5f0ade7e2a45a3889d72c65b
   
 .dropdown{
   display: none;
@@ -11,4 +15,58 @@
 
 .navbar-pages:hover  .dropdown{
   display: block;
+} */
+
+/* 
+.navbar-container {
+  padding: 1rem;
+} */
+
+.navbar-img img {
+  width: 100%;
+  height: auto;
 }
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.dropdown {
+  display: none;
+  
+}
+
+@media (min-width: 768px) {
+  .dropdown {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: block;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+  }
+}
+

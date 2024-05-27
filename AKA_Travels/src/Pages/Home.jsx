@@ -105,7 +105,7 @@ const Home = () => {
 
               Find The Beauty
             </h1>
-            <p className='mt-8 text-xl pb-6 '>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Assumenda sed quasi dolorum perspiciatis ratione totam ipsam  <br /> earum aspernatur dolorem, sunt animi ullam. Odit?</p>
+            <p className='mt-8 text-xl pb-6 '>“Life is about the adventures you take and the memories you make. So travel often and live life with open eyes and an open heart.”</p>
             <Link to='/contact'>
             <button className='mt-6 border-solid border-2 border-red-500 rounded-md h-12 w-40 text-xl hover:bg-slate-500  '>APPOINTMENT</button>
             </Link>
@@ -245,7 +245,7 @@ const Home = () => {
     <React.Fragment key={blogs.id}>
           <div className='w-full lg:w-1/2  z-10 py-16'>
             <div className="para border-2 border-solid border-b-gray-600 p-8 py-4  lg:-me-16 " style={{ backgroundColor: "wheat" }}>
-              <h1 className='text-xl pb-2'> <i class="fa-solid fa-calendar-days"></i>    {new Date(blogs.createdAt).toLocaleDateString()}</h1>
+              <h1 className='text-xl pb-2 '> <i class="fa-solid fa-calendar-days "></i>{new Date(blogs.createdAt).toLocaleDateString()}</h1>
               <h1 className='text-2xl font-bold pb-3'>{blogs.blog_name}</h1>
               <p className='pb-3'>{blogs.author_word}</p>
               
@@ -494,7 +494,7 @@ const Home = () => {
       <div className='pt-5  ' >
         <div className=' w-5/6  flex  flex-wrap mx-auto   '>
           <div className="ramp w-full md:w-1/2 lg:w-1/4 pe-2  ">
-            <div className="special border-2 border-solid border-slate-500  text-center  h-64    " >
+            <div className="special border-2 border-solid border-slate-500  text-center  h-64 pt-3    " >
               <h1 className='text-4xl  '><i class="fa-solid fa-star"></i></h1>
               <h1 className='pt-3 font-bold text-xl '>Special Activities</h1>
               <p className='pt-2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, magni reiciendis vero omnis</p>
@@ -678,7 +678,7 @@ const Home = () => {
                 <img src={`${API}/${blogs.blog_image}`} alt={blogs.blog_name} className='pic4' />
                 <h1 className='text-xl font-bold pt-3 pb-2'> {blogs.blog_name}</h1>
                 <p className='pb-3'>{blogs.author_word}</p>
-                <div className='flex items-center pb-9'>
+                <div className='flex justify-between  px-3 pb-9'>
                   <h1 className=''> <i class="fa-solid fa-calendar-days text-xl"></i>{new Date(blogs.createdAt).toLocaleDateString()}</h1>
                   <div className='ps-3 '>
                     <button className=' border-2 border-solid  rounded-md bg-slate-400 hover:bg-slate-300  px-3 py-2'><a href={`/BlogDetail/${blogs._id}`}> Read More</a></button>
