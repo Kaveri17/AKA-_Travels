@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { verifyUser } from '../../api/Userapp'
-
-
-
-
 const Verify = () => {
   
     const {token} = useParams()

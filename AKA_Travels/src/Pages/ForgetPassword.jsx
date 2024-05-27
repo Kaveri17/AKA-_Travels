@@ -59,9 +59,6 @@ const ForgetPassword = () => {
            </div>
    
          </form>
-       
-   
-   
    
        </div>
     

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { getGallery } from '../api/Gallapp';
 import { API } from '../config'
 
-
 const TripTypes = () => {
     // const[error, setError] = useState('');
     const [galleries, setGalleries] = useState([])
@@ -22,8 +21,6 @@ const TripTypes = () => {
       )
     },[])
   
-
-    
   return (
     <>
         <div className="wrapper w-10/12 mx-auto py-10">
@@ -60,7 +57,6 @@ const TripTypes = () => {
     </div>
   ))
 }
-
 
                 {/* <div className="w-full md:w-1/2 lg:w-4/12 py-10 px-2">
                     <div className="triptypes-div w-full rounded-xl">

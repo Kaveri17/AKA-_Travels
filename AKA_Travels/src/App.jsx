@@ -7,10 +7,7 @@ import { generateDate } from './utils/calendar'
 
 function App() {
   return (
-    
-    // <div className='container'>
-    //   <Navbar/>
-    // </div>
+   
     <>
       <MyRoutes/>   
     </>

@@ -7,12 +7,7 @@ import { API } from '../config';
 import { Link } from 'react-router-dom';
 import { getProd } from '../api/Pop';
 import { getGallery } from '../api/Gallapp';
-
-
-
-
 const Home = () => {
-
 
   const [blog, setBlog] = useState([])
   const [prod, setprod] = useState([])

@@ -49,10 +49,6 @@ const Details = () => {
                         </div>
                     </div>
                 </div>
-                
-                
-                 
-                
 
                 <div className="details shadow-md rounded-md mb-3 lg:shadow-none">
                     {/* <div className="details-img w-full relative">
@@ -304,7 +300,7 @@ const Details = () => {
                         </form>
                     </div>
                 </div> */}
-                
+
             </div>
             
 

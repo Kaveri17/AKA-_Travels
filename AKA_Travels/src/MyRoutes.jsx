@@ -44,7 +44,7 @@ import Setting from "./Layout/Setting";
 import Save from "./Layout/Save";
 import AdminGallery from "./Admin/AdminGallery";
 import AdminCategory from "./Admin/AdminCategory";
-import AdminPopular from "./Admin/AdminPopular";
+
 import AddGallery from "./Admin/AddGallery";
 import UpdateGallery from "./Admin/UpdateGallery";
 import AddPopular from "./Admin/AddPopular";
@@ -124,7 +124,7 @@ const MyRoutes = () => {
               <Route path="showgallery" element={<ShowGallery/>}/>
               
               <Route path='admincategory' element={<AdminCategory/>}/>
-              <Route path='adminpopular' element={<AdminPopular/>}/>
+            
 
 
 

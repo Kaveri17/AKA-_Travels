@@ -39,10 +39,6 @@ const ResetPassword = () => {
            
         })
         .catch(err => console.log(err))
-
-       
-
-
         
     }
     const showError = () => {

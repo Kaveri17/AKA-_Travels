@@ -6,7 +6,6 @@ import { act } from "react";
 import { findDOMNode } from "react-dom";
 
 const Activities = () => {
-  // const [activities,setActivities]=useState([])
   const [activities, setActivities] = useState([])
 
   useEffect(() => {

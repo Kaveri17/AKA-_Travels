@@ -18,14 +18,10 @@ const Packages = () => {
             }
         })
 
-
     },[])
     
 
 console.log(packages)
-
-
-
 
   return (
                 
@@ -58,12 +54,6 @@ console.log(packages)
             </div>
         </div>
     ))}
-
-
-
-
-
-
 
 {/* 
         

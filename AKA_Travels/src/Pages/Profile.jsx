@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
 const Profile = () => {
  
   const [username, setUsername] = useState("");
@@ -17,9 +16,6 @@ const Profile = () => {
     console.log("Settings saved:", { username, email, notificationsEnabled });
     navigate(`/save-response?username=${username}&email=${email}&notificationsEnabled=${notificationsEnabled}`);
   };
-
- 
-  
 
   return (
     <div className="container mx-auto p-4 ">
@@ -36,8 +32,6 @@ const Profile = () => {
             onChange={(e) => setUsername(e.target.value)}
           />
         </div>
-
-
         <div className="mb-4 w-1/2">
           <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email</label>
           <input

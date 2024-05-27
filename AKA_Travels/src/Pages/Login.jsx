@@ -2,11 +2,7 @@ import React, { useState } from 'react'
 import { Link,  useNavigate } from 'react-router-dom'
 import { authenticate, isAuthenticate, login } from '../api/Userapp'
 
-
 const Login = () => {
-
-
-
   let [email, setEmail] = useState('')
   let[password , setPassword] = useState('')
   let [error, setError] = useState('')
@@ -60,8 +56,6 @@ const Login = () => {
  <div className=" w-5/6 mx-auto " >
  {redirect()}
       <form className=' flex flex-col items-center justify-center w-full' style={{ height: '100vh' }}>
-   
-
         <div className=' w-full lg:w-1/2 border-2 border-solid border-red-300 p-4  ' style={{ backgroundColor: "skyblue" }}>
           <h1 className='text-3xl font-bold text-center pb-4 pt-4 underline'>LOGIN</h1>
           
@@ -74,9 +68,7 @@ const Login = () => {
             <label htmlFor="pwd"  >Password</label>
             <input type="password" className=' border-2 border-zinc-300 p-2 rounded-md w-3/5 sm:w-4/5' name='pwd' id='pwd' onChange={event => setPassword(event.target.value)} />
          
-
           </div>
-
           {showError()}
          
           <div className='text-center space-x-4 pt-4'>
@@ -93,8 +85,6 @@ const Login = () => {
         </div>
 
       </form>
-    
-
 
 
     </div>
